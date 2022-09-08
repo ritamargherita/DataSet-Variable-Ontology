@@ -1,0 +1,335 @@
+### NCBI
+
+@prefix qb:             <http://purl.org/linked-data/cube#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbpedia-owl:    <http://dbpedia.org/ontology/> .
+@prefix biotop:         <http://purl.org/biotop/biotop.owl#> .
+@prefix uniprot:        <http://purl.uniprot.org/core/> .
+@prefix biopax:         <http://www.biopax.org/release/biopax-level3.owl#> .
+@prefix biol:           <http://purl.org/NET/biol/ns#> .
+@prefix wd:             <http://www.wikidata.org/wiki/> .
+@prefix org:            <http://www.w3.org/ns/org#> .
+@prefix foaf:           <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms:        <http://purl.org/dc/terms/> .
+@prefix dicom:          <http://purl.org/healthcarevocab/v1#> .
+
+@prefix rfm:            <http://restrictedFairMetadata#> .
+@prefix ncbi:           <http://example.org/ncbi#> .
+
+
+
+
+### NCBI ORGANIZATION
+
+ncbi:ncbi               a                       org:Organization, foaf:Agent ;
+                        rdfs:label              "National Center for Biotechnology Information"@en.
+
+
+### NCBI CODE LIST
+
+ncbi:GeneDescriptor     a                       skos:ConceptScheme, owl:Ontology ;
+                        skos:prefLabel          "Code list for NCBI (Gene) - codelist scheme"@en ;
+                        rdfs:label              "Code list for NCBI (Gene) - codelist scheme"@en ;
+                        skos:notation           "CL_GENE";
+                        skos:note               "This code list provides information about the gene."@en ;
+                        rdfs:description        "This code list provides information about the gene."@en .
+
+
+### GENE DESCRIPTOR GENE TYPES
+
+ncbi:GeneDescriptorType a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Gene Type Enumeration"@en ;
+                        skos:definition         "Enumeration of gene types"@en ;
+                        skos:inScheme           ncbi:GeneDescriptor .
+
+ncbi:gdt-unknown        a                       skos:Concept, owl:Class ;
+                        rdfs:subClassOf         ncbi:GeneDescriptorType ;
+                        skos:prefLabel          "UNKNOWN" ;
+                        skos:notation           "0"^^xsd:integer .
+
+ncbi:gdt-tRNA           a                       skos:Concept, owl:Class ;
+                        rdfs:subClassOf         ncbi:GeneDescriptorType ;
+                        skos:prefLabel          "tRNA" ;
+                        skos:notation           "1"^^xsd:integer .       
+
+ncbi:gdt-rRNA           a                       skos:Concept, owl:Class ;
+                        rdfs:subClassOf         ncbi:GeneDescriptorType ;
+                        skos:prefLabel          "rRNA" ;
+                        skos:notation           "2"^^xsd:integer .       
+
+ncbi:gdt-snRNA          a                       skos:Concept, owl:Class ;
+                        rdfs:subClassOf         ncbi:GeneDescriptorType ;
+                        skos:prefLabel          "snRNA" ;
+                        skos:notation           "3"^^xsd:integer .       
+
+ncbi:gdt-scRNA          a                       skos:Concept, owl:Class ;
+                        rdfs:subClassOf         ncbi:GeneDescriptorType ;
+                        skos:prefLabel          "scRNA" ;
+                        skos:notation           "4"^^xsd:integer .       
+
+ncbi:gdt-snoRNA         a                       skos:Concept, owl:Class ;
+                        rdfs:subClassOf         ncbi:GeneDescriptorType ;
+                        skos:prefLabel          "snoRNA" ;
+                        skos:notation           "5"^^xsd:integer .       
+
+ncbi:gdt-PROTEINCODING  a                       skos:Concept, owl:Class ;
+                        rdfs:subClassOf         ncbi:GeneDescriptorType ;
+                        skos:prefLabel          "PROTEIN_CODING" ;
+                        skos:notation           "6"^^xsd:integer .       
+
+ncbi:gdt-PSEUDO         a                       skos:Concept, owl:Class ;
+                        rdfs:subClassOf         ncbi:GeneDescriptorType ;
+                        skos:prefLabel          "PSEUDO" ;
+                        skos:note               "these will have NG or NR"@en ;
+                        skos:notation           "7"^^xsd:integer .       
+
+ncbi:gdt-TRANSPOSON     a                       skos:Concept, owl:Class ;
+                        rdfs:subClassOf         ncbi:GeneDescriptorType ;
+                        skos:prefLabel          "TRANSPOSON" ;
+                        skos:notation           "8"^^xsd:integer .       
+
+ncbi:gdt-miscRNA        a                       skos:Concept, owl:Class ;
+                        rdfs:subClassOf         ncbi:GeneDescriptorType ;
+                        skos:prefLabel          "miscRNA" ;
+                        skos:notation           "9"^^xsd:integer .       
+
+ncbi:gdt-ncRNA          a                       skos:Concept, owl:Class ;
+                        rdfs:subClassOf         ncbi:GeneDescriptorType ;
+                        skos:prefLabel          "ncRNA" ;
+                        skos:notation           "10"^^xsd:integer .       
+
+ncbi:gdt-BIOLOGICALREGION          a            skos:Concept, owl:Class ;
+                        rdfs:subClassOf         ncbi:GeneDescriptorType ;
+                        skos:prefLabel          "BIOLOGICALREGION" ;
+                        skos:note               "these will have NG"@en ;
+                        skos:notation           "11"^^xsd:integer .       
+
+ncbi:gdt-OTHER          a                       skos:Concept, owl:Class ;
+                        rdfs:subClassOf         ncbi:GeneDescriptorType ;
+                        skos:prefLabel          "OTHER" ;
+                        skos:notation           "255"^^xsd:integer .       
+
+
+### GENE ORIENTATION TYPES
+
+ncbi:OrientationType    a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Orientation Enumeration"@en ;
+                        skos:definition         "Enumeration of gene orientation"@en ;
+                        skos:inScheme           ncbi:GeneDescriptor .
+
+ncbi:ot-none            a                       skos:Concept, owl:Class ;
+                        rdfs:subClassOf         ncbi:OrientationType ;
+                        skos:prefLabel          "none" ;
+                        skos:notation           "0"^^xsd:integer .
+
+ncbi:ot-plus            a                       skos:Concept, owl:Class ;
+                        rdfs:subClassOf         ncbi:OrientationType ;
+                        skos:prefLabel          "plus" ;
+                        skos:notation           "1"^^xsd:integer .
+
+ncbi:ot-minus           a                       skos:Concept, owl:Class ;
+                        rdfs:subClassOf         ncbi:OrientationType ;
+                        skos:prefLabel          "minus" ;
+                        skos:notation           "2"^^xsd:integer .
+
+
+### NCBI CONCEPT CLASSES
+
+ncbi:Gene               a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Gene"@en ;
+                        skos:altLabel           "gene"@en ;
+                        skos:definition         "Concept of a gene"@en ;
+                        skos:inScheme           ncbi:GeneDescriptor .
+
+ncbi:Organism           a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Organism"@en ;
+                        skos:altLabel           "organism"@en ;
+                        skos:definition         "Concept of an organism"@en ;
+                        skos:inScheme           ncbi:GeneDescriptor .
+
+ncbi:GeneTranscript     a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Transcript"@en ;
+                        skos:altLabel           "transcript"@en ;
+                        skos:definition         "Concept of a gene transcript"@en ;
+                        skos:inScheme           ncbi:GeneDescriptor .
+
+ncbi:GeneID             a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "NCBI GeneID"@en ;
+                        skos:altLabel           "gene-id"@en ;
+                        skos:definition         "NCBI Gene ID"@en ;
+                        skos:example            "2778" ;
+                        skos:inScheme           ncbi:GeneDescriptor .
+
+ncbi:Symbol             a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Symbol"@en ;
+                        skos:altLabel           "symbol"@en ;
+                        skos:definition         "gene symbol"@en ;
+                        skos:example            "GNAS" ;
+                        skos:inScheme           ncbi:GeneDescriptor .
+
+ncbi:Description        a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Description"@en ;
+                        skos:altLabel           "description"@en ;
+                        skos:definition         "gene name"@en ;
+                        skos:example            "GNAS complex locus"@en ;
+                        skos:inScheme           ncbi:GeneDescriptor .
+
+ncbi:TaxonomicName      a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Taxonomic Name"@en ;
+                        skos:altLabel           "tax-name"@en ;
+                        skos:definition         "Taxonomic name of the organism"@en ;
+                        skos:example            "Homo sapiens"@en ;
+                        skos:inScheme           ncbi:GeneDescriptor .
+
+ncbi:CommonName         a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Common Name"@en ;
+                        skos:altLabel           "common-name"@en ;
+                        skos:definition         "Common name of the organism"@en ;
+                        skos:example            "human"@en ;
+                        skos:inScheme           ncbi:GeneDescriptor .
+
+ncbi:TaxonomicID        a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Taxonomic ID"@en ;
+                        skos:altLabel           "tax-id"@en ;
+                        skos:definition         "NCBI Taxonomy ID for the organism"@en ;
+                        skos:example            "9606"@en ;
+                        skos:inScheme           ncbi:GeneDescriptor .
+
+ncbi:GenomicRange       a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Genomic Range"@en ;
+                        skos:altLabel           "genomic-range-repeated"@en ;
+                        skos:example            "NC_000007.14:155799980-155812463;NC_060931.1:156983127-156995607" ;
+                        skos:inScheme           ncbi:GeneDescriptor . 
+
+ncbi:Orientation        a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Orientation"@en ;
+                        skos:altLabel           "orientation"@en ;
+                        skos:inScheme           ncbi:GeneDescriptor .
+
+ncbi:LocationOnChromosome       a               skos:Concept, owl:Class ;
+                        skos:prefLabel          "Gene Location on Chromosome"@en ;
+                        skos:inScheme           ncbi:GeneDescriptor .
+
+ncbi:GeneType           a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Gene Type"@en ;
+                        skos:altLabel           "gene-type"@en ;
+                        skos:inScheme           ncbi:GeneDescriptor .
+
+ncbi:Transcript         a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Transcript"@en ;
+                        skos:altLavel           "transcript-"@en ;
+                        skos:definition         "RefSeq coding and non-coding transcript accessions"@en ;
+                        skos:example            "NR_132319.2" ;
+                        skos:inScheme           ncbi:GeneDescriptor .
+
+
+### SHH DATASET
+
+ncbi:dataset-shh        a                       qb:DataSet ;
+                        dct:title               "SHH sonic hedgehog signaling molecule [ Homo sapiens (human) ]"@en ;
+                        rdfs:label              "SHH sonic hedgehog signaling molecule [ Homo sapiens (human) ]"@en ;
+                        rdfs:comment            "Dataset about SHH sonic hedgehog signaling molecule (Homo Sapiens)"@en ;
+                        rdfs:description        "Dataset about SHH sonic hedgehog signaling molecule (Homo Sapiens)"@en ;
+                        dct:publisher           ncbi:ncbi ;
+                        dct:subject             dbpedia-owl:Gene, biotop:Gene, uniprot:Gene, biopaxa:Gene,
+                                                wd:Q7187, wd:Q14860072, wd:Q15978631 ;
+                        qb:structure            ncbi:dsd-dataset-shh .
+
+
+### SHH DATASET STRUCTURE
+
+ncbi:dsd-dataset-shh    a                       qb:DataStructureDefinition ;
+                        qb:component
+                                [qb:dimension   ncbi:geneId,
+                                                ncbi:symbol,
+                                                ] .
+
+
+### SHH DIMENSIONS
+
+ncbi:isGene             a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "is gene"@en ;
+                        qb:concept              ncbi:Gene .
+
+ncbi:hasOrganism        a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "organism of the gene"@en ;
+                        qb:concept              ncbi:Organism .
+
+ncbi:hasTranscript      a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "transcript(s) of the gene"@en ;
+                        qb:concept              ncbi:GeneTranscript .
+
+ncbi:hasGeneType        a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "has gene type"@en ;
+                        rdfs:range              ncbi:GeneDescriptorType ;
+                        qb:concept              ncbi:GeneDescriptorType . 
+
+ncbi:geneId             a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "gene_id"@en ;
+                        rdfs:range              xsd:long ;
+                        owl:propertyChainAxiom  (ncbi:isGene dcterms:identifier) ;
+                        qb:concept              ncbi:GeneID .
+
+ncbi:symbol             a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "gene_symbol"@en ;
+                        rdfs:range              xsd:string ;
+                        owl:propertyChainAxiom  (ncbi:isGene dbpedia-owl:symbol) ;
+                        qb:concept              ncbi:Symbol .
+
+ncbi:description        a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "description"@en ;
+                        rdfs:range              xsd:string ;
+                        owl:propertyChainAxiom  (ncbi:isGene rdfs:description) ;
+                        qb:concept              ncbi:Description .  
+
+ncbi:taxname            a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "scientific_name"@en ;
+                        rdfs:range              xsd:string ;
+                        owl:propertyChainAxiom  (ncbi:hasOrganism biol:name) ;
+                        qb:concept              ncbi:TaxonomicName .    
+
+ncbi:commonName         a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "common_name"@en ;
+                        rdfs:range              xsd:string ;
+                        owl:propertyChainAxiom  (ncbi:hasOrganism biol:commonName) ;
+                        qb:concept              ncbi:CommonName .                 
+                                    
+ncbi:taxId              a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "tax_id"@en ;
+                        rdfs:range              xsd:long ;
+                        owl:propertyChainAxiom  (ncbi:hasOrganism dcterms:identifier) ;
+                        qb:concept              ncbi:TaxonomicID .
+
+ncbi:genomicRanges      a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "genomic_range"@en ;
+                        rdfs:range              xsd:string ;
+                        qb:concept              ncbi:GenomicRange .
+
+ncbi:orientation        a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "orientation"@en ;
+                        rdfs:range              ncbi:OrientationType ;
+                        owl:propertyChainAxiom  (ncbi:isGene uniprot:orientation) ;
+                        qb:concept              ncbi:Orientation .
+
+ncbi:location           a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "Chromosomal Location"@en ;
+                        rdfs:range              xsd:integer ;
+                        owl:propertyChainAxiom  (ncbi:isGene dbpedia-owl:onChromosome) ;
+                        qb:concept              ncbi:LocationOnChromosome .
+
+ncbi:type               a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "gene_type"@en ;
+                        rdfs:range              ncbi:GeneDescriptorType ;
+                        owl:propertyChainAxiom  (ncbi:isGene biol:hasGeneType) ;
+                        qb:concept              ncbi:GeneType .
+
+ncbi:transcript         a              rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "transcript_accession"@en ;
+                        rdfs:range              xsd:string ;
+                        owl:propertyChainAxiom  (ncbi:hasTranscript dicom:AccessionNumber) ;
+                        qb:concept              ncbi:Transcript .
+
+
+
