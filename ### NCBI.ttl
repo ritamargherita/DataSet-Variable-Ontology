@@ -219,10 +219,20 @@ ncbi:GeneType           a                       skos:Concept, owl:Class ;
 
 ncbi:Transcript         a                       skos:Concept, owl:Class ;
                         skos:prefLabel          "Transcript"@en ;
-                        skos:altLavel           "transcript-"@en ;
+                        skos:altLabel           "transcript-"@en ;
                         skos:definition         "RefSeq coding and non-coding transcript accessions"@en ;
                         skos:example            "NR_132319.2" ;
                         skos:inScheme           ncbi:GeneDescriptor .
+
+ncbi:TranscriptName     a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Transcript Name"@en ;
+                        skos:altLabel           "name" ;
+                        skos:definition         "RefSeq transcript name"@en ;
+                        skos:example            "transcript variant 12"@en ;
+                        skos:inScheme           ncbi:GeneDescriptor .
+
+ncbi:TranscriptLength   a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          
 
 
 ### SHH DATASET
@@ -325,11 +335,21 @@ ncbi:type               a                       rdf:Property, owl:ObjectProperty
                         owl:propertyChainAxiom  (ncbi:isGene biol:hasGeneType) ;
                         qb:concept              ncbi:GeneType .
 
-ncbi:transcript         a              rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+ncbi:transcript         a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
                         rdfs:label              "transcript_accession"@en ;
                         rdfs:range              xsd:string ;
                         owl:propertyChainAxiom  (ncbi:hasTranscript dicom:AccessionNumber) ;
                         qb:concept              ncbi:Transcript .
 
+ncbi:transcriptName     a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ; 
+                        rdfs:label              "transcript_name"@en ;
+                        rdfs:range              xsd:string ;
+                        owl:propertyChainAxiom  (ncbi:hasTranscript dbpedia-owl:name) ;
+                        qb:concept              ncbi:TranscriptName .
 
+ncbi:transcriptLength   a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "transcript_length"@en ;
+                        rdfs:range              xsd:integer ;
+                        owl:propertyChainAxiom  (ncbi:hasTranscript uniprot:length) ;
+                        qb:concept              ncbi:TranscriptLength .
 
