@@ -20,6 +20,43 @@
 
 
 
+### SSH DATASET 
+
+ncbi:dataset-shh        a                       qb:DataSet ;
+                        dct:title               "SHH sonic hedgehog signaling molecule [ Homo sapiens (human) ]"@en ;
+                        rdfs:label              "SHH sonic hedgehog signaling molecule [ Homo sapiens (human) ]"@en ;
+                        rdfs:comment            "Dataset about SHH sonic hedgehog signaling molecule (Homo Sapiens)"@en ;
+                        rdfs:description        "Dataset about SHH sonic hedgehog signaling molecule (Homo Sapiens)"@en ;
+                        dct:publisher           ncbi:ncbi ;
+                        dct:subject             dbpedia-owl:Gene, biotop:Gene, uniprot:Gene, biopaxa:Gene,
+                                                wd:Q7187, wd:Q14860072, wd:Q15978631 ;
+                        qb:structure            ncbi:dsd-dataset-shh .
+
+
+### SHH DATASET STRUCTURE
+
+ncbi:dsd-dataset-shh    a                       qb:DataStructureDefinition ;
+                        qb:component
+                                [qb:dimension   ncbi:geneId,
+                                                ncbi:symbol,
+                                                ncbi:description,
+                                                ncbi:taxname,
+                                                ncbi:commonName,
+                                                ncbi:taxId,
+                                                ncbi:genomicRanges,
+                                                ncbi:orientation,
+                                                ncbi:location,
+                                                ncbi:type,
+                                                ncbi:transcriptAccession,
+                                                ncbi:transcriptName,
+                                                ncbi:transcriptLength,
+                                                ncbi:cdsCoordinates,
+                                                ncbi:proteinAccession,
+                                                ncbi:isoformName,
+                                                ncbi:proteinLength,
+                                                ncbi:proteinName
+                                ] .
+
 
 ### NCBI ORGANIZATION
 
@@ -35,6 +72,20 @@ ncbi:GeneDescriptor     a                       skos:ConceptScheme, owl:Ontology
                         skos:notation           "CL_GENE";
                         skos:note               "This code list provides information about the gene."@en ;
                         rdfs:description        "This code list provides information about the gene."@en .
+
+ncbi:TranscriptDescriptor       a               skos:ConceptScheme, owl:Ontology ;
+                        skos:prefLabel          "Code list for NCBI (Gene - Transcript) - codelist scheme"@en ;
+                        rdfs:label              "Code list for NCBI (Gene - Transcript) - codelist scheme"@en ;
+                        skos:notation           "CL_TRANSCRIPT";
+                        skos:note               "This code list provides information about the transcript(s)."@en ;
+                        rdfs:description        "This code list provides information about the transcript(s)."@en .
+
+ncbi:ProteinDescriptor  a                       skos:ConceptScheme, owl:Ontology ;
+                        skos:prefLabel          "Code list for NCBI (Protein) - codelist scheme"@en ;
+                        skos:label              "Code list for NCBI (Protein) - codelist scheme"@en ;
+                        skos:notation           "CL_PROTEIN";
+                        skos:note               "This code list provides information about the protein(s)."@en ;
+                        rdfs:description        "This code list provides information about the protein(s)."@en .
 
 
 ### GENE DESCRIPTOR GENE TYPES
@@ -109,7 +160,7 @@ ncbi:gdt-BIOLOGICALREGION          a            skos:Concept, owl:Class ;
 ncbi:gdt-OTHER          a                       skos:Concept, owl:Class ;
                         rdfs:subClassOf         ncbi:GeneDescriptorType ;
                         skos:prefLabel          "OTHER" ;
-                        skos:notation           "255"^^xsd:integer .       
+                        skos:notation           "255"^^xsd:integer .    
 
 
 ### GENE ORIENTATION TYPES
@@ -152,8 +203,20 @@ ncbi:Organism           a                       skos:Concept, owl:Class ;
 ncbi:GeneTranscript     a                       skos:Concept, owl:Class ;
                         skos:prefLabel          "Transcript"@en ;
                         skos:altLabel           "transcript"@en ;
-                        skos:definition         "Concept of a gene transcript"@en ;
-                        skos:inScheme           ncbi:GeneDescriptor .
+                        skos:definition         "Concept of a transcript associated with a gene"@en ;
+                        skos:inScheme           ncbi:TranscriptDescriptor .
+
+ncbi:Protein            a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Protein"@en ;
+                        skos:altLabel           "protein"@en ;
+                        skos:definition         "Concept of a protein associated with a gene or transcript"@en ;
+                        skos:inScheme           ncbi:ProteinDescriptor .
+
+ncbi:Isoform            a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Isoform"@en ;
+                        skos:altLabel           "isoform"@en ;
+                        skos:definition         "Concept of an isoform(s) of the protein associated with a transcript(s)"@en ;
+                        skos:inScheme           ncbi:ProteinDescriptor .
 
 ncbi:GeneID             a                       skos:Concept, owl:Class ;
                         skos:prefLabel          "NCBI GeneID"@en ;
@@ -194,7 +257,7 @@ ncbi:TaxonomicID        a                       skos:Concept, owl:Class ;
                         skos:prefLabel          "Taxonomic ID"@en ;
                         skos:altLabel           "tax-id"@en ;
                         skos:definition         "NCBI Taxonomy ID for the organism"@en ;
-                        skos:example            "9606"@en ;
+                        skos:example            "9606" ;
                         skos:inScheme           ncbi:GeneDescriptor .
 
 ncbi:GenomicRange       a                       skos:Concept, owl:Class ;
@@ -217,44 +280,68 @@ ncbi:GeneType           a                       skos:Concept, owl:Class ;
                         skos:altLabel           "gene-type"@en ;
                         skos:inScheme           ncbi:GeneDescriptor .
 
-ncbi:Transcript         a                       skos:Concept, owl:Class ;
-                        skos:prefLabel          "Transcript"@en ;
+ncbi:TranscriptAccession         a              skos:Concept, owl:Class ;
+                        skos:prefLabel          "Transcript Accession"@en ;
                         skos:altLabel           "transcript-"@en ;
                         skos:definition         "RefSeq coding and non-coding transcript accessions"@en ;
                         skos:example            "NR_132319.2" ;
-                        skos:inScheme           ncbi:GeneDescriptor .
+                        skos:inScheme           ncbi:TranscriptDescriptor .
 
 ncbi:TranscriptName     a                       skos:Concept, owl:Class ;
                         skos:prefLabel          "Transcript Name"@en ;
-                        skos:altLabel           "name" ;
+                        skos:altLabel           "name"@en ;
                         skos:definition         "RefSeq transcript name"@en ;
                         skos:example            "transcript variant 12"@en ;
-                        skos:inScheme           ncbi:GeneDescriptor .
+                        skos:inScheme           ncbi:TranscriptDescriptor .
 
 ncbi:TranscriptLength   a                       skos:Concept, owl:Class ;
-                        skos:prefLabel          
+                        skos:prefLabel          "Transcript Length"@en ;
+                        skos:altLabel           "length"@en ;
+                        skos:definition         "RefSeq transcript length in nucleotides"@en ;
+                        skos:example            "3180" ;
+                        skos:inScheme           ncbi:TranscriptDescriptor .
 
+ncbi:CdsCoordinates     a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Coding Region (CDS) Coordinates"@en ;
+                        skos:altLabel           "cds coords"@en ;
+                        skos:definition         "Coordinates of the coding region (cds)"@en ;
+                        skos:example            "342-1730" ;
+                        skos:inScheme           ncbi:TranscriptDescriptor .
 
-### SHH DATASET
+ncbi:CDS                a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "CDS"@en ;
+                        skos:altLabel           "cds-"@en ;
+                        skos:definition         "Coordinates of the coding region (cds) add accession number of the transcript"@en ;
+                        skos:example            "NM_000193.4:342-1730" ;
+                        skos:inScheme           ncbi:TranscriptDescriptor .
 
-ncbi:dataset-shh        a                       qb:DataSet ;
-                        dct:title               "SHH sonic hedgehog signaling molecule [ Homo sapiens (human) ]"@en ;
-                        rdfs:label              "SHH sonic hedgehog signaling molecule [ Homo sapiens (human) ]"@en ;
-                        rdfs:comment            "Dataset about SHH sonic hedgehog signaling molecule (Homo Sapiens)"@en ;
-                        rdfs:description        "Dataset about SHH sonic hedgehog signaling molecule (Homo Sapiens)"@en ;
-                        dct:publisher           ncbi:ncbi ;
-                        dct:subject             dbpedia-owl:Gene, biotop:Gene, uniprot:Gene, biopaxa:Gene,
-                                                wd:Q7187, wd:Q14860072, wd:Q15978631 ;
-                        qb:structure            ncbi:dsd-dataset-shh .
+ncbi:ProteinAccession   a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Protein Accession"@en ;
+                        skos:altLabel           "protein accession"@en ;
+                        skos:definition         "RefSeq protein accession with version"@en ;
+                        skos:example            "NP_001296812.1" ;
+                        skos:inScheme           ncbi:ProteinDescriptor .
 
+ncbi:IsoformName        a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Isoform Name"@en ;
+                        skos:altLabel           "isoform name"@en ;
+                        skos:definition         "Protein isoform name"@en ;
+                        skos:example            "isoform Alex" ;
+                        skos:inScheme           ncbi:ProteinDescriptor .
 
-### SHH DATASET STRUCTURE
+ncbi:ProteinLength      a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Protein Length"@en ;
+                        skos:altLabel           "protein length"@en ;
+                        skos:definition         "Protein length in amino acids"@en ;
+                        skos:example            "626" ;
+                        skos:inScheme           ncbi:ProteinDescriptor .
 
-ncbi:dsd-dataset-shh    a                       qb:DataStructureDefinition ;
-                        qb:component
-                                [qb:dimension   ncbi:geneId,
-                                                ncbi:symbol,
-                                                ] .
+ncbi:ProteinName        a                       skos:Concept, owl:Class ;
+                        skos:prefLabel          "Protein Name"@en ;
+                        skos:altLabel           "protein name"@en ;
+                        skos:definition         "Protein name"@en ;
+                        skos:example            "protein Alex" ;
+                        skos:inScheme           ncbi:ProteinDescriptor .
 
 
 ### SHH DIMENSIONS
@@ -268,8 +355,17 @@ ncbi:hasOrganism        a                       rdf:Property, owl:ObjectProperty
                         qb:concept              ncbi:Organism .
 
 ncbi:hasTranscript      a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
-                        rdfs:label              "transcript(s) of the gene"@en ;
+                        rdfs:label              "transcript(s) associated with the gene"@en ;
                         qb:concept              ncbi:GeneTranscript .
+
+ncbi:hasProtein         a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "protein(s) associated with the transcript(s)"@en ;
+                        qb:concept              ncbi:Protein . 
+
+ncbi:hasIsoform         a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "isoform(s) of the protein associated with the transcript(s)"@en ;
+                        owl:propertyChainAxiom  (ncbi:hasTranscript ncbi:hasProtein) ;
+                        qb:concept              ncbi:Isoform . 
 
 ncbi:hasGeneType        a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
                         rdfs:label              "has gene type"@en ;
@@ -335,11 +431,11 @@ ncbi:type               a                       rdf:Property, owl:ObjectProperty
                         owl:propertyChainAxiom  (ncbi:isGene biol:hasGeneType) ;
                         qb:concept              ncbi:GeneType .
 
-ncbi:transcript         a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+ncbi:transcriptAccession         a              rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
                         rdfs:label              "transcript_accession"@en ;
                         rdfs:range              xsd:string ;
                         owl:propertyChainAxiom  (ncbi:hasTranscript dicom:AccessionNumber) ;
-                        qb:concept              ncbi:Transcript .
+                        qb:concept              ncbi:TranscriptAccession .
 
 ncbi:transcriptName     a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ; 
                         rdfs:label              "transcript_name"@en ;
@@ -353,3 +449,37 @@ ncbi:transcriptLength   a                       rdf:Property, owl:ObjectProperty
                         owl:propertyChainAxiom  (ncbi:hasTranscript uniprot:length) ;
                         qb:concept              ncbi:TranscriptLength .
 
+ncbi:cdsCoordinates     a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "Coding region (cds) coordinates"@en ;
+                        rdfs:range              xsd:string ;
+                        qb:concept              ncbi:CdsCoordinates .
+
+ncbi:cds                a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "transcript_cds_coords"@en ;
+                        rdfs:range              xsd:string ;
+                        owl:propertyChainAxiom  (ncbi:hasTranscript ncbi:cdsCoordinates) ;
+                        qb:concept              ncbi:CDS .
+
+ncbi:proteinAccession   a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "protein_accession"@en ;
+                        rdfs:range              xsd:string ;
+                        owl:propertyChainAxiom  (ncbi:hasProtein dicom:AccessionNumber) ;
+                        qb:concept              ncbi:ProteinAccession .
+
+ncbi:isoformName        a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "isoform_name"@en ;
+                        rdfs:range              xsd:string ;
+                        owl:propertyChainAxiom  (ncbi:hasIsoform dbpedia-owl:name) ;
+                        qb:concept              ncbi:IsoformName .
+
+ncbi:proteinLength      a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "protein_length"@en ;
+                        rdfs:range              xsd:integer ;
+                        owl:propertyChainAxiom  (ncbi:hasProtein uniprot:length) ;
+                        qb:concept              ncbi:ProteinLength .
+
+ncbi:proteinName        a                       rdf:Property, owl:ObjectProperty, qb:DimensionProperty ;
+                        rdfs:label              "protein_name"@en ;
+                        rdfs:range              xsd:string ;
+                        owl:propertyChainAxiom  (ncbi:hasProtein dbpedia-owl:name) ;
+                        qb:concept              ncbi:ProteinName .
