@@ -15,7 +15,7 @@
 @prefix dcterms:        <http://purl.org/dc/terms/> .
 @prefix dicom:          <http://purl.org/healthcarevocab/v1#> .
 
-@prefix rfm:            <http://restrictedFairMetadata#> .
+@prefix fm:             <http://fairMetadata#> .
 @prefix ncbi:           <http://example.org/ncbi#> .
 
 
