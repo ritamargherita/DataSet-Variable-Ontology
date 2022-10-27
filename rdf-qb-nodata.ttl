@@ -80,7 +80,6 @@ eg:refPeriod  a rdf:Property, qb:DimensionProperty;
     qb:concept sdmx-concept:refPeriod ;
     .
 
-
 eg:refArea  a rdf:Property, qb:DimensionProperty;
     rdfs:label "reference area"@en;
     rdfs:subPropertyOf sdmx-dimension:refArea;
