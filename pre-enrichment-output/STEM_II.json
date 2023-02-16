@@ -1,0 +1,3614 @@
+{
+    "n_rows": 321,
+    "n_columns": 52,
+    "provenance": {
+        "created by": {
+            "name": "MetaSynth",
+            "version": "0.2.2.dev4+g2c9370e",
+            "privacy": null
+        },
+        "creation time": "2023-02-15T16:13:01.650487"
+    },
+    "vars": [
+        {
+            "name": "Date declaration of state of emergency",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[0123]",
+                            1.0
+                        ],
+                        [
+                            "\\d{1,1}",
+                            1.0
+                        ],
+                        [
+                            "[/]",
+                            1.0
+                        ],
+                        [
+                            "[01]",
+                            1.0
+                        ],
+                        [
+                            "\\d{1,1}",
+                            1.0
+                        ],
+                        [
+                            "[/]",
+                            1.0
+                        ],
+                        [
+                            "[12]",
+                            1.0
+                        ],
+                        [
+                            "[09]",
+                            1.0
+                        ],
+                        [
+                            "[019]",
+                            1.0
+                        ],
+                        [
+                            "\\d{1,1}",
+                            1.0
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Extension",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NY]",
+                            1.0
+                        ],
+                        [
+                            "[eo]",
+                            1.0
+                        ],
+                        [
+                            "[s]",
+                            0.7071651090342679
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Date of Report on derogation of human rights to Human Rights Committee",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[0123]",
+                            1.0
+                        ],
+                        [
+                            "\\d{1,1}",
+                            1.0
+                        ],
+                        [
+                            "[/]",
+                            1.0
+                        ],
+                        [
+                            "[01]",
+                            1.0
+                        ],
+                        [
+                            "\\d{1,1}",
+                            1.0
+                        ],
+                        [
+                            "[/]",
+                            1.0
+                        ],
+                        [
+                            "[12]",
+                            1.0
+                        ],
+                        [
+                            "[09]",
+                            1.0
+                        ],
+                        [
+                            "[019]",
+                            1.0
+                        ],
+                        [
+                            "\\d{1,1}",
+                            1.0
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Date lifting state of emergency",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.012461059190031152,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[0123]",
+                            1.0
+                        ],
+                        [
+                            "\\d{1,1}",
+                            1.0
+                        ],
+                        [
+                            "[-/]",
+                            1.0
+                        ],
+                        [
+                            "[01]",
+                            1.0
+                        ],
+                        [
+                            "\\d{1,1}",
+                            1.0
+                        ],
+                        [
+                            "[-/]",
+                            1.0
+                        ],
+                        [
+                            "[129]",
+                            1.0
+                        ],
+                        [
+                            "[089]",
+                            1.0
+                        ],
+                        [
+                            "[019]",
+                            0.9968454258675079
+                        ],
+                        [
+                            "\\d{1,1}",
+                            0.9968454258675079
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Duration (days)",
+            "type": "discrete",
+            "dtype": "Int64",
+            "prop_missing": 0.012461059190031152,
+            "distribution": {
+                "name": "DiscreteUniformDistribution",
+                "parameters": {
+                    "low": 2,
+                    "high": 4081
+                }
+            }
+        },
+        {
+            "name": "Country",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            ".[]{4,32}",
+                            1.0
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Derogation ICCPR Article 8.3",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NU]",
+                            1.0
+                        ],
+                        [
+                            "[no]",
+                            1.0
+                        ],
+                        [
+                            "[k]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[o]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[w]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Derogation ICCPR Article 9.2",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NUY]",
+                            1.0
+                        ],
+                        [
+                            "[eno]",
+                            1.0
+                        ],
+                        [
+                            "[ks]",
+                            0.9003115264797508
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[o]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[w]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Derogation ICCPR Article 9.3",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NUY]",
+                            1.0
+                        ],
+                        [
+                            "[eno]",
+                            1.0
+                        ],
+                        [
+                            "[ks]",
+                            0.9034267912772586
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[o]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[w]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Derogation ICCPR Article 10",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NU]",
+                            1.0
+                        ],
+                        [
+                            "[no]",
+                            1.0
+                        ],
+                        [
+                            "[k]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[o]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[w]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Derogation ICCPR Article 12.1",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NUY]",
+                            1.0
+                        ],
+                        [
+                            "[eno]",
+                            1.0
+                        ],
+                        [
+                            "[ks]",
+                            0.9781931464174455
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[o]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[w]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Derogation ICCPR Article 12.2",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NUY]",
+                            1.0
+                        ],
+                        [
+                            "[eno]",
+                            1.0
+                        ],
+                        [
+                            "[ks]",
+                            0.9750778816199377
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[o]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[w]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Derogation ICCPR Article 13",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NUY]",
+                            1.0
+                        ],
+                        [
+                            "[eno]",
+                            1.0
+                        ],
+                        [
+                            "[ks]",
+                            0.19626168224299065
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[o]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[w]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Derogation ICCPR Article 14",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NUY]",
+                            1.0
+                        ],
+                        [
+                            "[eno]",
+                            1.0
+                        ],
+                        [
+                            "[ks]",
+                            0.2087227414330218
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[o]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[w]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Derogation ICCPR Article 17.1",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NUY]",
+                            1.0
+                        ],
+                        [
+                            "[eno]",
+                            1.0
+                        ],
+                        [
+                            "[ks]",
+                            0.8691588785046729
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[o]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[w]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Derogation ICCPR Article 17.2",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NUY]",
+                            1.0
+                        ],
+                        [
+                            "[eno]",
+                            1.0
+                        ],
+                        [
+                            "[ks]",
+                            0.8629283489096573
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[o]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[w]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Derogation ICCPR Article 19.1",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NUY]",
+                            1.0
+                        ],
+                        [
+                            "[eno]",
+                            1.0
+                        ],
+                        [
+                            "[ks]",
+                            0.2554517133956386
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[o]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[w]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Derogation ICCPR Article 19.2",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NUY]",
+                            1.0
+                        ],
+                        [
+                            "[eno]",
+                            1.0
+                        ],
+                        [
+                            "[ks]",
+                            0.27414330218068533
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[o]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[w]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Derogation ICCPR Article 20",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NU]",
+                            1.0
+                        ],
+                        [
+                            "[no]",
+                            1.0
+                        ],
+                        [
+                            "[k]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[o]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[w]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Derogation ICCPR Article 21",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NUY]",
+                            1.0
+                        ],
+                        [
+                            "[eno]",
+                            1.0
+                        ],
+                        [
+                            "[ks]",
+                            0.9532710280373832
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[o]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[w]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Derogation ICCPR Article 22.1",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NUY]",
+                            1.0
+                        ],
+                        [
+                            "[eno]",
+                            1.0
+                        ],
+                        [
+                            "[ks]",
+                            0.22429906542056074
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[o]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[w]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Derogation ICCPR Article 22.2",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NUY]",
+                            1.0
+                        ],
+                        [
+                            "[eno]",
+                            1.0
+                        ],
+                        [
+                            "[ks]",
+                            0.22741433021806853
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[o]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[w]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Derogation ICCPR Article 23",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NU]",
+                            1.0
+                        ],
+                        [
+                            "[no]",
+                            1.0
+                        ],
+                        [
+                            "[ k]",
+                            0.19626168224299065
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[o]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[w]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Derogation ICCPR Article 24",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NU]",
+                            1.0
+                        ],
+                        [
+                            "[no]",
+                            1.0
+                        ],
+                        [
+                            "[k]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[o]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[w]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Derogation ICCPR Article 25",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NU]",
+                            1.0
+                        ],
+                        [
+                            "[no]",
+                            1.0
+                        ],
+                        [
+                            "[k]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[o]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[w]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Derogation ICCPR Article 26",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NU]",
+                            1.0
+                        ],
+                        [
+                            "[no]",
+                            1.0
+                        ],
+                        [
+                            "[k]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[o]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[w]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Derogation ICCPR Article 27",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NU]",
+                            1.0
+                        ],
+                        [
+                            "[no]",
+                            1.0
+                        ],
+                        [
+                            "[k]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[o]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[w]",
+                            0.19314641744548286
+                        ],
+                        [
+                            "[n]",
+                            0.19314641744548286
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Source",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[DR]",
+                            1.0
+                        ],
+                        [
+                            "[e]",
+                            1.0
+                        ],
+                        [
+                            "[ps]",
+                            1.0
+                        ],
+                        [
+                            "[op]",
+                            1.0
+                        ],
+                        [
+                            "[ors]",
+                            1.0
+                        ],
+                        [
+                            "[ist]",
+                            1.0
+                        ],
+                        [
+                            "[ it]",
+                            1.0
+                        ],
+                        [
+                            "[aot]",
+                            1.0
+                        ],
+                        [
+                            "[afr]",
+                            1.0
+                        ],
+                        [
+                            "[ ry]",
+                            1.0
+                        ],
+                        [
+                            "[ Hy]",
+                            1.0
+                        ],
+                        [
+                            "[ Nu]",
+                            1.0
+                        ],
+                        [
+                            "[Nmo]",
+                            1.0
+                        ],
+                        [
+                            "[aot]",
+                            1.0
+                        ],
+                        [
+                            "[int]",
+                            1.0
+                        ],
+                        [
+                            "[ fi]",
+                            1.0
+                        ],
+                        [
+                            "[Rfi]",
+                            1.0
+                        ],
+                        [
+                            "[ci]",
+                            1.0
+                        ],
+                        [
+                            "[acgi]",
+                            1.0
+                        ],
+                        [
+                            "[aht]",
+                            1.0
+                        ],
+                        [
+                            "[iot]",
+                            1.0
+                        ],
+                        [
+                            "[ios]",
+                            1.0
+                        ],
+                        [
+                            "[ no]",
+                            1.0
+                        ],
+                        [
+                            "[ ,Cn]",
+                            1.0
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.006230529595015576
+                        ],
+                        [
+                            "[ .fos]",
+                            1.0
+                        ],
+                        [
+                            "[ .CNfmo]",
+                            1.0
+                        ],
+                        [
+                            "[ .Cfmor]",
+                            1.0
+                        ],
+                        [
+                            "\\d{3,4}",
+                            0.006230529595015576
+                        ],
+                        [
+                            ".[]{24,219}",
+                            1.0
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Declaratory organ",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.009345794392523364,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[FGKPV]",
+                            1.0
+                        ],
+                        [
+                            "[ior]",
+                            1.0
+                        ],
+                        [
+                            "[ceinrv]",
+                            1.0
+                        ],
+                        [
+                            "[egms]",
+                            1.0
+                        ],
+                        [
+                            "[-eirt]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[ Pdn]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.012578616352201259
+                        ],
+                        [
+                            "[eior]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[cenr]",
+                            0.9905660377358491
+                        ],
+                        [
+                            ".[]{1,27}",
+                            0.9905660377358491
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Declaratory person",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.009345794392523364,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[AEFGHJKMNOPRSY\u00c1]",
+                            1.0
+                        ],
+                        [
+                            "[abeilmorstuvy]",
+                            1.0
+                        ],
+                        [
+                            "[abcefhklmnorstvwy]",
+                            1.0
+                        ],
+                        [
+                            "[ adeghijnoqrtz]",
+                            1.0
+                        ],
+                        [
+                            "[ MNacdegilmnorsu]",
+                            1.0
+                        ],
+                        [
+                            "[ FGMacdeilnorstuvz]",
+                            1.0
+                        ],
+                        [
+                            "[ BJacdehijklorstv]",
+                            1.0
+                        ],
+                        [
+                            "[ -ACEFKMUaehikors]",
+                            1.0
+                        ],
+                        [
+                            "[ ABCEFHNOPRSVacelmnors]",
+                            1.0
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.0220125786163522
+                        ],
+                        [
+                            "[ acdeghilmopsux\u00e1\u00ed]",
+                            1.0
+                        ],
+                        [
+                            "[BITabdeghijlmnoprstw]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[ acdehijklmnoprstvwx]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[ AMPacehilmnoprsv]",
+                            0.9748427672955975
+                        ],
+                        [
+                            ".[]{1,21}",
+                            0.9622641509433962
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Region",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            ".[]{7,528}",
+                            1.0
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Trigger",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[MN]",
+                            1.0
+                        ],
+                        [
+                            "[a]",
+                            1.0
+                        ],
+                        [
+                            "[nt]",
+                            1.0
+                        ],
+                        [
+                            "[-u]",
+                            1.0
+                        ],
+                        [
+                            "[mr]",
+                            1.0
+                        ],
+                        [
+                            "[a]",
+                            1.0
+                        ],
+                        [
+                            "[dl]",
+                            1.0
+                        ],
+                        [
+                            "[ e]",
+                            1.0
+                        ],
+                        [
+                            "[ d]",
+                            1.0
+                        ],
+                        [
+                            "[di]",
+                            1.0
+                        ],
+                        [
+                            "[is]",
+                            1.0
+                        ],
+                        [
+                            "[as]",
+                            1.0
+                        ],
+                        [
+                            "[as]",
+                            1.0
+                        ],
+                        [
+                            "[st]",
+                            1.0
+                        ],
+                        [
+                            "[et]",
+                            1.0
+                        ],
+                        [
+                            "[er]",
+                            1.0
+                        ],
+                        [
+                            "[r]",
+                            0.940809968847352
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Legal background",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[CU]",
+                            1.0
+                        ],
+                        [
+                            "[no]",
+                            1.0
+                        ],
+                        [
+                            "[kn]",
+                            1.0
+                        ],
+                        [
+                            "[ns]",
+                            1.0
+                        ],
+                        [
+                            "[iot]",
+                            1.0
+                        ],
+                        [
+                            "[itw]",
+                            1.0
+                        ],
+                        [
+                            "[intu]",
+                            1.0
+                        ],
+                        [
+                            "[tu]",
+                            0.9968847352024922
+                        ],
+                        [
+                            "[itu]",
+                            0.9968847352024922
+                        ],
+                        [
+                            "[iot]",
+                            0.9968847352024922
+                        ],
+                        [
+                            "[ino]",
+                            0.9968847352024922
+                        ],
+                        [
+                            "[no]",
+                            0.9875389408099688
+                        ],
+                        [
+                            "[ n]",
+                            0.006230529595015576
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "News sources",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            ".[]{3,284}",
+                            1.0
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "National/subnational",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[NSns]",
+                            1.0
+                        ],
+                        [
+                            "[au]",
+                            1.0
+                        ],
+                        [
+                            "[bt]",
+                            1.0
+                        ],
+                        [
+                            "[-i]",
+                            1.0
+                        ],
+                        [
+                            "[no]",
+                            1.0
+                        ],
+                        [
+                            "[an]",
+                            1.0
+                        ],
+                        [
+                            "[at]",
+                            1.0
+                        ],
+                        [
+                            "[il]",
+                            1.0
+                        ],
+                        [
+                            "[o]",
+                            0.8878504672897196
+                        ],
+                        [
+                            "[n]",
+                            0.8878504672897196
+                        ],
+                        [
+                            "[a]",
+                            0.8878504672897196
+                        ],
+                        [
+                            "[l]",
+                            0.8878504672897196
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Details",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            ".[]{3,926}",
+                            1.0
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Duration and other limitations of SoE according to consitution or other law",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.009345794392523364,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[AST]",
+                            1.0
+                        ],
+                        [
+                            "[chp]",
+                            1.0
+                        ],
+                        [
+                            "[acet]",
+                            1.0
+                        ],
+                        [
+                            "[ no]",
+                            1.0
+                        ],
+                        [
+                            "[ACNPcir]",
+                            1.0
+                        ],
+                        [
+                            "[dors]",
+                            1.0
+                        ],
+                        [
+                            "[.ghiln]",
+                            1.0
+                        ],
+                        [
+                            "[ eins]",
+                            1.0
+                        ],
+                        [
+                            "[5gintv]",
+                            1.0
+                        ],
+                        [
+                            "[ 5eit]",
+                            1.0
+                        ],
+                        [
+                            "[-cirtu]",
+                            1.0
+                        ],
+                        [
+                            "[3anostu]",
+                            1.0
+                        ],
+                        [
+                            "[ 8ilt]",
+                            1.0
+                        ],
+                        [
+                            "[ 5aio]",
+                            1.0
+                        ],
+                        [
+                            "[ Cnor]",
+                            1.0
+                        ],
+                        [
+                            "[ not]",
+                            1.0
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.006289308176100629
+                        ],
+                        [
+                            "[ fino]",
+                            1.0
+                        ],
+                        [
+                            "[ cfnos]",
+                            1.0
+                        ],
+                        [
+                            "[ 3flst]",
+                            1.0
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.009433962264150943
+                        ],
+                        [
+                            "[ ehit]",
+                            1.0
+                        ],
+                        [
+                            "[a-z]{2,7}",
+                            0.16981132075471697
+                        ],
+                        [
+                            "[ 12ACNPSTV]",
+                            1.0
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.009433962264150943
+                        ],
+                        [
+                            "[019eopr]",
+                            1.0
+                        ],
+                        [
+                            "[01569filnpr]",
+                            1.0
+                        ],
+                        [
+                            "[ 2578aeinosu]",
+                            1.0
+                        ],
+                        [
+                            "\\d{4,4}",
+                            0.015723270440251572
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.006289308176100629
+                        ],
+                        [
+                            "[ abilmtz]",
+                            1.0
+                        ],
+                        [
+                            "[ bdghilnosu]",
+                            1.0
+                        ],
+                        [
+                            "[1aefikopt]",
+                            1.0
+                        ],
+                        [
+                            "[a-z]{1,7}",
+                            0.11006289308176101
+                        ],
+                        [
+                            "[ 9]",
+                            1.0
+                        ],
+                        [
+                            "[a-z]{2,4}",
+                            0.11635220125786164
+                        ],
+                        [
+                            "[ 15R]",
+                            1.0
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.05345911949685535
+                        ],
+                        [
+                            "[159aeiorstu]",
+                            1.0
+                        ],
+                        [
+                            "[ 9bdhmnprt]",
+                            1.0
+                        ],
+                        [
+                            "[.03679acegistu]",
+                            1.0
+                        ],
+                        [
+                            "\\d{1,1}",
+                            0.031446540880503145
+                        ],
+                        [
+                            "[ .bcdginot]",
+                            1.0
+                        ],
+                        [
+                            "\\d{2,3}",
+                            0.02830188679245283
+                        ],
+                        [
+                            "[ .Racilnos]",
+                            1.0
+                        ],
+                        [
+                            "[ 26acefilmot]",
+                            1.0
+                        ],
+                        [
+                            "[ 6acefhiopu]",
+                            1.0
+                        ],
+                        [
+                            "[ .acfortu]",
+                            1.0
+                        ],
+                        [
+                            "[ 16abefhinot]",
+                            1.0
+                        ],
+                        [
+                            "[ 19afilost]",
+                            1.0
+                        ],
+                        [
+                            "[a-z]{1,4}",
+                            0.06289308176100629
+                        ],
+                        [
+                            "\\d{1,4}",
+                            0.0220125786163522
+                        ],
+                        [
+                            "[ B]",
+                            1.0
+                        ],
+                        [
+                            "[EGKSaeiopst]",
+                            1.0
+                        ],
+                        [
+                            "[ cfhimnrtu]",
+                            1.0
+                        ],
+                        [
+                            "[ Paenpru]",
+                            1.0
+                        ],
+                        [
+                            "[ APagrst]",
+                            1.0
+                        ],
+                        [
+                            "[ adeghiors]",
+                            1.0
+                        ],
+                        [
+                            "[ cdemnorst]",
+                            1.0
+                        ],
+                        [
+                            "[ .aehlnor]",
+                            1.0
+                        ],
+                        [
+                            "[ Racdefgilnsty]",
+                            1.0
+                        ],
+                        [
+                            "[ 12aemnotuy]",
+                            1.0
+                        ],
+                        [
+                            "[a-z]{1,8}",
+                            0.059748427672955975
+                        ],
+                        [
+                            "[a-zA-Z]{5,9}",
+                            0.018867924528301886
+                        ],
+                        [
+                            "[ 135]",
+                            1.0
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.006289308176100629
+                        ],
+                        [
+                            "[1357acimors]",
+                            1.0
+                        ],
+                        [
+                            "\\d{3,3}",
+                            0.012578616352201259
+                        ],
+                        [
+                            "[ afhnrt]",
+                            1.0
+                        ],
+                        [
+                            "[ .ansty]",
+                            1.0
+                        ],
+                        [
+                            "[ .1AEaehlnt]",
+                            1.0
+                        ],
+                        [
+                            "[A-Z]{4,4}",
+                            0.0031446540880503146
+                        ],
+                        [
+                            "[ 29abhlmnrz]",
+                            1.0
+                        ],
+                        [
+                            "[ 69CSdeost]",
+                            1.0
+                        ],
+                        [
+                            "[ .23ehnrt]",
+                            1.0
+                        ],
+                        [
+                            "[ (abcdegorst]",
+                            1.0
+                        ],
+                        [
+                            "[a-z]{1,8}",
+                            0.22955974842767296
+                        ],
+                        [
+                            "[ 23]",
+                            1.0
+                        ],
+                        [
+                            "[()16Kadehilmorst]",
+                            1.0
+                        ],
+                        [
+                            "[ aefhimnot]",
+                            1.0
+                        ],
+                        [
+                            "[ (acegnsty]",
+                            1.0
+                        ],
+                        [
+                            "[ CEabeghlrtu]",
+                            1.0
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.0031446540880503146
+                        ],
+                        [
+                            "[ )abdeghlmrt]",
+                            1.0
+                        ],
+                        [
+                            "[ aeimrt]",
+                            1.0
+                        ],
+                        [
+                            "[ aceinoprst]",
+                            1.0
+                        ],
+                        [
+                            "[ acefghilnsty]",
+                            1.0
+                        ],
+                        [
+                            "[a-z]{1,4}",
+                            0.21069182389937108
+                        ],
+                        [
+                            "[ ,]",
+                            1.0
+                        ],
+                        [
+                            "\\d{2,3}",
+                            0.009433962264150943
+                        ],
+                        [
+                            "[ (ISacefiopt]",
+                            1.0
+                        ],
+                        [
+                            "[ (Vadfhmnort]",
+                            1.0
+                        ],
+                        [
+                            "[ ,1abehnorst]",
+                            1.0
+                        ],
+                        [
+                            "[ )aceinrtuy]",
+                            1.0
+                        ],
+                        [
+                            "[ Aabdeghklmnoprst]",
+                            1.0
+                        ],
+                        [
+                            "[ :aeinrt]",
+                            1.0
+                        ],
+                        [
+                            "[ ./dehimnortu]",
+                            1.0
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.0031446540880503146
+                        ],
+                        [
+                            "[ ./acdefghmnr]",
+                            1.0
+                        ],
+                        [
+                            "[ 4abdemnoptwy]",
+                            1.0
+                        ],
+                        [
+                            "[a-z]{1,6}",
+                            0.09433962264150944
+                        ],
+                        [
+                            "[ .16S]",
+                            1.0
+                        ],
+                        [
+                            "[ 3APSadeimoptuw]",
+                            1.0
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.0031446540880503146
+                        ],
+                        [
+                            "[a-z]{1,11}",
+                            0.8647798742138365
+                        ],
+                        [
+                            "[ .8]",
+                            1.0
+                        ],
+                        [
+                            "[a-z]{1,12}",
+                            0.8490566037735849
+                        ],
+                        [
+                            "[ ,./2N]",
+                            1.0
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.012578616352201259
+                        ],
+                        [
+                            "[ 14abdeimostuw]",
+                            1.0
+                        ],
+                        [
+                            "[ ,.78befhistux]",
+                            1.0
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.0031446540880503146
+                        ],
+                        [
+                            "[ 23acehlprst]",
+                            1.0
+                        ],
+                        [
+                            "[ (2aegilmopt]",
+                            1.0
+                        ],
+                        [
+                            "[ (0acehilortx]",
+                            1.0
+                        ],
+                        [
+                            "[a-z]{1,8}",
+                            0.9433962264150944
+                        ],
+                        [
+                            "[ ),/012]",
+                            1.0
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.006289308176100629
+                        ],
+                        [
+                            "[a-z]{1,7}",
+                            0.24213836477987422
+                        ],
+                        [
+                            "[ )./256]",
+                            1.0
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.012578616352201259
+                        ],
+                        [
+                            "[a-z]{2,9}",
+                            0.22012578616352202
+                        ],
+                        [
+                            "[ (),-.069]",
+                            1.0
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.006289308176100629
+                        ],
+                        [
+                            "[a-z]{2,14}",
+                            0.22955974842767296
+                        ],
+                        [
+                            "[ 01:?]",
+                            1.0
+                        ],
+                        [
+                            "\\d{3,4}",
+                            0.012578616352201259
+                        ],
+                        [
+                            "[ ,/ETbcdefgmostuw]",
+                            1.0
+                        ],
+                        [
+                            "[ /adefhimopuy]",
+                            1.0
+                        ],
+                        [
+                            "[ abefilnvwy]",
+                            1.0
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.006289308176100629
+                        ],
+                        [
+                            "[ acenrstuwy]",
+                            1.0
+                        ],
+                        [
+                            "[ ,2P_acghinorstw]",
+                            1.0
+                        ],
+                        [
+                            "[a-z]{1,9}",
+                            0.2169811320754717
+                        ],
+                        [
+                            "[ ,.0=]",
+                            1.0
+                        ],
+                        [
+                            "[ 1Pabcdimnpstw]",
+                            1.0
+                        ],
+                        [
+                            "[ 7ANaehinorst]",
+                            1.0
+                        ],
+                        [
+                            "[ 8aceinoprtuy]",
+                            1.0
+                        ],
+                        [
+                            "[ 7Acdeflnostuv]",
+                            1.0
+                        ],
+                        [
+                            "[ .6acdeilnorst]",
+                            1.0
+                        ],
+                        [
+                            "[ 3adeimnort]",
+                            1.0
+                        ],
+                        [
+                            "[).abcdeglnot]",
+                            1.0
+                        ],
+                        [
+                            "[ .efilnortx]",
+                            1.0
+                        ],
+                        [
+                            "\\d{3,3}",
+                            0.012578616352201259
+                        ],
+                        [
+                            "[ /abinortu]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[ (,bdefglmnrsw]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[ 2cegimnot]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[a-z]{1,9}",
+                            0.949685534591195
+                        ],
+                        [
+                            "[ ),/01]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[a-z]{1,8}",
+                            0.8207547169811321
+                        ],
+                        [
+                            "[ ./1236]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[ 0135Sbdeilnpstw]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[ 03Tehimotx]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[ 4acdefhimost]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[ acdehinost]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[ adehinty]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[ .abcdehilnostxy]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[ ,acdfhlostx]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.009433962264150943
+                        ],
+                        [
+                            "[a-z]{1,6}",
+                            0.8270440251572327
+                        ],
+                        [
+                            "[ ,.14]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[a-z]{2,11}",
+                            0.2169811320754717
+                        ],
+                        [
+                            "[ (,568?S]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[a-z]{2,11}",
+                            0.2358490566037736
+                        ],
+                        [
+                            "[ (02:=AT]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[a-z]{2,9}",
+                            0.22641509433962265
+                        ],
+                        [
+                            "[ ./79:]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[ /0235adioprstw]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[ /24Taefhnorstw]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[ 3adefghoprstwy]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.009433962264150943
+                        ],
+                        [
+                            "[ )adefhioprstuw]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "[a-z]{1,14}",
+                            0.9654088050314465
+                        ],
+                        [
+                            "[ ,.]",
+                            0.9968553459119497
+                        ],
+                        [
+                            "\\d{2,3}",
+                            0.012578616352201259
+                        ],
+                        [
+                            "[ Sagimopstwy]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.006289308176100629
+                        ],
+                        [
+                            "[(adefhinoru]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[ Eabdehnopty]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[ .cdehmorstwy]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[ ,.Pghilmoprstuw]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "\\d{3,3}",
+                            0.009433962264150943
+                        ],
+                        [
+                            "[ .Eaehimnprt]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[ :acgilmnorstuwx]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.009433962264150943
+                        ],
+                        [
+                            "\\d{2,2}",
+                            0.012578616352201259
+                        ],
+                        [
+                            "[ /aceghilnopstuy]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[a-z]{1,11}",
+                            0.1069182389937107
+                        ],
+                        [
+                            "[ (,./]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.006289308176100629
+                        ],
+                        [
+                            "[ abdefhmnotuw]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.0220125786163522
+                        ],
+                        [
+                            "[acdefghiptuw]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[ ceinoprstuwy]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[a-z]{1,9}",
+                            0.1069182389937107
+                        ],
+                        [
+                            "[ ,./:]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[ /CNOabefinopstw]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[/aefhinoprtu]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[ /abcdnprtwx]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[a-z]{1,10}",
+                            0.25471698113207547
+                        ],
+                        [
+                            "[ ./]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[a-z]{2,14}",
+                            0.9748427672955975
+                        ],
+                        [
+                            "[ ./?AJP]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[Cabceilmoprstw]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[defhimnosuxy]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[ =abcdeinpst]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[ /8CMPgilmorst]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.0031446540880503146
+                        ],
+                        [
+                            "[a-z]{2,9}",
+                            0.9842767295597484
+                        ],
+                        [
+                            "[ ./8]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[ 5ACMadeijot]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[5ITaefhnoprsu]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[ )/acdhjmnpst]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[a-z]{1,8}",
+                            0.9559748427672956
+                        ],
+                        [
+                            "[ .6]",
+                            0.9905660377358491
+                        ],
+                        [
+                            "[a-z]{2,14}",
+                            0.22955974842767296
+                        ],
+                        [
+                            "[ ,24?S]",
+                            0.9842767295597484
+                        ],
+                        [
+                            "[a-z]{2,13}",
+                            0.22955974842767296
+                        ],
+                        [
+                            "[a-zA-Z]{9,9}",
+                            0.015723270440251572
+                        ],
+                        [
+                            "[ ,.45:=]",
+                            0.9842767295597484
+                        ],
+                        [
+                            "\\d{1,4}",
+                            0.14465408805031446
+                        ],
+                        [
+                            "[a-z]{2,8}",
+                            0.04716981132075472
+                        ],
+                        [
+                            "[ )AC]",
+                            0.9842767295597484
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.02830188679245283
+                        ],
+                        [
+                            "[ (.bdefhimostuwz]",
+                            0.9842767295597484
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.009433962264150943
+                        ],
+                        [
+                            "[aehilmoptx]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[a-z]{1,10}",
+                            0.8333333333333334
+                        ],
+                        [
+                            "[ ,.:]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[a-z]{2,10}",
+                            0.07547169811320754
+                        ],
+                        [
+                            "\\d{2,2}",
+                            0.006289308176100629
+                        ],
+                        [
+                            "[ ./R]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.02830188679245283
+                        ],
+                        [
+                            "[ /3abdeoprtuw]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.0031446540880503146
+                        ],
+                        [
+                            "[ ahinoprtwxy]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[ .egimostuwy]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[ abehorstw]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "\\d{3,3}",
+                            0.0220125786163522
+                        ],
+                        [
+                            "[a-z]{1,7}",
+                            0.07547169811320754
+                        ],
+                        [
+                            "[ ,.N]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[ abcdeinostw]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.006289308176100629
+                        ],
+                        [
+                            "[ (aefhiortuy]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[ acdehinprstxy]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[ acehilmost]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[ .acehilmnst]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[ acefgilnoprst]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[ .:abehlmnor]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[ /Pbegilrst]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[ (/Aaehlnoy]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "\\d{3,3}",
+                            0.0031446540880503146
+                        ],
+                        [
+                            "[a-z]{1,10}",
+                            0.11006289308176101
+                        ],
+                        [
+                            "[ ./:]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[a-z]{2,11}",
+                            0.10062893081761007
+                        ],
+                        [
+                            "[ (./C]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "\\d{1,1}",
+                            0.0031446540880503146
+                        ],
+                        [
+                            "[ ()/Dabdimot]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[ defhinorw]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[ cegmnorstw]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[ /aeiprstw]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[a-z]{1,9}",
+                            0.8364779874213837
+                        ],
+                        [
+                            "[ ,./:]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[ /1Tacefijoptw]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[A-Z]{1,2}",
+                            0.006289308176100629
+                        ],
+                        [
+                            "[%/0fhinoprs]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[ /2adenprw]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[ (0?ceiorstw]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[ .1Ceghioptw]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[).Odehirtvx]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[ .=Nacehnrtw]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[ .6RSaehilnt]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[a-zA-Z]{1,9}",
+                            0.07232704402515723
+                        ],
+                        [
+                            "[ %(,./7?]",
+                            0.8459119496855346
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.009433962264150943
+                        ],
+                        [
+                            "[ 12abcefhimostw]",
+                            0.839622641509434
+                        ],
+                        [
+                            "[ 06acfhinot]",
+                            0.839622641509434
+                        ],
+                        [
+                            "[a-z]{1,8}",
+                            0.8238993710691824
+                        ],
+                        [
+                            "[ ./:O_]",
+                            0.8301886792452831
+                        ],
+                        [
+                            "[/Fdefiosw]",
+                            0.8301886792452831
+                        ],
+                        [
+                            "[%/defhimnox]",
+                            0.8301886792452831
+                        ],
+                        [
+                            "[ /2=ceiprtuwx]",
+                            0.8301886792452831
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.009433962264150943
+                        ],
+                        [
+                            "[ /02cdeloruw]",
+                            0.8301886792452831
+                        ],
+                        [
+                            "[2Tabceghlmntwx]",
+                            0.8301886792452831
+                        ],
+                        [
+                            "[ .2Hceghlorst]",
+                            0.8301886792452831
+                        ],
+                        [
+                            "[6Eaeinrtwx]",
+                            0.8301886792452831
+                        ],
+                        [
+                            "[ %/5cghiopst]",
+                            0.8301886792452831
+                        ],
+                        [
+                            "[ 27ehlnpstvy]",
+                            0.8301886792452831
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.009433962264150943
+                        ],
+                        [
+                            "[a-z]{1,13}",
+                            0.07232704402515723
+                        ],
+                        [
+                            "[ &./0]",
+                            0.8301886792452831
+                        ],
+                        [
+                            "[CRacdeijmopt]",
+                            0.8301886792452831
+                        ],
+                        [
+                            "[Eaefgnos]",
+                            0.8301886792452831
+                        ],
+                        [
+                            "[ Pbcinptwy]",
+                            0.8301886792452831
+                        ],
+                        [
+                            "[A-Z]{1,5}",
+                            0.012578616352201259
+                        ],
+                        [
+                            "[ %/=?abeghms]",
+                            0.8301886792452831
+                        ],
+                        [
+                            "[ 2abeimrtw]",
+                            0.8301886792452831
+                        ],
+                        [
+                            "[ )0deilrst]",
+                            0.8301886792452831
+                        ],
+                        [
+                            "[ =Ogiprstu]",
+                            0.8207547169811321
+                        ],
+                        [
+                            "\\d{4,4}",
+                            0.006289308176100629
+                        ],
+                        [
+                            "[,.Fdegimnosu]",
+                            0.8207547169811321
+                        ],
+                        [
+                            "[ %cefjlnx]",
+                            0.8207547169811321
+                        ],
+                        [
+                            "[ 2acehlnstu]",
+                            0.8207547169811321
+                        ],
+                        [
+                            "[0acehlpstxy]",
+                            0.8207547169811321
+                        ],
+                        [
+                            "[ /=?Taehnty]",
+                            0.8207547169811321
+                        ],
+                        [
+                            "[A-Z]{1,2}",
+                            0.012578616352201259
+                        ],
+                        [
+                            "[a-z]{1,8}",
+                            0.8050314465408805
+                        ],
+                        [
+                            "[ %,./1:=]",
+                            0.8207547169811321
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.006289308176100629
+                        ],
+                        [
+                            "[ /257bdimors]",
+                            0.8207547169811321
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.009433962264150943
+                        ],
+                        [
+                            "[(./0257entu]",
+                            0.8207547169811321
+                        ],
+                        [
+                            "[a-z]{2,6}",
+                            0.03459119496855346
+                        ],
+                        [
+                            "[A-Z]{1,5}",
+                            0.03459119496855346
+                        ],
+                        [
+                            "[ %,.026o]",
+                            0.8207547169811321
+                        ],
+                        [
+                            "[ &247abfjns]",
+                            0.8207547169811321
+                        ],
+                        [
+                            "\\d{4,5}",
+                            0.012578616352201259
+                        ],
+                        [
+                            "[ ).abcehoprs]",
+                            0.8176100628930818
+                        ],
+                        [
+                            "[ (aoprtu]",
+                            0.8144654088050315
+                        ],
+                        [
+                            "\\d{4,4}",
+                            0.009433962264150943
+                        ],
+                        [
+                            "[a-z]{1,8}",
+                            0.06918238993710692
+                        ],
+                        [
+                            "[ ).=?]",
+                            0.8144654088050315
+                        ],
+                        [
+                            "[a-z]{2,9}",
+                            0.059748427672955975
+                        ],
+                        [
+                            "\\d{2,2}",
+                            0.0031446540880503146
+                        ],
+                        [
+                            "[ ),/=]",
+                            0.8113207547169812
+                        ],
+                        [
+                            "[a-z]{2,11}",
+                            0.02830188679245283
+                        ],
+                        [
+                            "[ (-/16;S]",
+                            0.8050314465408805
+                        ],
+                        [
+                            "[a-z]{3,9}",
+                            0.06918238993710692
+                        ],
+                        [
+                            "[ /39:]",
+                            0.8050314465408805
+                        ],
+                        [
+                            "[a-z]{2,9}",
+                            0.02830188679245283
+                        ],
+                        [
+                            "[ /057]",
+                            0.8050314465408805
+                        ],
+                        [
+                            "[ /0bdhist]",
+                            0.8050314465408805
+                        ],
+                        [
+                            "[)cefhotw]",
+                            0.8050314465408805
+                        ],
+                        [
+                            "[a-z]{1,6}",
+                            0.789308176100629
+                        ],
+                        [
+                            "[ ./:]",
+                            0.7955974842767296
+                        ],
+                        [
+                            "[a-z]{3,16}",
+                            0.040880503144654086
+                        ],
+                        [
+                            "[ ./CN]",
+                            0.7955974842767296
+                        ],
+                        [
+                            "[(/abhiopt]",
+                            0.7955974842767296
+                        ],
+                        [
+                            "[ehnotuw]",
+                            0.7955974842767296
+                        ],
+                        [
+                            "[ abistuw]",
+                            0.7955974842767296
+                        ],
+                        [
+                            "[/lmostw]",
+                            0.7955974842767296
+                        ],
+                        [
+                            "[ .aeinpw]",
+                            0.7955974842767296
+                        ],
+                        [
+                            "[:acistw]",
+                            0.7955974842767296
+                        ],
+                        [
+                            "[ /_ilnpu]",
+                            0.7955974842767296
+                        ],
+                        [
+                            "[ /adopst]",
+                            0.7955974842767296
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.0031446540880503146
+                        ],
+                        [
+                            "[aeilopsw]",
+                            0.7955974842767296
+                        ],
+                        [
+                            "[a-z]{2,9}",
+                            0.7735849056603774
+                        ],
+                        [
+                            "[ ./_]",
+                            0.7955974842767296
+                        ],
+                        [
+                            "[a-z]{2,9}",
+                            0.06918238993710692
+                        ],
+                        [
+                            "[ ./]",
+                            0.7955974842767296
+                        ],
+                        [
+                            "[a-z]{2,7}",
+                            0.06918238993710692
+                        ],
+                        [
+                            "[ ()./]",
+                            0.7955974842767296
+                        ],
+                        [
+                            "[ aehjw]",
+                            0.789308176100629
+                        ],
+                        [
+                            "[ hinstx]",
+                            0.789308176100629
+                        ],
+                        [
+                            "[/clpt]",
+                            0.789308176100629
+                        ],
+                        [
+                            "[?deiopt]",
+                            0.789308176100629
+                        ],
+                        [
+                            "[a-z]{1,6}",
+                            0.06289308176100629
+                        ],
+                        [
+                            "[ ./:=]",
+                            0.789308176100629
+                        ],
+                        [
+                            "\\d{1,4}",
+                            0.0220125786163522
+                        ],
+                        [
+                            "[a-z]{2,3}",
+                            0.03773584905660377
+                        ],
+                        [
+                            "[ )/?]",
+                            0.789308176100629
+                        ],
+                        [
+                            "[a-z]{2,7}",
+                            0.04716981132075472
+                        ],
+                        [
+                            "[ ,./=]",
+                            0.7767295597484277
+                        ],
+                        [
+                            "[ 5jmw]",
+                            0.7767295597484277
+                        ],
+                        [
+                            "[4aosw]",
+                            0.7767295597484277
+                        ],
+                        [
+                            "[3nprw]",
+                            0.7767295597484277
+                        ],
+                        [
+                            "[a-z]{1,1}",
+                            0.012578616352201259
+                        ],
+                        [
+                            "[ .1?]",
+                            0.7767295597484277
+                        ],
+                        [
+                            "[)fgitw]",
+                            0.7767295597484277
+                        ],
+                        [
+                            "[dhiot]",
+                            0.7547169811320755
+                        ],
+                        [
+                            "[=alpsv]",
+                            0.7547169811320755
+                        ],
+                        [
+                            "[ .7eno]",
+                            0.7547169811320755
+                        ],
+                        [
+                            "[a-z]{2,9}",
+                            0.012578616352201259
+                        ],
+                        [
+                            "[ ./0_]",
+                            0.7547169811320755
+                        ],
+                        [
+                            "[7dinu]",
+                            0.7547169811320755
+                        ],
+                        [
+                            "[0dinop]",
+                            0.7547169811320755
+                        ],
+                        [
+                            "[)=cnot]",
+                            0.7547169811320755
+                        ],
+                        [
+                            "[a-z]{1,6}",
+                            0.015723270440251572
+                        ],
+                        [
+                            "[ /1]",
+                            0.7484276729559748
+                        ],
+                        [
+                            "\\d{5,5}",
+                            0.009433962264150943
+                        ],
+                        [
+                            "[)/adw]",
+                            0.7484276729559748
+                        ],
+                        [
+                            "\\d{5,5}",
+                            0.0031446540880503146
+                        ],
+                        [
+                            "[/aip]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[A-Z]{1,1}",
+                            0.0031446540880503146
+                        ],
+                        [
+                            "[apy]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[mors]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[.ilo]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[ bev]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[ aix]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "\\w{1,14}",
+                            0.012578616352201259
+                        ],
+                        [
+                            "[ (./]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[aeop]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[dfnr]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[a-z]{1,1}",
+                            0.006289308176100629
+                        ],
+                        [
+                            "[ ./]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[ adt]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "\\d{3,7}",
+                            0.006289308176100629
+                        ],
+                        [
+                            "[-eh]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "\\d{3,3}",
+                            0.006289308176100629
+                        ],
+                        [
+                            "[,aet]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[ -a]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "\\d{1,1}",
+                            0.0031446540880503146
+                        ],
+                        [
+                            "[cfhi]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "\\d{2,2}",
+                            0.0031446540880503146
+                        ],
+                        [
+                            "[-lot]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "\\d{1,1}",
+                            0.0031446540880503146
+                        ],
+                        [
+                            "[astu]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[a-z]{1,4}",
+                            0.012578616352201259
+                        ],
+                        [
+                            "\\w{2,2}",
+                            0.0031446540880503146
+                        ],
+                        [
+                            "[ -.:]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[/ajo]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[/7fs]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[ fp]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[a-z]{1,9}",
+                            0.015723270440251572
+                        ],
+                        [
+                            "[ .1?]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[0gim]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[ade]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[a-z]{1,8}",
+                            0.012578616352201259
+                        ],
+                        [
+                            "[ .9=]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[a-z]{3,3}",
+                            0.012578616352201259
+                        ],
+                        [
+                            "[ /369]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[a-zA-Z]{6,13}",
+                            0.012578616352201259
+                        ],
+                        [
+                            "[ /25]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[a-zA-Z]{9,9}",
+                            0.0031446540880503146
+                        ],
+                        [
+                            "[/3457]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[a-z]{3,3}",
+                            0.0031446540880503146
+                        ],
+                        [
+                            "[ 1489]",
+                            0.7421383647798742
+                        ],
+                        [
+                            "[a-z]{6,6}",
+                            0.009433962264150943
+                        ],
+                        [
+                            "\\d{3,3}",
+                            0.0031446540880503146
+                        ],
+                        [
+                            "[ ).]",
+                            0.7389937106918238
+                        ],
+                        [
+                            "[a-z]{4,6}",
+                            0.012578616352201259
+                        ],
+                        [
+                            "[ ).]",
+                            0.7358490566037735
+                        ],
+                        [
+                            "[ ]",
+                            0.012578616352201259
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 1.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "\\d{3,4}",
+                            0.67
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "_duplicated_0",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 1.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "\\d{3,4}",
+                            0.67
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "_duplicated_1",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 1.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "\\d{3,4}",
+                            0.67
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "_duplicated_2",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 1.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "\\d{3,4}",
+                            0.67
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "_duplicated_3",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 1.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "\\d{3,4}",
+                            0.67
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "_duplicated_4",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 1.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "\\d{3,4}",
+                            0.67
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "_duplicated_5",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 1.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "\\d{3,4}",
+                            0.67
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "_duplicated_6",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 1.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "\\d{3,4}",
+                            0.67
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "_duplicated_7",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 1.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "\\d{3,4}",
+                            0.67
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "_duplicated_8",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 1.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "\\d{3,4}",
+                            0.67
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "_duplicated_9",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 1.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "\\d{3,4}",
+                            0.67
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "_duplicated_10",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 1.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "\\d{3,4}",
+                            0.67
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "_duplicated_11",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 1.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "\\d{3,4}",
+                            0.67
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "_duplicated_12",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 1.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "\\d{3,4}",
+                            0.67
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "_duplicated_13",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 1.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "\\d{3,4}",
+                            0.67
+                        ]
+                    ]
+                }
+            }
+        }
+    ]
+}

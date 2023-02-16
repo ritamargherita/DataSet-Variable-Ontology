@@ -1,0 +1,855 @@
+{
+    "n_rows": 165,
+    "n_columns": 19,
+    "provenance": {
+        "created by": {
+            "name": "MetaSynth",
+            "version": "0.2.2.dev4+g2c9370e",
+            "privacy": null
+        },
+        "creation time": "2023-02-15T16:12:55.030026"
+    },
+    "vars": [
+        {
+            "name": "id",
+            "type": "discrete",
+            "dtype": "Int64",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "DiscreteUniformDistribution",
+                "parameters": {
+                    "low": 3,
+                    "high": 168
+                }
+            }
+        },
+        {
+            "name": "Organisation name",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            ".[]{3,47}",
+                            1.0
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Contributor",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[R]",
+                            1.0
+                        ],
+                        [
+                            "[U]",
+                            1.0
+                        ],
+                        [
+                            "[G]",
+                            1.0
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Date of attack",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.30303030303030304,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[2]",
+                            1.0
+                        ],
+                        [
+                            "[0]",
+                            1.0
+                        ],
+                        [
+                            "[01]",
+                            1.0
+                        ],
+                        [
+                            "\\d{1,1}",
+                            1.0
+                        ],
+                        [
+                            "[-]",
+                            1.0
+                        ],
+                        [
+                            "[01]",
+                            1.0
+                        ],
+                        [
+                            "\\d{1,1}",
+                            1.0
+                        ],
+                        [
+                            "[-]",
+                            1.0
+                        ],
+                        [
+                            "[0123]",
+                            1.0
+                        ],
+                        [
+                            "\\d{1,1}",
+                            1.0
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Date of discovery",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.23636363636363636,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[2]",
+                            1.0
+                        ],
+                        [
+                            "[0]",
+                            1.0
+                        ],
+                        [
+                            "[01]",
+                            1.0
+                        ],
+                        [
+                            "\\d{1,1}",
+                            1.0
+                        ],
+                        [
+                            "[-]",
+                            1.0
+                        ],
+                        [
+                            "[01]",
+                            1.0
+                        ],
+                        [
+                            "\\d{1,1}",
+                            1.0
+                        ],
+                        [
+                            "[-]",
+                            1.0
+                        ],
+                        [
+                            "[0123]",
+                            1.0
+                        ],
+                        [
+                            "\\d{1,1}",
+                            1.0
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Date announced",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.006060606060606061,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[2]",
+                            1.0
+                        ],
+                        [
+                            "[0]",
+                            1.0
+                        ],
+                        [
+                            "[01]",
+                            1.0
+                        ],
+                        [
+                            "\\d{1,1}",
+                            1.0
+                        ],
+                        [
+                            "[-]",
+                            1.0
+                        ],
+                        [
+                            "[01]",
+                            1.0
+                        ],
+                        [
+                            "\\d{1,1}",
+                            1.0
+                        ],
+                        [
+                            "[-]",
+                            1.0
+                        ],
+                        [
+                            "[0123]",
+                            1.0
+                        ],
+                        [
+                            "\\d{1,1}",
+                            1.0
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Breached before",
+            "type": "discrete",
+            "dtype": "Int64",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "PoissonDistribution",
+                "parameters": {
+                    "mu": 0.1696969696969697
+                }
+            }
+        },
+        {
+            "name": "Sector",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[CG]",
+                            1.0
+                        ],
+                        [
+                            "[io]",
+                            1.0
+                        ],
+                        [
+                            "[v]",
+                            1.0
+                        ],
+                        [
+                            "[ei]",
+                            1.0
+                        ],
+                        [
+                            "[lr]",
+                            1.0
+                        ],
+                        [
+                            "[in]",
+                            1.0
+                        ],
+                        [
+                            "[am]",
+                            1.0
+                        ],
+                        [
+                            "[en]",
+                            1.0
+                        ],
+                        [
+                            "[n]",
+                            0.16363636363636364
+                        ],
+                        [
+                            "[t]",
+                            0.16363636363636364
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Attack vector",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[IMRSU]",
+                            1.0
+                        ],
+                        [
+                            "[aino]",
+                            1.0
+                        ],
+                        [
+                            "[cks]",
+                            1.0
+                        ],
+                        [
+                            "[ceinou]",
+                            1.0
+                        ],
+                        [
+                            "[ acfor]",
+                            1.0
+                        ],
+                        [
+                            "[cflnruw]",
+                            1.0
+                        ],
+                        [
+                            "[ efinor]",
+                            1.0
+                        ],
+                        [
+                            "[cein]",
+                            0.5636363636363636
+                        ],
+                        [
+                            "[dgint]",
+                            0.5636363636363636
+                        ],
+                        [
+                            "[ egiu]",
+                            0.5636363636363636
+                        ],
+                        [
+                            "[hinprt]",
+                            0.5636363636363636
+                        ],
+                        [
+                            "[aeint]",
+                            0.5636363636363636
+                        ],
+                        [
+                            "[ eort]",
+                            0.5636363636363636
+                        ],
+                        [
+                            ".[]{1,16}",
+                            0.5636363636363636
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Operational impact",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[DIMRUW]",
+                            1.0
+                        ],
+                        [
+                            "[einos]",
+                            1.0
+                        ],
+                        [
+                            "[beknos]",
+                            1.0
+                        ],
+                        [
+                            "[ inrtu]",
+                            1.0
+                        ],
+                        [
+                            "[ acos]",
+                            1.0
+                        ],
+                        [
+                            "[celow]",
+                            1.0
+                        ],
+                        [
+                            "[ lmno]",
+                            1.0
+                        ],
+                        [
+                            "[emop]",
+                            0.8484848484848485
+                        ],
+                        [
+                            "[dfpr]",
+                            0.8484848484848485
+                        ],
+                        [
+                            "[ or]",
+                            0.8484848484848485
+                        ],
+                        [
+                            "[mors]",
+                            0.8484848484848485
+                        ],
+                        [
+                            "[aeim]",
+                            0.8484848484848485
+                        ],
+                        [
+                            "[ilrs]",
+                            0.8484848484848485
+                        ],
+                        [
+                            "[eosvw]",
+                            0.8484848484848485
+                        ],
+                        [
+                            "[aeiu]",
+                            0.8121212121212121
+                        ],
+                        [
+                            "[cr]",
+                            0.42424242424242425
+                        ],
+                        [
+                            "[ce]",
+                            0.42424242424242425
+                        ],
+                        [
+                            "[e]",
+                            0.17575757575757575
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Defence",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[BMR]",
+                            1.0
+                        ],
+                        [
+                            "[eio]",
+                            1.0
+                        ],
+                        [
+                            "[mt]",
+                            1.0
+                        ],
+                        [
+                            "[ehi]",
+                            1.0
+                        ],
+                        [
+                            "[dg]",
+                            0.8121212121212121
+                        ],
+                        [
+                            "[ai]",
+                            0.8121212121212121
+                        ],
+                        [
+                            "[at]",
+                            0.8121212121212121
+                        ],
+                        [
+                            "[it]",
+                            0.8121212121212121
+                        ],
+                        [
+                            "[io]",
+                            0.8121212121212121
+                        ],
+                        [
+                            "[no]",
+                            0.8121212121212121
+                        ],
+                        [
+                            "[n]",
+                            0.3939393939393939
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Informational impact",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[DU]",
+                            1.0
+                        ],
+                        [
+                            "[ein]",
+                            1.0
+                        ],
+                        [
+                            "[ks]",
+                            1.0
+                        ],
+                        [
+                            "[cnrt]",
+                            1.0
+                        ],
+                        [
+                            "[loru]",
+                            1.0
+                        ],
+                        [
+                            "[opruvw]",
+                            1.0
+                        ],
+                        [
+                            "[censt]",
+                            1.0
+                        ],
+                        [
+                            "[rtu]",
+                            0.9212121212121213
+                        ],
+                        [
+                            "[ry]",
+                            0.9090909090909091
+                        ],
+                        [
+                            "[e]",
+                            0.7757575757575758
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Target",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[ALNOUu]",
+                            1.0
+                        ],
+                        [
+                            "[enops]",
+                            1.0
+                        ],
+                        [
+                            "[cekpt]",
+                            1.0
+                        ],
+                        [
+                            "[alnrw]",
+                            1.0
+                        ],
+                        [
+                            "[ailo]",
+                            0.9393939393939394
+                        ],
+                        [
+                            "[crtw]",
+                            0.9272727272727272
+                        ],
+                        [
+                            "[aikn]",
+                            0.9272727272727272
+                        ],
+                        [
+                            "[nt]",
+                            0.15151515151515152
+                        ],
+                        [
+                            "[gi]",
+                            0.15151515151515152
+                        ],
+                        [
+                            "[ o]",
+                            0.15151515151515152
+                        ],
+                        [
+                            "[ns]",
+                            0.15151515151515152
+                        ],
+                        [
+                            "[a-z]{5,5}",
+                            0.006060606060606061
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Possible defence strategies",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[FRS]",
+                            1.0
+                        ],
+                        [
+                            "[er]",
+                            1.0
+                        ],
+                        [
+                            "[csu]",
+                            1.0
+                        ],
+                        [
+                            "[iosu]",
+                            1.0
+                        ],
+                        [
+                            "[grst]",
+                            1.0
+                        ],
+                        [
+                            "[enrt]",
+                            1.0
+                        ],
+                        [
+                            "[adi]",
+                            1.0
+                        ],
+                        [
+                            "[ nt]",
+                            1.0
+                        ],
+                        [
+                            "[chi]",
+                            1.0
+                        ],
+                        [
+                            "[aeo]",
+                            1.0
+                        ],
+                        [
+                            "[nr]",
+                            0.8848484848484849
+                        ],
+                        [
+                            "[ d]",
+                            0.5454545454545454
+                        ],
+                        [
+                            "[aw]",
+                            0.5454545454545454
+                        ],
+                        [
+                            "[an]",
+                            0.5454545454545454
+                        ],
+                        [
+                            "[dr]",
+                            0.5454545454545454
+                        ],
+                        [
+                            "[ e]",
+                            0.5454545454545454
+                        ],
+                        [
+                            "[r]",
+                            0.46060606060606063
+                        ],
+                        [
+                            "[e]",
+                            0.46060606060606063
+                        ],
+                        [
+                            "[c]",
+                            0.46060606060606063
+                        ],
+                        [
+                            "[o]",
+                            0.46060606060606063
+                        ],
+                        [
+                            "[v]",
+                            0.46060606060606063
+                        ],
+                        [
+                            "[e]",
+                            0.46060606060606063
+                        ],
+                        [
+                            "[r]",
+                            0.46060606060606063
+                        ],
+                        [
+                            "[y]",
+                            0.46060606060606063
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Inside job",
+            "type": "discrete",
+            "dtype": "Int64",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "PoissonDistribution",
+                "parameters": {
+                    "mu": 0.048484848484848485
+                }
+            }
+        },
+        {
+            "name": "Countries affected",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            ".[]{2,34}",
+                            1.0
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Total money lost",
+            "type": "discrete",
+            "dtype": "Int64",
+            "prop_missing": 0.7515151515151515,
+            "distribution": {
+                "name": "DiscreteUniformDistribution",
+                "parameters": {
+                    "low": 0,
+                    "high": 640000001
+                }
+            }
+        },
+        {
+            "name": "People affected",
+            "type": "discrete",
+            "dtype": "Int64",
+            "prop_missing": 0.22424242424242424,
+            "distribution": {
+                "name": "DiscreteUniformDistribution",
+                "parameters": {
+                    "low": 31,
+                    "high": 2147483648
+                }
+            }
+        },
+        {
+            "name": "Resources",
+            "type": "string",
+            "dtype": "Utf8",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "RegexDistribution",
+                "parameters": {
+                    "re_list": [
+                        [
+                            "[h]",
+                            1.0
+                        ],
+                        [
+                            "[t]",
+                            1.0
+                        ],
+                        [
+                            "[t]",
+                            1.0
+                        ],
+                        [
+                            "[p]",
+                            1.0
+                        ],
+                        [
+                            "[:s]",
+                            1.0
+                        ],
+                        [
+                            "[/:]",
+                            1.0
+                        ],
+                        [
+                            "[/]",
+                            1.0
+                        ],
+                        [
+                            "[/fln]",
+                            1.0
+                        ],
+                        [
+                            "\\d{1,1}",
+                            0.012121212121212121
+                        ],
+                        [
+                            "[abcdefghikmnostuwy]",
+                            1.0
+                        ],
+                        [
+                            "[aefiklnorsuw]",
+                            1.0
+                        ],
+                        [
+                            "\\d{1,1}",
+                            0.012121212121212121
+                        ],
+                        [
+                            "[.abcdegkmnoprstuwz]",
+                            1.0
+                        ],
+                        [
+                            "[.4abceghilmnorstu]",
+                            1.0
+                        ],
+                        [
+                            ".[]{67,590}",
+                            1.0
+                        ]
+                    ]
+                }
+            }
+        }
+    ]
+}
