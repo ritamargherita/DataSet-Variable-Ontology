@@ -1,0 +1,469 @@
+{
+    "n_rows": 4437,
+    "n_columns": 18,
+    "provenance": {
+        "created by": {
+            "name": "MetaSynth",
+            "version": "0.2.2.dev4+g2c9370e",
+            "privacy": null
+        },
+        "creation time": "2023-03-21T23:41:12.020417"
+    },
+    "vars": [
+        {
+            "name": "country",
+            "type": "categorical",
+            "dtype": "Categorical",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "MultinoulliDistribution",
+                "parameters": {
+                    "labels": [
+                        "Argentina",
+                        "Bangladesh",
+                        "Bolivia",
+                        "Botswana",
+                        "Brazil",
+                        "Burkina Faso",
+                        "Cambodia",
+                        "Cameroon",
+                        "Chile",
+                        "China",
+                        "Chinese Taipei",
+                        "Colombia",
+                        "Costa Rica",
+                        "Ecuador",
+                        "Egypt",
+                        "Ethiopia",
+                        "Ghana",
+                        "Hong Kong",
+                        "India",
+                        "Indonesia",
+                        "Israel",
+                        "Japan",
+                        "Kenya",
+                        "Laos",
+                        "Lesotho",
+                        "Malawi",
+                        "Malaysia",
+                        "Mauritius",
+                        "Mexico",
+                        "Morocco",
+                        "Mozambique",
+                        "Myanmar",
+                        "Namibia",
+                        "Nepal",
+                        "Nigeria",
+                        "Pakistan",
+                        "Peru",
+                        "Philippines",
+                        "Republic of Korea",
+                        "Rwanda",
+                        "Senegal",
+                        "Singapore",
+                        "South Africa",
+                        "Sri Lanka",
+                        "Tanzania",
+                        "Thailand",
+                        "Tunisia",
+                        "Turkey",
+                        "Uganda",
+                        "Viet Nam",
+                        "Zambia"
+                    ],
+                    "probs": [
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549
+                    ]
+                }
+            }
+        },
+        {
+            "name": "cnt",
+            "type": "categorical",
+            "dtype": "Categorical",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "MultinoulliDistribution",
+                "parameters": {
+                    "labels": [
+                        "ARG",
+                        "BFA",
+                        "BGD",
+                        "BOL",
+                        "BRA",
+                        "BWA",
+                        "CHL",
+                        "CHN",
+                        "CMR",
+                        "COL",
+                        "CRI",
+                        "ECU",
+                        "EGY",
+                        "ETH",
+                        "GHA",
+                        "HKG",
+                        "IDN",
+                        "IND",
+                        "ISR",
+                        "JPN",
+                        "KEN",
+                        "KHM",
+                        "KOR",
+                        "LAO",
+                        "LKA",
+                        "LSO",
+                        "MAR",
+                        "MEX",
+                        "MMR",
+                        "MOZ",
+                        "MUS",
+                        "MWI",
+                        "MYS",
+                        "NAM",
+                        "NGA",
+                        "NPL",
+                        "PAK",
+                        "PER",
+                        "PHL",
+                        "RWA",
+                        "SEN",
+                        "SGP",
+                        "THA",
+                        "TUN",
+                        "TUR",
+                        "TWN",
+                        "TZA",
+                        "UGA",
+                        "VNM",
+                        "ZAF",
+                        "ZMB"
+                    ],
+                    "probs": [
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549,
+                        0.0196078431372549
+                    ]
+                }
+            }
+        },
+        {
+            "name": "var",
+            "type": "categorical",
+            "dtype": "Categorical",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "MultinoulliDistribution",
+                "parameters": {
+                    "labels": [
+                        "EMP",
+                        "VA",
+                        "VA_Q15"
+                    ],
+                    "probs": [
+                        0.3333333333333333,
+                        0.3333333333333333,
+                        0.3333333333333333
+                    ]
+                }
+            }
+        },
+        {
+            "name": "year",
+            "type": "discrete",
+            "dtype": "Int64",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "DiscreteUniformDistribution",
+                "parameters": {
+                    "low": 1990,
+                    "high": 2019
+                }
+            }
+        },
+        {
+            "name": "Agriculture",
+            "type": "continuous",
+            "dtype": "Float64",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "LogNormalDistribution",
+                "parameters": {
+                    "mu": 11.023994828575065,
+                    "sigma": 3.73701351552902
+                }
+            }
+        },
+        {
+            "name": "Mining",
+            "type": "continuous",
+            "dtype": "Float64",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "LogNormalDistribution",
+                "parameters": {
+                    "mu": 8.514152874380617,
+                    "sigma": 4.613615116617728
+                }
+            }
+        },
+        {
+            "name": "Manufacturing",
+            "type": "continuous",
+            "dtype": "Float64",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "LogNormalDistribution",
+                "parameters": {
+                    "mu": 10.91147559255708,
+                    "sigma": 4.0056707716291395
+                }
+            }
+        },
+        {
+            "name": "Utilities",
+            "type": "continuous",
+            "dtype": "Float64",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "NormalDistribution",
+                "parameters": {
+                    "mean": 2797726.555855998,
+                    "std_dev": 15851497.11000249
+                }
+            }
+        },
+        {
+            "name": "Construction",
+            "type": "continuous",
+            "dtype": "Float64",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "LogNormalDistribution",
+                "parameters": {
+                    "mu": 9.938072405642922,
+                    "sigma": 3.8885785930776016
+                }
+            }
+        },
+        {
+            "name": "Trade services",
+            "type": "continuous",
+            "dtype": "Float64",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "LogNormalDistribution",
+                "parameters": {
+                    "mu": 11.058399246518286,
+                    "sigma": 3.8094065366346594
+                }
+            }
+        },
+        {
+            "name": "Transport services",
+            "type": "continuous",
+            "dtype": "Float64",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "LogNormalDistribution",
+                "parameters": {
+                    "mu": 9.784290255940883,
+                    "sigma": 3.968914393181773
+                }
+            }
+        },
+        {
+            "name": "Business services",
+            "type": "continuous",
+            "dtype": "Float64",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "LogNormalDistribution",
+                "parameters": {
+                    "mu": 9.808700506999976,
+                    "sigma": 4.187356766660782
+                }
+            }
+        },
+        {
+            "name": "Financial services",
+            "type": "continuous",
+            "dtype": "Float64",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "LogNormalDistribution",
+                "parameters": {
+                    "mu": 9.098404561673078,
+                    "sigma": 4.460144803752897
+                }
+            }
+        },
+        {
+            "name": "Real estate",
+            "type": "continuous",
+            "dtype": "Float64",
+            "prop_missing": 0.0067613252197430695,
+            "distribution": {
+                "name": "ExponentialDistribution",
+                "parameters": {
+                    "rate": 1.5152742796352954e-07
+                }
+            }
+        },
+        {
+            "name": "Government services",
+            "type": "continuous",
+            "dtype": "Float64",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "LogNormalDistribution",
+                "parameters": {
+                    "mu": 10.717959202457656,
+                    "sigma": 3.8166045356949105
+                }
+            }
+        },
+        {
+            "name": "Other services",
+            "type": "continuous",
+            "dtype": "Float64",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "LogNormalDistribution",
+                "parameters": {
+                    "mu": 9.595348145401006,
+                    "sigma": 3.627237202951218
+                }
+            }
+        },
+        {
+            "name": "Total",
+            "type": "continuous",
+            "dtype": "Float64",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "LogNormalDistribution",
+                "parameters": {
+                    "mu": 12.991874143695469,
+                    "sigma": 3.754237618473918
+                }
+            }
+        },
+        {
+            "name": "War flag",
+            "type": "categorical",
+            "dtype": "Categorical",
+            "prop_missing": 0.0,
+            "distribution": {
+                "name": "MultinoulliDistribution",
+                "parameters": {
+                    "labels": [
+                        "0",
+                        "1"
+                    ],
+                    "probs": [
+                        0.9465855307640297,
+                        0.05341446923597025
+                    ]
+                }
+            }
+        }
+    ]
+}
