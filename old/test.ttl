@@ -1,0 +1,49 @@
+
+
+<internal/table/example1>               a                                   csvw:Table ;
+                                        csvw:tableSchema    [
+                                            csvw:column                     <internal/uri/column/jaar> ;
+                                            eg:rowsRepresentInstanceOf      <internal/refugee/invitation/event> # ideally external
+                                        ] .
+
+<internal/uri/column/dep>              a                              csvw:Column, 
+                                        csvw:titles                         "dep" ;
+                                        csvw:propertyUrl                vuschema:department ;
+                                        eg:relatedVariable                  <cbs/vu-thesaurus/department> . # ideally external SKOS thesaurus or i-adopt variable
+
+
+<internal/refugee/invitation/event>     rdf:subClassOf                      sem:Event .
+
+
+<cbs/thesaurus/vocabulary/jaar>         a                                   i-adopt:Variable ;
+                                        i-adopt:property                    <wikidata/happened/inJaar> ;
+                                        eg:isRepresentedByProperty          time:hasJaar . 
+                        
+
+
+<internal/uri/column/ageOfMother>       a                   csvw:Column, 
+                                        csvw:titles                         "age of mother" ;
+                                        csvw:propertyUrl                cbs:ageOfProperty ;
+                                        eg:relatedVariable                  <cbs/age/mother> .
+
+<internal/uri/column/ageer>       a                   csvw:Column, 
+                                        csvw:titles                         "age" ;
+                                        csvw:propertyUrl                    schema:age cbs-vocab:age;
+                                        eg:relatedVariable                  cbs-vocab:age .
+
+<internal/uri/column/nationality>   a   csvw:Column, 
+                                        svw:titles                         "nationality of invited refugees" ;
+                                        csvw:propertyUrl                   cbs-property-collection:nationalityOfImvRefuguees .
+
+
+                                        
+                                        eg:relatedVariable                  cbs-vocab:varNationalityOfInvitedRefuguees .
+
+cbs-vocab:varNationalityOfInvitedRefuguees          a                   i-adopt:Variable ;
+                                                    i-adopt:objectOfInterest        foaf:Person ;
+                                                    i-adopt:property                dbpedia:nationality ;
+                                                    skos:relatedTo      dbpedia:nationality .
+
+
+
+<rowMargherita>   schema:age    20 . 

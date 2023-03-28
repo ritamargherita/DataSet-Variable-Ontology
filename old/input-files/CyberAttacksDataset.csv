@@ -1,0 +1,652 @@
+id,"Organisation name",Contributor,"Date of attack","Date of discovery","Date announced","Breached before",Sector,"Attack vector","Operational impact",Defence,"Informational impact",Target,"Possible defence strategies","Inside job","Countries affected","Total money lost","People affected",Resources
+3,Reddit,RUG,2018-06-14,2018-06-19,2018-08-01,0,Civilian,"Social engineering","User compromise",Mitigation,Disclosure,Network,Frustration,0,USA,,330000000,"https://www.reddit.com/r/announcements/comments/93qnm5/we_had_a_security_incident_heres_what_you_need_to/
+https://fortune.com/2018/08/01/reddit-security-breach/
+https://www.tomshardware.com/news/reddit-2fa-sms-data-breach,37543.html"
+4,TicketFly,RUG,2018-05-30,2018-05-31,2018-05-31,0,Civilian,Unknown,"Denial of service",Remediation,Disrupt,Application,Resistance,0,USA,,27000000,"https://www.vice.com/en/article/mbk3nx/ticketfly-website-database-hacked-data-breach
+https://gizmodo.com/a-day-later-ticketfly-is-still-offline-after-failing-t-1826499017
+https://www.zdnet.com/article/ticketfly-cyberattack-exposed-data-belonging-to-27-million-accounts/
+"
+5,"Government of The Phillipines",RUG,2018-04-01,,2018-04-24,1,Government,Unknown,Unknown,Mitigation,Disclosure,unknown,Frustration,0,Phillipines,,2000,"https://www.pna.gov.ph/articles/1032990
+https://news.abs-cbn.com/news/04/24/18/2000-individuals-affected-by-government-data-breach-privacy-body
+https://www.privacy.gov.ph/2018/04/npc-investigates-multiple-government-website-breach/
+"
+6,MyFitnessPal,RUG,2018-02-01,2018-03-25,2018-03-30,0,Civilian,Unknown,"User compromise",Both,Disclosure,Application,"Recognition and recovery",0,World,,150000000,"https://www.wired.com/story/under-armour-myfitnesspal-hack-password-hashing/
+https://content.myfitnesspal.com/security-information/FAQ.html
+https://www.engadget.com/2018-03-29-under-armour-data-breach-affects-150-million-myfitnesspal-users.html"
+7,Timehop,RUG,2017-12-19,2018-07-04,2018-07-04,0,Civilian,"Unsecured hardware","Misuse of resource",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,21000000,"https://gizmodo.com/timehop-hit-with-worrying-breach-of-21-million-users-p-1827444522
+https://www.timehop.com/security/technical
+https://www.tomshardware.com/news/timeop-breach-hacked-security,37423.html
+"
+8,"Cheddar's Scratch Kitchen",RUG,2017-11-03,2018-08-16,2018-08-22,0,Civilian,"Unsecured hardware","Installed malware",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,567000,"https://oag.ca.gov/system/files/Cheddar?s%20Web%20Notification_0.pdf
+https://www.reuters.com/article/us-darden-cyber/darden-reports-possible-data-breach-at-cheddars-scratch-kitchen-idUSKCN1L728E
+https://www.zdnet.com/article/the-credit-card-data-of-500000-cheddars-scratch-kitchen-customers-has-been-stolen/
+"
+9,MyHeritage,RUG,2017-10-26,2018-06-04,2018-06-04,0,Civilian,Unknown,Unknown,Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,92283889,"https://arstechnica.com/tech-policy/2018/06/92-million-myheritage-users-had-their-data-quietly-swiped/
+https://blog.myheritage.com/2018/06/myheritage-statement-about-a-cybersecurity-incident/
+https://us.norton.com/internetsecurity-emerging-threats-myheritage-data-breach-exposes-info-of-more-than-92-million-user.html"
+10,"Pizza Hut",RUG,2017-10-01,,2017-10-16,0,Civilian,Unknown,Unknown,Both,Disclosure,unknown,Frustration,0,USA,,60000,"https://fortune.com/2017/10/17/pizza-hut-data-breach/
+https://www.information-age.com/pizza-hut-suffers-data-breach-123469137/
+https://www.infosecurity-magazine.com/news/pizza-hut-serves-up-a-slice-data/
+"
+11,[24]7.ai,RUG,2017-09-26,2017-10-12,2018-04-04,0,Civilian,"Unsecured hardware","Installed malware",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,1000000,"https://time.com/5230288/delta-sears-data-breach-credit-cards/
+https://kirkpatrickprice.com/blog/247-ai-cyber-incident-how-your-vendors-can-impact-your-security/
+https://www.forbes.com/sites/leemathews/2018/04/09/hacked-chat-service-exposes-data-from-best-buy-sears-kmart-and-delta/#af800a130552
+https://eu.usatoday.com/story/money/2018/04/05/data-breach-service-provider-hits-thousands-sears-delta-customers/490089002/
+"
+12,"Dixons Carphone",RUG,2017-07-01,,2018-06-13,1,Civilian,"Unsecured hardware","Installed malware",Remediation,Disclosure,Network,"Secured hardware",0,UK,653350,14000000,"https://www.bbc.com/news/business-45016906
+https://gizmodo.com/breach-at-one-of-europes-biggest-pc-superstore-chains-e-1826791837
+https://www.zdnet.com/article/dixons-carphone-hit-with-500000-fine-after-data-breach-affecting-14-million-people/
+"
+13,Facebook,RUG,2017-07-01,2018-09-25,2018-09-28,1,Civilian,Misconfiguration,"User compromise",Remediation,Disclosure,Application,"Recognition and recovery",0,World,,50000000,"https://www.forbes.com/sites/kateoflahertyuk/2018/09/29/facebook-data-breach-what-to-do-next/?sh=5efc5ba32de3
+https://about.fb.com/news/2018/09/security-update/
+https://www.reuters.com/article/us-facebook-cyber/facebook-tentatively-concludes-spammers-were-behind-recent-data-breach-wsj-idUSKCN1MS03F
+https://www.wired.com/story/facebook-security-breach-50-million-accounts/"
+14,"FedEx Corp",RUG,2017-06-26,,2017-06-29,0,Civilian,Unknown,"Installed malware",Remediation,Disrupt,Network,Resistance,0,World,300000000,,"https://www.aircargonews.net/technology/tnt-express-operations-significantly-affected-by-cyber-attacks/
+https://www.bloomberg.com/news/articles/2017-06-28/fedex-says-cyberattack-disrupts-tnt-s-worldwide-operations
+https://www.bbc.com/news/technology-41336086
+"
+15,OneLogin,RUG,2017-05-31,2017-05-31,2017-05-31,0,Civilian,"Social engineering","User compromise",Mitigation,Disclosure,Network,Frustration,0,USA,,,"https://www.onelogin.com/blog/may-31-2017-security-incident
+https://pastebin.com/2eAtMyEv
+https://www.csoonline.com/article/3389138/how-onelogin-responded-to-its-breach-and-regained-customer-trust.html
+"
+16,"Clarkson PLC",RUG,2017-05-31,2017-11-07,2017-11-29,0,Civilian,"Social engineering","Misuse of resource",Mitigation,Disclosure,Network,"Recognition and recovery",0,UK,,,"https://www.clarksons.com/media/1142671/update_on_2017_data_breach____regulatory_notice.pdf
+https://www.bleepingcomputer.com/news/security/shipping-firm-avoids-customer-data-dump-in-last-years-hack-and-ransom-incident/
+https://gcaptain.com/clarkson-plc-reveals-details-of-2017-cyber-security-incident/
+"
+17,Saks,RUG,2017-05-01,2018-03-28,2018-04-01,0,Civilian,"Unsecured hardware","Installed malware",Remediation,Disclosure,Network,"Secured hardware",0,USA,,5000000,"https://geminiadvisory.io/fin7-syndicate-hacks-saks-fifth-avenue-and-lord-taylor/
+https://gizmodo.com/lord-taylor-and-saks-have-been-hacked-to-the-tune-of-1824245962
+https://www.nytimes.com/2018/04/01/technology/saks-lord-taylor-credit-cards.html
+https://www.forbes.com/sites/paularosenblum/2018/04/02/confusion-reigns-in-the-wake-of-saks-lord-and-taylor-data-breach/?sh=1f6f76ce337a"
+18,"Lord & Taylor",RUG,2017-05-01,2018-03-28,2018-04-01,0,Civilian,"Unsecured hardware","Installed malware",Remediation,Disclosure,Network,"Secured hardware",0,USA,,5000000,"https://geminiadvisory.io/fin7-syndicate-hacks-saks-fifth-avenue-and-lord-taylor/
+https://gizmodo.com/lord-taylor-and-saks-have-been-hacked-to-the-tune-of-1824245962
+https://www.nytimes.com/2018/04/01/technology/saks-lord-taylor-credit-cards.html
+https://www.forbes.com/sites/paularosenblum/2018/04/02/confusion-reigns-in-the-wake-of-saks-lord-and-taylor-data-breach/?sh=1f6f76ce337a"
+19,"City of Dallas",RUG,2017-04-09,2017-04-09,2017-04-09,0,Government,Unknown,"User compromise",Mitigation,Disrupt,Local,Frustration,0,USA,,,"https://arstechnica.com/information-technology/2017/04/hackers-set-off-dallas-156-emergency-sirens-over-a-dozen-times/
+https://www.nytimes.com/2017/04/08/us/dallas-emergency-sirens-hacking.html
+https://www.wired.com/2017/04/dallas-siren-hack-wasnt-novel-just-really-loud/
+"
+20,"Forever 21",RUG,2017-04-03,,2017-11-14,1,Civilian,"Unsecured hardware","Installed malware",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,,"https://www.reuters.com/article/us-forever21-cyber/fashion-retailer-forever-21-reports-payment-card-security-breach-idUSKBN1DE2SK
+https://www.engadget.com/2017-12-29-forever-21-breach-exposed-credit-card-info-months.html
+https://www.csoonline.com/article/3245069/forever-21-hackers-breached-payment-system-for-7-months-no-encryption-on-pos-devices.html
+https://www.infosecurity-magazine.com/news/forever-21-confirms-data-breach/
+"
+21,"Whole Foods",RUG,2017-03-10,2017-09-23,2017-09-28,0,Civilian,"Unsecured hardware","Installed malware",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,,"https://media.wholefoodsmarket.com/whole-foods-market-payment-card-investigation-update
+https://www.cnbc.com/2017/09/28/whole-foods-suffers-data-breach-in-some-stores.html
+https://gizmodo.com/whole-foods-is-still-being-overly-secretive-about-its-c-1819285162"
+22,"Tesco Bank",RUG,2016-11-05,2016-11-05,2016-11-06,0,Civilian,Misconfiguration,"Misuse of resource",Mitigation,Disrupt,Application,Resistance,0,UK,24328535,40000,"https://yourcommunity.tescobank.com/threads/2550-Message-for-Current-Account-customers?p=5804#post5804
+https://www.engadget.com/2016-11-07-tesco-bank-breach.html
+https://www.theguardian.com/business/2018/oct/01/tesco-bank-fined-cyber-attack-fca
+https://www.fca.org.uk/news/press-releases/fca-fines-tesco-bank-failures-2016-cyber-attack
+"
+23,"Friend Finder Network",RUG,2016-10-18,,2016-11-13,1,Civilian,Misconfiguration,"Web compromise",Remediation,Disclosure,Network,Frustration,0,World,,412000000,"https://www.engadget.com/2016-11-13-adultfriendfinder-hack-puts-412-million-accounts-at-risk.html
+https://www.wired.co.uk/article/adult-friend-finder-hacked-email-addresses-users
+https://www.vice.com/en/article/qkjeap/hookup-service-adult-friendfinder-may-have-been-hacked-again
+"
+24,"Arby?s Restaurant Group, Inc.",RUG,2016-10-08,,2017-03-10,0,Civilian,"Unsecured hardware","Installed malware",Mitigation,Disclosure,Network,"Recognition and recovery",0,USA,,,"https://fortune.com/2017/02/09/arbys-restaurants-hackers-data-breach/
+https://arbys.com/security/
+https://krebsonsecurity.com/2017/02/fast-food-chain-arbys-acknowledges-breach/
+"
+25,Deloitte,RUG,2016-10-01,2017-03-01,2017-09-25,0,Civilian,"Social engineering","Root compromise",Remediation,Discovery,Network,"Recognition and recovery",0,World,,,"https://www.theguardian.com/business/2017/sep/25/deloitte-hit-by-cyber-attack-revealing-clients-secret-emails
+https://www.bbc.com/news/technology-41385951
+https://www.pymnts.com/news/b2b-payments/2017/deloitte-cybersecurity-data-breach/
+"
+26,Uber,RUG,2016-10-01,2016-11-01,2017-11-21,1,Civilian,"Social engineering","Misuse of resource",Mitigation,Disclosure,Network,Frustration,0,USA,148000000,57000000,"https://9to5mac.com/2017/11/21/uber-data-breach-affected-users/
+https://www.bloomberg.com/news/articles/2017-11-21/uber-concealed-cyberattack-that-exposed-57-million-people-s-data?utm_content=tv&utm_campaign=socialflow-organic&utm_source=twitter&utm_medium=social&cmpid%3D=socialflow-twitter-tv
+https://eu.usatoday.com/story/tech/news/2018/09/26/uber-pay-148-million-over-undisclosed-data-breach-ex-ceo-paid-hackers-keep-quiet/1432335002/
+https://medium.com/golden-data/case-study-uber-technologies-inc-data-breach-7261484d6471"
+27,"Defense Integrated",RUG,2016-09-01,2016-09-01,2017-10-04,0,Government,"Unsecured hardware","User compromise",Mitigation,Discovery,Network,Frustration,0,"South Korea, USA",,,"https://www.reuters.com/article/us-northkorea-cybercrime-southkorea/north-korea-hackers-stole-south-korea-u-s-military-plans-to-wipe-out-north-korea-leadership-lawmaker-idUSKBN1CF1WT
+https://www.businessinsider.com/r-north-korea-hackers-stole-south-korea-us-military-plans-yonhap-2017-10?international=true&r=US&IR=T
+https://www.vox.com/world/2017/10/13/16465882/north-korea-cyber-attack-capability-us-military
+"
+28,"Trump Hotel Collection",RUG,2016-08-10,2017-06-05,2017-07-12,1,Civilian,Unknown,"Installed malware",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,,"https://www.trumphotels.com/uploads/14111/0/trump-sabre-notice-website-letter.pdf
+https://www.bbc.com/news/technology-40593943
+https://krebsonsecurity.com/2017/07/trump-hotels-hit-by-3rd-card-breach-in-2-years/
+https://krebsonsecurity.com/2017/05/breach-at-sabre-corp-s-hospitality-unit/
+"
+29,GameStop,RUG,2016-08-10,2017-04-03,2017-04-07,0,Civilian,Unknown,"Installed malware",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,,"https://krebsonsecurity.com/2017/04/gamestop-com-investigating-possible-breach/
+https://www.engadget.com/2017-06-09-gamestop-confirms-credit-card-data-breach.html
+https://www.doj.nh.gov/consumer/security-breaches/documents/gamestop-20170605.pdf
+https://blog.malwarebytes.com/cybercrime/hacking/2017/04/gamestop-customer-data-allegedly-siphoned-in-possible-breach/
+https://blog.malwarebytes.com/cybercrime/hacking/2017/04/gamestop-customer-data-allegedly-siphoned-in-possible-breach/"
+30,"Phillipine Commission on Elections",RUG,2016-03-27,2016-03-28,2016-03-28,0,Government,Unknown,"Denial of service",Mitigation,Disrupt,Application,Frustration,0,Phillipines,,55000000,"https://www.telecomasia.net/content/massive-data-breach-exposes-all-philippines-voters
+https://news.abs-cbn.com/halalan2016/nation/03/27/16/look-comelec-website-hacked
+"
+31,Cloudflare,RUG,2016-02-13,2017-02-17,2017-02-24,0,Civilian,Misconfiguration,"User compromise",Remediation,Disclosure,Application,"Recognition and recovery",0,World,,,"https://arstechnica.com/information-technology/2017/02/serious-cloudflare-bug-exposed-a-potpourri-of-secret-customer-data/
+https://blog.cloudflare.com/incident-report-on-memory-leak-caused-by-cloudflare-parser-bug/
+https://techcrunch.com/2017/02/23/major-cloudflare-bug-leaked-sensitive-data-from-customers-websites/
+"
+32,Orbitz,RUG,2016-01-01,2018-03-01,2018-03-20,0,Civilian,Unknown,"User compromise",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,110000,880000,"https://gizmodo.com/orbitz-says-hackers-accessed-880-000-payment-cards-1823924288
+https://www.reuters.com/article/us-orbitz-cyber/expedias-orbitz-says-880000-payment-cards-hit-in-breach-idUSKBN1GW23V
+https://www.theverge.com/2018/3/20/17144482/orbitz-data-breach-credit-cards
+https://www.lifelock.com/learn-data-breaches-orbitz-data-breach-what-to-do-next.html
+"
+33,MySpace,RUG,2016-01-01,,2017-02-07,1,Civilian,Unknown,Unknown,Both,Disclosure,Application,Frustration,0,USA,,427000000,"https://www.businesswire.com/news/home/20160531005770/en/Time-Confirms-Breach-Myspace
+https://eu.usatoday.com/story/tech/2016/05/31/360-million-myspace-accounts-breached/85183200/
+https://www.csoonline.com/article/3166846/myspace-becomes-every-hackers-space-with-top-breach-in-2016-report-says.html
+"
+34,Steam,RUG,2015-12-25,2015-12-25,2015-12-30,1,Civilian,Misconfiguration,"User compromise",Mitigation,Disclosure,Application,Frustration,0,World,,34000,"https://www.wired.co.uk/article/valve-explains-christmas-steam-attacks
+https://store.steampowered.com/news/19852/
+https://www.theverge.com/2015/12/25/10665814/valve-steam-holiday-sale-security-problems"
+35,Vtech,RUG,2015-11-14,2015-11-24,2015-11-30,0,Civilian,"Insufficient input validation","Installed malware",Mitigation,Disclosure,Network,Frustration,0,World,,12000000,"https://arstechnica.com/information-technology/2015/12/man-arrested-in-toymaker-hack-says-he-wanted-to-expose-inadequate-security/
+https://time.com/4130704/vtech-hack-childrens-toys/
+https://www.vice.com/en/article/yp3zev/hacker-obtained-childrens-headshots-and-chatlogs-from-toymaker-vtech
+https://www.vtech.com/en/press_release/2015/data-breach-on-vtech-learning-lodge-update/
+"
+36,Kiddiecare,RUG,2015-11-01,,2016-05-09,0,Civilian,Misconfiguration,"User compromise",Remediation,Disclosure,Network,"Recognition and recovery",0,UK,,794000,"https://www.itpro.co.uk/hacking/26503/794000-kiddicare-customer-details-stolen-in-data-breach
+https://hotforsecurity.bitdefender.com/blog/kiddicare-customers-at-risk-after-data-spills-from-test-server-13871.html
+https://www.bbc.com/news/technology-36247189
+https://www.computerweekly.com/news/450295963/Nursery-and-baby-store-Kiddicare-puts-its-hand-up-to-data-breach-after-attack-on-a-test-site
+
+"
+37,"Vodafone UK",RUG,2015-10-28,2015-10-29,2015-10-31,0,Civilian,"Social engineering","User compromise",Mitigation,Disclosure,Network,Frustration,0,UK,,1827,"https://www.csoonline.com/article/3000122/vodafone-uk-fights-off-breach-attempts-blocks-1-800-accounts-in-aftermath.html
+https://arstechnica.com/tech-policy/2015/11/vodafone-says-over-1800-customer-bank-details-accessed-in-attack/
+https://www.bloomberg.com/news/articles/2015-10-31/vodafone-says-some-u-k-customers-accounts-accessed-by-hackers
+"
+38,"Wendy's International",RUG,2015-09-01,2016-02-01,2016-07-07,0,Civilian,"Unsecured hardware","User compromise",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,,"https://www.wendys.com/payment-card-incident
+https://www.bankinfosecurity.com/wendys-finally-reveals-more-breach-details-a-9097
+https://krebsonsecurity.com/tag/wendys-breach/
+"
+39,Pentagon,RUG,2015-07-25,,2015-08-06,0,Civilian,Unknown,"User compromise",Both,Discovery,Network,Frustration,0,USA,,4000,"https://www.csoonline.com/article/2961059/black-hat-2015-russia-blamed-for-pentagon-hack.html
+https://www.usnews.com/news/articles/2015/08/06/reported-russian-cyber-attack-shuts-down-pentagon-network
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjL7I67-5rtAhXCGewKHdIPCMk4ChAWMAR6BAgJEAI&url=https%3A%2F%2Fwww.washingtonpost.com%2Fworld%2Fnational-security%2Fus-suspects-russia-in-hack-of-pentagon-computer-network%2F2015%2F08%2F06%2Fb80e1644-3c7a-11e5-9c2d-ed991d848c48_story.html&usg=AOvVaw1RKMrv-ohM1_oqx2CEbk8W"
+40,"Ashley Madison",RUG,2015-07-15,2015-07-15,2015-07-15,0,Civilian,Unknown,Unknown,Mitigation,Disclosure,Network,Frustration,0,USA,11200000,37000000,"https://krebsonsecurity.com/2015/07/online-cheating-site-ashleymadison-hacked/
+"
+41,"Democratic National Committee",RUG,2015-06-01,2015-09-01,2016-07-22,0,Government,"Insufficient input validation","Installed malware",Remediation,Discovery,Network,"Recognition and recovery",0,USA,,200,"https://www.nytimes.com/interactive/2016/08/16/us/politics/cyberattack-on-democratic-politicians-dnc.html?mtrref=www.google.com&gwh=3955B798068691B50A8F19DB3DAA2E12&gwt=regi&assetType=REGIWALL
+https://www.crowdstrike.com/blog/bears-midst-intrusion-democratic-national-committee/
+https://www.nytimes.com/2016/07/23/us/politics/dnc-emails-sanders-clinton.html?ref=politics
+https://www.theguardian.com/technology/2016/jul/26/dnc-email-leak-russian-hack-guccifer-2
+"
+42,Twitch.tv,RUG,2015-03-03,,2015-03-23,0,Civilian,Unknown,"Installed malware",Mitigation,Disclosure,Application,Frustration,0,World,,,"https://arstechnica.com/information-technology/2015/03/twitch-resets-user-passwords-following-breach/
+https://www.forbes.com/sites/thomasbrewster/2015/03/24/amazon-twitch-hacked-passwords-nabbed/?sh=78ead81774bb
+https://www.itproportal.com/2015/03/24/twitch-suffers-apparent-data-breach-password-reset-forced/"
+43,Slack,RUG,2015-03-01,2015-03-01,2015-03-28,0,Civilian,Unknown,"User compromise",Mitigation,Disclosure,Network,Frustration,0,World,,35000,"https://slack.com/intl/en-nl/blog/news/new-information-2015-incident
+https://techcrunch.com/2015/03/27/slack-got-hacked/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAKlLRJoUabElfignTQZPDGIO6gE3l06jHpbAT1WaCg8BIxvezC3eJaaLZNXlA3PBSNrbLAyiWtCjm-ZSF80xyC3Duu52g34N9KpOmG7cW04aYFaHGukPatgNrKfaB7bmFgGbFJKytFcKG_4HhmxRQ3Cgs4IxDvpbk1wanBy2dHd8
+https://www.businessinsider.com/slacks-security-breach-may-be-worse-than-its-letting-on-2015-3?international=true&r=US&IR=T
+https://www.infosecurity-magazine.com/news/slack-resets-1-of-passwords-after/
+"
+44,"HEI Hotels & Resorts",RUG,2015-03-01,2016-06-21,2016-08-15,0,Civilian,Unknown,"Misuse of resource",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,8000,"https://www.reuters.com/article/us-hotels-cyber/starwood-marriott-hyatt-ihg-hit-by-malware-hei-idUSKCN10P0ZM
+https://www.engadget.com/2016-08-15-hyatt-and-starwood-hotel-chains-suffer-credit-card-breach.html
+https://www.doj.nh.gov/consumer/security-breaches/documents/hei-hotels-resorts-20160812.pdf
+https://www.hotelmanagement.net/tech/hei-hotels-hit-latest-data-breach
+
+"
+45,"Intercontinental Hotel Group",RUG,2015-03-01,2016-07-01,2016-08-15,0,Civilian,"Unsecured hardware","Installed malware",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,,"https://www.engadget.com/2016-08-15-hyatt-and-starwood-hotel-chains-suffer-credit-card-breach.html
+https://www.engadget.com/2017-04-20-intercontinental-data-breach.html
+https://krebsonsecurity.com/tag/ihg-breach/
+https://www.bankinfosecurity.com/intercontinental-hotels-group-malware-hit-1200-locations-a-9852
+"
+46,PoliceOne,RUG,2015-01-01,2017-02-03,2017-02-07,0,Government,"Insufficient input validation","User compromise",Remediation,Disclosure,Application,"Recognition and recovery",0,USA,,715000,"https://securityaffairs.co/wordpress/55967/data-breach/policeone-data-breach.html
+https://www.zdnet.com/article/police-forum-hacked-thousands-of-records-for-sale-on-dark-web/
+http://securityaffairs.co/wordpress/50593/hacking/vbulletin-vulnerabilities-mail-ru.html
+https://www.police1.com/police-products/press-releases/p1-forums-users-an-update-on-policeone-forums-data-breach-cVHZ9lMlbkkaDo50/
+https://www.vice.com/en/article/9adnb5/hacker-steals-thousands-of-accounts-from-police-forum
+"
+47,Snapchat,RUG,2014-12-30,2014-08-01,2014-01-01,0,Civilian,Misconfiguration,"Misuse of resource",Mitigation,Disclosure,Application,"Recognition and recovery",0,World,,4600000,"https://www.bbc.com/news/technology-25572661
+https://gibsonsec.org/snapchat/
+https://www.tomsguide.com/us/snapchat-data-breach-advice,news-18057.html
+https://techcrunch.com/2013/12/31/hackers-claim-to-publish-list-of-4-6m-snapchat-usernames-and-numbers/?guccounter=1
+"
+48,Hilton,RUG,2014-11-18,2015-09-26,2015-11-24,0,Civilian,"Unsecured hardware","User compromise",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,700000,363000,"http://fortune.com/2015/11/25/hilton-data-breach/
+https://fortune.com/2015/09/26/hilton-may-be-latest-victim-of-hacking-attack/
+https://www.bbc.com/news/technology-41834679
+https://krebsonsecurity.com/2015/09/banks-card-breach-at-hilton-hotel-properties/"
+49,"Department of Immigration and Border Protection",RUG,2014-11-07,2014-11-07,2015-03-30,0,Government,Misconfiguration,"Misuse of resource",Mitigation,Disclosure,User,"Recognition and recovery",0,Australia,,31,"https://www.theguardian.com/world/2015/mar/30/personal-details-of-world-leaders-accidentally-revealed-by-g20-organisers
+https://www.documentcloud.org/documents/1697616-g20-world-leaders-data-breach.html
+https://www.nytimes.com/2015/03/31/us/politics/obamas-passport-data-leaked-in-australian-email-blunder.html"
+50,TalkTalk,RUG,2014-10-01,2014-12-01,2015-02-27,0,Civilian,Unknown,"Misuse of resource",Both,Disclosure,Network,"Recognition and recovery",0,UK,,,"https://www.bbc.com/news/technology-31656613
+https://www.engadget.com/2015-02-27-talktalk-attackers-steal-personal-data.html
+"
+51,"U.S. Office of Personnel Management",RUG,2014-10-01,2015-04-15,2015-06-05,1,Government,Unknown,"User compromise",Remediation,Discovery,Network,"Recognition and recovery",0,USA,1000000,4000000,"https://www.opm.gov/news/releases/2015/06/opm-to-notify-employees-of-cybersecurity-incident/
+https://www.csoonline.com/article/3318238/the-opm-hack-explained-bad-security-practices-meet-chinas-captain-america.html
+"
+52,"Cox Communications",RUG,2014-08-07,2014-08-12,2015-11-05,0,Civilian,"Social engineering","User compromise",Mitigation,Disclosure,Network,Frustration,0,USA,596000,61,"https://arstechnica.com/information-technology/2015/11/fcc-fines-cox-for-falling-for-lizard-squad-scam-exposing-customer-data/
+http://transition.fcc.gov/eb/News_Releases/DOC-336222A1.html
+https://www.bankinfosecurity.com/fcc-fines-cox-over-lizard-squad-hack-a-8668
+http://transition.fcc.gov/Daily_Releases/Daily_Business/2015/db1105/DA-15-1241A1.pdf
+
+
+"
+53,Supervalu,RUG,2014-08-01,,2014-09-29,1,Civilian,Unknown,"Installed malware",Mitigation,Unknown,Network,Frustration,0,USA,,,"https://fortune.com/2014/09/29/supervalu-malware-point-of-sale/
+https://money.cnn.com/2014/09/30/technology/security/supervalu-hack/index.html
+"
+54,HealthCare.gov,RUG,2014-07-01,2014-08-25,2014-09-04,0,Government,"Incorrect permission","Misuse of resource",Mitigation,Disclosure,Network,"Recognition and recovery",0,USA,,,"https://gizmodo.com/healthcare-gov-portal-suffers-data-breach-trump-offici-1829877392
+https://www.nytimes.com/2014/09/05/us/hackers-breach-security-of-healthcaregov.html
+https://fcw.com/articles/2014/09/04/healthcaredotgov-breach.aspx
+https://www.bankinfosecurity.com/update-healthcaregov-breach-exposed-extensive-data-a-11698
+"
+55,Mozilla,RUG,2014-06-23,2014-07-23,2014-08-04,0,Civilian,Misconfiguration,"User compromise",Mitigation,Disclosure,Network,"Recognition and recovery",0,USA,,80000,"https://www.theguardian.com/technology/2014/aug/05/mozilla-leak-developer-email-addresses-passwords-firefox
+https://www.welivesecurity.com/2014/08/04/data-breach-in-firefox-add-ons/
+https://blog.mozilla.org/security/2014/08/01/mdn-database-disclosure/"
+56,Supervalu,RUG,2014-06-22,2014-07-17,2014-08-14,0,Civilian,Unknown,"User compromise",Mitigation,Disclosure,Network,Frustration,0,USA,,,"https://www.nytimes.com/2014/08/16/technology/food-retailer-discloses-a-data-breach.html
+https://www.usatoday.com/story/money/business/2014/08/15/supervalu-becomes-latest-to-suffer-data-breach/14116437/
+https://www.cnbc.com/2014/08/15/us-supermarket-chain-supervalu-investigating-potential-data-breach.html
+"
+57,CareFirst,RUG,2014-06-20,,2015-05-20,0,Civilian,Unknown,"User compromise",Remediation,Disclosure,User,"Recognition and recovery",0,USA,,1100000,"https://www.nytimes.com/2015/05/21/business/carefirst-discloses-data-breach-up-to-1-1-million-customers-affected.html
+https://krebsonsecurity.com/2015/05/carefirst-blue-cross-breach-hits-1-1m/
+http://www.carefirstanswers.com
+"
+58,"JPMorgan Chase & Co.",RUG,2014-06-01,2014-08-01,2014-10-07,0,Civilian,"Insufficient input validation","Root compromise",Remediation,Discovery,Network,"Recognition and recovery",0,USA,,83000000,"https://dealbook.nytimes.com/2014/10/02/jpmorgan-discovers-further-cyber-security-issues/?mtrref=undefined&gwh=758D8F89E33D2FBB18386C13C565C042&gwt=regi&assetType=REGIWALL
+https://www.usatoday.com/story/tech/2014/10/02/jp-morgan-security-breach/16590689/
+https://www.cimcor.com/blog/jp-morgan-chase-bank-breach-2014
+https://www.bloomberg.com/news/articles/2014-10-02/jpmorgan-says-data-breach-affected-76-million-households
+https://fas.org/sgp/crs/misc/breach.pdf
+"
+59,"Trump Hotel Collection",RUG,2014-05-19,2015-06-02,2015-10-06,0,Civilian,Unknown,"Installed malware",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,50000,70000,"https://web.archive.org/web/20160121160657/https://www.trumphotelcollection.com/data-security-notice
+https://arstechnica.com/information-technology/2015/10/trump-hotels-payment-system-infected-with-malware/
+https://krebsonsecurity.com/2015/07/banks-card-breach-at-trump-hotel-properties/
+"
+60,Uber,RUG,2014-05-13,2014-09-17,2015-02-27,0,Civilian,Unknown,"User compromise",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,148000000,50000,"https://www.forbes.com/sites/davelewis/2015/02/28/uber-suffers-data-breach-affecting-50000/?sh=3a63cfad2db1
+https://medium.com/golden-data/case-study-uber-technologies-inc-data-breach-7261484d6471
+https://www.latimes.com/business/technology/la-fi-tn-uber-data-breach-20150227-story.html
+"
+61,"Premera Blue Cross",RUG,2014-05-05,2015-01-29,2015-03-17,0,Civilian,Unknown,"Misuse of resource",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,11000000,"https://www.forbes.com/sites/katevinton/2015/03/17/11-million-customers-medical-and-financial-data-may-have-been-exposed-in-premera-blue-cross-breach/?sh=76ac732175d9
+https://www.nytimes.com/2015/03/18/business/premera-blue-cross-says-data-breach-exposed-medical-data.html
+"
+62,"Community Health Systems",RUG,2014-04-01,2014-07-01,2014-08-18,0,Civilian,Unknown,"Installed malware",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,4500000,"https://www.bbc.com/news/technology-28838661
+https://www.csoonline.com/article/2466084/community-health-systems-blames-china-for-recent-data-breach.html
+https://www.forbes.com/sites/danmunro/2014/08/18/cyber-attack-nets-4-5-million-records-from-large-hospital-system/?sh=7967be517f07
+https://chsnet.gcs-web.com/static-files/f415880f-f5fe-462e-b707-0ada0e18b819
+"
+63,"Home Depot Inc.",RUG,2014-04-01,2014-09-02,2014-09-08,0,Civilian,"Incorrect permission","User compromise",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,19500000,50000000,"https://www.reuters.com/article/us-home-depot-breach-settlement/home-depot-settles-consumer-lawsuit-over-big-2014-data-breach-idUSKCN0WA24Z
+https://www.sans.org/reading-room/whitepapers/casestudies/paper/36367
+https://www.infosecurity-magazine.com/news/home-depot-breach-third-party/
+"
+64,UPS,RUG,2014-03-26,2014-08-11,2014-08-26,0,Civilian,"Unsecured hardware","User compromise",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,100000,"https://www.forbes.com/sites/katevinton/2014/08/26/data-breach-bulletin-sixteen-arrested-after-allegedly-hacking-half-of-south-korea/?sh=365065313161
+https://fortune.com/2014/08/20/ups-investigating-security-breach/
+https://nakedsecurity.sophos.com/2014/08/22/the-ups-store-breach-what-went-wrong-and-what-ups-got-right/
+"
+65,Anthem,RUG,2014-02-18,2015-01-29,2015-02-04,0,Civilian,"Social engineering","Installed malware",Mitigation,Disclosure,Network,Frustration,0,USA,260000000,80000000,"https://www.nytimes.com/2015/02/05/business/hackers-breached-data-of-millions-insurer-says.html
+https://www.reuters.com/article/us-anthem-cyber-settlement/anthem-to-pay-record-115-million-to-settle-u-s-lawsuits-over-data-breach-idUSKBN19E2ML
+https://www.bankinfosecurity.com/new-in-depth-analysis-anthem-breach-a-9627
+"
+66,"eBay Inc.",RUG,2014-02-01,2014-03-01,2014-05-21,0,Civilian,"Social engineering","User compromise",Remediation,Disclosure,Network,Frustration,0,USA,,145000000,"https://www.nytimes.com/2014/05/22/technology/ebay-reports-attack-on-its-computer-network.html
+https://www.ebayinc.com/stories/news/faq-ebay-password-change/?utm_source=301Redirect&utm_medium=301Redirect&utm_campaign=301Redirect
+https://www.bankinfosecurity.com/ebay-a-6858
+"
+67,Morrisons,RUG,2014-01-12,2014-03-13,2014-03-14,0,Civilian,"Incorrect permission","Misuse of resource",Remediation,Disclosure,Network,"Recognition and recovery",1,UK,2675900,98998,"https://www.bbc.com/news/uk-england-42193502
+https://www.theguardian.com/business/2014/mar/14/morrisons-staff-personal-details-stolen-published-online
+https://www.computerweekly.com/news/252480981/Morrisons-not-liable-for-2014-data-breach-says-Supreme-Court
+"
+68,Yahoo,RUG,2014-01-01,,2016-09-21,1,Civilian,Unknown,"Installed malware",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,500000000,"https://www.usatoday.com/story/tech/news/2016/09/22/yahoo-breach-500-million-what-to-do/90849498/
+https://www.cnet.com/news/yahoo-500-million-accounts-hacked-data-breach/
+https://www.nytimes.com/2016/09/23/technology/yahoo-hackers.html
+https://www.bloomberg.com/news/articles/2016-09-22/yahoo-says-at-least-500-million-accounts-breached-in-hack-attack
+
+"
+69,"Internal Revenue Services",RUG,2014-01-01,2015-05-01,2015-05-26,0,Government,Unknown,"User compromise",Mitigation,Distort,Application,"Recognition and recovery",0,USA,50000000,720000,"https://www.nytimes.com/2015/05/27/business/breach-exposes-irs-tax-returns.html
+https://www.cnbc.com/2015/08/17/irs-breach-affected-2x-as-many-taxpayers-as-expected.html
+https://money.cnn.com/2016/02/26/technology/irs-data-theft/"
+70,Imgur,RUG,2014-01-01,2017-11-23,2017-11-24,0,Civilian,Misconfiguration,"User compromise",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,1700000,"https://blog.imgur.com/2017/11/24/notice-of-data-breach/
+https://www.tomshardware.com/news/imgur-hack-1.7-million-accounts,35995.html
+"
+71,"Excellus BlueCross BlueShield",RUG,2013-12-01,2015-08-05,2015-09-09,0,Civilian,Unknown,"Root compromise",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,300000000,10500000,"https://krcomplexlit.com/currentcases/excellus-bluecross-blueshield-data-breach
+https://www.bankinfosecurity.com/excellus-bcbs-breach-affects-xxxxxxxx-a-8527
+"
+72,Scottrade,RUG,2013-12-01,,2015-10-02,0,Civilian,Unknown,"Installed malware",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,4600000,"http://fortune.com/2015/10/02/scottrade-data-breach/
+https://www.cnbc.com/2015/10/02/scottrade-data-breach-affects-up-to-4m-customers.html
+https://securityintelligence.com/news/scottrade-security-breach-could-spawn-stock-scams-targeting-4-6-million-customers/
+"
+73,AT&T,RUG,2013-11-01,2014-04-21,2015-04-08,1,Civilian,"Social engineering","User compromise",Remediation,Disclosure,Network,"Recognition and recovery",1,"Columbia, Mexico, Phillipines, USA",25000000,280000,"https://www.fcc.gov/document/att-pay-25m-settle-investigation-three-data-breaches
+https://arstechnica.com/tech-policy/2015/04/att-fined-25-million-after-call-center-employees-stole-customers-data/
+http://cdn.arstechnica.net/wp-content/uploads/2015/04/DA-15-399A1.pdf
+https://digitalguardian.com/blog/fcc-att-reach-25m-settlement-over-insider-data-breach
+
+"
+74,"U.S. Office of Personnel Management",RUG,2013-11-01,2014-03-01,2015-07-09,0,Government,"Social engineering","User compromise",Mitigation,Disclosure,Network,Frustration,0,USA,,21500000,"https://www.nytimes.com/2015/07/10/us/office-of-personnel-management-hackers-got-data-of-millions.html
+https://www.theguardian.com/technology/2015/sep/23/us-government-hack-stole-fingerprints
+"
+75,Experian,RUG,2013-09-01,2015-09-16,2015-10-01,1,Civilian,Unknown,"User compromise",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,15000000,"https://www.prnewswire.com/news-releases/experian-notifies-consumers-in-the-us-who-may-have-been-affected-by-unauthorized-acquisition-of-a-clients-data-300152926.html
+https://www.experian.com/data-breach/t-mobilefacts
+https://fortune.com/2015/10/01/experian-data-breach-tmobile/"
+76,Mozilla,RUG,2013-09-01,,2015-09-05,1,Civilian,"Social engineering","User compromise",Remediation,Discovery,Network,"Recognition and recovery",0,USA,,,"https://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/security/files/2015/09/BugzillaFAQ.pdf
+https://arstechnica.com/information-technology/2015/09/mozilla-data-stolen-from-hacked-bug-database-was-used-to-attack-firefox/
+https://www.welivesecurity.com/2015/09/08/mozillas-bugzilla-breached/
+"
+77,Yahoo!,RUG,2013-08-01,,2016-12-14,0,Civilian,Unknown,Unknown,Both,Disclosure,Network,Frustration,0,USA,,2147483647,"https://www.nytimes.com/2017/10/03/technology/yahoo-hack-3-billion-users.html
+https://www.verizonmedia.com/press/yahoo-provides-notice-to-additional-users-affected-by-previously/
+https://help.yahoo.com/kb/account/SLN28451.html?impressions=true
+https://www.reuters.com/article/us-yahoo-cyber/yahoo-says-all-three-billion-accounts-hacked-in-2013-data-theft-idUSKCN1C82O1"
+78,Yahoo,RUG,2013-08-01,2016-11-09,2016-12-14,1,Civilian,Unknown,"Root compromise",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,2147483647,"https://9to5mac.com/2017/03/01/yahoo-hack-2017-data-breach/
+https://www.cnbc.com/2017/02/15/yahoo-sends-new-warning-to-customers-about-data-breach.html
+https://www.theverge.com/2017/10/3/16414306/yahoo-security-data-breach-3-billion-verizon
+https://www.nytimes.com/2016/11/10/technology/yahoo-employees-knew-in-2014-about-hacker-attack.html
+https://help.yahoo.com/kb/account/SLN28451.html?impressions=true
+"
+79,"Neiman Marcus",RUG,2013-07-16,2014-01-01,2014-06-15,0,Civilian,"Unsecured hardware","Installed malware",Remediation,Disclosure,Network,"Secured hardware",0,USA,1500000,1100000,"https://www.zdnet.com/article/neiman-marcus-agrees-to-1-5-million-data-breach-settlement/
+https://www.neimanmarcus.com/en-za/c/NM/Security-Info-cat49570732?icid=topPromo_hmpg_ticker_SecurityInfo_0114
+https://www.bankinfosecurity.com/when-did-neiman-marcus-breach-start-a-6424
+https://www.nytimes.com/2014/01/24/business/neiman-marcus-breach-affected-1-1-million-cards.html
+
+"
+80,"Kroll Background America",RUG,2013-06-01,2013-09-01,2013-09-25,0,Civilian,Unknown,Unknown,Both,Disclosure,unknown,Frustration,0,USA,,,"https://www.usatoday.com/story/cybertruth/2013/09/26/lexisnexis-dunn--bradstreet-altegrity-hacked/2878769/
+https://www.databreaches.net/kroll-background-america-hacked/
+https://krebsonsecurity.com/2013/09/data-broker-giants-hacked-by-id-theft-service/
+https://oag.ca.gov/system/files/California%20-%20State%20Notice_0.pdf
+"
+81,"Michaels & Aaron Brothers",RUG,2013-05-08,2014-02-27,2014-04-17,0,Civilian,Unknown,"Installed malware",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,3000000,"https://in.reuters.com/article/us-michaelsstores-cybercrime/retailer-michaels-stores-confirms-payment-card-data-breach-idUSBREA3G27N20140417
+https://krebsonsecurity.com/2014/04/3-million-customer-credit-debit-cards-stolen-in-michaels-aaron-brothers-breaches/
+https://www.businesswire.com/news/home/20140417006352/en/Michaels-Identifies-Previously-Announced-Data-Security-Issue#.U1A3P2fhf7w
+https://www.michaels.com/payment-card-notice-faqs/payment-card-notice-faqs.html
+"
+82,Pentagon,RUG,2013-05-01,2017-09-27,2017-11-29,1,Government,Misconfiguration,"Misuse of resource",Remediation,Discovery,Network,"Recognition and recovery",0,USA,,,"https://www.siliconrepublic.com/companies/pentagon-data-unsecured
+https://www.bbc.com/news/technology-42166004"
+83,LivingSocial,RUG,2013-04-26,2013-04-26,2013-04-26,0,Civilian,"Insufficient input validation","Web compromise",Mitigation,Disclosure,Network,Frustration,0,World,,50000000,"https://nakedsecurity.sophos.com/2013/04/27/livingsocial-hacked-50-million-affected/
+https://www.crn.com/news/security/240153803/livingsocial-data-breach-affects-millions.htm
+https://abcnews.go.com/Technology/livingsocial-hacked-50-million-customers-data-compromised/story?id=19057439
+"
+84,"Dun & Bradstreet Corp",RUG,2013-03-01,,2013-09-25,0,Civilian,Unknown,"Misuse of resource",Mitigation,Disclosure,Network,Resistance,0,USA,,1000000,"https://news.softpedia.com/news/Dun-Bradstreet-Starts-Notifying-Customers-of-Data-Breach-395124.shtml
+https://www.usatoday.com/story/cybertruth/2013/09/26/lexisnexis-dunn--bradstreet-altegrity-hacked/2878769/
+https://www.cnbc.com/2013/09/30/cybercrime-hackers-sell-social-security-info.html"
+85,Tumblr,RUG,2013-01-01,2013-05-12,2016-05-30,0,Civilian,Unknown,"Misuse of resource",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,65000000,"https://www.bankinfosecurity.com/blogs/tumblr-issues-historical-breach-pwnage-alert-p-2142
+https://www.vice.com/en/article/8q88k5/hackers-stole-68-million-passwords-from-tumblr-new-analysis-reveals
+https://www.troyhunt.com/the-emergence-of-historical-mega-breaches/
+https://www.welivesecurity.com/2016/05/30/65-million-tumblr-users-probably-careful/
+"
+86,Facebook,RUG,2013-01-01,2015-01-01,2018-03-21,1,Civilian,"Social engineering","Misuse of resource",Remediation,Disclosure,Application,"Recognition and recovery",0,USA,,70000000,"https://www.theguardian.com/technology/2018/apr/08/facebook-to-contact-the-87-million-users-affected-by-data-breach
+https://www.facebook.com/zuck/posts/10104712037900071
+https://www.forbes.com/sites/kathleenchaykowski/2018/03/21/mark-zuckerberg-addresses-breach-of-trust-in-facebook-user-data-crisis/?sh=46ec15153e36
+https://www.csoonline.com/article/3532816/the-biggest-data-breaches-in-southeast-asia.html
+"
+87,"Central Hudson Gas and Electric",RUG,2012-09-01,2013-01-01,2013-02-20,0,Civilian,Unknown,"Installed malware",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,3750000,"https://www.esecurityplanet.com/network-security/central-hudson-gas-and-electric-hacked.html
+https://privacyrights.org/data-breaches/central-hudson-gas-electric
+https://www.recordonline.com/article/20130416/BIZ/130419701
+
+"
+88,"South Carolina Government",RUG,2012-08-01,2012-10-10,2012-10-26,0,Government,"Social engineering","User compromise",Mitigation,Disclosure,User,"Recognition and recovery",0,USA,12000000,3800000,"https://www.usatoday.com/story/news/nation/2013/02/27/hacker-south-carolina/1951719/
+https://www.forbes.com/sites/anthonykosner/2012/10/27/cyber-security-fails-as-3-6-million-social-security-numbers-breached-in-south-carolina/#6c1756ee4e9e
+https://www.nytimes.com/2012/11/21/us/more-details-of-south-carolina-hacking-episode.html"
+89,"Yahoo! Voices",RUG,2012-07-11,2012-07-11,2012-07-12,0,Civilian,"Insufficient input validation","Root compromise",Mitigation,Disclosure,Network,Frustration,0,USA,,450000,"https://www.washingtonpost.com/business/technology/yahoo-passwords-hacked-likely-taken-through-yahoo-voices/2012/07/12/gJQA6IsOfW_story.html
+https://money.cnn.com/2012/07/12/technology/yahoo-hack/
+"
+90,Dropbox,RUG,2012-07-01,2012-07-15,2012-07-17,0,Civilian,Misconfiguration,"User compromise",Mitigation,Disclosure,Network,Resistance,0,USA,,68000000,"https://www.theverge.com/2016/8/31/12727404/dropbox-breach-passwords-hacked-encrypted
+https://www.vice.com/en/article/nz74qb/hackers-stole-over-60-million-dropbox-accounts
+https://www.zdnet.com/article/dropbox-investigating-why-its-users-are-being-spammed/
+https://www.bbc.com/news/technology-37232635
+"
+91,LinkedIn,RUG,2012-06-05,2012-06-05,2012-06-06,0,Civilian,"Race condition","Web compromise",Mitigation,Disclosure,Network,Resistance,0,USA,5000000,117000000,"https://www.linkedin.com/help/linkedin/answer/69603/notice-of-data-breach-may-2016?lang=en
+https://www.bankinfosecurity.com/linkedin-breach-worse-than-advertised-a-9113
+https://blog.linkedin.com/2012/06/06/linkedin-member-passwords-compromised
+https://inspiredelearning.com/blog/the-linkedin-hack-understanding-why-it-was-so-easy-to-crack-the-passwords-2/
+"
+92,"Korea Credit Bureau",RUG,2012-05-01,,2014-01-20,0,Civilian,"Unsecured hardware","Root compromise",Mitigation,Disclosure,Network,"Secured hardware",1,"South Korea",,20000000,"https://cisomag.eccouncil.org/data-breach-exposed-one-million-payment-card-details-in-south-korea/
+https://www.bbc.com/news/technology-25808189
+https://www.nytimes.com/2014/01/21/business/international/theft-of-data-fuels-worries-in-south-korea.html"
+93,Last.fm,RUG,2012-03-22,,2012-06-01,0,Civilian,Unknown,"Installed malware",Both,Disclosure,Network,"Recognition and recovery",0,USA,,43570999,"https://techcrunch.com/2016/09/01/43-million-passwords-hacked-in-last-fm-breach/
+https://www.zdnet.com/article/hackers-stole-43-million-last-fm-account-details-in-2012-breach/
+https://www.pcworld.com/article/3115165/lastfm-breach-from-2012-affected-43-million-users.html
+"
+94,Experian,RUG,2012-03-01,2012-10-01,2013-03-13,0,Civilian,Unknown,"Root compromise",Mitigation,Disclosure,Network,"Recognition and recovery",0,USA,,30000000,"https://www.reuters.com/article/us-experian-databreach/exclusive-u-s-states-probing-security-breach-at-experian-unit-idUSBREA321SL20140403
+https://www.forbes.com/sites/jasonbloomberg/2015/10/03/experian-hack-continues-pattern-of-recklessness/?sh=246c98162166
+https://www.sandiegouniontribune.com/news/watchdog/sd-me-data-breach-20180321-story.html
+"
+95,MilitarySingles.com,RUG,2012-03-01,,2012-03-25,0,Civilian,"Incorrect permission","Installed malware",Mitigation,Disrupt,Application,Frustration,0,USA,,163792,"https://www.databreaches.net/militarysingles-com-hack-exposes-over-160000-users-information/
+https://www.cnet.com/news/hackers-steal-passwords-from-military-dating-site/
+https://www.theverge.com/2012/3/26/2904641/lulzsec-reborn-with-military-singles-hack"
+96,"Korea Telecom Corporation",RUG,2012-02-01,2012-07-13,2012-07-29,0,Civilian,Unknown,"Installed malware",Remediation,Disclosure,Network,"Recognition and recovery",1,"South Korea",,8700000,"https://www.theverge.com/2012/7/29/3200338/korea-telecom-data-breach-hackers-telemarketers
+https://www.csoonline.com/article/2132035/s--korean-kt-hack-highlights-cybercriminals--growing-sophistication.html
+"
+97,"Global Payments",RUG,2012-01-21,2012-03-01,2012-03-12,0,Civilian,Unknown,Unknown,Both,Disclosure,unknown,Frustration,0,USA,93900000,1500000,"https://www.bankinfosecurity.com/global-payments-breach-tab-94-million-a-5415
+https://www.bankinfosecurity.com/banks-alerted-to-massive-card-breach-a-4638
+https://www.forbes.com/sites/greatspeculations/2012/04/03/global-payments-data-breach-exposes-card-payments-vulnerability/?sh=69d457572da0
+https://www.wired.com/2012/04/global-payments-breach/
+https://krebsonsecurity.com/2012/03/mastercard-visa-warn-of-processor-breach/
+"
+98,Steam,RUG,2011-11-06,2011-11-06,2011-11-10,0,Civilian,Unknown,"Web compromise",Mitigation,Disclosure,Application,Frustration,0,USA,,35000000,"https://www.forbes.com/sites/daveywinder/2019/08/09/critical-steam-security-warning-issued-for-72-million-windows-10-gamers/?sh=1cfdc26935e1
+https://www.mcvuk.com/business-news/pc/steam-hacked-valve-customer-data-compromised/
+https://www.bbc.com/news/technology-15690187
+https://www.eurogamer.net/articles/2011-11-10-valve-confirms-steam-security-breach
+"
+99,Google+,RUG,2011-06-28,2018-03-01,2018-10-08,0,Civilian,Misconfiguration,"User compromise",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,500000,"https://www.nytimes.com/2018/10/08/technology/google-plus-security-disclosure.html
+https://www.blog.google/technology/safety-security/project-strobe/
+https://www.theverge.com/2018/10/8/17951890/google-plus-shut-down-security-api-change-gmail-android
+"
+100,Sega,RUG,2011-06-16,2011-06-16,2011-06-19,0,Civilian,"Insufficient input validation","Denial of service",Mitigation,Disclosure,Application,Resistance,0,Japan,,1300000,"https://www.nytimes.com/2011/06/20/technology/20iht-sega20.html
+https://www.bbc.com/news/technology-13829690
+https://www.reuters.com/article/us-sega-hackers-idUSL3E7HJ01520110619"
+101,"Lockheed Martin",RUG,2011-05-21,2011-05-21,2011-05-28,0,Government,Unknown,"Root compromise",Mitigation,Discovery,Network,Resistance,0,USA,,,"https://www.computerweekly.com/opinion/No-excuses-for-Lockheed-Martin-cyber-attack
+"
+102,Sony,RUG,2011-04-16,2011-04-19,2011-04-20,0,Civilian,"Insufficient input validation","Denial of service",Mitigation,Disclosure,Application,Resistance,0,World,17750000,77000000,"https://arstechnica.com/gaming/2014/07/sony-to-pay-up-to-17-75-million-in-2011-psn-hacking-settlement/
+https://www.theguardian.com/technology/blog/2011/may/03/sony-data-breach-online-entertainment
+https://www.nytimes.com/2011/04/27/technology/27playstation.html
+https://www.extremetech.com/gaming/84218-how-the-playstation-network-was-hacked
+"
+103,Pentagon,RUG,2011-03-01,,2011-07-14,0,Government,Unknown,Unknown,Both,Discovery,Network,Frustration,0,USA,,,"https://www.washingtonpost.com/blogs/checkpoint-washington/post/24000-pentagon-files-stolen-in-major-cyber-breach-official-says/2011/07/14/gIQAsaaVEI_blog.html?utm_term=.fac4968dc2e1
+https://www.npr.org/sections/thetwo-way/2011/07/14/137858361/pentagon-says-24-000-files-were-stolen-in-data-breach
+https://www.nytimes.com/2011/07/15/world/15cyber.html
+"
+104,"Stanford Hospital",RUG,2010-09-01,2011-08-22,2011-09-09,0,Civilian,Unknown,Unknown,Both,Disclosure,Network,"Recognition and recovery",0,USA,4000000,20000,"https://healthitsecurity.com/news/stanford-hospital-agrees-to-4-million-breach-settlement
+https://www.databreachtoday.com/stanford-breach-lawsuit-settled-a-6670
+https://www.inforisktoday.com/stanford-reports-website-breach-a-4038
+https://www.crn.com/news/security/231601171/stanford-hospital-data-breach-exposes-20-000-patient-records.htm"
+105,"U.S. Department of State",RUG,2010-01-05,2010-05-25,2010-06-06,0,Government,"Unsecured hardware","Misuse of resource",Both,Discovery,Network,"Secured hardware",1,World,,,"https://www.nytimes.com/2010/11/29/world/29cables.html
+https://www.theguardian.com/world/2010/nov/28/how-us-embassy-cables-leaked
+https://gizmodo.com/how-a-burnt-lady-gaga-cd-helped-leak-thousands-of-intel-5701089
+https://www.wired.com/2011/12/manning-assange-laptop/"
+106,"RockYou Inc.",RUG,2009-12-01,2009-12-04,2009-12-15,0,Civilian,"Insufficient input validation","User compromise",Mitigation,Disclosure,Application,Resistance,0,USA,,32000000,"https://www.computerworld.com/article/2522045/rockyou-hack-exposes-names--passwords-of-30m-accounts.html
+https://techcrunch.com/2009/12/14/rockyou-hack-security-myspace-facebook-passwords/"
+107,"Iran Nuclear Program",RUG,2009-06-01,2010-06-15,2010-09-26,0,Government,"Unsecured hardware","Installed malware",Mitigation,Destruct,Application,"Secured hardware",0,Iran,,,"http://large.stanford.edu/courses/2015/ph241/holloway1/
+https://www.infoworld.com/article/2626009/is-stuxnet-the--best--malware-ever-.html
+https://www.bbc.com/news/world-middle-east-11414483
+https://spectrum.ieee.org/telecom/security/the-real-story-of-stuxnet
+https://www.csoonline.com/article/3218104/what-is-stuxnet-who-created-it-and-how-does-it-work.html"
+108,CheckFree,RUG,2008-12-02,2008-12-02,2009-01-06,0,Civilian,"Social engineering","Web compromise",Remediation,Disrupt,Network,"Recognition and recovery",0,USA,,5000000,"https://www.computerworld.com/article/2530152/checkfree-warns-5-million-customers-after-hack.html
+"
+109,"RBS WorldPay",RUG,2008-11-05,2008-11-10,2008-12-23,0,Civilian,Unknown,"User compromise",Remediation,Disrupt,User,Resistance,0,USA,9500000,1100000,"https://www.washingtonpost.com/wp-dyn/content/article/2009/04/15/AR2009041501196_2.html?sid=ST2009041501334
+https://www.databreaches.net/rbs-worldpay-hacker-extradicted-to-atlanta/
+https://www.wired.com/2009/11/rbs-worldpay/
+https://threatpost.com/anatomy-rbs-worldpay-hack-111009/73073/
+"
+110,Pentagon,RUG,2008-09-01,,2010-08-25,0,Government,"Unsecured hardware",Unknown,Mitigation,Unknown,Network,"Secured hardware",0,USA,,,"https://www.wired.com/2010/08/insiders-doubt-2008-pentagon-hack-was-foreign-spy-attack/
+https://www.bbc.com/news/world-us-canada-11088658"
+111,"Heartland Payment Systems",RUG,2008-05-08,2008-10-01,2009-01-19,0,Civilian,"Unsecured hardware","Misuse of resource",Remediation,Disclosure,Network,"Secured hardware",0,USA,640000000,100000000,"https://www.nytimes.com/2009/01/21/technology/21breach.html
+https://www.forbes.com/sites/davelewis/2015/05/31/heartland-payment-systems-suffers-data-breach/?sh=2a70c8cc744a"
+112,"Bank of New York Mellon",RUG,2008-02-27,2008-02-27,2008-05-22,0,Civilian,"Unsecured hardware","Misuse of resource",Mitigation,Disclosure,Network,"Secured hardware",0,USA,186000000,12500000,"https://www.usatoday.com/story/money/business/2015/04/15/bony-mellon-fined-fca/25810789/
+https://www.bankinfosecurity.com/bank-ny-mellon-breach-much-bigger-than-first-announced-a-952
+"
+113,"Hannaford Brothers",RUG,2007-12-07,2008-02-27,2008-03-17,0,Civilian,Misconfiguration,"Installed malware",Mitigation,Disclosure,Network,Resistance,0,USA,1800000,4200000,"https://bergermontague.com/cases/hannaford-brothers-co-customer-data-security-breach-litigation/
+https://abcnews.go.com/Technology/story?id=4469806&page=1
+https://krebsonsecurity.com/tag/hannaford-brothers-co/"
+114,"HM Revenue and Customs",RUG,2007-10-18,2007-11-10,2007-11-20,0,Government,"Unsecured hardware","Misuse of resource",Mitigation,Disclosure,Network,"Secured hardware",0,UK,,25000000,"http://news.bbc.co.uk/2/hi/business/7105592.stm
+http://news.bbc.co.uk/2/hi/uk_news/politics/7103566.stm"
+115,"Nationwide Building",RUG,2006-08-01,2006-09-01,,0,Civilian,"Unsecured hardware","User compromise",Mitigation,Disclosure,User,"Secured hardware",0,UK,1989400,11000000,"https://www.theguardian.com/money/2007/feb/15/business.accounts
+https://www.standard.co.uk/news/nationwide-fined-1m-over-stolen-laptop-scandal-7249203.html"
+116,"Countrywide Home Loan",RUG,2006-07-01,,2008-08-01,0,Civilian,Misconfiguration,"User compromise",Mitigation,Disclosure,User,"Recognition and recovery",1,USA,30350000,2400000,"https://www.latimes.com/archives/la-xpm-2008-aug-02-fi-arrest2-story.html
+https://archives.fbi.gov/archives/losangeles/press-releases/2011/former-employee-of-countrywide-home-loans-ordered-to-pay-1.2-million-in-restitution-for-data-breach-involving-information-for-millions-of-individuals
+https://bergermontague.com/wp-content/uploads/2018/03/countrywide-settlement.pdf"
+117,LexisNexis,RUG,2005-01-01,,2005-03-10,0,Civilian,"Social engineering","Installed malware",Mitigation,Disclosure,Network,Resistance,0,USA,,310000,"https://www.esecurityplanet.com/trends/article.php/3497111/310000-Exposed-by-LexisNexis-Data-Breach.htm
+https://www.wired.com/2005/05/database-hackers-reveal-tactics/
+https://www.wsj.com/articles/SB111037944326774624
+https://www.nytimes.com/2005/04/13/technology/security-breach-at-lexisnexis-now-appears-larger.html
+"
+118,"CardSystems Solutions Inc.",RUG,,2005-05-22,2005-06-17,0,Civilian,Unknown,"Installed malware",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,40000000,"https://money.cnn.com/2005/06/17/news/master_card/
+https://www.businesswire.com/news/home/20050617005525/en/MasterCard-International-Identifies-Security-Breach-at-CardSystems-Solutions-A-Third-Party-Processor-of-Payment-Card-Data
+"
+119,Ameritrade,RUG,,,2007-09-01,0,Civilian,Unknown,"Installed malware",Mitigation,Disclosure,Network,Resistance,0,USA,14400000,6300000,"https://www.esecurityplanet.com/network-security/td-ameritrade-settles-security-breach-lawsuit.html
+https://www.reuters.com/article/urnidgns852573c4006938800025765c0069d7ec/judge-says-td-ameritrades-proposed-security-fixes-not-enough-idUS61443379520091027
+https://www.wired.com/2008/07/ameritrade-hack/
+https://www.theregister.com/2007/09/15/ameritrade_database_burgled/"
+120,Gawker,RUG,,2010-11-11,2010-12-11,0,Civilian,Unknown,"Root compromise",Both,Disclosure,Network,Resistance,0,USA,,1300000,"https://www.forbes.com/sites/firewall/2010/12/13/the-lessons-of-gawkers-security-mess/?sh=6bbf12a16b5d
+https://www.theatlantic.com/culture/archive/2010/12/why-gawker-s-security-breach-is-so-bad/343054/
+https://web.archive.org/web/20101216021934/http://techshrimp.com/2010/12/13/gawker-website-hacked-by-gnosis-gnosis-says-they-are-not-4chan-or-anonymous/"
+121,NASAQ,RUG,,2011-10-01,2011-10-20,0,Civilian,Unknown,"Installed malware",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,,"https://www.bloomberg.com/news/articles/2014-07-17/how-russian-hackers-stole-the-nasdaq
+https://www.nytimes.com/2011/02/06/business/06nasdaq.html
+https://www.reuters.com/article/us-nasdaq-hacking/exclusive-nasdaq-hackers-spied-on-company-boards-idUSTRE79J84T20111020
+https://www.businessinsider.com/nasdaq-attacked-by-hackers-2014-7?IR=T"
+122,"Stratfor Global Intelligence",RUG,,2011-12-06,2011-12-24,0,Civilian,"Insufficient input validation","Root compromise",Both,Destruct,"Operating system",Resistance,0,USA,1750000,90000,"https://www.nytimes.com/2011/12/26/technology/hackers-breach-the-web-site-of-stratfor-global-intelligence.html
+https://www.theguardian.com/technology/2011/dec/27/security-stratfor-hackers-credit-cards
+https://www.reuters.com/article/us-stratfor-hack-lawsuit/stratfor-to-settle-class-action-suit-over-hack-idUSBRE85R03720120628?feedType=RSS&feedName=technologyNews&utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+reuters%2FtechnologyNews+(Reuters+Technology+News)&utm_content=Goo
+https://www.zdnet.com/article/stratfor-held-payment-details-in-plain-text-before-2011-hack-report/
+"
+123,"Citigroup Inc.",RUG,,2011-05-10,2011-06-09,0,Civilian,"Incorrect permission","User compromise",Mitigation,Disclosure,Application,Resistance,0,USA,2700000,360000,"https://www.observeit.com/blog/throwback-hack-citigroup-hack-2011/
+https://www.nytimes.com/2011/06/14/technology/14security.html
+https://www.theregister.com/2011/06/14/citigroup_website_hack_simple/
+https://www.latimes.com/business/la-xpm-2011-jun-17-la-fi-citigroup-hacking-20110617-story.html"
+124,Epsilon,RUG,,2011-03-30,2011-04-01,0,Civilian,Unknown,Unknown,Both,Disclosure,Network,Resistance,0,USA,637000000,60000000,"https://www.bankinfosecurity.com/epsilon-biggest-breach-ever-a-3502
+https://www.observeit.com/blog/throwback-hack-the-epsilon-email-breach-of-2011/
+https://www.eweek.com/security/epsilon-data-breach-to-cost-billions-in-worst-case-scenario"
+125,"Verisign Inc.",RUG,,,2012-02-02,0,Civilian,Unknown,Unknown,Both,Unknown,Network,Frustration,0,USA,,,"https://www.cio.com/article/2399773/faq-about-the-verisign-data-breaches.html
+https://www.reuters.com/article/us-hacking-verisign-idUSTRE8110Z820120202
+https://www.computerweekly.com/news/2240114786/Verisign-admits-security-breach-of-corporate-network"
+126,"RSA Security LLC",RUG,,,2011-03-17,0,Civilian,"Social engineering","Root compromise",Mitigation,Disclosure,Network,Frustration,0,USA,,,"https://arstechnica.com/information-technology/2011/06/rsa-finally-comes-clean-securid-is-compromised/
+https://www.theregister.com/2011/04/04/rsa_hack_howdunnit/
+"
+127,Facebook,RUG,,2013-06-14,2013-06-21,0,Civilian,Misconfiguration,"Root compromise",Remediation,Disclosure,Application,"Recognition and recovery",0,USA,,6000000,"https://uk.reuters.com/article/net-us-facebook-security-idUSBRE95K18Y20130621
+https://www.facebook.com/notes/facebook-security/important-message-from-facebooks-white-hat-program/10151437074840766
+"
+128,"Barnes and Noble",RUG,,2012-09-14,2012-10-23,0,Civilian,"Unsecured hardware","User compromise",Remediation,Disclosure,Local,"Recognition and recovery",0,USA,,,"https://arstechnica.com/information-technology/2012/10/hackers-steal-data-from-compromised-barnes-noble-payment-terminals/
+https://www.zdnet.com/article/barnes-noble-confirms-cyberattack-customer-data-breach/
+https://www.nytimes.com/2012/10/24/business/hackers-get-credit-data-at-barnes-noble.html
+https://www.latimes.com/business/la-xpm-2012-oct-25-la-fi-barnes-noble-data-theft-20121025-story.html
+"
+129,Evernote,RUG,,2013-02-28,2013-03-02,0,Civilian,Unknown,"Denial of service",Mitigation,Disclosure,Application,Frustration,0,USA,,50000000,"https://www.theverge.com/2013/3/2/4056704/evernote-password-reset
+https://nakedsecurity.sophos.com/2013/03/02/evernote-hacked-almost-50-million-passwords-reset-after-security-breach/
+https://edition.cnn.com/2013/03/04/tech/web/evernote-hacked/index.html
+
+"
+130,Twitter,RUG,,,2013-02-01,0,Civilian,Unknown,Unknown,Both,Disclosure,Network,Frustration,0,USA,,250000,"https://web.archive.org/web/20130204085709/https://www.wired.co.uk/news/archive/2013-02/02/twitter-hacked
+https://web.archive.org/web/20130204072414/http://blog.twitter.com/2013/02/keeping-our-users-secure.html
+https://www.theguardian.com/technology/2013/feb/02/twitter-hacked-accounts-reset-security
+https://www.theverge.com/2013/2/1/3942660/twitter-was-also-attacked-this-week-passwords-for-up-to-250000-users-compromised"
+131,"Vodafone Germany",RUG,,2013-09-05,2013-09-12,0,Civilian,Unknown,Unknown,Both,Disclosure,unknown,"Recognition and recovery",1,Germany,,2000000,"https://www.zdnet.com/article/vodafone-germany-confirms-insider-data-theft-two-million-customers-affected/
+https://www.engadget.com/2013-09-12-vodafone-hacked-2-million-customers-germany.html
+https://www.securityweek.com/attacker-steals-data-2-million-vodafone-germany-customers
+https://www.pinsentmasons.com/out-law/news/vodafone-germany-discloses-details-about-data-breach-affecting-2m-customers
+
+"
+132,"TerraCom & YourTel",RUG,,2013-05-07,2013-05-23,0,Civilian,Misconfiguration,"User compromise",Mitigation,Disclosure,Network,"Recognition and recovery",0,USA,3500000,300000,"https://www.fcc.gov/document/terracom-yourtel-pay-35m-privacy-breach-violations
+https://www.wired.co.uk/article/reporter-google-breach-hacker
+https://www.lexology.com/library/detail.aspx?g=225619a4-9dfa-4c2a-af54-7e4c5c264c04"
+133,Ubisoft,RUG,,,2013-07-03,1,Civilian,Unknown,"Misuse of resource",Both,Disclosure,Network,Frustration,0,France,,58000000,"https://www.firstpost.com/tech/news-analysis/ubisoft-website-hacked-hackers-get-access-to-email-addresses-and-passwords-3630625.html
+https://www.bbc.com/news/technology-23159997
+https://www.theregister.com/2013/07/02/ubisoft_data_breach/
+"
+134,MoonPig,RUG,,2013-08-18,2015-01-04,0,Civilian,Misconfiguration,"Denial of service",Mitigation,Disrupt,Network,Frustration,0,UK,0,3000000,"https://www.theguardian.com/technology/2015/jan/06/personal-details-moonpig-exposed-security-bug
+https://darkport.co.uk/blog/moonpig-vulnerability/"
+135,Adobe,RUG,,,2013-10-03,0,Civilian,Unknown,"Root compromise",Mitigation,Disclosure,Network,Resistance,0,USA,,150000000,"https://www.theverge.com/2013/11/7/5078560/over-150-million-breached-records-from-adobe-hack-surface-online
+https://www.zdnet.com/article/adobe-admits-2-9m-customer-accounts-have-been-compromised/
+https://krebsonsecurity.com/2013/10/adobe-breach-impacted-at-least-38-million-users/"
+136,"Sony Pictures",RUG,,2014-11-24,2014-11-24,0,Civilian,Unknown,"Installed malware",Mitigation,Discovery,Network,Frustration,0,"Japan, USA",11000000,,"https://www.buzzfeednews.com/article/tomgara/sony-hack
+https://www.vox.com/2015/1/20/18089084/sony-hack-north-korea"
+137,"European Central Bank",RUG,,2014-07-21,2014-07-24,0,Government,Unknown,"Misuse of resource",Both,Disclosure,Network,"Recognition and recovery",0,EU,,,"https://www.cnbc.com/2014/07/24/ecb-announces-data-theft.html
+https://www.bankinfosecurity.com/euro-central-bank-suffers-data-breach-a-7101
+"
+138,TalkTalk,RUG,,2015-10-21,2015-10-23,1,Civilian,"Insufficient input validation","Misuse of resource",Mitigation,Disclosure,Network,Frustration,0,UK,509176,21000,"https://www.engadget.com/2015-10-23-talktalk-hack-explainer.html
+https://www.engadget.com/2015-10-23-talktalk-hacked.html
+https://www.theguardian.com/technology/2015/oct/23/talktalk-criticised-for-poor-security-and-handling-of-hack-attack
+https://www.theguardian.com/business/2016/oct/05/talktalk-hit-with-record-400k-fine-over-cyber-attack
+"
+139,"Dominos Pizza Inc.",RUG,,2014-06-16,2014-06-16,0,Civilian,Unknown,Unknown,Both,Disclosure,Network,Frustration,0,"Belgium, France",,650000,"https://www.reuters.com/article/us-dominos-pizza-cybersecurity/hackers-steal-dominos-pizza-customer-data-in-europe-ransom-sought-idUSKBN0ER1TF20140616
+https://www.welivesecurity.com/2014/06/16/dominos-pizza-hacked/
+https://www.csoonline.com/article/2364323/domino-s-pizza-large-breach-with-a-side-of-ransom.html
+
+
+"
+140,"Dixons Carphone",RUG,,2015-08-05,2015-08-08,0,Civilian,Unknown,"Misuse of resource",Remediation,Disclosure,Network,Frustration,0,UK,541268,2400000,"https://uk.reuters.com/article/uk-carphone-warhouse/dixons-carphone-says-cyber-attack-may-have-exposed-customers-data-idUKKCN0QD0JH20150809
+https://www.bbc.com/news/uk-33835185
+https://www.ft.com/content/baa7e2d0-82fb-3363-8d3b-170425b8043a
+https://www.theregister.com/2015/08/08/carphone_warehouse_data_breach/
+https://www.ft.com/content/7dfbc636-6ef9-11e8-92d3-6c13e5c92914
+"
+141,"National Archive and Record Administration",RUG,,,2015-06-12,1,Government,Unknown,Unknown,Both,Disclosure,Network,Frustration,0,USA,,14000000,"https://www.theguardian.com/technology/2015/jun/12/hacking-personnel-data-4-million-federal-workers
+https://www.nextgov.com/cybersecurity/2015/06/signs-opm-hack-have-turned-national-archives/116005/
+https://www.opm.gov/cybersecurity/cybersecurity-incidents/"
+142,"Adult Friend Finder",RUG,,,2015-05-21,0,Civilian,Unknown,Unknown,Both,Disclosure,Application,Frustration,0,USA,,3528458,"https://www.csoonline.com/article/2925833/adult-friend-finder-confirms-data-breach-3-5-million-records-exposed.html
+https://www.bankinfosecurity.com/alleged-adult-website-breach-may-affect-412-million-accounts-a-9519
+https://www.theguardian.com/technology/2016/nov/14/adult-friend-finder-and-penthouse-hacked-in-largest-personal-data-breach-on-record
+"
+143,CIA,RUG,,2015-10-01,2017-03-08,0,Government,Unknown,Unknown,Both,Discovery,unknown,Frustration,0,USA,,,"https://www.reuters.com/article/cia-wikileaks-idUSL2N1GL204
+https://www.businessinsider.com/r-us-officials-aware-of-cia-security-breach-in-2016-say-wikileaks-papers-authentic-2017-3?international=true&r=US&IR=T
+https://www.latimes.com/business/technology/la-fi-tn-cia-wikileaks-vault7-20170307-story.html
+"
+144,Twitter,RUG,,,2016-06-09,1,Civilian,"Social engineering","User compromise",Mitigation,Disclosure,User,Frustration,0,USA,,32888300,"https://fortune.com/2016/06/09/twitter-hack-malware/
+https://techcrunch.com/2016/06/08/twitter-hack/
+https://www.bankinfosecurity.com/33-million-twitter-credentials-may-have-been-leaked-a-9187
+"
+145,"Verizon Enterprise Solutions",RUG,,,2016-03-24,0,Civilian,"Social engineering","User compromise",Both,Discovery,Network,Frustration,0,USA,,1500000,"https://krebsonsecurity.com/2016/03/crooks-steal-sell-verizon-enterprise-customer-data/
+https://www.cnbc.com/2016/03/24/15-million-verizon-enterprise-customers-hacked-report.html
+https://arstechnica.com/information-technology/2016/03/after-verizon-breach-1-5-million-customer-records-put-up-for-sale/
+"
+146,"US Navy",RUG,,2016-10-27,2016-11-23,0,Government,"Unsecured hardware","User compromise",Mitigation,Discovery,User,Frustration,0,USA,,134386,"https://arstechnica.com/information-technology/2016/11/us-navy-warns-134000-sailors-data-breach-hpe-laptop-compromised/
+https://www.bbc.com/news/technology-38090234
+https://www.infosecurity-magazine.com/news/us-navy-admits-to-data-breach/
+"
+147,"Sage Group",RUG,,,2016-08-13,0,Civilian,"Incorrect permission","User compromise",Mitigation,Disclosure,Network,Frustration,1,UK,,,"https://fortune.com/2016/08/18/sage-breach-arrest/
+https://theantisocialengineer.com/2016/08/13/potential-sage-uk-payroll-data-breach/
+https://arstechnica.com/information-technology/2016/08/sage-data-breach-software-accountancy-insider-attack/
+"
+148,Three.,RUG,,2016-11-17,2016-11-18,0,Civilian,"Social engineering","User compromise",Mitigation,Disclosure,User,"Recognition and recovery",0,UK,,133827,"https://techcrunch.com/2016/11/18/three-uk-suffers-major-data-breach-via-compromised-employee-login/
+https://www.bbc.com/news/business-38022309
+https://www.theguardian.com/business/2016/nov/18/three-mobile-customer-data-breach-phone-upgrade"
+149,"Internal Revenue Services",RUG,,2017-01-25,2017-04-06,1,Government,"Social engineering","User compromise",Mitigation,Disclosure,Network,"Recognition and recovery",0,USA,,100000,"https://www.nytimes.com/2017/04/06/us/politics/internal-revenue-service-breach-taxpayer-data.html
+https://www.engadget.com/2017-04-07-irs-fafsa-data-breach-taxpayer-info.html
+https://www.govinfo.gov/content/pkg/CHRG-115hhrg28504/html/CHRG-115hhrg28504.htm
+"
+150,"Republican National Committee",RUG,,2017-06-12,2017-06-19,1,Government,Misconfiguration,"Misuse of resource",Both,Discovery,Network,"Recognition and recovery",0,USA,,198000000,"https://www.forbes.com/sites/leemathews/2017/06/19/gop-firm-leaked-info-200-million-americans/?sh=a94249979ff1
+https://www.upguard.com/breaches/the-rnc-files
+https://gizmodo.com/gop-data-firm-accidentally-leaks-personal-details-of-ne-1796211612
+"
+151,Cellebrite,RUG,,,2017-01-12,0,Civilian,Unknown,"User compromise",Mitigation,Discovery,Network,Frustration,0,Israel,,,"https://www.cellebrite.com/en/resources/press-releases/cellebrite-statement-on-information-security-breach/
+https://www.bbc.com/news/technology-38607670
+https://www.vice.com/en/article/3daywj/hacker-steals-900-gb-of-cellebrite-data
+"
+152,Sonic,RUG,,2016-09-18,2016-09-26,0,Civilian,"Unsecured hardware","Installed malware",Mitigation,Disclosure,Network,"Secured hardware",0,USA,,5000000,"https://eu.usatoday.com/story/tech/2017/09/27/sonic-drive-hit-security-breach/708850001/
+https://krebsonsecurity.com/2017/09/breach-at-sonic-drive-in-may-have-impacted-millions-of-credit-debit-cards/
+https://www.reuters.com/article/us-cyber-sonic-idUSKBN1C92S8"
+153,Alteryx,RUG,,2017-10-06,2017-12-19,0,Civilian,Misconfiguration,"Web compromise",Remediation,Discovery,Network,"Recognition and recovery",0,USA,,317000000,"https://us.norton.com/internetsecurity-emerging-threats-alteryx-data-leak-exposes-information-for-123-million.html
+https://www.latimes.com/business/technology/la-fi-tn-alteryx-data-breach-20171222-story.html
+https://fortune.com/2017/12/22/experian-data-breach-alteryx-amazon-equifax/
+"
+154,"Heathrow Airport",RUG,,2017-10-28,2017-10-28,0,Government,"Unsecured hardware","Misuse of resource",Both,Discovery,User,"Secured hardware",0,UK,157848,,"https://www.mirror.co.uk/news/uk-news/terror-threat-heathrow-airport-security-11428132
+https://www.bbc.com/news/business-45785227
+https://www.teiss.co.uk/ico-fines-heathrow-data-breach/"
+155,"NICE System",RUG,,2017-06-08,2017-07-12,0,Civilian,Misconfiguration,"Misuse of resource",Both,Disclosure,Network,"Recognition and recovery",0,Israel,,14000000,"https://www.zdnet.com/article/millions-verizon-customer-records-israeli-data/
+https://www.upguard.com/breaches/verizon-cloud-leak
+https://www.foxnews.com/tech/verizon-data-breach-14-million-customers-reportedly-exposed
+https://fortune.com/2017/07/13/verizon-personal-data-customers-leaked/"
+156,TigerSwan,RUG,,2017-07-20,2017-09-02,0,Civilian,Misconfiguration,"User compromise",Remediation,Discovery,Network,"Recognition and recovery",0,USA,,10000,"https://www.upguard.com/breaches/cloud-leak-tigerswan
+https://www.gizmodo.com.au/2017/09/thousands-of-job-applicants-citing-top-secret-us-government-work-exposed-in-amazon-server-data-breach/
+https://arstechnica.com/information-technology/2017/11/army-red-disk-intel-sharing-system-left-exposed-in-open-aws-data-store/
+"
+157,Wonga,RUG,,2017-04-07,2017-04-09,0,Civilian,Unknown,Unknown,Both,Disclosure,Network,Frustration,0,UK,,270000,"https://www.bbc.com/news/business-39544762
+https://techcrunch.com/2017/04/10/pay-day-loan-firm-wonga-suffers-data-breach-affecting-up-to-270000/
+https://www.helpnetsecurity.com/2017/04/10/wonga-data-breach/
+"
+158,CeX,RUG,,,2017-08-30,0,Civilian,Unknown,Unknown,Both,Disclosure,unknown,Frustration,0,UK,,2000000,"https://www.tomshardware.com/news/cex-data-breach-2-million-gamers,35346.html
+https://www.itproportal.com/news/cex-data-breach-the-industry-reacts/
+https://www.bbc.com/news/technology-41095162"
+159,Panera,RUG,,2017-08-02,2018-04-03,0,Civilian,Misconfiguration,"Misuse of resource",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,37000000,"https://www.csoonline.com/article/3268025/panera-bread-blew-off-breach-report-for-8-months-leaked-millions-of-customer-records.html
+https://arstechnica.com/information-technology/2018/04/panera-accused-security-researcher-of-scam-when-he-reported-a-major-flaw/
+https://medium.com/@djhoulihan/no-panera-bread-doesnt-take-security-seriously-bf078027f815
+https://krebsonsecurity.com/2018/04/panerabread-com-leaks-millions-of-customer-records/"
+160,"Equifax Inc.",RUG,,2017-07-29,2017-09-07,0,Civilian,Unknown,Unknown,Both,Disclosure,Network,Frustration,0,USA,314000000,143000000,"https://www.forbes.com/sites/leemathews/2017/09/07/equifax-data-breach-impacts-143-million-americans/?sh=be70ed8356f8
+https://www.cnbc.com/2017/09/07/credit-reporting-firm-equifax-says-cybersecurity-incident-could-potentially-affect-143-million-us-consumers.html
+https://www.reuters.com/article/us-equifax-cyber/equifax-breach-could-be-most-costly-in-corporate-history-idUSKCN1GE257
+"
+161,"FedEx Corp",RUG,,2018-02-05,2018-02-15,1,Civilian,Misconfiguration,"User compromise",Mitigation,Disclosure,Network,"Recognition and recovery",0,USA,,119000,"https://arstechnica.com/information-technology/2018/02/fedex-customer-data-left-online-for-anyone-to-rifle-through/
+https://www.reuters.com/article/us-fedex-data-exposed-idUSKCN1FZ299
+https://gizmodo.com/119-000-passports-and-photo-ids-of-fedex-customers-foun-1823035669"
+162,T-Mobile,RUG,,2018-10-02,2018-10-10,1,Civilian,Misconfiguration,"Misuse of resource",Remediation,Disclosure,Network,"Recognition and recovery",0,USA,,70000000,"https://www.vice.com/en/article/wjx3e4/t-mobile-website-allowed-hackers-to-access-your-account-data-with-just-your-phone-number
+https://arstechnica.com/information-technology/2017/10/t-mobile-website-bug-apparently-exploited-to-mine-sensitive-account-data/
+https://www.cnet.com/news/bug-reportedly-exposed-t-mobile-customers-personal-data/
+"
+163,Twitter,RUG,,,2018-05-03,1,Civilian,Misconfiguration,Unknown,Mitigation,Disclosure,Application,Frustration,0,World,547000,330000000,"https://blog.twitter.com/official/en_us/topics/company/2018/keeping-your-account-secure.html
+https://www.reuters.com/article/us-twitter-passwords/twitter-urges-all-users-to-change-passwords-after-glitch-idUSKBN1I42JG
+https://www.bbc.com/news/business-43995168
+"
+164,Pentagon,RUG,,2018-10-04,2018-10-12,1,Government,Unknown,"User compromise",Mitigation,Discovery,Network,Frustration,0,USA,,30000,"https://www.militarytimes.com/news/your-military/2018/10/12/pentagon-reveals-cyber-breach-of-travel-records/
+https://apnews.com/article/7f6f4db35b0041bdbc5467848225e67d
+https://www.engadget.com/2018-10-14-pentagon-travel-record-data-breach.html
+https://www.bankinfosecurity.com/pentagon-data-breach-exposed-30000-travel-records-a-11600"
+165,"Canadian Imperial Bank of Commerce",RUG,,2018-05-27,2018-05-28,0,Civilian,Unknown,Unknown,Mitigation,Disclosure,unknown,Frustration,0,Canada,,40000,"https://www.itgovernanceusa.com/blog/90000-affected-as-cibc-and-bank-of-montreal-disclose-data-breaches
+https://www.bloomberg.com/news/articles/2018-05-28/fraudsters-may-have-taken-personal-data-at-cibc-s-simplii-bmo
+https://www.newswire.ca/news-releases/simplii-financial-advises-clients-of-potential-security-issue-and-recommended-actions-to-protect-their-personal-information-683856321.html
+https://www.csoonline.com/article/3276275/2-canadian-banks-hacked-90000-customers-data-stolen.html
+https://www.reuters.com/article/us-bmo-attack/cyber-thieves-claim-to-hit-two-big-canadian-banks-idUSKCN1IT1PQ"
+166,"Bank of Montreal",RUG,,2018-05-27,2018-05-28,0,Civilian,Unknown,Unknown,Mitigation,Disclosure,unknown,Frustration,0,Canada,,50000,"https://newsroom.bmo.com/index.php?s=2429&item=129367
+https://www.itgovernanceusa.com/blog/90000-affected-as-cibc-and-bank-of-montreal-disclose-data-breaches
+https://www.bloomberg.com/news/articles/2018-05-28/fraudsters-may-have-taken-personal-data-at-cibc-s-simplii-bmo
+https://www.reuters.com/article/us-bmo-attack/cyber-thieves-claim-to-hit-two-big-canadian-banks-idUSKCN1IT1PQ
+https://www.csoonline.com/article/3276275/2-canadian-banks-hacked-90000-customers-data-stolen.html"
+167,Exactis,RUG,,2018-06-01,2018-06-27,0,Civilian,Misconfiguration,"Misuse of resource",Remediation,Discovery,Network,"Recognition and recovery",0,USA,,340000000,"https://www.engadget.com/2018-06-28-exactis-leak-340-million-records.html
+https://www.wired.com/story/exactis-database-leak-340-million-records/
+https://gizmodo.com/personal-information-of-340-million-people-and-business-1827194298"

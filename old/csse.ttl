@@ -1,0 +1,64 @@
+@prefix csseVar:    <www.example.org/csse/dictionary/variable#> .
+@prefix csseProp:   <www.example.org/csse/dictionary/property#> .
+@prefix i-adopt:    <https://w3id.org/iadopt/ont/> .
+@prefix sur:        <https://w3id.org/survey-ontology#> .
+@prefix skos:       <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema:     <http://schema.org/> .
+@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema> .
+@prefix xsd:        <https://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms:    <http://purl.org/dc/terms/description> .
+
+# -- VARIABLES  ----------------------------
+
+csseVar:provinceState               a                       i-adopt:Variable, sur:ObservableVariable ;
+                                    i-adopt:hasProperty     csseProp:hasProvinceState .
+
+csseVar:countryRegion               a                       i-adopt:Variable, sur:ObservableVariable ;
+                                    i-adopt:hasProperty     csseProp:hasCountryRegion .
+
+csseVar:latitude                    a                       i-adopt:Variable, sur:LatentVariable ;
+                                    i-adopt:hasProperty     csseProp:hasLatitude .
+
+csseVar:longitude                   a                       i-adopt:Variable, sur:LatentVariable ;
+                                    i-adopt:hasProperty     csseProp:hasLongitude .
+
+csseVar:numberOfCases               a                       i-adopt:Variable, sur:ObservableVariable ;
+                                    i-adopt:hasProperty     csseProp:hasNumberOfCases .
+
+csseVar:date                        a                       i-adopt:Variable, sur:ObservableVariable ;
+                                    i-adopt:hasProperty     csseProp:hasDate .
+
+ccseVar:numberOfCasesOnDate         a                       i-adopt:Variable, sur:LatentVariable ;
+                                    i-adopt:hasProperty     csseProp:hasNumberOfCasesOnDate .
+
+# -- PROPERTIES  ----------------------------
+
+csseProp:hasProvinceState           a                       i-adopt:Property, rdfs:Property ;
+                                    skos:prefLabel          "Province/State" ;
+                                    rdfs:range              xsd:string .
+
+csseProp:hasCountryRegion           a                       i-adopt:Property, rdfs:Property ;
+                                    skos:prefLabel          "Country/Region" ;
+                                    rdfs:range              xsd:string .
+
+csseProp:hasLatitude                a                       i-adopt:Property, rdfs:Property ;
+                                    skos:prefLabel          "Lat" ;
+                                    rdfs:range              xsd:float .
+
+csseProp:hasLongitude               a                       i-adopt:Property, rdfs:Property ;
+                                    skos:prefLabel          "Long" ;
+                                    rdfs:range              xsd:float .
+
+csseProp:hasNumberOfCases           a                       i-adopt:Property, rdfs:Property ;
+                                    skos:prefLabel          "Number of cases" ;
+                                    rdfs:range              xsd:float .
+
+csseProp:hasDate                    a                       i-adopt:Property, rdfs:Property ;
+                                    skos:prefLabel          "Date" ;
+                                    rdfs:range              xsd:Date .
+
+csseProp:hasNumberOfCasesOnDate     a                       i-adopt:Property, rdfs:Property, owl:ObjectProperty ;
+                                    skos:prefLabel          "Number of cases on date" ;
+                                    owl:propertyChainAxiom  ( csseProp:hasNumberOfCases csseProp:hasDate ) ;
+                                    rdfs:range              xsd:float .
+                                
