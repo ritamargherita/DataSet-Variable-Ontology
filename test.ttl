@@ -39,7 +39,7 @@ ex:columnTotaal             a                       csvw:Column ;
                             dsv:aggregationMethod   [
                                 dsv:aggregationType         "count" ;
                                 dsv:aggregationDimension    ex:RefugeeActor  # not sure about this
-                            ]
+                            ] .
 
 ex:propTotaal               a                       rdf:Property ;
                             dsv:linksToVariable     ex:VarTotaal ;
