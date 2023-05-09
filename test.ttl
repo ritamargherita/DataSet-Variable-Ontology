@@ -35,7 +35,11 @@ ex:RefugeeActor             a                       sem:Actor ;
 ex:columnTotaal             a                       csvw:Column ;
                             csvw:name               "Totaal"@nl ;
                             csvw:propertyUrl        ex:propTotaal ;
-                            dsv:refersToVariable    ex:VarTotaal .
+                            dsv:refersToVariable    ex:VarTotaal ;
+                            dsv:aggregationMethod   [
+                                dsv:aggregationType         "count" ;
+                                dsv:aggregationDimension    ex:RefugeeActor  # not sure about this
+                            ]
 
 ex:propTotaal               a                       rdf:Property ;
                             dsv:linksToVariable     ex:VarTotaal ;
@@ -44,6 +48,7 @@ ex:propTotaal               a                       rdf:Property ;
 
 ex:VarTotaal                a                       dsv:Variable ;
                             rdf:label               "Totaal"@nl .
+
 
 # column 2 - Jaar
 
