@@ -1,0 +1,110 @@
+@prefix dsv:            <http://datasetVariableOntology.example> .
+@prefix csvw:           <http://www.w3.org/ns/csvw#> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex:             <http://example.org/> .
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:           <http://xmlns.com/foaf/0.1/> .
+@prefix sem:            <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+@prefix dbpedia-owl:    <http://dbpedia.org/ontology/> .
+
+
+### AGGREGATED TABLE
+
+<www.example-data.nl/aggregated-table>      a                   dsv:AggregatedTable ;
+                                            csvw:tableSchema    [
+                                                csvw:columns        ex:columnTotaal ,
+                                                                    ex:columnJaar ,
+                                                                    ex:columnNationaliteit ,
+                                                                    ex:columnLeeftijd ,
+                                                                    ex:columnGeslacht ;
+                                                dsv:rowsRepresentInstancesOf        ex:RefugeeInvitationEvent 
+                                            ] .
+
+# rows representation
+
+ex:RefugeeInvitationEvent   a                       sem:Event;
+                            sem:actor               ex:RefugeeActor ;
+                            sem:eventType           ex:RefugeeInvitation .
+
+ex:RefugeeActor             a                       sem:Actor ;
+                            sem:ActorType           foaf:Person .                   
+
+# column 1 - Totaal
+
+ex:columnTotaal             a                       csvw:Column ;
+                            csvw:name               "Totaal"@nl ;
+                            csvw:propertyUrl        ex:propTotaal ;
+                            dsv:refersToVariable    ex:VarTotaal .
+
+ex:propTotaal               a                       rdf:Property ;
+                            dsv:linksToVariable     ex:VarTotaal ;
+                            rdfs:range              xsd:int ;
+                            rdfs:domain             ex:RefugeeActor .
+
+ex:VarTotaal                a                       dsv:Variable ;
+                            rdf:label               "Totaal"@nl .
+
+# column 2 - Jaar
+
+ex:columnJaar               a                       csvw:Column ;
+                            csvw:name               "Jaar"@nl ;
+                            csvw:propertyUrl        ex:propJaar ;
+                            dsv:refersToVariable    ex:VarJaar .
+
+ex:propJaar                 a                       rdf:Property ;
+                            owl:propertyChainAxiom  (ex:propIsRefugeeInvitationEvent dbpedia-owl:year) ;
+                            dsv:linksToVariable     ex:VarJaar ;
+                            rdfs:range              xsd:gYear ;
+                            rdfs:domain             ex:RefugeeInvitationEvent .
+
+ex:VarJaar                  a                       dsv:Variable ;
+                            rdf:label               "Jaar"@nl .
+
+# column 3 - Nationaliteit
+
+ex:columnNationaliteit      a                       csvw:Column ;
+                            csvw:name               "Nationaliteit van de uitgenodigde vluchteling"@nl ;
+                            csvw:propertyUrl        ex:propNationaliteit ;
+                            dsv:refersToVariable    ex:VarNationaliteit .
+
+ex:propNationaliteit        a                       rdf:Property ;
+                            owl:propertyChainAxiom  (ex:propIsRefugeeActor dbpedia-owl:nationality) ;
+                            dsv:linksToVariable     ex:VarNationaliteit ;
+                            rdfs:range              xsd:str ;
+                            rdfs:domain             ex:RefugeeActor .
+
+ex:VarNationaliteit         a                       dsv:Variable ;
+                            rdf:label               "Nationaliteit van de uitgenodigde vluchteling"@nl .
+
+# column 4 - Leeftijd
+
+ex:columnLeeftijd           a                       csvw:Column ;
+                            csvw:name               "Leeftijd in groepen van uitgenodigde vluchtelingen"@nl ;
+                            csvw:propertyUrl        ex:propLeeftijd ;
+                            dsv:refersToVariable    ex:VarLeeftijd .
+
+ex:propLeeftijd             a                       rdf:Property ;
+                            owl:propertyChainAxiom  (ex:propIsRefugeeActor ex:propHasAgeGroup) ;
+                            dsv:linksToVariable     ex:VarLeeftijd ;
+                            rdfs:range              xsd:str ;
+                            rdfs:domain             ex:RefugeeActor .
+
+ex:VarLeeftijd              a                       dsv:Variable ;
+                            rdf:label               "Leeftijd in groepen van uitgenodigde vluchtelingen"@nl .
+
+# column 5 - Geslacht
+
+ex:columnGeslacht           a                       csvw:Column ;
+                            csvw:name               "Geslacht"@nl ;
+                            csvw:propertyUrl        ex:propGeslacht ;
+                            dsv:refersToVariable    ex:VarGeslacht .
+
+ex:propGeslacht             a                       rdf:Property ;
+                            owl:propertyChainAxiom  (ex:propIsRefugeeActor foaf:gender) ;
+                            dsv:linksToVariable     ex:VarGeslacht ;
+                            rdfs:range              xsd:str ;
+                            rdfs:domain             ex:RefugeeActor .
+
+ex:VarGeslacht              a                       dsv:Variable ;
+                            rdf:label               "Geslacht"@nl .
