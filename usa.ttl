@@ -1,0 +1,52 @@
+@prefix dsv:            <http://datasetVariableOntology.example> .
+@prefix csvw:           <http://www.w3.org/ns/csvw#> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex:             <http://example.org/> .
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:           <http://xmlns.com/foaf/0.1/> .
+@prefix sem:            <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+@prefix dbpedia-owl:    <http://dbpedia.org/ontology/> .
+
+
+###########################################
+# Dataset USA
+###########################################
+
+<www.example-datasets.com/usa>              a                   dsv:Dataset ;
+                                            csvw:url            "https://catalog.data.gov/dataset/nchs-births-and-general-fertility-rates-united-states" ;
+                                            dsv:datasetSchema   [
+                                                dsv:datasetComponent    <www.example-datasets.com/usa/column/Year> ,
+                                                                        <www.example-datasets.com/usa/column/BirthNumber> ,
+                                                                        <www.example-datasets.com/usa/column/GeneralFertilityRate> ,
+                                                                        <www.example-datasets.com/usa/column/CrudeBirthRate> 
+                                            ] .
+
+###########################################
+# Dataset USA - Columns
+###########################################
+
+ex:columnTotaal             a                       csvw:Column ;
+                            csvw:name               "Totaal"@nl ;
+                            csvw:propertyUrl        ex:propTotaal ;
+                            dsv:refersToVariable    ex:VarTotaal ;
+                            dsv:aggregationMethod   [
+                                dsv:aggregationType         "count" ;
+                                dsv:aggregationDimension    ex:RefugeeActor  # not sure about this
+                            ] .
+
+###########################################
+# Dataset USA - Properties
+###########################################
+
+ex:propTotaal               a                       rdf:Property ;
+                            dsv:linksToVariable     ex:VarTotaal ;
+                            rdfs:range              xsd:int ;
+                            rdfs:domain             ex:RefugeeActor .
+
+###########################################
+# Dataset USA - Variables
+###########################################
+
+ex:VarTotaal                a                       dsv:Variable ;
+                            rdf:label               "Totaal"@nl .
