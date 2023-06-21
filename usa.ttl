@@ -1,52 +1,97 @@
 @prefix dsv:            <http://datasetVariableOntology.example> .
 @prefix csvw:           <http://www.w3.org/ns/csvw#> .
-@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
-@prefix ex:             <http://example.org/> .
-@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix foaf:           <http://xmlns.com/foaf/0.1/> .
-@prefix sem:            <http://semanticweb.cs.vu.nl/2009/11/sem/> .
-@prefix dbpedia-owl:    <http://dbpedia.org/ontology/> .
+@prefix var:            <http://example.org/VariablesVocabulary/> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
 
 
 ###########################################
 # Dataset USA
 ###########################################
 
-<www.example-datasets.com/usa>              a                   dsv:Dataset ;
-                                            csvw:url            "https://catalog.data.gov/dataset/nchs-births-and-general-fertility-rates-united-states" ;
-                                            dsv:datasetSchema   [
-                                                dsv:datasetComponent    <www.example-datasets.com/usa/column/Year> ,
-                                                                        <www.example-datasets.com/usa/column/BirthNumber> ,
-                                                                        <www.example-datasets.com/usa/column/GeneralFertilityRate> ,
-                                                                        <www.example-datasets.com/usa/column/CrudeBirthRate> 
+<www.example-datasets.org/usa>              a                       dsv:AggregatedDataset ;
+                                            csvw:url                "https://catalog.data.gov/dataset/nchs-births-and-general-fertility-rates-united-states" ;
+                                            dsv:aggregationMethod   [
+                                                dsv:aggregationType             "count"@en ;
+                                                dsv:aggregationDimension        <www.example-datasets.org/usa/column/Year> 
+                                            ] ;
+                                            dsv:datasetSchema       [
+                                                dsv:rowsRepresentInstancesOf    <www.example-datasets.org/usa/rowsRepresentation/nationalStatistics>
+                                            ], [
+                                                dsv:datasetComponent            <www.example-datasets.org/usa/column/Year> ,
+                                                                                <www.example-datasets.org/usa/column/BirthNumber> ,
+                                                                                <www.example-datasets.org/usa/column/GeneralFertilityRate> ,
+                                                                                <www.example-datasets.org/usa/column/CrudeBirthRate> 
                                             ] .
 
 ###########################################
 # Dataset USA - Columns
 ###########################################
 
-ex:columnTotaal             a                       csvw:Column ;
-                            csvw:name               "Totaal"@nl ;
-                            csvw:propertyUrl        ex:propTotaal ;
-                            dsv:refersToVariable    ex:VarTotaal ;
-                            dsv:aggregationMethod   [
-                                dsv:aggregationType         "count" ;
-                                dsv:aggregationDimension    ex:RefugeeActor  # not sure about this
-                            ] .
+<www.example-datasets.org/usa/column/Year>                      a                       dsv:DimensionComponent ,
+                                                                                        csvw:Column ;
+                                                                rdfs:label              "Year"@en ;
+                                                                dsv:componentProperty   <www.example-datasets.org/usa/property/year> ;
+                                                                dsv:refersToVariable    var:Year .
+
+<www.example-datasets.org/usa/column/BirthNumber>               a                       dsv:DimensionComponent ,
+                                                                                        csvw:Column ;
+                                                                rdfs:label              "Birth Number"@en ;
+                                                                dsv:componentProperty   <www.example-datasets.org/usa/property/birthNumber> ;
+                                                                dsv:refersToVariable    var:NumberOfBirths .
+
+<www.example-datasets.org/usa/column/GeneralFertilityRate>      a                       dsv:DimensionComponent ,
+                                                                                        csvw:Column ;
+                                                                rdfs:label              "General Fertility Rate"@en ;
+                                                                dsv:componentProperty   <www.example-datasets.org/usa/property/generalFertilityRate> ;
+                                                                dsv:refersToVariable    var:GeneralFertilityRate .
+
+<www.example-datasets.org/usa/column/CrudeBirthRate>            a                       dsv:DimensionComponent ,
+                                                                                        csvw:Column ;
+                                                                rdfs:label              "Crude Birth Rate"@en ;
+                                                                dsv:componentProperty   <www.example-datasets.org/usa/property/crudeBirthRate> ;
+                                                                dsv:refersToVariable    var:CrudeBirthRate .
 
 ###########################################
 # Dataset USA - Properties
 ###########################################
 
-ex:propTotaal               a                       rdf:Property ;
-                            dsv:linksToVariable     ex:VarTotaal ;
-                            rdfs:range              xsd:int ;
-                            rdfs:domain             ex:RefugeeActor .
+<www.example-datasets.org/usa/property/year>                    a                       rdf:Property ;
+                                                                dsv:linksToVariable     var:Year ;
+                                                                rdfs:range              xsd:gYear ;
+                                                                rdfs:domain             <www.example-datasets.org/usa/rowsRepresentation/nationalStatistics> .
+
+<www.example-datasets.org/usa/property/birthNumber>             a                       rdf:Property ;
+                                                                dsv:linksToVariable     var:NumberOfBirths ;
+                                                                rdfs:range              xsd:int ;
+                                                                rdfs:domain             <www.example-datasets.org/usa/rowsRepresentation/nationalStatistics> .
+
+<www.example-datasets.org/usa/property/generalFertilityRate>    a                       rdf:Property ;
+                                                                dsv:linksToVariable     var:GeneralFertilityRate ;
+                                                                rdfs:range              xsd:float ;
+                                                                rdfs:domain             <www.example-datasets.org/usa/rowsRepresentation/nationalStatistics> .
+
+<www.example-datasets.org/usa/property/crudeBirthRate>          a                       rdf:Property ;
+                                                                dsv:linksToVariable     var:CrudeBirthRate ;
+                                                                rdfs:range              xsd:float ;
+                                                                rdfs:domain             <www.example-datasets.org/usa/rowsRepresentation/nationalStatistics> .
+
 
 ###########################################
 # Dataset USA - Variables
 ###########################################
 
-ex:VarTotaal                a                       dsv:Variable ;
-                            rdf:label               "Totaal"@nl .
+var:Year                                                        a                       dsv:Variable ;
+                                                                rdfs:label              "Year Variable"@en .               
+
+var:NumberOfBirths                                              a                       dsv:Variable ;
+                                                                rdfs:label              "Number of Births Variables"@en ;
+                                                                dsv:subVariableOf       var:Fertility .
+
+var:GeneralFertilityRate                                        a                       dsv:Variable ;
+                                                                rdfs:label              "General Fertility Rate Variable"@en ;
+                                                                dsv:subVariableOf       var:Fertility .
+
+var:CrudeBirthRate                                              a                       dsv:Variable ;
+                                                                rdfs:label              "Crude Birth Rate Variable"@en ;
+                                                                dsv:subVariableOf       var:Fertility .

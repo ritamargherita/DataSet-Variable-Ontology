@@ -1,0 +1,102 @@
+@prefix dsv:            <http://datasetVariableOntology.example> .
+@prefix csvw:           <http://www.w3.org/ns/csvw#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix var:            <http://example.org/VariablesVocabulary/> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+
+
+###########################################
+# Dataset Canada
+###########################################
+
+<www.example-datasets.org/canada>           a                       dsv:AggregatedDataset ;
+                                            csvw:url                "https://open.canada.ca/data/en/dataset/1367e3a6-02f1-496f-9c0f-d078dbdd58d0" ;
+                                            dsv:aggregationMethod   [
+                                                dsv:aggregationType             "count"@en ;
+                                                dsv:aggregationDimension        <www.example-datasets.org/canada/column/refDate> 
+                                            ] ;
+                                            dsv:datasetSchema       [
+                                                dsv:rowsRepresentInstancesOf    <www.example-datasets.org/canada/rowsRepresentation/nationalStatistics>
+                                            ], [
+                                                dsv:datasetComponent            <www.example-datasets.org/canada/column/refDate> ,
+                                                                                <www.example-datasets.org/canada/column/geo> ,
+                                                                                <www.example-datasets.org/canada/column/ageGroup> ,
+                                                                                <www.example-datasets.org/canada/column/pregnancyOutcomes> ,
+                                                                                <www.example-datasets.org/canada/column/characteristics> ,
+                                                                                <www.example-datasets.org/canada/column/value>
+                                            ] .
+
+###########################################
+# Dataset USA - Columns
+###########################################
+
+<www.example-datasets.org/canada/column/refDate>                a                       dsv:DimensionComponent ,
+                                                                                        csvw:Column ;
+                                                                rdfs:label              "REF_DATE"@en ;
+                                                                dsv:componentProperty   <www.example-datasets.org/canada/property/refDate> ;
+                                                                dsv:refersToVariable    var:Year .
+
+<www.example-datasets.org/canada/column/geo>                    a                       dsv:DimensionComponent ,
+                                                                                        csvw:Column ;
+                                                                rdfs:label              "GEO"@en ;
+                                                                dsv:componentProperty   <www.example-datasets.org/canada/property/geo> ;
+                                                                dsv:refersToVariable    var:Location .
+
+<www.example-datasets.org/canada/column/ageGroup>               a                       dsv:DimensionComponent ,
+                                                                                        csvw:Column ;
+                                                                rdfs:label              "Age group"@en ;
+                                                                dsv:componentProperty   <www.example-datasets.org/canada/property/ageGroup> ;
+                                                                dsv:refersToVariable    var:AgeGroup .
+
+<www.example-datasets.org/canada/column/pregnancyOutcomes>      a                       dsv:DimensionComponent ,
+                                                                                        csvw:Column ;
+                                                                rdfs:label              "Pregnancy outcomes"@en ;
+                                                                dsv:componentProperty   <www.example-datasets.org/canada/property/pregnancyOutcomes> ;
+                                                                dsv:refersToVariable    var:PregnancyOutcomes .
+
+<www.example-datasets.org/canada/column/characteristics>        a                       dsv:DimensionComponent ,
+                                                                                        csvw:Column ;
+                                                                rdfs:label              "Characteristics"@en ;
+                                                                dsv:componentProperty   <www.example-datasets.org/canada/property/characteristics> ;
+                                                                dsv:refersToVariable    var:StatisticalCharacteristics . ## NOT SURE ABOUT THIS ONE!
+
+<www.example-datasets.org/canada/column/value>                  a                       dsv:DimensionComponent ,
+                                                                                        csvw:Column ;
+                                                                rdfs:label              "VALUE"@en ;
+                                                                dsv:componentProperty   <www.example-datasets.org/canada/property/value> ;
+                                                                dsv:refersToVariable    var:Value .
+
+###########################################
+# Dataset USA - Properties
+###########################################
+
+<www.example-datasets.org/canada/property/refDate>              a                       rdf:Property ;
+                                                                dsv:linksToVariable     var:Year ;
+                                                                rdfs:range              xsd:gYear ;
+                                                                rdfs:domain             <www.example-datasets.org/canada/rowsRepresentation/nationalStatistics> .
+
+<www.example-datasets.org/canada/property/geo>                  a                       rdf:Property ;
+                                                                dsv:linksToVariable     var:Location ;
+                                                                rdfs:range              xsd:string ;
+                                                                rdfs:domain             <www.example-datasets.org/canada/rowsRepresentation/nationalStatistics> .
+
+<www.example-datasets.org/canada/property/ageGroup>             a                       rdf:Property ;
+                                                                dsv:linksToVariable     var:AgeGroup ;
+                                                                rdfs:range              xsd:string ;
+                                                                rdfs:domain             <www.example-datasets.org/canada/rowsRepresentation/nationalStatistics> .
+
+<www.example-datasets.org/canada/property/pregnancyOutcomes>    a                       rdf:Property ;
+                                                                dsv:linksToVariable     var:PregnancyOutcomes ;
+                                                                rdfs:range              xsd:string ;
+                                                                rdfs:domain             <www.example-datasets.org/canada/rowsRepresentation/nationalStatistics> .
+
+<www.example-datasets.org/canada/property/characteristics>      a                       rdf:Property ;
+                                                                dsv:linksToVariable     var:StatisticalCharacteristics ;
+                                                                rdfs:range              xsd:string ;
+                                                                rdfs:domain             <www.example-datasets.org/canada/rowsRepresentation/nationalStatistics> .
+
+<www.example-datasets.org/canada/property/value>                a                       rdf:Property ;
+                                                                dsv:linksToVariable     var:Value ;
+                                                                rdfs:range              xsd:int ;
+                                                                rdfs:domain             <www.example-datasets.org/canada/rowsRepresentation/nationalStatistics> .
+
