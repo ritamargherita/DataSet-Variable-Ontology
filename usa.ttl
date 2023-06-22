@@ -76,7 +76,6 @@
                                                                 rdfs:range              xsd:float ;
                                                                 rdfs:domain             <www.example-datasets.org/usa/rowsRepresentation/nationalStatistics> .
 
-
 ###########################################
 # Dataset USA - Variables
 ###########################################

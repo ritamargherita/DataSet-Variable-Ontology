@@ -1,0 +1,208 @@
+@prefix dsv:            <http://datasetVariableOntology.example> .
+@prefix csvw:           <http://www.w3.org/ns/csvw#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix var:            <http://example.org/VariablesVocabulary/> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbpedia-owl:    <http://dbpedia.org/ontology/> .
+
+
+###########################################
+# Dataset United Kingdom
+###########################################
+
+<www.example-datasets.org/uk>           a                       dsv:AggregatedDataset ;
+                                            csvw:url                "https://www.data.gov.uk/dataset/dab5dccd-4d0e-4b40-b333-178e13ce49fe/annual-births-by-age-of-mother" ;
+                                            dsv:aggregationMethod   [
+                                                dsv:aggregationType             "count"@en ;
+                                                dsv:aggregationDimension        <www.example-datasets.org/uk/column/year> ,
+                                                                                <www.example-datasets.org/uk/column/sex>
+                                            ] ;
+                                            dsv:datasetSchema       [
+                                                dsv:rowsRepresentInstancesOf    <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics>
+                                            ], [
+                                                dsv:datasetComponent            <www.example-datasets.org/uk/column/year> ,
+                                                                                <www.example-datasets.org/uk/column/rgn20cd> ,
+                                                                                <www.example-datasets.org/uk/column/rgn20nm> ,
+                                                                                <www.example-datasets.org/uk/column/lad20cd> ,
+                                                                                <www.example-datasets.org/uk/column/lad20nm> ,
+                                                                                <www.example-datasets.org/uk/column/wd20cd> ,
+                                                                                <www.example-datasets.org/uk/column/wd20nm> ,
+                                                                                <www.example-datasets.org/uk/column/ageOfMother> ,
+                                                                                <www.example-datasets.org/uk/column/sex> ,
+                                                                                <www.example-datasets.org/uk/column/births> 
+                                            ] .
+
+###########################################
+# Dataset United Kingdom - Columns
+###########################################
+
+<www.example-datasets.org/uk/column/year>                       a                       dsv:DimensionComponent ,
+                                                                                        csvw:Column ;
+                                                                rdfs:label              "year"@en ;
+                                                                dsv:componentProperty   <www.example-datasets.org/uk/property/year> ;
+                                                                dsv:refersToVariable    var:Year .
+
+<www.example-datasets.org/uk/column/rgn20cd>                    a                       dsv:DimensionComponent ,
+                                                                                        csvw:Column ;
+                                                                rdfs:label              "RGN20CD"@en ;
+                                                                dsv:componentProperty   <www.example-datasets.org/uk/property/rgn20cd> ;
+                                                                dsv:refersToVariable    var:RegionalCode .
+
+<www.example-datasets.org/uk/column/rgn20nm>                    a                       dsv:DimensionComponent ,
+                                                                                        csvw:Column ;
+                                                                rdfs:label              "RGN20NM"@en ;
+                                                                dsv:componentProperty   <www.example-datasets.org/uk/property/rgn20nm> ;
+                                                                dsv:refersToVariable    var:RegionalName .
+
+<www.example-datasets.org/uk/column/lad20cd>                    a                       dsv:DimensionComponent ,
+                                                                                        csvw:Column ;
+                                                                rdfs:label              "LAD20CD"@en ;
+                                                                dsv:componentProperty   <www.example-datasets.org/uk/property/lad20cd> ;
+                                                                dsv:refersToVariable    var:LocalAuthorityDistrictCode .
+
+<www.example-datasets.org/uk/column/lad20nm>                    a                       dsv:DimensionComponent ,
+                                                                                        csvw:Column ;
+                                                                rdfs:label              "LAD20NM"@en ;
+                                                                dsv:componentProperty   <www.example-datasets.org/uk/property/lad20nm> ;
+                                                                dsv:refersToVariable    var:LocalAuthorityDistrictName .
+
+<www.example-datasets.org/uk/column/wd20cd>                     a                       dsv:DimensionComponent ,
+                                                                                        csvw:Column ;
+                                                                rdfs:label              "WD20CD"@en ;
+                                                                dsv:componentProperty   <www.example-datasets.org/uk/property/wd20cd> ;
+                                                                dsv:refersToVariable    var:WardsDivisionCode .
+
+<www.example-datasets.org/uk/column/wd20nm>                     a                       dsv:DimensionComponent ,
+                                                                                        csvw:Column ;
+                                                                rdfs:label              "WD20NM"@en ;
+                                                                dsv:componentProperty   <www.example-datasets.org/uk/property/wd20nm> ;
+                                                                dsv:refersToVariable    var:WardsDivisionName .
+
+<www.example-datasets.org/uk/column/ageOfMother>                a                       dsv:DimensionComponent ,
+                                                                                        csvw:Column ;
+                                                                rdfs:label              "age_of_mother"@en ;
+                                                                dsv:componentProperty   <www.example-datasets.org/uk/property/ageOfMother> ;
+                                                                dsv:refersToVariable    var:AgeOfMother .
+
+<www.example-datasets.org/uk/column/sex>                        a                       dsv:DimensionComponent ,
+                                                                                        csvw:Column ;
+                                                                rdfs:label              "sex"@en ;
+                                                                dsv:componentProperty   <www.example-datasets.org/uk/property/sex> ;
+                                                                dsv:refersToVariable    var:Gender .
+
+<www.example-datasets.org/uk/column/births>                     a                       dsv:DimensionComponent ,
+                                                                                        csvw:Column ;
+                                                                rdfs:label              "births"@en ;
+                                                                dsv:componentProperty   <www.example-datasets.org/uk/property/births> ;
+                                                                dsv:refersToVariable    var:NumberOfBirths .
+
+###########################################
+# Dataset United Kingdom - Properties
+###########################################
+
+<www.example-datasets.org/uk/property/year>                     a                       rdf:Property ;
+                                                                dsv:linksToVariable     var:Year ;
+                                                                rdfs:range              xsd:gYear ;
+                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
+
+<www.example-datasets.org/uk/property/rgn20cd>                  a                       rdf:Property ;
+                                                                dsv:linksToVariable     var:RegionalCode ;
+                                                                rdfs:range              xsd:string ;
+                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
+
+<www.example-datasets.org/uk/property/rgn20nm>                  a                       rdf:Property ;
+                                                                dsv:linksToVariable     var:RegionalName ;
+                                                                rdfs:range              xsd:string ;
+                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
+
+<www.example-datasets.org/uk/property/lad20cd>                  a                       rdf:Property ;
+                                                                dsv:linksToVariable     var:LocalAuthorityDistrictCode ;
+                                                                rdfs:range              xsd:string ;
+                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
+
+<www.example-datasets.org/uk/property/lad20nm>                  a                       rdf:Property ;
+                                                                dsv:linksToVariable     var:LocalAuthorityDistrictName ;
+                                                                rdfs:range              xsd:string ;
+                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
+
+<www.example-datasets.org/uk/property/wd20cd>                   a                       rdf:Property ;
+                                                                dsv:linksToVariable     var:WardsDivisionCode ;
+                                                                rdfs:range              xsd:int ;
+                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
+
+<www.example-datasets.org/uk/property/wd20nm>                   a                       rdf:Property ;
+                                                                dsv:linksToVariable     var:WardsDivisionName ;
+                                                                rdfs:range              xsd:int ;
+                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
+
+<www.example-datasets.org/uk/property/ageOfMother>              a                       rdf:Property ;
+                                                                owl:propertyChainAxiom  (
+                                                                    <www.example-datasets.org/uk/property/hasMother> 
+                                                                    <www.example-datasets.org/uk/property/hasAgeRange> ) ;
+                                                                dsv:linksToVariable     var:AgeOfMother ;
+                                                                rdfs:range              xsd:int ;
+                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
+
+<www.example-datasets.org/uk/property/sex>                      a                       rdf:Property ;
+                                                                dsv:linksToVariable     var:Gender ;
+                                                                rdfs:range              xsd:int ;
+                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
+
+<www.example-datasets.org/uk/property/births>                   a                       rdf:Property ;
+                                                                dsv:linksToVariable     var:NumberOfBirths ;
+                                                                rdfs:range              xsd:int ;
+                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
+
+###########################################
+# Dataset United Kingdom - Variables
+###########################################
+
+var:Year                                                        a                       dsv:Variable ;
+                                                                rdfs:label              "Year Variable"@en .               
+
+var:RegionalCode                                                a                       dsv:Variable ;
+                                                                rdfs:label              "Regional Code Variable"@en ;
+                                                                dsv:subVariableOf       var:RegionalLocation .
+
+var:RegionalName                                                a                       dsv:Variable ;
+                                                                rdfs:label              "Regional Name Variable"@en ;
+                                                                dsv:subVariableOf       var:RegionalLocation .
+
+var:RegionalLocation                                            a                       dsv:Variable ;
+                                                                rdfs:label              "Regional Location Variable"@en ;
+                                                                dsv:subVariableOf       var:GeoLocation .
+
+var:LocalAuthorityDistrictCode                                  a                       dsv:Variable ;
+                                                                rdfs:label              "Local Authority District Code Variable"@en ;
+                                                                dsv:subVariableOf       var:LocalAuthorityDistrictLocation .
+
+var:LocalAuthorityDistrictName                                  a                       dsv:Variable ;
+                                                                rdfs:label              "Local Authority District Name Variable"@en ;
+                                                                dsv:subVariableOf       var:LocalAuthorityDistrictLocation .
+
+var:LocalAuthorityDistrictLocation                              a                       dsv:Variable ;
+                                                                rdfs:label              "Local Authority District Location Variable"@en ;
+                                                                dsv:subVariableOf       var:GeoLocation .
+
+var:WardsDivisionCode                                           a                       dsv:Variable ;
+                                                                rdfs:label              "Wards Division Code Variables"@en ;
+                                                                dsv:subVariableOf       var:WardsDivisionLocation .
+
+var:WardsDivisionName                                           a                       dsv:Variable ;
+                                                                rdfs:label              "Wards Division Name Variable"@en ;
+                                                                dsv:subVariableOf       var:WardsDivisionLocation .
+
+var:WardsDivisionLocation                                       a                       dsv:Variable ;
+                                                                rdfs:label              "Wards Division Location Variable"@en ;
+                                                                dsv:subVariableOf       var:GeoLocation .
+
+var:AgeOfMother                                                 a                       dsv:Variable ;
+                                                                rdfs:label              "Age of Mother Variable"@en ;
+                                                                dsv:subVariableOf       var:AgeGroup .
+
+var:Gender                                                      a                       dsv:Variable ;
+                                                                rdfs:label              "Statistical Characteristics Variable"@en .
+
+var:NumberOfBirths                                              a                       dsv:Variable ;
+                                                                rdfs:label              "Number of Births Variables"@en ;
+                                                                dsv:subVariableOf       var:Fertility .
