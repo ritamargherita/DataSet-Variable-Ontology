@@ -1,0 +1,111 @@
+@prefix dsv:            <http://datasetVariableOntology.example> .
+@prefix csvw:           <http://www.w3.org/ns/csvw#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix var:            <http://example.org/VariablesVocabulary/> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+
+
+###########################################
+# Variables Time Coverage
+###########################################
+
+var:YearCoverage                    a                   dsv:Variable ;
+                                    rdfs:label          "Year Coverage Variable"@en ;
+                                    dsv:subVariableOf   var:TimeCoverage .
+
+var:TimeCoverage                    a                   dsv:Variable ;
+                                    rdfs:label          "Time Coverage Variable"@en .     
+
+###########################################
+# Variables Location
+###########################################          
+
+var:Location                        a                   dsv:Variable ;
+                                    rdfs:label          "Location Variable"@en .
+
+var:GeoLocation                     a                   dsv:Variable ;
+                                    rdfs:label          "Geological Location Variable"@en ;
+                                    dsv:subVariableOf   var:Location .
+
+var:RegionalLocation                a                   dsv:Variable ;
+                                    rdfs:label          "Regional Location Variable"@en ;
+                                                        dsv:subVariableOf       var:GeoLocation .
+
+var:RegionalCode                    a                   dsv:Variable ;
+                                    rdfs:label          "Regional Code Variable"@en ;
+                                    dsv:subVariableOf   var:RegionalLocation .
+
+var:RegionalName                    a                   dsv:Variable ;
+                                    rdfs:label          "Regional Name Variable"@en ;
+                                    dsv:subVariableOf   var:RegionalLocation .
+
+var:LocalAuthorityDistrictLocation  a                   dsv:Variable ;
+                                    rdfs:label          "Local Authority District Location Variable"@en ;
+                                    dsv:subVariableOf   var:GeoLocation .
+
+var:LocalAuthorityDistrictCode      a                   dsv:Variable ;
+                                    rdfs:label          "Local Authority District Code Variable"@en ;
+                                    dsv:subVariableOf   var:LocalAuthorityDistrictLocation .
+
+var:LocalAuthorityDistrictName      a                   dsv:Variable ;
+                                    rdfs:label          "Local Authority District Name Variable"@en ;
+                                    dsv:subVariableOf   var:LocalAuthorityDistrictLocation .
+
+var:WardsDivisionLocation           a                   dsv:Variable ;
+                                    rdfs:label          "Wards Division Location Variable"@en ;
+                                    dsv:subVariableOf   var:GeoLocation .
+
+var:WardsDivisionCode               a                   dsv:Variable ;
+                                    rdfs:label          "Wards Division Code Variables"@en ;
+                                    dsv:subVariableOf   var:WardsDivisionLocation .
+
+var:WardsDivisionName               a                   dsv:Variable ;
+                                    rdfs:label          "Wards Division Name Variable"@en ;
+                                    dsv:subVariableOf   var:WardsDivisionLocation .
+
+###########################################
+# Variables Personal Characteristics
+###########################################     
+
+var:Age                             a                   dsv:Variable ;
+                                    rdfs:label          "Age Variable"@en .
+
+var:AgeGroup                        a                   dsv:Variable ;
+                                    rdfs:label          "Age Group Variable"@en ;
+                                    dsv:subVariableOf   var:Age .
+
+var:Gender                          a                   dsv:Variable ;
+                                    rdfs:label          "Gender"@en .
+
+###########################################
+# Variables Fertility
+########################################### 
+
+var:Fertility                       a                   dsv:Variable ;
+                                    rdfs:label          "Fertility Variable"@en .
+
+var:PregnancyOutcome                a                   dsv:Variable ;
+                                    rdfs:label          "Pregnancy Outcomes Variable"@en ;
+                                    dsv:subVariableOf   var:Fertility .
+
+var:NumberOfBirths                  a                   dsv:Variable ;
+                                    rdfs:label          "Number of Births Variables"@en ;
+                                    dsv:subVariableOf   var:Fertility .
+
+var:GeneralFertilityRate            a                   dsv:Variable ;
+                                    rdfs:label          "General Fertility Rate Variable"@en ;
+                                    dsv:subVariableOf   var:Fertility .
+
+var:CrudeBirthRate                  a                   dsv:Variable ;
+                                    rdfs:label          "Crude Birth Rate Variable"@en ;
+                                    dsv:subVariableOf   var:Fertility .
+
+###########################################
+# Variables Statistical Characteristics
+########################################### 
+
+var:StatisticalCharacteristic       a                   dsv:Variable ;
+                                    rdfs:label          "Statistical Characteristics Variable"@en .
+
+
+

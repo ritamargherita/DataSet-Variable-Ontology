@@ -32,7 +32,7 @@
                                                                                         csvw:Column ;
                                                                 rdfs:label              "Year"@en ;
                                                                 dsv:componentProperty   <www.example-datasets.org/usa/property/year> ;
-                                                                dsv:refersToVariable    var:Year .
+                                                                dsv:refersToVariable    var:YearCoverage .
 
 <www.example-datasets.org/usa/column/BirthNumber>               a                       dsv:DimensionComponent ,
                                                                                         csvw:Column ;
@@ -57,7 +57,7 @@
 ###########################################
 
 <www.example-datasets.org/usa/property/year>                    a                       rdf:Property ;
-                                                                dsv:linksToVariable     var:Year ;
+                                                                dsv:linksToVariable     var:YearCoverage ;
                                                                 rdfs:range              xsd:gYear ;
                                                                 rdfs:domain             <www.example-datasets.org/usa/rowsRepresentation/nationalStatistics> .
 
@@ -75,22 +75,3 @@
                                                                 dsv:linksToVariable     var:CrudeBirthRate ;
                                                                 rdfs:range              xsd:float ;
                                                                 rdfs:domain             <www.example-datasets.org/usa/rowsRepresentation/nationalStatistics> .
-
-###########################################
-# Dataset USA - Variables
-###########################################
-
-var:Year                                                        a                       dsv:Variable ;
-                                                                rdfs:label              "Year Variable"@en .               
-
-var:NumberOfBirths                                              a                       dsv:Variable ;
-                                                                rdfs:label              "Number of Births Variables"@en ;
-                                                                dsv:subVariableOf       var:Fertility .
-
-var:GeneralFertilityRate                                        a                       dsv:Variable ;
-                                                                rdfs:label              "General Fertility Rate Variable"@en ;
-                                                                dsv:subVariableOf       var:Fertility .
-
-var:CrudeBirthRate                                              a                       dsv:Variable ;
-                                                                rdfs:label              "Crude Birth Rate Variable"@en ;
-                                                                dsv:subVariableOf       var:Fertility .

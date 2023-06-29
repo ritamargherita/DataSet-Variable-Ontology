@@ -34,7 +34,7 @@
                                                                                         csvw:Column ;
                                                                 rdfs:label              "REF_DATE"@en ;
                                                                 dsv:componentProperty   <www.example-datasets.org/canada/property/refDate> ;
-                                                                dsv:refersToVariable    var:Year .
+                                                                dsv:refersToVariable    var:YearCoverage .
 
 <www.example-datasets.org/canada/column/geo>                    a                       dsv:DimensionComponent ,
                                                                                         csvw:Column ;
@@ -52,13 +52,13 @@
                                                                                         csvw:Column ;
                                                                 rdfs:label              "Pregnancy outcomes"@en ;
                                                                 dsv:componentProperty   <www.example-datasets.org/canada/property/pregnancyOutcomes> ;
-                                                                dsv:refersToVariable    var:PregnancyOutcomes .
+                                                                dsv:refersToVariable    var:PregnancyOutcome .
 
 <www.example-datasets.org/canada/column/characteristics>        a                       dsv:DimensionComponent ,
                                                                                         csvw:Column ;
                                                                 rdfs:label              "Characteristics"@en ;
                                                                 dsv:componentProperty   <www.example-datasets.org/canada/property/characteristics> ;
-                                                                dsv:refersToVariable    var:StatisticalCharacteristics . ## NOT SURE ABOUT THIS ONE!
+                                                                dsv:refersToVariable    var:StatisticalCharacteristic . ## NOT SURE ABOUT THIS ONE!
 
 <www.example-datasets.org/canada/column/value>                  a                       dsv:DimensionComponent ,
                                                                                         csvw:Column ;
@@ -71,7 +71,7 @@
 ###########################################
 
 <www.example-datasets.org/canada/property/refDate>              a                       rdf:Property ;
-                                                                dsv:linksToVariable     var:Year ;
+                                                                dsv:linksToVariable     var:YearCoverage ;
                                                                 rdfs:range              xsd:gYear ;
                                                                 rdfs:domain             <www.example-datasets.org/canada/rowsRepresentation/nationalStatistics> .
 
@@ -86,12 +86,12 @@
                                                                 rdfs:domain             <www.example-datasets.org/canada/rowsRepresentation/nationalStatistics> .
 
 <www.example-datasets.org/canada/property/pregnancyOutcomes>    a                       rdf:Property ;
-                                                                dsv:linksToVariable     var:PregnancyOutcomes ;
+                                                                dsv:linksToVariable     var:PregnancyOutcome ;
                                                                 rdfs:range              xsd:string ;
                                                                 rdfs:domain             <www.example-datasets.org/canada/rowsRepresentation/nationalStatistics> .
 
 <www.example-datasets.org/canada/property/characteristics>      a                       rdf:Property ;
-                                                                dsv:linksToVariable     var:StatisticalCharacteristics ;
+                                                                dsv:linksToVariable     var:StatisticalCharacteristic ;
                                                                 rdfs:range              xsd:string ;
                                                                 rdfs:domain             <www.example-datasets.org/canada/rowsRepresentation/nationalStatistics> .
 
@@ -99,30 +99,3 @@
                                                                 dsv:linksToVariable     var:NumberOfBirths ;
                                                                 rdfs:range              xsd:int ;
                                                                 rdfs:domain             <www.example-datasets.org/canada/rowsRepresentation/nationalStatistics> .
-
-###########################################
-# Dataset Canada - Variables
-###########################################
-
-var:Year                                                        a                       dsv:Variable ;
-                                                                rdfs:label              "Year Variable"@en .               
-
-var:GeoLocation                                                 a                       dsv:Variable ;
-                                                                rdfs:label              "Geological Location Variable"@en ;
-                                                                dsv:subVariableOf       var:Location .
-
-var:AgeGroup                                                    a                       dsv:Variable ;
-                                                                rdfs:label              "Age Group Variable"@en ;
-                                                                dsv:subVariableOf       var:Age .
-
-var:PregnancyOutcomes                                           a                       dsv:Variable ;
-                                                                rdfs:label              "Pregnancy Outcomes Variable"@en ;
-                                                                dsv:subVariableOf       var:Fertility .
-
-var:StatisticalCharacteristics                                  a                       dsv:Variable ;
-                                                                rdfs:label              "Statistical Characteristics Variable"@en .
-
-var:NumberOfBirths                                              a                       dsv:Variable ;
-                                                                rdfs:label              "Number of Births Variables"@en ;
-                                                                dsv:subVariableOf       var:Fertility .
-

@@ -82,7 +82,7 @@
                                                                                         csvw:Column ;
                                                                 rdfs:label              "age_of_mother"@en ;
                                                                 dsv:componentProperty   <www.example-datasets.org/uk/property/ageOfMother> ;
-                                                                dsv:refersToVariable    var:AgeOfMother .
+                                                                dsv:refersToVariable    var:AgeGroup .
 
 <www.example-datasets.org/uk/column/sex>                        a                       dsv:DimensionComponent ,
                                                                                         csvw:Column ;
@@ -139,7 +139,7 @@
                                                                 owl:propertyChainAxiom  (
                                                                     <www.example-datasets.org/uk/property/hasMother> 
                                                                     <www.example-datasets.org/uk/property/hasAgeRange> ) ;
-                                                                dsv:linksToVariable     var:AgeOfMother ;
+                                                                dsv:linksToVariable     var:AgeGroup ;
                                                                 rdfs:range              xsd:int ;
                                                                 rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
 
@@ -152,57 +152,3 @@
                                                                 dsv:linksToVariable     var:NumberOfBirths ;
                                                                 rdfs:range              xsd:int ;
                                                                 rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
-
-###########################################
-# Dataset United Kingdom - Variables
-###########################################
-
-var:Year                                                        a                       dsv:Variable ;
-                                                                rdfs:label              "Year Variable"@en .               
-
-var:RegionalCode                                                a                       dsv:Variable ;
-                                                                rdfs:label              "Regional Code Variable"@en ;
-                                                                dsv:subVariableOf       var:RegionalLocation .
-
-var:RegionalName                                                a                       dsv:Variable ;
-                                                                rdfs:label              "Regional Name Variable"@en ;
-                                                                dsv:subVariableOf       var:RegionalLocation .
-
-var:RegionalLocation                                            a                       dsv:Variable ;
-                                                                rdfs:label              "Regional Location Variable"@en ;
-                                                                dsv:subVariableOf       var:GeoLocation .
-
-var:LocalAuthorityDistrictCode                                  a                       dsv:Variable ;
-                                                                rdfs:label              "Local Authority District Code Variable"@en ;
-                                                                dsv:subVariableOf       var:LocalAuthorityDistrictLocation .
-
-var:LocalAuthorityDistrictName                                  a                       dsv:Variable ;
-                                                                rdfs:label              "Local Authority District Name Variable"@en ;
-                                                                dsv:subVariableOf       var:LocalAuthorityDistrictLocation .
-
-var:LocalAuthorityDistrictLocation                              a                       dsv:Variable ;
-                                                                rdfs:label              "Local Authority District Location Variable"@en ;
-                                                                dsv:subVariableOf       var:GeoLocation .
-
-var:WardsDivisionCode                                           a                       dsv:Variable ;
-                                                                rdfs:label              "Wards Division Code Variables"@en ;
-                                                                dsv:subVariableOf       var:WardsDivisionLocation .
-
-var:WardsDivisionName                                           a                       dsv:Variable ;
-                                                                rdfs:label              "Wards Division Name Variable"@en ;
-                                                                dsv:subVariableOf       var:WardsDivisionLocation .
-
-var:WardsDivisionLocation                                       a                       dsv:Variable ;
-                                                                rdfs:label              "Wards Division Location Variable"@en ;
-                                                                dsv:subVariableOf       var:GeoLocation .
-
-var:AgeOfMother                                                 a                       dsv:Variable ;
-                                                                rdfs:label              "Age of Mother Variable"@en ;
-                                                                dsv:subVariableOf       var:AgeGroup .
-
-var:Gender                                                      a                       dsv:Variable ;
-                                                                rdfs:label              "Statistical Characteristics Variable"@en .
-
-var:NumberOfBirths                                              a                       dsv:Variable ;
-                                                                rdfs:label              "Number of Births Variables"@en ;
-                                                                dsv:subVariableOf       var:Fertility .
