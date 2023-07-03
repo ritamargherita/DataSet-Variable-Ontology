@@ -9,12 +9,12 @@
 # Variables Time Coverage
 ###########################################
 
+var:TimeCoverage                    a                   dsv:Variable ;
+                                    rdfs:label          "Time Coverage Variable"@en .
+
 var:YearCoverage                    a                   dsv:Variable ;
                                     rdfs:label          "Year Coverage Variable"@en ;
-                                    dsv:subVariableOf   var:TimeCoverage .
-
-var:TimeCoverage                    a                   dsv:Variable ;
-                                    rdfs:label          "Time Coverage Variable"@en .     
+                                    dsv:subVariableOf   var:TimeCoverage .     
 
 ###########################################
 # Variables Location
@@ -29,7 +29,7 @@ var:GeoLocation                     a                   dsv:Variable ;
 
 var:RegionalLocation                a                   dsv:Variable ;
                                     rdfs:label          "Regional Location Variable"@en ;
-                                                        dsv:subVariableOf       var:GeoLocation .
+                                    dsv:subVariableOf       var:GeoLocation .
 
 var:RegionalCode                    a                   dsv:Variable ;
                                     rdfs:label          "Regional Code Variable"@en ;
@@ -67,15 +67,24 @@ var:WardsDivisionName               a                   dsv:Variable ;
 # Variables Personal Characteristics
 ###########################################     
 
-var:Age                             a                   dsv:Variable ;
-                                    rdfs:label          "Age Variable"@en .
+var:PersonalCharacteristics         a                   dsv:Variable ;
+                                    rdfs:label          "Personal Characteristics Variable"@en .
 
-var:AgeGroup                        a                   dsv:Variable ;
-                                    rdfs:label          "Age Group Variable"@en ;
-                                    dsv:subVariableOf   var:Age .
+var:Age                             a                   dsv:Variable ;
+                                    rdfs:label          "Age Variable"@en ;
+                                    dsv:subVariableOf   var:PersonalCharacteristics .
 
 var:Gender                          a                   dsv:Variable ;
-                                    rdfs:label          "Gender"@en .
+                                    rdfs:label          "Gender Variable"@en ;
+                                    dsv:subVariableOf   var:PersonalCharacteristics .
+
+var:MaritalStatus                   a                   dsv:Variable ;
+                                    rdfs:label          "Marital Status Variable"@en ;
+                                    dsv:subVariableOf   var:PersonalCharacteristics .
+
+var:MigrationBackground             a                   dsv:Variable ;
+                                    rdfs:label          "Migration Background Variable"@en ;
+                                    dsv:subVariableOf   var:PersonalCharacteristics .
 
 ###########################################
 # Variables Fertility
@@ -100,12 +109,13 @@ var:CrudeBirthRate                  a                   dsv:Variable ;
                                     rdfs:label          "Crude Birth Rate Variable"@en ;
                                     dsv:subVariableOf   var:Fertility .
 
+var:NetReplacementFactor            a                   dsv:Variable ;
+                                    rdfs:label          "Net Replacement Factor Variable"@en ;
+                                    dsv:subVariableOf   var:Fertility .
+
 ###########################################
 # Variables Statistical Characteristics
 ########################################### 
 
 var:StatisticalCharacteristic       a                   dsv:Variable ;
                                     rdfs:label          "Statistical Characteristics Variable"@en .
-
-
-
