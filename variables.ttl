@@ -109,6 +109,14 @@ var:CrudeBirthRate                  a                   dsv:Variable ;
                                     rdfs:label          "Crude Birth Rate Variable"@en ;
                                     dsv:subVariableOf   var:Fertility .
 
+var:NumberOfLiveBirths              a                   dsv:Variable ;
+                                    rdfs:label          "Number of Live Births Variable"@en ;
+                                    dsv:subVariableOf   var:NumberOfBirths .
+
+var:NumberOfStillBirths             a                   dsv:Variable ;
+                                    rdfs:label          "Number of Still Births Variable"@en ;
+                                    dsv:subVariableOf   var:NumberOfBirths .
+
 var:NetReplacementFactor            a                   dsv:Variable ;
                                     rdfs:label          "Net Replacement Factor Variable"@en ;
                                     dsv:subVariableOf   var:Fertility .
