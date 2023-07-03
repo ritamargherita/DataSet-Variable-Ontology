@@ -46,7 +46,7 @@
                                                                                         csvw:Column ;
                                                                 rdfs:label              "Age group"@en ;
                                                                 dsv:componentProperty   <www.example-datasets.org/canada/property/ageGroup> ;
-                                                                dsv:refersToVariable    var:AgeGroup .
+                                                                dsv:refersToVariable    var:Age .
 
 <www.example-datasets.org/canada/column/pregnancyOutcomes>      a                       dsv:DimensionComponent ,
                                                                                         csvw:Column ;
@@ -81,7 +81,7 @@
                                                                 rdfs:domain             <www.example-datasets.org/canada/rowsRepresentation/nationalStatistics> .
 
 <www.example-datasets.org/canada/property/ageGroup>             a                       rdf:Property ;
-                                                                dsv:linksToVariable     var:AgeGroup ;
+                                                                dsv:linksToVariable     var:Age ;
                                                                 rdfs:range              xsd:string ;
                                                                 rdfs:domain             <www.example-datasets.org/canada/rowsRepresentation/nationalStatistics> .
 
