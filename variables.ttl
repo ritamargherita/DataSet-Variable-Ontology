@@ -82,8 +82,8 @@ var:MaritalStatus                   a                   dsv:Variable ;
                                     rdfs:label          "Marital Status Variable"@en ;
                                     dsv:subVariableOf   var:PersonalCharacteristics .
 
-var:MigrationBackground             a                   dsv:Variable ;
-                                    rdfs:label          "Migration Background Variable"@en ;
+var:Background                      a                   dsv:Variable ;
+                                    rdfs:label          "Background Variable"@en ;
                                     dsv:subVariableOf   var:PersonalCharacteristics .
 
 ###########################################
@@ -103,7 +103,7 @@ var:NumberOfBirths                  a                   dsv:Variable ;
 
 var:GeneralFertilityRate            a                   dsv:Variable ;
                                     rdfs:label          "General Fertility Rate Variable"@en ;
-                                    dsv:subVariableOf   var:Fertility .
+                                    dsv:subVariableOf   var:NumberOfBirths .
 
 var:CrudeBirthRate                  a                   dsv:Variable ;
                                     rdfs:label          "Crude Birth Rate Variable"@en ;
