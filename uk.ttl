@@ -82,7 +82,7 @@
                                                                                         csvw:Column ;
                                                                 rdfs:label              "age_of_mother"@en ;
                                                                 dsv:componentProperty   <www.example-datasets.org/uk/property/ageOfMother> ;
-                                                                dsv:refersToVariable    var:AgeGroup .
+                                                                dsv:refersToVariable    var:Age .
 
 <www.example-datasets.org/uk/column/sex>                        a                       dsv:DimensionComponent ,
                                                                                         csvw:Column ;
@@ -102,53 +102,53 @@
 
 <www.example-datasets.org/uk/property/year>                     a                       rdf:Property ;
                                                                 dsv:linksToVariable     var:YearCoverage ;
-                                                                rdfs:range              xsd:gYear ;
-                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
+                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> ;
+                                                                rdfs:range              xsd:gYear .
 
 <www.example-datasets.org/uk/property/rgn20cd>                  a                       rdf:Property ;
                                                                 dsv:linksToVariable     var:RegionalCode ;
-                                                                rdfs:range              xsd:string ;
-                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
+                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> ;
+                                                                rdfs:range              xsd:string .
 
 <www.example-datasets.org/uk/property/rgn20nm>                  a                       rdf:Property ;
                                                                 dsv:linksToVariable     var:RegionalName ;
-                                                                rdfs:range              xsd:string ;
-                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
+                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> ;
+                                                                rdfs:range              xsd:string .
 
 <www.example-datasets.org/uk/property/lad20cd>                  a                       rdf:Property ;
                                                                 dsv:linksToVariable     var:LocalAuthorityDistrictCode ;
-                                                                rdfs:range              xsd:string ;
-                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
+                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> ;
+                                                                rdfs:range              xsd:string .
 
 <www.example-datasets.org/uk/property/lad20nm>                  a                       rdf:Property ;
                                                                 dsv:linksToVariable     var:LocalAuthorityDistrictName ;
-                                                                rdfs:range              xsd:string ;
-                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
+                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> ;
+                                                                rdfs:range              xsd:string .
 
 <www.example-datasets.org/uk/property/wd20cd>                   a                       rdf:Property ;
                                                                 dsv:linksToVariable     var:WardsDivisionCode ;
-                                                                rdfs:range              xsd:int ;
-                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
+                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> ;
+                                                                rdfs:range              xsd:int .
 
 <www.example-datasets.org/uk/property/wd20nm>                   a                       rdf:Property ;
                                                                 dsv:linksToVariable     var:WardsDivisionName ;
-                                                                rdfs:range              xsd:int ;
-                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
+                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> ;
+                                                                rdfs:range              xsd:int .
 
 <www.example-datasets.org/uk/property/ageOfMother>              a                       rdf:Property ;
                                                                 owl:propertyChainAxiom  (
                                                                     <www.example-datasets.org/uk/property/hasMother> 
                                                                     <www.example-datasets.org/uk/property/hasAgeRange> ) ;
-                                                                dsv:linksToVariable     var:AgeGroup ;
-                                                                rdfs:range              xsd:int ;
-                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
+                                                                dsv:linksToVariable     var:Age ;
+                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> ;
+                                                                rdfs:range              xsd:int .
 
 <www.example-datasets.org/uk/property/sex>                      a                       rdf:Property ;
                                                                 dsv:linksToVariable     var:Gender ;
-                                                                rdfs:range              xsd:int ;
-                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
+                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> ;
+                                                                rdfs:range              xsd:int .
 
 <www.example-datasets.org/uk/property/births>                   a                       rdf:Property ;
                                                                 dsv:linksToVariable     var:NumberOfBirths ;
-                                                                rdfs:range              xsd:int ;
-                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
+                                                                rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> ;
+                                                                rdfs:range              xsd:int .
