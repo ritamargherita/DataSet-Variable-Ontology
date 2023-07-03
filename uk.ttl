@@ -40,7 +40,7 @@
                                                                                         csvw:Column ;
                                                                 rdfs:label              "year"@en ;
                                                                 dsv:componentProperty   <www.example-datasets.org/uk/property/year> ;
-                                                                dsv:refersToVariable    var:Year .
+                                                                dsv:refersToVariable    var:YearCoverage .
 
 <www.example-datasets.org/uk/column/rgn20cd>                    a                       dsv:DimensionComponent ,
                                                                                         csvw:Column ;
@@ -101,7 +101,7 @@
 ###########################################
 
 <www.example-datasets.org/uk/property/year>                     a                       rdf:Property ;
-                                                                dsv:linksToVariable     var:Year ;
+                                                                dsv:linksToVariable     var:YearCoverage ;
                                                                 rdfs:range              xsd:gYear ;
                                                                 rdfs:domain             <www.example-datasets.org/uk/rowsRepresentation/nationalStatistics> .
 
