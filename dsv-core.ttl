@@ -1,4 +1,4 @@
-@prefix dsv:            <http://datasetVariableOntology.example> .
+@prefix dsv:            <http://datasetVariableOntology.example/> .
 @prefix dm:             <https://w3id.org/odissei/ns/datamethods/> .
 @prefix owl:            <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .

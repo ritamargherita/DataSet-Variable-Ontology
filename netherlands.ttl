@@ -1,4 +1,4 @@
-@prefix dsv:            <http://datasetVariableOntology.example> .
+@prefix dsv:            <http://datasetVariableOntology.example/> .
 @prefix csvw:           <http://www.w3.org/ns/csvw#> .
 @prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix var:            <http://example.org/VariablesVocabulary/> .
