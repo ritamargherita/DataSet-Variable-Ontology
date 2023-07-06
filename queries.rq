@@ -1,0 +1,91 @@
+######################################################################################
+# What are the columns and their label of a given dataset?
+######################################################################################
+
+PREFIX dsv: <http://datasetVariableOntology.example/>
+PREFIX csvw: <http://www.w3.org/ns/csvw#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?datasetComponent ?columnLabel
+WHERE { 
+	<http:/www.example-datasets.org/canada> 	dsv:datasetSchema 		?datasetSchema .
+    ?datasetSchema								dsv:datasetComponent    ?datasetComponent .
+    ?datasetComponent 							a 						csvw:Column ;
+                             					rdfs:label				?columnLabel.
+}
+
+
+######################################################################################
+# What are the variables and their label of a given dataset?
+######################################################################################
+
+PREFIX dsv: <http://datasetVariableOntology.example/>
+PREFIX csvw: <http://www.w3.org/ns/csvw#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?variable ?variableLabel
+WHERE { 
+	<http:/www.example-datasets.org/canada> 	dsv:datasetSchema 		?datasetSchema .
+    ?datasetSchema								dsv:datasetComponent    ?datasetComponent .
+    ?datasetComponent 							a 						csvw:Column ;
+                             					dsv:refersToVariable	?variable .
+    ?variable									rdfs:label				?variableLabel
+}
+
+
+######################################################################################
+# What are the variables, and their label, that appear in a certain dataset?
+######################################################################################
+
+PREFIX dsv: <http://datasetVariableOntology.example/>
+PREFIX csvw: <http://www.w3.org/ns/csvw#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?variable ?variableLabel
+WHERE { 
+	<http:/www.example-datasets.org/canada> 	dsv:datasetSchema 		?datasetSchema .
+    ?datasetSchema								dsv:datasetComponent    ?datasetComponent .
+    ?datasetComponent 							a 						csvw:Column ;
+                             					dsv:refersToVariable	?variable .
+    ?variable									rdfs:label				?variableLabel .
+}
+
+
+######################################################################################
+# In what other datasets do those variables appear?
+######################################################################################
+
+PREFIX dsv: <http://datasetVariableOntology.example/>
+PREFIX csvw: <http://www.w3.org/ns/csvw#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?otherDataset
+WHERE { 
+	<http:/www.example-datasets.org/canada> 	dsv:datasetSchema 		?datasetSchema .
+    ?datasetSchema								dsv:datasetComponent    ?datasetComponent .
+    ?datasetComponent 							a 						csvw:Column ;
+                             					dsv:refersToVariable	?variable .
+    
+    ?otherDataset								dsv:datasetSchema		?otherDatasetSchema .
+    ?otherDatasetSchema							dsv:datasetComponent    ?otherDatasetComponent .
+    ?otherDatasetComponent						dsv:refersToVariable 	?variable .
+    
+    FILTER(?otherDataset != <http:/www.example-datasets.org/canada>)
+}
+
+
+######################################################################################
+# Given a certain variable, which column headers are used to represent this variable in the various datasets?
+######################################################################################
+
+PREFIX dsv: <http://datasetVariableOntology.example/>
+PREFIX csvw: <http://www.w3.org/ns/csvw#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX var: <http://example.org/VariablesVocabulary/>
+
+SELECT DISTINCT ?columnLabel
+WHERE { 
+    ?datasetComponent 							a 						csvw:Column ;
+                             					rdfs:label				?columnLabel ;
+                             					dsv:refersToVariable	var:YearCoverage .
+}
