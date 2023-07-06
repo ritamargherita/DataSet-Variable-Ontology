@@ -12,7 +12,7 @@
 
 <www.uk-open-data.org/example-aggregated-dataset>       a                               dsv:AggregatedDataset ;
                                                         csvw:url                        "https://www.data.gov.uk/dataset/dab5dccd-4d0e-4b40-b333-178e13ce49fe/annual-births-by-age-of-mother" ;
-                                                        dsv:rowsRepresentInstancesOf    <www.example-datasets.org/uk-individual/rowsRepresentation/births> ;
+                                                        dsv:rowsRepresentInstancesOf    <www.uk-open-data.org/example-individual-dataset/rowsRepresentation/birth> ;
                                                         dsv:aggregationMethod   [
                                                             dsv:aggregatedFrom          <www.uk-open-data.org/example-individual-dataset> ;
                                                             dsv:aggregatedBy            <www.uk-open-data.org/example-individual-dataset/column/year> ,
@@ -196,53 +196,53 @@
 
 <www.uk-open-data.org/properties-dictionary/year>                       a                               rdf:Property ;
                                                                         dsv:linksToVariable             var:YearCoverage ;
-                                                                        rdfs:domain                     <www.example-datasets.org/uk-individual/rowsRepresentation/births> ;
+                                                                        rdfs:domain                     <www.uk-open-data.org/example-individual-dataset/rowsRepresentation/birth> ;
                                                                         rdfs:range                      xsd:gYear .
 
 <www.uk-open-data.org/properties-dictionary/rgn20cd>                    a                               rdf:Property ;
                                                                         dsv:linksToVariable             var:RegionalCode ;
-                                                                        rdfs:domain                     <www.example-datasets.org/uk-individual/rowsRepresentation/births> ;
+                                                                        rdfs:domain                     <www.uk-open-data.org/example-individual-dataset/rowsRepresentation/birth> ;
                                                                         rdfs:range                      xsd:string .
 
 <www.uk-open-data.org/properties-dictionary/rgn20nm>                    a                               rdf:Property ;
                                                                         dsv:linksToVariable             var:RegionalName ;
-                                                                        rdfs:domain                     <www.example-datasets.org/uk-individual/rowsRepresentation/births> ;
+                                                                        rdfs:domain                     <www.uk-open-data.org/example-individual-dataset/rowsRepresentation/birth> ;
                                                                         rdfs:range                      xsd:string .
 
 <www.uk-open-data.org/properties-dictionary/lad20cd>                    a                               rdf:Property ;
                                                                         dsv:linksToVariable             var:LocalAuthorityDistrictCode ;
-                                                                        rdfs:domain                     <www.example-datasets.org/uk-individual/rowsRepresentation/births> ;
+                                                                        rdfs:domain                     <www.uk-open-data.org/example-individual-dataset/rowsRepresentation/birth> ;
                                                                         rdfs:range                      xsd:string .
 
 <www.uk-open-data.org/properties-dictionary/lad20nm>                    a                               rdf:Property ;
                                                                         dsv:linksToVariable             var:LocalAuthorityDistrictName ;
-                                                                        rdfs:domain                     <www.example-datasets.org/uk-individual/rowsRepresentation/births> ;
+                                                                        rdfs:domain                     <www.uk-open-data.org/example-individual-dataset/rowsRepresentation/birth> ;
                                                                         rdfs:range                      xsd:string .
 
 <www.uk-open-data.org/properties-dictionary/wd20cd>                     a                               rdf:Property ;
                                                                         dsv:linksToVariable             var:WardsDivisionCode ;
-                                                                        rdfs:domain                     <www.example-datasets.org/uk-individual/rowsRepresentation/births> ;
+                                                                        rdfs:domain                     <www.uk-open-data.org/example-individual-dataset/rowsRepresentation/birth> ;
                                                                         rdfs:range                      xsd:int .
 
 <www.uk-open-data.org/properties-dictionary/wd20nm>                     a                               rdf:Property ;
                                                                         dsv:linksToVariable             var:WardsDivisionName ;
-                                                                        rdfs:domain                     <www.example-datasets.org/uk-individual/rowsRepresentation/births> ;
+                                                                        rdfs:domain                     <www.uk-open-data.org/example-individual-dataset/rowsRepresentation/birth> ;
                                                                         rdfs:range                      xsd:int .
 
 <www.uk-open-data.org/properties-dictionary/ageOfMother>                a                               rdf:Property ;
                                                                         owl:propertyChainAxiom          (
-                                                                                    <www.example-datasets.org/uk/property/hasMother> 
-                                                                                    <www.example-datasets.org/uk/property/hasAgeRange> ) ;
+                                                                                    <www.uk-open-data.org/properties-dictionary/hasMother> 
+                                                                                    <www.uk-open-data.org/properties-dictionary/hasAgeGroup> ) ;
                                                                         dsv:linksToVariable             var:Age ;
-                                                                        rdfs:domain                     <www.example-datasets.org/uk-individual/rowsRepresentation/births> ;
+                                                                        rdfs:domain                     <www.uk-open-data.org/example-individual-dataset/rowsRepresentation/birth> ;
                                                                         rdfs:range                      xsd:int .
 
 <www.example-datasets.org/uk/property/sex>                              a                               rdf:Property ;
                                                                         dsv:linksToVariable             var:Gender ;
-                                                                        rdfs:domain                     <www.example-datasets.org/uk-individual/rowsRepresentation/births> ;
+                                                                        rdfs:domain                     <www.uk-open-data.org/example-individual-dataset/rowsRepresentation/birth> ;
                                                                         rdfs:range                      xsd:int .
 
 <www.example-datasets.org/uk/property/births>                           a                               rdf:Property ;
                                                                         dsv:linksToVariable             var:NumberOfBirths ;
-                                                                        rdfs:domain                     <www.example-datasets.org/uk-individual/rowsRepresentation/births> ;
+                                                                        rdfs:domain                     <www.uk-open-data.org/example-individual-dataset/rowsRepresentation/birth> ;
                                                                         rdfs:range                      xsd:int .
