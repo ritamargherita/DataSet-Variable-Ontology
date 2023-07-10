@@ -85,21 +85,25 @@
 ###########################################
 
 <www.usa-open-data.org/properties-dictionary/year>                      a                       rdf:Property ;
+                                                                        rdfs:label              "Property defining the year of an event"@en ;
                                                                         dsv:linksToVariable     var:YearCoverage ;
                                                                         rdfs:domain             var:Birth ;
                                                                         rdfs:range              xsd:gYear .
 
 <www.usa-open-data.org/properties-dictionary/birthNumber>               a                       rdf:Property ;
+                                                                        rdfs:label              "Property defining the number of births"@en ;
                                                                         dsv:linksToVariable     var:Birth ;
                                                                         rdfs:domain             var:Birth ;
                                                                         rdfs:range              xsd:int .
 
 <www.usa-open-data.org/properties-dictionary/generalFertilityRate>      a                       rdf:Property ;
+                                                                        rdfs:label              "Property defining the general fertility rate"@en ;
                                                                         dsv:linksToVariable     var:FertilityRate ;
                                                                         rdfs:domain             var:Birth ;
                                                                         rdfs:range              xsd:float .
 
 <www.usa-open-data.org/properties-dictionary/crudeBirthRate>            a                       rdf:Property ;
+                                                                        rdfs:label              "Property defining the crude birth rate"@en ;
                                                                         dsv:linksToVariable     var:Birth ;
                                                                         rdfs:domain             var:Birth ;
                                                                         rdfs:range              xsd:float .

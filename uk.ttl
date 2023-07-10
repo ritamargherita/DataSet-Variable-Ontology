@@ -195,41 +195,49 @@
 ###########################################
 
 <www.uk-open-data.org/properties-dictionary/year>                       a                               rdf:Property ;
+                                                                        rdfs:label                      "Property defining the year of an event"@en ;
                                                                         dsv:linksToVariable             var:YearCoverage ;
                                                                         rdfs:domain                     var:Birth ;
                                                                         rdfs:range                      xsd:gYear .
 
 <www.uk-open-data.org/properties-dictionary/rgn20cd>                    a                               rdf:Property ;
+                                                                        rdfs:label                      "Property defining the regional code"@en ;
                                                                         dsv:linksToVariable             var:GeoLocation ;
                                                                         rdfs:domain                     var:Birth ;
                                                                         rdfs:range                      xsd:string .
 
 <www.uk-open-data.org/properties-dictionary/rgn20nm>                    a                               rdf:Property ;
+                                                                        rdfs:label                      "Property defining the regional name"@en ;
                                                                         dsv:linksToVariable             var:GeoLocation ;
                                                                         rdfs:domain                     var:Birth ;
                                                                         rdfs:range                      xsd:string .
 
 <www.uk-open-data.org/properties-dictionary/lad20cd>                    a                               rdf:Property ;
+                                                                        rdfs:label                      "Property defining the Local Authority District code"@en ;
                                                                         dsv:linksToVariable             var:GeoLocation ;
                                                                         rdfs:domain                     var:Birth ;
                                                                         rdfs:range                      xsd:string .
 
 <www.uk-open-data.org/properties-dictionary/lad20nm>                    a                               rdf:Property ;
+                                                                        rdfs:label                      "Property defining the Local Authority District name"@en ;
                                                                         dsv:linksToVariable             var:GeoLocation ;
                                                                         rdfs:domain                     var:Birth ;
                                                                         rdfs:range                      xsd:string .
 
 <www.uk-open-data.org/properties-dictionary/wd20cd>                     a                               rdf:Property ;
+                                                                        rdfs:label                      "Property defining the Wards code"@en ;
                                                                         dsv:linksToVariable             var:GeoLocation ;
                                                                         rdfs:domain                     var:Birth ;
                                                                         rdfs:range                      xsd:int .
 
 <www.uk-open-data.org/properties-dictionary/wd20nm>                     a                               rdf:Property ;
+                                                                        rdfs:label                      "Property defining the Wards name"@en ;
                                                                         dsv:linksToVariable             var:GeoLocation ;
                                                                         rdfs:domain                     var:Birth ;
                                                                         rdfs:range                      xsd:int .
 
 <www.uk-open-data.org/properties-dictionary/ageOfMother>                a                               rdf:Property ;
+                                                                        rdfs:label                      "Property defining the age group of the mother"@en ;
                                                                         owl:propertyChainAxiom          (
                                                                                     <www.uk-open-data.org/properties-dictionary/hasMother> 
                                                                                     <www.uk-open-data.org/properties-dictionary/hasAgeGroup> ) ;
@@ -238,11 +246,13 @@
                                                                         rdfs:range                      xsd:int .
 
 <www.example-datasets.org/uk/property/sex>                              a                               rdf:Property ;
+                                                                        rdfs:label                      "Property defining the gender of an individual"@en ;
                                                                         dsv:linksToVariable             var:Gender ;
                                                                         rdfs:domain                     var:Birth ;
                                                                         rdfs:range                      xsd:int .
 
 <www.example-datasets.org/uk/property/births>                           a                               rdf:Property ;
+                                                                        rdfs:label                      "Property defining the number of births"@en ;
                                                                         dsv:linksToVariable             var:Birth ;
                                                                         rdfs:domain                     var:Birth ;
                                                                         rdfs:range                      xsd:int .

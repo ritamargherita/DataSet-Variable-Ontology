@@ -113,26 +113,31 @@
 ###########################################
 
 <www.canada-open-data.org/properties-dictionary/refDate>                a                       rdf:Property ;
+                                                                        rdfs:label              "Property defining the year of an event"@en ;
                                                                         dsv:linksToVariable     var:YearCoverage ;
                                                                         rdfs:domain             var:PregnancyOutcome ;
                                                                         rdfs:range              xsd:gYear .
 
 <www.canada-open-data.org/properties-dictionary/geo>                    a                       rdf:Property ;
+                                                                        rdfs:label              "Property defining the location of an event"@en ;
                                                                         dsv:linksToVariable     var:GeoLocation ;
                                                                         rdfs:domain             var:PregnancyOutcome ;
                                                                         rdfs:range              xsd:string .
 
 <www.canada-open-data.org/properties-dictionary/ageGroup>               a                       rdf:Property ;
+                                                                        rdfs:label              "Property defining the age group of the mother"@en ;
                                                                         dsv:linksToVariable     var:Age ;
                                                                         rdfs:domain             var:PregnancyOutcome ;
                                                                         rdfs:range              xsd:string .
 
 <www.canada-open-data.org/properties-dictionary/pregnancyOutcomes>      a                       rdf:Property ;
+                                                                        rdfs:label              "Property defining the outcome of a pregnancy"@en ;
                                                                         dsv:linksToVariable     var:PregnancyOutcome ;
                                                                         rdfs:domain             var:PregnancyOutcome ;
                                                                         rdfs:range              xsd:string .
 
 <www.canada-open-data.org/properties-dictionary/value>                  a                       rdf:Property ;
+                                                                        rdfs:label              "Property defining the number of births"@en ;
                                                                         dsv:linksToVariable     var:Birth ;
                                                                         rdfs:domain             var:PregnancyOutcome ;
                                                                         rdfs:range              xsd:int .

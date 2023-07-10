@@ -213,56 +213,88 @@
 ###########################################
 
 <www.nl-open-data.org/properties-dictionary/periods>                        a                       rdf:Property ;
+                                                                            rdfs:label              "Property defining the year of an event"@en ;
                                                                             dsv:linksToVariable     var:YearCoverage ;
                                                                             rdfs:domain             var:Birth ;
                                                                             rdfs:range              xsd:gYear .
 
 <www.nl-open-data.org/properties-dictionary/totalLiveBornChildren>          a                       rdf:Property ;
+                                                                            rdfs:label              "Property defining the number of live births"@en ;
                                                                             dsv:linksToVariable     var:LiveBirth ;
                                                                             rdfs:domain             var:Birth ;
                                                                             rdfs:range              xsd:int .
 
 <www.nl-open-data.org/properties-dictionary/generalFertilityRate>           a                       rdf:Property ;
+                                                                            rdfs:label              "Property defining the general fertility rate"@en ;
                                                                             dsv:linksToVariable     var:FertilityRate ;
                                                                             rdfs:domain             var:Birth ;
                                                                             rdfs:range              xsd:float .
 
 <www.nl-open-data.org/properties-dictionary/youngerThan20Years>             a                       rdf:Property ;
+                                                                            rdfs:label              "Property defining the age group of the mother"@en ;
+                                                                            owl:propertyChainAxiom          (
+                                                                                    <www.nl-open-data.org/properties-dictionary/hasMother> 
+                                                                                    <www.nl-open-data.org/properties-dictionary/hasAgeGroup> ) ;
                                                                             dsv:linksToVariable     var:Age ;
                                                                             rdfs:domain             var:Birth ;
                                                                             rdfs:range              xsd:int .
 
 <www.nl-open-data.org/properties-dictionary/20To25Years>                    a                       rdf:Property ;
+                                                                            rdfs:label              "Property defining the age group of the mother"@en ;
+                                                                            owl:propertyChainAxiom          (
+                                                                                    <www.nl-open-data.org/properties-dictionary/hasMother> 
+                                                                                    <www.nl-open-data.org/properties-dictionary/hasAgeGroup> ) ;
                                                                             dsv:linksToVariable     var:Age ;
                                                                             rdfs:domain             var:Birth ;
                                                                             rdfs:range              xsd:int .
 
 <www.nl-open-data.org/properties-dictionary/25To30Years>                    a                       rdf:Property ;
+                                                                            rdfs:label              "Property defining the age group of the mother"@en ;
+                                                                            owl:propertyChainAxiom          (
+                                                                                    <www.nl-open-data.org/properties-dictionary/hasMother> 
+                                                                                    <www.nl-open-data.org/properties-dictionary/hasAgeGroup> ) ;
                                                                             dsv:linksToVariable     var:Age ;
                                                                             rdfs:domain             var:Birth ;
                                                                             rdfs:range              xsd:int .
 
 <www.nl-open-data.org/properties-dictionary/30To35Years>                    a                       rdf:Property ;
+                                                                            rdfs:label              "Property defining the age group of the mother"@en ;
+                                                                            owl:propertyChainAxiom          (
+                                                                                    <www.nl-open-data.org/properties-dictionary/hasMother> 
+                                                                                    <www.nl-open-data.org/properties-dictionary/hasAgeGroup> ) ;
                                                                             dsv:linksToVariable     var:Age ;
                                                                             rdfs:domain             var:Birth ;
                                                                             rdfs:range              xsd:int .
 
 <www.nl-open-data.org/properties-dictionary/35To40Years>                    a                       rdf:Property ;
+                                                                            rdfs:label              "Property defining the age group of the mother"@en ;
+                                                                            owl:propertyChainAxiom          (
+                                                                                    <www.nl-open-data.org/properties-dictionary/hasMother> 
+                                                                                    <www.nl-open-data.org/properties-dictionary/hasAgeGroup> ) ;
                                                                             dsv:linksToVariable     var:Age ;
                                                                             rdfs:domain             var:Birth ;
                                                                             rdfs:range              xsd:int .
 
 <www.nl-open-data.org/properties-dictionary/40To45Years>                    a                       rdf:Property ;
+                                                                            rdfs:label              "Property defining the age group of the mother"@en ;
+                                                                            owl:propertyChainAxiom          (
+                                                                                    <www.nl-open-data.org/properties-dictionary/hasMother> 
+                                                                                    <www.nl-open-data.org/properties-dictionary/hasAgeGroup> ) ;
                                                                             dsv:linksToVariable     var:Age ;
                                                                             rdfs:domain             var:Birth ;
                                                                             rdfs:range              xsd:int .
 
 <www.nl-open-data.org/properties-dictionary/45YearsOrOlder>                 a                       rdf:Property ;
+                                                                            rdfs:label              "Property defining the age group of the mother"@en ;
+                                                                            owl:propertyChainAxiom          (
+                                                                                    <www.nl-open-data.org/properties-dictionary/hasMother> 
+                                                                                    <www.nl-open-data.org/properties-dictionary/hasAgeGroup> ) ;
                                                                             dsv:linksToVariable     var:Age ;
                                                                             rdfs:domain             var:Birth ;
                                                                             rdfs:range              xsd:int .
 
 <www.nl-open-data.org/properties-dictionary/totalBirths>                    a                       rdf:Property ;
+                                                                            rdfs:label              "Property defining the number of births"@en ;
                                                                             dsv:linksToVariable     var:Birth ;
                                                                             rdfs:domain             var:Birth ;
                                                                             rdfs:range              xsd:int .
