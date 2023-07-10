@@ -2,9 +2,9 @@
 # What are the columns and their label of a given dataset?
 ######################################################################################
 
-PREFIX dsv: <http://datasetVariableOntology.example/>
-PREFIX csvw: <http://www.w3.org/ns/csvw#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dsv:     <www.example.org/datasetVariableOntology/>
+PREFIX csvw:    <www.w3.org/ns/csvw#>
+PREFIX rdfs:    <www.w3.org/2000/01/rdf-schema#>
 
 SELECT DISTINCT ?datasetComponent ?columnLabel
 WHERE { 
@@ -19,13 +19,13 @@ WHERE {
 # What are the variables and their label of a given dataset?
 ######################################################################################
 
-PREFIX dsv: <http://datasetVariableOntology.example/>
-PREFIX csvw: <http://www.w3.org/ns/csvw#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dsv:     <www.example.org/datasetVariableOntology/>
+PREFIX csvw:    <www.w3.org/ns/csvw#>
+PREFIX rdfs:    <www.w3.org/2000/01/rdf-schema#>
 
 SELECT DISTINCT ?variable ?variableLabel
 WHERE { 
-	<http:/www.example-datasets.org/canada> 	dsv:datasetSchema 		?datasetSchema .
+	<www.example-datasets.org/canada> 	        dsv:datasetSchema 		?datasetSchema .
     ?datasetSchema								dsv:datasetComponent    ?datasetComponent .
     ?datasetComponent 							a 						csvw:Column ;
                              					dsv:refersToVariable	?variable .
@@ -37,13 +37,13 @@ WHERE {
 # What are the variables, and their label, that appear in a certain dataset?
 ######################################################################################
 
-PREFIX dsv: <http://datasetVariableOntology.example/>
-PREFIX csvw: <http://www.w3.org/ns/csvw#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dsv:     <www.example.org/datasetVariableOntology/>
+PREFIX csvw:    <www.w3.org/ns/csvw#>
+PREFIX rdfs:    <www.w3.org/2000/01/rdf-schema#>
 
 SELECT DISTINCT ?variable ?variableLabel
 WHERE { 
-	<http:/www.example-datasets.org/canada> 	dsv:datasetSchema 		?datasetSchema .
+	<www.example-datasets.org/canada> 	        dsv:datasetSchema 		?datasetSchema .
     ?datasetSchema								dsv:datasetComponent    ?datasetComponent .
     ?datasetComponent 							a 						csvw:Column ;
                              					dsv:refersToVariable	?variable .
@@ -55,13 +55,13 @@ WHERE {
 # In what other datasets do those variables appear?
 ######################################################################################
 
-PREFIX dsv: <http://datasetVariableOntology.example/>
-PREFIX csvw: <http://www.w3.org/ns/csvw#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dsv:     <www.example.org/datasetVariableOntology/>
+PREFIX csvw:    <www.w3.org/ns/csvw#>
+PREFIX rdfs:    <www.w3.org/2000/01/rdf-schema#>
 
 SELECT DISTINCT ?otherDataset
 WHERE { 
-	<http:/www.example-datasets.org/canada> 	dsv:datasetSchema 		?datasetSchema .
+	<www.example-datasets.org/canada> 	        dsv:datasetSchema 		?datasetSchema .
     ?datasetSchema								dsv:datasetComponent    ?datasetComponent .
     ?datasetComponent 							a 						csvw:Column ;
                              					dsv:refersToVariable	?variable .
@@ -70,7 +70,7 @@ WHERE {
     ?otherDatasetSchema							dsv:datasetComponent    ?otherDatasetComponent .
     ?otherDatasetComponent						dsv:refersToVariable 	?variable .
     
-    FILTER(?otherDataset != <http:/www.example-datasets.org/canada>)
+    FILTER(?otherDataset != <www.example-datasets.org/canada>)
 }
 
 
@@ -78,10 +78,10 @@ WHERE {
 # Given a certain variable, which column headers are used to represent this variable in the various datasets?
 ######################################################################################
 
-PREFIX dsv: <http://datasetVariableOntology.example/>
-PREFIX csvw: <http://www.w3.org/ns/csvw#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX var: <http://example.org/VariablesVocabulary/>
+PREFIX dsv:     <www.example.org/datasetVariableOntology/>
+PREFIX csvw:    <www.w3.org/ns/csvw#>
+PREFIX rdfs:    <www.w3.org/2000/01/rdf-schema#>
+PREFIX var:     <www.example.org/VariablesVocabulary/>
 
 SELECT DISTINCT ?columnLabel
 WHERE { 

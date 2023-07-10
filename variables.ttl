@@ -1,8 +1,8 @@
-@prefix dsv:            <http://datasetVariableOntology.example/> .
-@prefix csvw:           <http://www.w3.org/ns/csvw#> .
-@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix var:            <http://example.org/VariablesVocabulary/> .
-@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+@prefix dsv:            <www.example.org/datasetVariableOntology/> .
+@prefix csvw:           <www.w3.org/ns/csvw#> .
+@prefix rdfs:           <www.w3.org/2000/01/rdf-schema#> .
+@prefix var:            <www.example.org/VariablesVocabulary/> .
+@prefix xsd:            <www.w3.org/2001/XMLSchema#> .
 
 
 ###########################################

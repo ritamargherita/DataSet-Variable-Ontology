@@ -1,10 +1,10 @@
-@prefix dsv:            <http://datasetVariableOntology.example/> .
-@prefix dm:             <https://w3id.org/odissei/ns/datamethods/> .
-@prefix owl:            <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix csvw:           <http://www.w3.org/ns/csvw#> .
-@prefix qb:             <http://www.w3.org/TR/vocab-data-cube/> .
+@prefix dsv:        <www.example.org/datasetVariableOntology/> .
+@prefix dm:         <w3id.org/odissei/ns/datamethods/> .
+@prefix owl:        <www.w3.org/2002/07/owl#> .
+@prefix rdf:        <www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:       <www.w3.org/2000/01/rdf-schema#> .
+@prefix csvw:       <www.w3.org/ns/csvw#> .
+@prefix qb:         <www.w3.org/TR/vocab-data-cube/> .
 
 ###########################################
 # DataSet-Variable Ontology
