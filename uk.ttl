@@ -28,7 +28,7 @@
                                                                 dsv:summaryStatistics   [
                                                                     dsv:numberOfRows            "962760"^^xsd:integer ;
                                                                     dsv:numberOfColumns         "10"^^xsd:integer ;
-                                                                    dsv:datasetCompleteness     "0.98"^^xsd:float ;
+                                                                    dsv:completeness            "0.98"^^xsd:float ;
                                                                     dsv:missingValuesFormat     "NA"^^xsd:string
                                                                 ] ;
                                                                 dsv:datasetSchema       [
@@ -58,7 +58,7 @@
                                                                                     dsv:aggregationFunctionArgument     <http://www.uk-open-data.org/example-individual-dataset/column/year> 
                                                                                 ] ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                    dsv:completeness                    "1.00"^^xsd:float ;
                                                                                     dsv:dataType                        "Numerical"@en ;
                                                                                 ] .
 
@@ -72,7 +72,7 @@
                                                                                     dsv:aggregationFunctionArgument     <http://www.uk-open-data.org/example-individual-dataset/column/rgn20cd> 
                                                                                 ] ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:componentCompleteness           "0.89"^^xsd:float ;
+                                                                                    dsv:completeness                    "0.89"^^xsd:float ;
                                                                                     dsv:missingValuesFormat             "NA"^^xsd:string ;
                                                                                     dsv:dataType                        "Categorical"@en ;
                                                                                 ] .
@@ -87,7 +87,7 @@
                                                                                     dsv:aggregationFunctionArgument     <http://www.uk-open-data.org/example-individual-dataset/column/rgn20nm> 
                                                                                 ] ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:componentCompleteness           "0.89"^^xsd:float ;
+                                                                                    dsv:completeness                    "0.89"^^xsd:float ;
                                                                                     dsv:missingValuesFormat             "NA"^^xsd:string ;
                                                                                     dsv:dataType                        "Categorical"@en ;
                                                                                 ] .
@@ -102,7 +102,7 @@
                                                                                     dsv:aggregationFunctionArgument     <http://www.uk-open-data.org/example-individual-dataset/column/lad20cd> 
                                                                                 ] ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                    dsv:completeness                    "1.00"^^xsd:float ;
                                                                                     dsv:dataType                        "Categorical"@en ;
                                                                                 ] .
 
@@ -116,7 +116,7 @@
                                                                                     dsv:aggregationFunctionArgument     <http://www.uk-open-data.org/example-individual-dataset/column/lad20nm> 
                                                                                 ] ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                    dsv:completeness                    "1.00"^^xsd:float ;
                                                                                     dsv:dataType                        "Categorical"@en ;
                                                                                 ] .
 
@@ -130,7 +130,7 @@
                                                                                     dsv:aggregationFunctionArgument     <http://www.uk-open-data.org/example-individual-dataset/column/wd20cd> 
                                                                                 ] ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                    dsv:completeness                    "1.00"^^xsd:float ;
                                                                                     dsv:dataType                        "Categorical"@en ;
                                                                                 ] .
 
@@ -144,7 +144,7 @@
                                                                                     dsv:aggregationFunctionArgument     <http://www.uk-open-data.org/example-individual-dataset/column/wd20nm> 
                                                                                 ] ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                    dsv:completeness                    "1.00"^^xsd:float ;
                                                                                     dsv:dataType                        "Categorical"@en ;
                                                                                 ] .
 
@@ -158,7 +158,7 @@
                                                                                     dsv:aggregationFunctionArgument     <http://www.uk-open-data.org/example-individual-dataset/column/ageOfMother> 
                                                                                 ] ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                    dsv:completeness                    "1.00"^^xsd:float ;
                                                                                     dsv:dataType                        "Categorical"@en ;
                                                                                 ] .
 
@@ -172,7 +172,7 @@
                                                                                     dsv:aggregationFunctionArgument     <http://www.uk-open-data.org/example-individual-dataset/column/sex> 
                                                                                 ] ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                    dsv:completeness                    "1.00"^^xsd:float ;
                                                                                     dsv:dataType                        "Categorical"@en ;
                                                                                 ] .
 
@@ -186,7 +186,7 @@
                                                                                     dsv:aggregationFunctionArgument     <http://www.uk-open-data.org/example-individual-dataset/column/new-birth-id> 
                                                                                 ] ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                    dsv:completeness                    "1.00"^^xsd:float ;
                                                                                     dsv:dataType                        "Numerical"@en ;
                                                                                 ] .
 

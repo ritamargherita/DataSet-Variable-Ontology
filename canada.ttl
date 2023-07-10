@@ -22,7 +22,7 @@
                                                                     dsv:summaryStatistics   [
                                                                         dsv:numberOfRows                "40208"^^xsd:integer ;
                                                                         dsv:numberOfColumns             "5"^^xsd:integer ;
-                                                                        dsv:datasetCompleteness         "0.99"^^xsd:float ;
+                                                                        dsv:completeness                 "0.99"^^xsd:float ;
                                                                         dsv:missingValuesFormat         "NA"^^xsd:string
                                                                     ] ;
                                                                     dsv:datasetSchema       [
@@ -47,7 +47,7 @@
                                                                                                 dsv:aggregationFunctionArgument     <http://www.canada-open-data.org/example-individual-dataset/column/refDate> 
                                                                                             ] ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                                dsv:completeness                   "1.00"^^xsd:float ;
                                                                                                 dsv:dataType                        "Numerical"@en ;
                                                                                             ] .
 
@@ -61,7 +61,7 @@
                                                                                                 dsv:aggregationFunctionArgument     <http://www.canada-open-data.org/example-individual-dataset/column/geo> 
                                                                                             ] ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                                dsv:completeness                   "1.00"^^xsd:float ;
                                                                                                 dsv:dataType                        "Categorical"@en ;
                                                                                             ] .
 
@@ -75,7 +75,7 @@
                                                                                                 dsv:aggregationFunctionArgument     <http://www.canada-open-data.org/example-individual-dataset/column/ageGroup> 
                                                                                             ] ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                                dsv:completeness                   "1.00"^^xsd:float ;
                                                                                                 dsv:dataType                        "Categorical"@en ;
                                                                                             ] .
 
@@ -89,7 +89,7 @@
                                                                                                 dsv:aggregationFunctionArgument     <http://www.canada-open-data.org/example-individual-dataset/column/pregnancyOutcomes> 
                                                                                             ] ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                                dsv:completeness                   "1.00"^^xsd:float ;
                                                                                                 dsv:dataType                        "Categorical"@en ;
                                                                                             ] .
 
@@ -103,7 +103,7 @@
                                                                                                 dsv:aggregationFunctionArgument     <http://www.canada-open-data.org/example-individual-dataset/column/new-birth-id> 
                                                                                             ] ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:componentCompleteness           "0.97"^^xsd:float ;
+                                                                                                dsv:completeness                   "0.97"^^xsd:float ;
                                                                                                 dsv:dataType                        "Numerical"@en ;
                                                                                                 dsv:missingValuesFormat             "NA"^^xsd:string
                                                                                             ] .

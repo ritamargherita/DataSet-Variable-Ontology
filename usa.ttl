@@ -19,7 +19,7 @@
                                                                     dsv:summaryStatistics   [
                                                                         dsv:numberOfRows            "110"^^xsd:integer ;
                                                                         dsv:numberOfColumns         "4"^^xsd:integer ;
-                                                                        dsv:datasetCompleteness     "1.00"^^xsd:float 
+                                                                        dsv:completeness            "1.00"^^xsd:float 
                                                                     ] ;
                                                                     dsv:datasetSchema       [
                                                                         dsv:datasetComponent        <http://www.usa-open-data.org/example-aggregated-dataset/column/Year> ,
@@ -42,7 +42,7 @@
                                                                                                 dsv:aggregationFunctionArgument     <http://www.usa-open-data.org/example-individual-dataset/column/Year> 
                                                                                             ] ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                                dsv:completeness                    "1.00"^^xsd:float ;
                                                                                                 dsv:dataType                        "Numerical"@en ;
                                                                                             ] .
 
@@ -56,7 +56,7 @@
                                                                                                 dsv:aggregationFunctionArgument     <http://www.usa-open-data.org/example-individual-dataset/column/new-birth-id> 
                                                                                             ] ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                                dsv:completeness                    "1.00"^^xsd:float ;
                                                                                                 dsv:dataType                        "Numerical"@en ;
                                                                                             ] .
 
@@ -66,7 +66,7 @@
                                                                                             dsv:componentProperty       <http://www.usa-open-data.org/properties-dictionary/generalFertilityRate> ;
                                                                                             dsv:refersToVariable        var:FertilityRate ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                                dsv:completeness                    "1.00"^^xsd:float ;
                                                                                                 dsv:dataType                        "Numerical"@en ;
                                                                                             ] .
 
@@ -76,7 +76,7 @@
                                                                                             dsv:componentProperty       <http://www.usa-open-data.org/properties-dictionary/crudeBirthRate> ;
                                                                                             dsv:refersToVariable        var:Birth ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                                dsv:completeness                    "1.00"^^xsd:float ;
                                                                                                 dsv:dataType                        "Numerical"@en ;
                                                                                             ] .
 
