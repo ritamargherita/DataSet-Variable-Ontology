@@ -52,7 +52,7 @@
                                                                                     dsv:componentProperty       <www.usa-open-data.org/properties-dictionary/birthNumber> ;
                                                                                     dsv:refersToVariable        var:Birth ;
                                                                                     dsv:hasAggregationMethod    [
-                                                                                        dsv:aggregationFunction             "COUNT DISTINCT"@en ;
+                                                                                        dsv:aggregationFunction             "COUNT"@en ;
                                                                                         dsv:aggregationFunctionArgument     <www.usa-open-data.org/example-individual-dataset/column/new-birth-id> 
                                                                                     ] ;
                                                                                     dsv:summaryStatistics       [
