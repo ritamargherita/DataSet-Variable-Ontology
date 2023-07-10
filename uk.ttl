@@ -24,7 +24,7 @@
                                                                                         <www.uk-open-data.org/example-individual-dataset/column/wd20nm> ,
                                                                                         <www.uk-open-data.org/example-individual-dataset/column/ageOfMother> ,
                                                                                         <www.uk-open-data.org/example-individual-dataset/column/sex> 
-                                                            ] ;
+                                                        ] ;
                                                         dsv:summaryStatistics   [
                                                             dsv:numberOfRows            "962760"^^xsd:integer ;
                                                             dsv:numberOfColumns         "10"^^xsd:integer ;

@@ -1,5 +1,0 @@
-etd-change-log-july2021.pdf (application/pdf) 34253 bytes.
-etd-linked-with-historical-series.rar (application/x-rar-compressed) 2068390 bytes.
-etd-release2021.dta (application/x-stata-14) 602196 bytes.
-etd-release2021.rds (application/gzip) 223258 bytes.
-etd-release2021.xlsx (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) 890039 bytes.
