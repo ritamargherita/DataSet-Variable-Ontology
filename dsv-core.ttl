@@ -26,12 +26,13 @@ dsv:DatasetSchema               a                   owl:Class ;
 
 dsv:DimensionComponent          a                   owl:Class ;
                                 rdfs:subClassOf     qb:ComponentSpecification .
-                                # rdfs:subClassOf     csvw:Column, csvw:Row
 
 dsv:Variable                    a                   owl:Class .
 
 dsv:Aggregation                 a                   owl:Class ;
                                 rdfs:subClassOf     dm:Anonymization .
+
+dsv:SummaryStatistics           a                   owl:Class .
 
 ###########################################
 # Instances of Classes
@@ -45,52 +46,84 @@ dsv:AggregatedDataset           a                   dsv:Dataset .
 # Object Properties
 ###########################################                  
 
-dsv:DatasetSchema               a                   owl:ObjectProperty ;
-                                rdfs:subPropertyOf  qb:structure ,
-                                                    csvw:tableSchema ;
-                                rdfs:domain         dsv:Dataset ;
-                                rdfs:range          dsv:DatasetSchema .
+dsv:datasetSchema                   a                   owl:ObjectProperty ;
+                                    rdfs:subPropertyOf  qb:structure ,
+                                                        csvw:tableSchema ;
+                                    rdfs:domain         dsv:Dataset ;
+                                    rdfs:range          dsv:DatasetSchema .
 
-dsv:dimensionComponent          a                   owl:ObjectProperty ;
-                                rdfs:subPropertyOf  qb:component ;
-                                # rdfs:subPropertyOf    csvw:column
-                                rdfs:domain         dsv:DatasetSchema ;
-                                rdfs:range          dsv:DimensionComponent .
+dsv:dimensionComponent              a                   owl:ObjectProperty ;
+                                    rdfs:subPropertyOf  qb:component ;
+                                    rdfs:domain         dsv:DatasetSchema ;
+                                    rdfs:range          dsv:DimensionComponent .
 
-dsv:componentProperty           a                   owl:ObjectProperty ;
-                                rdfs:subPropertyOf  qb:dimension,
-                                                    csvw:propertyUrl ;
-                                rdfs:domain         dsv:DimensionComponent ;
-                                rdfs:range          rdf:Property .
+dsv:componentProperty               a                   owl:ObjectProperty ;
+                                    rdfs:subPropertyOf  qb:dimension,
+                                                        csvw:propertyUrl ;
+                                    rdfs:domain         dsv:DimensionComponent ;
+                                    rdfs:range          rdf:Property .
 
-dsv:refersToVariable            a                   owl:ObjectProperty ;
-                                rdfs:domain         dsv:DimensionComponent ;
-                                rdfs:range          dsv:Variable .
+dsv:refersToVariable                a                   owl:ObjectProperty ;
+                                    rdfs:domain         dsv:DimensionComponent ;
+                                    rdfs:range          dsv:Variable .
 
-dsv:linksToVariable             a                   owl:ObjectProperty ;
-                                rdfs:domain         rdf:Property ;
-                                rdfs:range          dsv:Variable .
+dsv:linksToVariable                 a                   owl:ObjectProperty ;
+                                    rdfs:domain         rdf:Property ;
+                                    rdfs:range          dsv:Variable .
 
-dsv:subVariableOf               a                   owl:ObjectProperty ;
-                                rdfs:domain         dsv:Variable ;
-                                rdfs:range          dsv:Variable .
+dsv:subVariableOf                   a                   owl:ObjectProperty ;
+                                    rdfs:domain         dsv:Variable ;
+                                    rdfs:range          dsv:Variable .
 
-dsv:aggregationMethod           a                   owl:ObjectProperty ;
-                                rdfs:domain         dsv:DimensionComponent ;
-                                rdfs:range          dsv:Aggregation .
+dsv:aggregationMethod               a                   owl:ObjectProperty ;
+                                    rdfs:domain         dsv:DimensionComponent ;
+                                    rdfs:range          dsv:Aggregation .
 
-dsv:rowsRepresentInstancesOf    a                   owl:ObjectProperty ;
-                                rdfs:domain         dsv:DatasetSchema .
-                                # rdfs:range         owl:Class, skos:Concept .
+dsv:rowsRepresentInstancesOf        a                   owl:ObjectProperty ;
+                                    rdfs:domain         dsv:DatasetSchema ;
+                                    rdfs:range          owl:Class .
+
+dsv:aggregatedFrom                  a                   owl:ObjectProperty ;
+                                    rdfs:domain         dsv:Aggregation ;
+                                    rdfs:range          dsv:Dataset .
+
+dsv:aggregatedBy                    a                   owl:ObjectProperty ;
+                                    rdfs:domain         dsv:Aggregation ;
+                                    rdfs:range          dsv:DimensionComponent .
+
+dsv:aggregationFunctionArgument     a                   owl:ObjectProperty ;
+                                    rdfs:domain         dsv:Aggregation ;
+                                    rdfs:range          dsv:DimensionComponent .
+
+dsv:summaryStatistics               a                   owl:ObjectProperty ;
+                                    rdfs:domain         dsv:Dataset ,
+                                                        dsv:DimensionComponent ;
+                                    rdfs:range          dsv:SummaryStatistics .
 
 ###########################################
 # Data Properties
 ###########################################   
 
-dsv:aggregationType             a                   owl:DatatypeProperty ;
-                                rdfs:domain         dsv:Aggregation .
-                                # rdfs:range         ??? . 
+dsv:aggregationFunction             a                   owl:DataProperty ;
+                                    rdfs:domain         dsv:Aggregation ;
+                                    rdfs:range          xsd:string . 
 
-dsv:aggregationDimension        a                   owl:DatatypeProperty ;
-                                rdfs:domain         dsv:Aggregation .
-                                # rdfs:range         ??? .                  
+dsv:numberOfColumns                 a                   owl:DataProperty ;
+                                    rdfs:domain         dsv:SummaryStatistics ;
+                                    rdfs:range          xsd:string .
+
+dsv:numberOfRows                    a                   owl:DataProperty ;
+                                    rdfs:domain         dsv:SummaryStatistics ;
+                                    rdfs:range          xsd:string . 
+
+dsv:completeness                    a                   owl:DataProperty ;
+                                    rdfs:domain         dsv:SummaryStatistics ;
+                                    rdfs:range          xsd:string .
+
+dsv:dataType                        a                   owl:DataProperty ;
+                                    rdfs:domain         dsv:SummaryStatistics ;
+                                    rdfs:range          xsd:string . 
+
+dsv:missingValueFormat              a                   owl:DataProperty ;
+                                    rdfs:domain         dsv:SummaryStatistics ;
+                                    rdfs:range          xsd:string .
