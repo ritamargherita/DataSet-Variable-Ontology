@@ -27,7 +27,7 @@
                                                             dsv:summaryStatistics   [
                                                                 dsv:numberOfRows            "72"^^xsd:integer ;
                                                                 dsv:numberOfColumns         "12"^^xsd:integer ;
-                                                                dsv:datasetCompleteness     "1.0"^^xsd:float 
+                                                                dsv:datasetCompleteness     "1.00"^^xsd:float 
                                                             ] ;
                                                             dsv:datasetSchema       [
                                                                 dsv:datasetComponent        <www.nl-open-data.org/example-aggregated-dataset/column/perioden> ,

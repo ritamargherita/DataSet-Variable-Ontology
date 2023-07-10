@@ -13,21 +13,23 @@
                                                             csvw:url                            "https://open.canada.ca/data/en/dataset/1367e3a6-02f1-496f-9c0f-d078dbdd58d0" ;
                                                             dsv:rowsRepresentInstancesOf        var:PregnancyOutcome ;
                                                             dsv:aggregationMethod   [
-                                                                dsv:aggregationType             "count"@en ;
-                                                                dsv:aggregationDimension        <www.canada-open-data.org/example-aggregated-dataset/column/refDate> 
+                                                                dsv:aggregatedFrom              <www.canada-open-data.org/example-individual-dataset> ;
+                                                                dsv:aggregatedBy                <www.canada-open-data.org/example-individual-dataset/column/refDate> ,
+                                                                                                <www.canada-open-data.org/example-individual-dataset/column/geo> ,
+                                                                                                <www.canada-open-data.org/example-individual-dataset/column/ageGroup> ,
+                                                                                                <www.canada-open-data.org/example-individual-dataset/column/pregnancyOutcomes>  
                                                             ] ;
                                                             dsv:summaryStatistics   [
-                                                                dsv:numberOfRows            "962760"^^xsd:integer ;
-                                                                dsv:numberOfColumns         "10"^^xsd:integer ;
-                                                                dsv:datasetCompleteness     "0.975"^^xsd:float ;
-                                                                dsv:missingValuesFormat     "NA"^^xsd:string
+                                                                dsv:numberOfRows                "40208"^^xsd:integer ;
+                                                                dsv:numberOfColumns             "5"^^xsd:integer ;
+                                                                dsv:datasetCompleteness         "0.99"^^xsd:float ;
+                                                                dsv:missingValuesFormat         "NA"^^xsd:string
                                                             ] ;
                                                             dsv:datasetSchema       [
                                                                 dsv:datasetComponent            <www.canada-open-data.org/example-aggregated-dataset/column/refDate> ,
                                                                                                 <www.canada-open-data.org/example-aggregated-dataset/column/geo> ,
                                                                                                 <www.canada-open-data.org/example-aggregated-dataset/column/ageGroup> ,
                                                                                                 <www.canada-open-data.org/example-aggregated-dataset/column/pregnancyOutcomes> ,
-                                                                                                <www.canada-open-data.org/example-aggregated-dataset/column/characteristics> ,
                                                                                                 <www.canada-open-data.org/example-aggregated-dataset/column/value>
                                                             ] .
 
@@ -35,72 +37,102 @@
 # Dataset Canada - Columns
 ###########################################
 
-<www.canada-open-data.org/example-aggregated-dataset/column/refDate>                a                       dsv:DimensionComponent ,
-                                                                                                            csvw:Column ;
-                                                                                    rdfs:label              "REF_DATE"@en ;
-                                                                                    dsv:componentProperty   <www.canada-open-data.org/example-aggregated-dataset/property/refDate> ;
-                                                                                    dsv:refersToVariable    var:YearCoverage .
+<www.canada-open-data.org/example-aggregated-dataset/column/refDate>                a                           dsv:DimensionComponent ,
+                                                                                                                csvw:Column ;
+                                                                                    rdfs:label                  "REF_DATE"@en ;
+                                                                                    dsv:componentProperty       <www.canada-open-data.org/properties-dictionary/refDate> ;
+                                                                                    dsv:refersToVariable        var:YearCoverage ;
+                                                                                    dsv:hasAggregationMethod    [
+                                                                                        dsv:aggregationFunction             "GROUP BY"@en ;
+                                                                                        dsv:aggregationFunctionArgument     <www.canada-open-data.org/example-individual-dataset/column/refDate> 
+                                                                                    ] ;
+                                                                                    dsv:summaryStatistics       [
+                                                                                        dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                        dsv:dataType                        "Numerical"@en ;
+                                                                                    ] .
 
-<www.canada-open-data.org/example-aggregated-dataset/column/geo>                    a                       dsv:DimensionComponent ,
-                                                                                                            csvw:Column ;
-                                                                                    rdfs:label              "GEO"@en ;
-                                                                                    dsv:componentProperty   <www.canada-open-data.org/example-aggregated-dataset/property/geo> ;
-                                                                                    dsv:refersToVariable    var:GeoLocation .
+<www.canada-open-data.org/example-aggregated-dataset/column/geo>                    a                           dsv:DimensionComponent ,
+                                                                                                                csvw:Column ;
+                                                                                    rdfs:label                  "GEO"@en ;
+                                                                                    dsv:componentProperty       <www.canada-open-data.org/properties-dictionary/geo> ;
+                                                                                    dsv:refersToVariable        var:GeoLocation ;
+                                                                                    dsv:hasAggregationMethod    [
+                                                                                        dsv:aggregationFunction             "GROUP BY"@en ;
+                                                                                        dsv:aggregationFunctionArgument     <www.canada-open-data.org/example-individual-dataset/column/geo> 
+                                                                                    ] ;
+                                                                                    dsv:summaryStatistics       [
+                                                                                        dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                        dsv:dataType                        "String"@en ;
+                                                                                    ] .
 
-<www.canada-open-data.org/example-aggregated-dataset/column/ageGroup>               a                       dsv:DimensionComponent ,
-                                                                                                            csvw:Column ;
-                                                                                    rdfs:label              "Age group"@en ;
-                                                                                    dsv:componentProperty   <www.canada-open-data.org/example-aggregated-dataset/property/ageGroup> ;
-                                                                                    dsv:refersToVariable    var:Age .
+<www.canada-open-data.org/example-aggregated-dataset/column/ageGroup>               a                           dsv:DimensionComponent ,
+                                                                                                                csvw:Column ;
+                                                                                    rdfs:label                  "Age group"@en ;
+                                                                                    dsv:componentProperty       <www.canada-open-data.org/properties-dictionary/ageGroup> ;
+                                                                                    dsv:refersToVariable        var:Age ;
+                                                                                    dsv:hasAggregationMethod    [
+                                                                                        dsv:aggregationFunction             "GROUP BY"@en ;
+                                                                                        dsv:aggregationFunctionArgument     <www.canada-open-data.org/example-individual-dataset/column/ageGroup> 
+                                                                                    ] ;
+                                                                                    dsv:summaryStatistics       [
+                                                                                        dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                        dsv:dataType                        "String"@en ;
+                                                                                    ] .
 
-<www.canada-open-data.org/example-aggregated-dataset/column/pregnancyOutcomes>      a                       dsv:DimensionComponent ,
-                                                                                                            csvw:Column ;
-                                                                                    rdfs:label              "Pregnancy outcomes"@en ;
-                                                                                    dsv:componentProperty   <www.canada-open-data.org/example-aggregated-dataset/property/pregnancyOutcomes> ;
-                                                                                    dsv:refersToVariable    var:PregnancyOutcome .
+<www.canada-open-data.org/example-aggregated-dataset/column/pregnancyOutcomes>      a                           dsv:DimensionComponent ,
+                                                                                                                csvw:Column ;
+                                                                                    rdfs:label                  "Pregnancy outcomes"@en ;
+                                                                                    dsv:componentProperty       <www.canada-open-data.org/properties-dictionary/pregnancyOutcomes> ;
+                                                                                    dsv:refersToVariable        var:PregnancyOutcome ;
+                                                                                    dsv:hasAggregationMethod    [
+                                                                                        dsv:aggregationFunction             "GROUP BY"@en ;
+                                                                                        dsv:aggregationFunctionArgument     <www.canada-open-data.org/example-individual-dataset/column/pregnancyOutcomes> 
+                                                                                    ] ;
+                                                                                    dsv:summaryStatistics       [
+                                                                                        dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                        dsv:dataType                        "String"@en ;
+                                                                                    ] .
 
-<www.canada-open-data.org/example-aggregated-dataset/column/characteristics>        a                       dsv:DimensionComponent ,
-                                                                                                            csvw:Column ;
-                                                                                    rdfs:label              "Characteristics"@en ;
-                                                                                    dsv:componentProperty   <www.canada-open-data.org/example-aggregated-dataset/property/characteristics> ;
-                                                                                    dsv:refersToVariable    var:StatisticalCharacteristic .
-
-<www.canada-open-data.org/example-aggregated-dataset/column/value>                  a                       dsv:DimensionComponent ,
-                                                                                                            csvw:Column ;
-                                                                                    rdfs:label              "VALUE"@en ;
-                                                                                    dsv:componentProperty   <www.canada-open-data.org/example-aggregated-dataset/property/value> ;
-                                                                                    dsv:refersToVariable    var:Value .
+<www.canada-open-data.org/example-aggregated-dataset/column/value>                  a                           dsv:DimensionComponent ,
+                                                                                                                csvw:Column ;
+                                                                                    rdfs:label                  "VALUE"@en ;
+                                                                                    dsv:componentProperty       <www.canada-open-data.org/properties-dictionary/value> ;
+                                                                                    dsv:refersToVariable        var:Value ;
+                                                                                    dsv:hasAggregationMethod    [
+                                                                                        dsv:aggregationFunction             "COUNT"@en ;
+                                                                                        dsv:aggregationFunctionArgument     <www.canada-open-data.org/example-individual-dataset/column/new-birth-id> 
+                                                                                    ] ;
+                                                                                    dsv:summaryStatistics       [
+                                                                                        dsv:componentCompleteness           "0.97"^^xsd:float ;
+                                                                                        dsv:dataType                        "Numerical"@en ;
+                                                                                        dsv:missingValuesFormat             "NA"^^xsd:string
+                                                                                    ] .
 
 ###########################################
 # Dataset Canada - Properties
 ###########################################
 
-<www.canada-open-data.org/example-aggregated-dataset/property/refDate>              a                       rdf:Property ;
-                                                                                    dsv:linksToVariable     var:YearCoverage ;
-                                                                                    rdfs:range              xsd:gYear ;
-                                                                                    rdfs:domain             var:PregnancyOutcome .
+<www.canada-open-data.org/properties-dictionary/refDate>                a                       rdf:Property ;
+                                                                        dsv:linksToVariable     var:YearCoverage ;
+                                                                        rdfs:domain             var:PregnancyOutcome ;
+                                                                        rdfs:range              xsd:gYear .
 
-<www.canada-open-data.org/example-aggregated-dataset/property/geo>                  a                       rdf:Property ;
-                                                                                    dsv:linksToVariable     var:GeoLocation ;
-                                                                                    rdfs:range              xsd:string ;
-                                                                                    rdfs:domain             var:PregnancyOutcome .
+<www.canada-open-data.org/properties-dictionary/geo>                    a                       rdf:Property ;
+                                                                        dsv:linksToVariable     var:GeoLocation ;
+                                                                        rdfs:domain             var:PregnancyOutcome ;
+                                                                        rdfs:range              xsd:string .
 
-<www.canada-open-data.org/example-aggregated-dataset/property/ageGroup>             a                       rdf:Property ;
-                                                                                    dsv:linksToVariable     var:Age ;
-                                                                                    rdfs:range              xsd:string ;
-                                                                                    rdfs:domain             var:PregnancyOutcome .
+<www.canada-open-data.org/properties-dictionary/ageGroup>               a                       rdf:Property ;
+                                                                        dsv:linksToVariable     var:Age ;
+                                                                        rdfs:domain             var:PregnancyOutcome ;
+                                                                        rdfs:range              xsd:string .
 
-<www.canada-open-data.org/example-aggregated-dataset/property/pregnancyOutcomes>    a                       rdf:Property ;
-                                                                                    dsv:linksToVariable     var:PregnancyOutcome ;
-                                                                                    rdfs:range              xsd:string ;
-                                                                                    rdfs:domain             var:PregnancyOutcome .
+<www.canada-open-data.org/properties-dictionary/pregnancyOutcomes>      a                       rdf:Property ;
+                                                                        dsv:linksToVariable     var:PregnancyOutcome ;
+                                                                        rdfs:domain             var:PregnancyOutcome ;
+                                                                        rdfs:range              xsd:string .
 
-<www.canada-open-data.org/example-aggregated-dataset/property/characteristics>      a                       rdf:Property ;
-                                                                                    dsv:linksToVariable     var:StatisticalCharacteristic ;
-                                                                                    rdfs:range              xsd:string ;
-                                                                                    rdfs:domain             var:PregnancyOutcome .
-
-<www.canada-open-data.org/example-aggregated-dataset/property/value>                a                       rdf:Property ;
-                                                                                    dsv:linksToVariable     var:NumberOfBirths ;
-                                                                                    rdfs:range              xsd:int ;
-                                                                                    rdfs:domain             var:PregnancyOutcome .
+<www.canada-open-data.org/properties-dictionary/value>                  a                       rdf:Property ;
+                                                                        dsv:linksToVariable     var:NumberOfBirths ;
+                                                                        rdfs:domain             var:PregnancyOutcome ;
+                                                                        rdfs:range              xsd:int .
