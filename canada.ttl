@@ -22,7 +22,7 @@
                                                                     dsv:summaryStatistics   [
                                                                         dsv:numberOfRows                "40208"^^xsd:integer ;
                                                                         dsv:numberOfColumns             "5"^^xsd:integer ;
-                                                                        dsv:completeness                 "0.99"^^xsd:float ;
+                                                                        dsv:completeness                "0.99"^^xsd:float ;
                                                                         dsv:missingValuesFormat         "NA"^^xsd:string
                                                                     ] ;
                                                                     dsv:datasetSchema       [
