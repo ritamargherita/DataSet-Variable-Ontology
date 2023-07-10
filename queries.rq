@@ -2,16 +2,16 @@
 # What are the columns and their label of a given dataset?
 ######################################################################################
 
-PREFIX dsv:     <www.example.org/datasetVariableOntology/>
-PREFIX csvw:    <www.w3.org/ns/csvw#>
-PREFIX rdfs:    <www.w3.org/2000/01/rdf-schema#>
+PREFIX dsv: 	<http://www.example.org/datasetVariableOntology/>
+PREFIX csvw: 	<http://www.w3.org/ns/csvw#>
+PREFIX rdfs: 	<http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT DISTINCT ?datasetComponent ?columnLabel
 WHERE { 
-	<http:/www.example-datasets.org/canada> 	dsv:datasetSchema 		?datasetSchema .
-    ?datasetSchema								dsv:datasetComponent    ?datasetComponent .
-    ?datasetComponent 							a 						csvw:Column ;
-                             					rdfs:label				?columnLabel.
+	<http://www.canada-open-data.org/example-aggregated-dataset> 	    dsv:datasetSchema 		?datasetSchema .
+    ?datasetSchema								                        dsv:datasetComponent    ?datasetComponent .
+    ?datasetComponent 							                        a 						csvw:Column ;
+                             					                        rdfs:label				?columnLabel.
 }
 
 
@@ -19,58 +19,39 @@ WHERE {
 # What are the variables and their label of a given dataset?
 ######################################################################################
 
-PREFIX dsv:     <www.example.org/datasetVariableOntology/>
-PREFIX csvw:    <www.w3.org/ns/csvw#>
-PREFIX rdfs:    <www.w3.org/2000/01/rdf-schema#>
+PREFIX dsv: 	<http://www.example.org/datasetVariableOntology/>
+PREFIX csvw: 	<http://www.w3.org/ns/csvw#>
+PREFIX rdfs: 	<http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT DISTINCT ?variable ?variableLabel
 WHERE { 
-	<www.example-datasets.org/canada> 	        dsv:datasetSchema 		?datasetSchema .
-    ?datasetSchema								dsv:datasetComponent    ?datasetComponent .
-    ?datasetComponent 							a 						csvw:Column ;
-                             					dsv:refersToVariable	?variable .
-    ?variable									rdfs:label				?variableLabel
+	<http://www.canada-open-data.org/example-aggregated-dataset> 	    dsv:datasetSchema 		?datasetSchema .
+    ?datasetSchema								                        dsv:datasetComponent    ?datasetComponent .
+    ?datasetComponent 							                        a 						csvw:Column ;
+                             					                        dsv:refersToVariable	?variable .
+    ?variable									                        rdfs:label				?variableLabel
 }
-
-
-######################################################################################
-# What are the variables, and their label, that appear in a certain dataset?
-######################################################################################
-
-PREFIX dsv:     <www.example.org/datasetVariableOntology/>
-PREFIX csvw:    <www.w3.org/ns/csvw#>
-PREFIX rdfs:    <www.w3.org/2000/01/rdf-schema#>
-
-SELECT DISTINCT ?variable ?variableLabel
-WHERE { 
-	<www.example-datasets.org/canada> 	        dsv:datasetSchema 		?datasetSchema .
-    ?datasetSchema								dsv:datasetComponent    ?datasetComponent .
-    ?datasetComponent 							a 						csvw:Column ;
-                             					dsv:refersToVariable	?variable .
-    ?variable									rdfs:label				?variableLabel .
-}
-
 
 ######################################################################################
 # In what other datasets do those variables appear?
 ######################################################################################
 
-PREFIX dsv:     <www.example.org/datasetVariableOntology/>
-PREFIX csvw:    <www.w3.org/ns/csvw#>
-PREFIX rdfs:    <www.w3.org/2000/01/rdf-schema#>
+PREFIX dsv: 	<http://www.example.org/datasetVariableOntology/>
+PREFIX csvw: 	<http://www.w3.org/ns/csvw#>
+PREFIX rdfs: 	<http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT DISTINCT ?otherDataset
 WHERE { 
-	<www.example-datasets.org/canada> 	        dsv:datasetSchema 		?datasetSchema .
-    ?datasetSchema								dsv:datasetComponent    ?datasetComponent .
-    ?datasetComponent 							a 						csvw:Column ;
-                             					dsv:refersToVariable	?variable .
+	<http://www.canada-open-data.org/example-aggregated-dataset> 	    dsv:datasetSchema 		?datasetSchema .
+    ?datasetSchema								                        dsv:datasetComponent    ?datasetComponent .
+    ?datasetComponent 							                        a 						csvw:Column ;
+                             					                        dsv:refersToVariable	?variable .
     
-    ?otherDataset								dsv:datasetSchema		?otherDatasetSchema .
-    ?otherDatasetSchema							dsv:datasetComponent    ?otherDatasetComponent .
-    ?otherDatasetComponent						dsv:refersToVariable 	?variable .
+    ?otherDataset								                        dsv:datasetSchema		?otherDatasetSchema .
+    ?otherDatasetSchema							                        dsv:datasetComponent    ?otherDatasetComponent .
+    ?otherDatasetComponent						                        dsv:refersToVariable 	?variable .
     
-    FILTER(?otherDataset != <www.example-datasets.org/canada>)
+    FILTER(?otherDataset != <http://www.canada-open-data.org/example-aggregated-dataset>)
 }
 
 
@@ -78,14 +59,14 @@ WHERE {
 # Given a certain variable, which column headers are used to represent this variable in the various datasets?
 ######################################################################################
 
-PREFIX dsv:     <www.example.org/datasetVariableOntology/>
-PREFIX csvw:    <www.w3.org/ns/csvw#>
-PREFIX rdfs:    <www.w3.org/2000/01/rdf-schema#>
-PREFIX var:     <www.example.org/VariablesVocabulary/>
+PREFIX dsv: 	<http://www.example.org/datasetVariableOntology/>
+PREFIX csvw: 	<http://www.w3.org/ns/csvw#>
+PREFIX rdfs: 	<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX var: 	<http://www.example.org/VariablesVocabulary/>
 
 SELECT DISTINCT ?columnLabel
 WHERE { 
-    ?datasetComponent 							a 						csvw:Column ;
-                             					rdfs:label				?columnLabel ;
-                             					dsv:refersToVariable	var:YearCoverage .
+    ?datasetComponent 		a 						csvw:Column ;
+                            rdfs:label				?columnLabel ;
+                            dsv:refersToVariable	var:YearCoverage .
 }
