@@ -27,42 +27,6 @@ var:GeoLocation                     a                   dsv:Variable ;
                                     rdfs:label          "Geological Location Variable"@en ;
                                     dsv:subVariableOf   var:Location .
 
-var:RegionalLocation                a                   dsv:Variable ;
-                                    rdfs:label          "Regional Location Variable"@en ;
-                                    dsv:subVariableOf       var:GeoLocation .
-
-var:RegionalCode                    a                   dsv:Variable ;
-                                    rdfs:label          "Regional Code Variable"@en ;
-                                    dsv:subVariableOf   var:RegionalLocation .
-
-var:RegionalName                    a                   dsv:Variable ;
-                                    rdfs:label          "Regional Name Variable"@en ;
-                                    dsv:subVariableOf   var:RegionalLocation .
-
-var:LocalAuthorityDistrictLocation  a                   dsv:Variable ;
-                                    rdfs:label          "Local Authority District Location Variable"@en ;
-                                    dsv:subVariableOf   var:GeoLocation .
-
-var:LocalAuthorityDistrictCode      a                   dsv:Variable ;
-                                    rdfs:label          "Local Authority District Code Variable"@en ;
-                                    dsv:subVariableOf   var:LocalAuthorityDistrictLocation .
-
-var:LocalAuthorityDistrictName      a                   dsv:Variable ;
-                                    rdfs:label          "Local Authority District Name Variable"@en ;
-                                    dsv:subVariableOf   var:LocalAuthorityDistrictLocation .
-
-var:WardsDivisionLocation           a                   dsv:Variable ;
-                                    rdfs:label          "Wards Division Location Variable"@en ;
-                                    dsv:subVariableOf   var:GeoLocation .
-
-var:WardsDivisionCode               a                   dsv:Variable ;
-                                    rdfs:label          "Wards Division Code Variables"@en ;
-                                    dsv:subVariableOf   var:WardsDivisionLocation .
-
-var:WardsDivisionName               a                   dsv:Variable ;
-                                    rdfs:label          "Wards Division Name Variable"@en ;
-                                    dsv:subVariableOf   var:WardsDivisionLocation .
-
 ###########################################
 # Variables Personal Characteristics
 ###########################################     
@@ -78,14 +42,6 @@ var:Gender                          a                   dsv:Variable ;
                                     rdfs:label          "Gender Variable"@en ;
                                     dsv:subVariableOf   var:PersonalCharacteristics .
 
-var:MaritalStatus                   a                   dsv:Variable ;
-                                    rdfs:label          "Marital Status Variable"@en ;
-                                    dsv:subVariableOf   var:PersonalCharacteristics .
-
-var:Background                      a                   dsv:Variable ;
-                                    rdfs:label          "Background Variable"@en ;
-                                    dsv:subVariableOf   var:PersonalCharacteristics .
-
 ###########################################
 # Variables Fertility
 ########################################### 
@@ -97,33 +53,14 @@ var:PregnancyOutcome                a                   dsv:Variable ;
                                     rdfs:label          "Pregnancy Outcomes Variable"@en ;
                                     dsv:subVariableOf   var:Fertility .
 
-var:Births                          a                   dsv:Variable ;
-                                    rdfs:label          "Births Variables"@en ;
+var:Birth                           a                   dsv:Variable ;
+                                    rdfs:label          "Birth Variables"@en ;
                                     dsv:subVariableOf   var:Fertility .
 
-var:GeneralFertilityRate            a                   dsv:Variable ;
-                                    rdfs:label          "General Fertility Rate Variable"@en ;
-                                    dsv:subVariableOf   var:NumberOfBirths .
-
-var:CrudeBirthRate                  a                   dsv:Variable ;
-                                    rdfs:label          "Crude Birth Rate Variable"@en ;
+var:FertilityRate                   a                   dsv:Variable ;
+                                    rdfs:label          "Fertility Rate Variable"@en ;
                                     dsv:subVariableOf   var:Fertility .
 
-var:LiveBirths                      a                   dsv:Variable ;
-                                    rdfs:label          "Live Births Variable"@en ;
-                                    dsv:subVariableOf   var:NumberOfBirths .
-
-var:StillBirths                     a                   dsv:Variable ;
-                                    rdfs:label          "Still Births Variable"@en ;
-                                    dsv:subVariableOf   var:NumberOfBirths .
-
-var:NetReplacementFactor            a                   dsv:Variable ;
-                                    rdfs:label          "Net Replacement Factor Variable"@en ;
-                                    dsv:subVariableOf   var:Fertility .
-
-###########################################
-# Variables Statistical Characteristics
-########################################### 
-
-var:StatisticalCharacteristic       a                   dsv:Variable ;
-                                    rdfs:label          "Statistical Characteristics Variable"@en .
+var:LiveBirth                       a                   dsv:Variable ;
+                                    rdfs:label          "Live Birth Variable"@en ;
+                                    dsv:subVariableOf   var:Birth .

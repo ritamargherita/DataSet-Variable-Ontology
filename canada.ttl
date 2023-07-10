@@ -62,7 +62,7 @@
                                                                                     ] ;
                                                                                     dsv:summaryStatistics       [
                                                                                         dsv:componentCompleteness           "1.00"^^xsd:float ;
-                                                                                        dsv:dataType                        "String"@en ;
+                                                                                        dsv:dataType                        "Categorical"@en ;
                                                                                     ] .
 
 <www.canada-open-data.org/example-aggregated-dataset/column/ageGroup>               a                           dsv:DimensionComponent ,
@@ -76,7 +76,7 @@
                                                                                     ] ;
                                                                                     dsv:summaryStatistics       [
                                                                                         dsv:componentCompleteness           "1.00"^^xsd:float ;
-                                                                                        dsv:dataType                        "String"@en ;
+                                                                                        dsv:dataType                        "Categorical"@en ;
                                                                                     ] .
 
 <www.canada-open-data.org/example-aggregated-dataset/column/pregnancyOutcomes>      a                           dsv:DimensionComponent ,
@@ -90,14 +90,14 @@
                                                                                     ] ;
                                                                                     dsv:summaryStatistics       [
                                                                                         dsv:componentCompleteness           "1.00"^^xsd:float ;
-                                                                                        dsv:dataType                        "String"@en ;
+                                                                                        dsv:dataType                        "Categorical"@en ;
                                                                                     ] .
 
 <www.canada-open-data.org/example-aggregated-dataset/column/value>                  a                           dsv:DimensionComponent ,
                                                                                                                 csvw:Column ;
                                                                                     rdfs:label                  "VALUE"@en ;
                                                                                     dsv:componentProperty       <www.canada-open-data.org/properties-dictionary/value> ;
-                                                                                    dsv:refersToVariable        var:Value ;
+                                                                                    dsv:refersToVariable        var:Birth ;
                                                                                     dsv:hasAggregationMethod    [
                                                                                         dsv:aggregationFunction             "COUNT"@en ;
                                                                                         dsv:aggregationFunctionArgument     <www.canada-open-data.org/example-individual-dataset/column/new-birth-id> 
@@ -133,6 +133,6 @@
                                                                         rdfs:range              xsd:string .
 
 <www.canada-open-data.org/properties-dictionary/value>                  a                       rdf:Property ;
-                                                                        dsv:linksToVariable     var:NumberOfBirths ;
+                                                                        dsv:linksToVariable     var:Birth ;
                                                                         rdfs:domain             var:PregnancyOutcome ;
                                                                         rdfs:range              xsd:int .

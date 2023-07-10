@@ -12,7 +12,7 @@
 
 <www.uk-open-data.org/example-aggregated-dataset>       a                               dsv:AggregatedDataset ;
                                                         csvw:url                        "https://www.data.gov.uk/dataset/dab5dccd-4d0e-4b40-b333-178e13ce49fe/annual-births-by-age-of-mother" ;
-                                                        dsv:rowsRepresentInstancesOf    var:Births ;
+                                                        dsv:rowsRepresentInstancesOf    var:Birth ;
                                                         dsv:aggregationMethod   [
                                                             dsv:aggregatedFrom          <www.uk-open-data.org/example-individual-dataset> ;
                                                             dsv:aggregatedBy            <www.uk-open-data.org/example-individual-dataset/column/year> ,
@@ -66,7 +66,7 @@
                                                                                                         csvw:Column ;
                                                                         rdfs:label                      "RGN20CD"@en ;
                                                                         dsv:componentProperty           <www.uk-open-data.org/properties-dictionary/rgn20cd> ;
-                                                                        dsv:refersToVariable            var:RegionalCode ;
+                                                                        dsv:refersToVariable            var:GeoLocation ;
                                                                         dsv:hasAggregationMethod        [
                                                                             dsv:aggregationFunction             "GROUP BY"@en ;
                                                                             dsv:aggregationFunctionArgument     <www.uk-open-data.org/example-individual-dataset/column/rgn20cd> 
@@ -81,7 +81,7 @@
                                                                                                         csvw:Column ;
                                                                         rdfs:label                      "RGN20NM"@en ;
                                                                         dsv:componentProperty           <www.uk-open-data.org/properties-dictionary/rgn20nm> ;
-                                                                        dsv:refersToVariable            var:RegionalName ;
+                                                                        dsv:refersToVariable            var:GeoLocation ;
                                                                         dsv:hasAggregationMethod        [
                                                                             dsv:aggregationFunction             "GROUP BY"@en ;
                                                                             dsv:aggregationFunctionArgument     <www.uk-open-data.org/example-individual-dataset/column/rgn20nm> 
@@ -96,7 +96,7 @@
                                                                                                         csvw:Column ;
                                                                         rdfs:label                      "LAD20CD"@en ;
                                                                         dsv:componentProperty           <www.uk-open-data.org/properties-dictionary/lad20cd> ;
-                                                                        dsv:refersToVariable            var:LocalAuthorityDistrictCode ;
+                                                                        dsv:refersToVariable            var:GeoLocation ;
                                                                         dsv:hasAggregationMethod        [
                                                                             dsv:aggregationFunction             "GROUP BY"@en ;
                                                                             dsv:aggregationFunctionArgument     <www.uk-open-data.org/example-individual-dataset/column/lad20cd> 
@@ -110,7 +110,7 @@
                                                                                                         csvw:Column ;
                                                                         rdfs:label                      "LAD20NM"@en ;
                                                                         dsv:componentProperty           <www.uk-open-data.org/properties-dictionary/lad20nm> ;
-                                                                        dsv:refersToVariable            var:LocalAuthorityDistrictName ;
+                                                                        dsv:refersToVariable            var:GeoLocation ;
                                                                         dsv:hasAggregationMethod        [
                                                                             dsv:aggregationFunction             "GROUP BY"@en ;
                                                                             dsv:aggregationFunctionArgument     <www.uk-open-data.org/example-individual-dataset/column/lad20nm> 
@@ -124,7 +124,7 @@
                                                                                                         csvw:Column ;
                                                                         rdfs:label                      "WD20CD"@en ;
                                                                         dsv:componentProperty           <www.uk-open-data.org/properties-dictionary/wd20cd> ;
-                                                                        dsv:refersToVariable            var:WardsDivisionCode ;
+                                                                        dsv:refersToVariable            var:GeoLocation ;
                                                                         dsv:hasAggregationMethod        [
                                                                             dsv:aggregationFunction             "GROUP BY"@en ;
                                                                             dsv:aggregationFunctionArgument     <www.uk-open-data.org/example-individual-dataset/column/wd20cd> 
@@ -138,7 +138,7 @@
                                                                                                         csvw:Column ;
                                                                         rdfs:label                      "WD20NM"@en ;
                                                                         dsv:componentProperty           <www.uk-open-data.org/properties-dictionary/wd20nm> ;
-                                                                        dsv:refersToVariable            var:WardsDivisionName ;
+                                                                        dsv:refersToVariable            var:GeoLocation ;
                                                                         dsv:hasAggregationMethod        [
                                                                             dsv:aggregationFunction             "GROUP BY"@en ;
                                                                             dsv:aggregationFunctionArgument     <www.uk-open-data.org/example-individual-dataset/column/wd20nm> 
@@ -180,7 +180,7 @@
                                                                                                         csvw:Column ;
                                                                         rdfs:label                      "births"@en ;
                                                                         dsv:componentProperty           <www.uk-open-data.org/properties-dictionary/births> ;
-                                                                        dsv:refersToVariable            var:NumberOfBirths ;
+                                                                        dsv:refersToVariable            var:Birth ;
                                                                         dsv:hasAggregationMethod        [
                                                                             dsv:aggregationFunction             "COUNT DISTINCT"@en ;
                                                                             dsv:aggregationFunctionArgument     <www.uk-open-data.org/example-individual-dataset/column/new-birth-id> 
@@ -196,37 +196,37 @@
 
 <www.uk-open-data.org/properties-dictionary/year>                       a                               rdf:Property ;
                                                                         dsv:linksToVariable             var:YearCoverage ;
-                                                                        rdfs:domain                     <www.uk-open-data.org/example-individual-dataset/rowsRepresentation/birth> ;
+                                                                        rdfs:domain                     var:Birth ;
                                                                         rdfs:range                      xsd:gYear .
 
 <www.uk-open-data.org/properties-dictionary/rgn20cd>                    a                               rdf:Property ;
-                                                                        dsv:linksToVariable             var:RegionalCode ;
-                                                                        rdfs:domain                     <www.uk-open-data.org/example-individual-dataset/rowsRepresentation/birth> ;
+                                                                        dsv:linksToVariable             var:GeoLocation ;
+                                                                        rdfs:domain                     var:Birth ;
                                                                         rdfs:range                      xsd:string .
 
 <www.uk-open-data.org/properties-dictionary/rgn20nm>                    a                               rdf:Property ;
-                                                                        dsv:linksToVariable             var:RegionalName ;
-                                                                        rdfs:domain                     <www.uk-open-data.org/example-individual-dataset/rowsRepresentation/birth> ;
+                                                                        dsv:linksToVariable             var:GeoLocation ;
+                                                                        rdfs:domain                     var:Birth ;
                                                                         rdfs:range                      xsd:string .
 
 <www.uk-open-data.org/properties-dictionary/lad20cd>                    a                               rdf:Property ;
-                                                                        dsv:linksToVariable             var:LocalAuthorityDistrictCode ;
-                                                                        rdfs:domain                     <www.uk-open-data.org/example-individual-dataset/rowsRepresentation/birth> ;
+                                                                        dsv:linksToVariable             var:GeoLocation ;
+                                                                        rdfs:domain                     var:Birth ;
                                                                         rdfs:range                      xsd:string .
 
 <www.uk-open-data.org/properties-dictionary/lad20nm>                    a                               rdf:Property ;
-                                                                        dsv:linksToVariable             var:LocalAuthorityDistrictName ;
-                                                                        rdfs:domain                     <www.uk-open-data.org/example-individual-dataset/rowsRepresentation/birth> ;
+                                                                        dsv:linksToVariable             var:GeoLocation ;
+                                                                        rdfs:domain                     var:Birth ;
                                                                         rdfs:range                      xsd:string .
 
 <www.uk-open-data.org/properties-dictionary/wd20cd>                     a                               rdf:Property ;
-                                                                        dsv:linksToVariable             var:WardsDivisionCode ;
-                                                                        rdfs:domain                     <www.uk-open-data.org/example-individual-dataset/rowsRepresentation/birth> ;
+                                                                        dsv:linksToVariable             var:GeoLocation ;
+                                                                        rdfs:domain                     var:Birth ;
                                                                         rdfs:range                      xsd:int .
 
 <www.uk-open-data.org/properties-dictionary/wd20nm>                     a                               rdf:Property ;
-                                                                        dsv:linksToVariable             var:WardsDivisionName ;
-                                                                        rdfs:domain                     <www.uk-open-data.org/example-individual-dataset/rowsRepresentation/birth> ;
+                                                                        dsv:linksToVariable             var:GeoLocation ;
+                                                                        rdfs:domain                     var:Birth ;
                                                                         rdfs:range                      xsd:int .
 
 <www.uk-open-data.org/properties-dictionary/ageOfMother>                a                               rdf:Property ;
@@ -234,15 +234,15 @@
                                                                                     <www.uk-open-data.org/properties-dictionary/hasMother> 
                                                                                     <www.uk-open-data.org/properties-dictionary/hasAgeGroup> ) ;
                                                                         dsv:linksToVariable             var:Age ;
-                                                                        rdfs:domain                     <www.uk-open-data.org/example-individual-dataset/rowsRepresentation/birth> ;
+                                                                        rdfs:domain                     var:Birth ;
                                                                         rdfs:range                      xsd:int .
 
 <www.example-datasets.org/uk/property/sex>                              a                               rdf:Property ;
                                                                         dsv:linksToVariable             var:Gender ;
-                                                                        rdfs:domain                     <www.uk-open-data.org/example-individual-dataset/rowsRepresentation/birth> ;
+                                                                        rdfs:domain                     var:Birth ;
                                                                         rdfs:range                      xsd:int .
 
 <www.example-datasets.org/uk/property/births>                           a                               rdf:Property ;
-                                                                        dsv:linksToVariable             var:NumberOfBirths ;
-                                                                        rdfs:domain                     <www.uk-open-data.org/example-individual-dataset/rowsRepresentation/birth> ;
+                                                                        dsv:linksToVariable             var:Birth ;
+                                                                        rdfs:domain                     var:Birth ;
                                                                         rdfs:range                      xsd:int .
