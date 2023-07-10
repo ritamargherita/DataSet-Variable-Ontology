@@ -63,9 +63,30 @@ WHERE {
 # 1.5 - What is the overall completeness of a given dataset?
 ##################################################################################################################################
 
+PREFIX dsv: 	<http://www.example.org/datasetVariableOntology/>
+
+SELECT ?completeness
+WHERE { 
+    <http://www.canada-open-data.org/example-aggregated-dataset>		dsv:summaryStatistics		?stats .
+	?stats																dsv:completeness			?completeness
+}
+
+
 ##################################################################################################################################
 # 1.6 - What is the completeness of each column of a given dataset?
 ##################################################################################################################################
+
+PREFIX dsv: 	<http://www.example.org/datasetVariableOntology/>
+PREFIX rdfs: 	<http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?component ?componentLabel ?componentCompleteness
+WHERE { 
+    <http://www.canada-open-data.org/example-aggregated-dataset>		dsv:datasetSchema		?datasetSchema .
+    ?datasetSchema														dsv:datasetComponent	?component .
+    ?component															rdfs:label				?componentLabel ;
+																		dsv:summaryStatistics	?componentStats .
+    ?componentStats														dsv:completeness		?componentCompleteness .
+}
 
 
 ##################################################################################################################################
@@ -84,6 +105,7 @@ WHERE {
                              					                        dsv:refersToVariable	?variable .
     ?variable									                        rdfs:label				?variableLabel
 }
+
 
 ##################################################################################################################################
 # 2.2 - In what other datasets do those variables appear?
@@ -105,6 +127,61 @@ WHERE {
     ?otherDatasetComponent						                        dsv:refersToVariable 	?variable .
     
     FILTER(?otherDataset != <http://www.canada-open-data.org/example-aggregated-dataset>)
+}
+
+
+##################################################################################################################################
+# 2.3 - Is there any conceptual relationships between columns of a given dataset?
+##################################################################################################################################
+
+PREFIX dsv: <http://www.example.org/datasetVariableOntology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?datasetComponent ?componentLabel ?variable ?variableLabel ?topVariable ?topVariableLabel
+WHERE {
+    <http://www.uk-open-data.org/example-aggregated-dataset>	        dsv:datasetSchema 		?datasetSchema .	
+   	?datasetSchema												        dsv:datasetComponent	?datasetComponent .
+    ?datasetComponent											        rdfs:label				?componentLabel ;
+                                                                        dsv:refersToVariable	?variable .
+    ?variable													        rdfs:label				?variableLabel ;
+                                                           		        dsv:subVariableOf		?topVariable .
+    ?topVariable 												        rdfs:label				?topVariableLabel
+    {
+        SELECT ?topVariable (COUNT(?topVariable) AS ?count)
+        WHERE { 
+            <http://www.uk-open-data.org/example-aggregated-dataset>	        dsv:datasetSchema 		?datasetSchema .	
+            ?datasetSchema												        dsv:datasetComponent	?datasetComponent .
+            ?datasetComponent											        rdfs:label				?componentLabel ;
+                                                                                dsv:refersToVariable	?variable .
+            ?variable													        rdfs:label				?variableLabel ;
+                                                                                dsv:subVariableOf		?topVariable .
+            ?topVariable 												        rdfs:label				?topVariableLabel .
+        } 
+        GROUP BY ?topVariable
+        HAVING(?count > 1)
+    }
+}
+
+
+##################################################################################################################################
+# 2.4 - Which datasets have their rows representing instances of same type?
+##################################################################################################################################
+
+PREFIX dsv: 	<http://www.example.org/datasetVariableOntology/>
+PREFIX rdfs: 	<http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?dataset2 ?rowsRepresentation 
+WHERE {
+    ?dataset2		a 	                            dsv:AggregatedDataset ;
+               		dsv:rowsRepresentInstancesOf	?rowsRepresentation
+    FILTER(?dataset2 != ?dataset)
+    {
+        SELECT ?dataset ?rowsRepresentation
+        WHERE {
+            	?dataset			a								dsv:AggregatedDataset ;
+                       				dsv:rowsRepresentInstancesOf	?rowsRepresentation .
+        }
+    }
 }
 
 
