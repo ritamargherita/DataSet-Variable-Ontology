@@ -10,575 +10,260 @@
 # Dataset Netherlands
 ###########################################
 
-<www.example-datasets.org/nl>           a                       dsv:AggregatedDataset ;
-                                            csvw:url                "https://opendata.cbs.nl/statline/portal.html?_la=nl&_catalog=CBS&tableId=37422ned&_theme=62" ;
-                                            dsv:aggregationMethod   [
-                                                dsv:aggregationType             "count"@en ;
-                                                dsv:aggregationDimension        <www.example-datasets.org/nl/column/perioden> 
-                                            ] ;
-                                            dsv:datasetSchema       [
-                                                dsv:rowsRepresentInstancesOf    <www.example-datasets.org/nl/rowsRepresentation/nationalStatistics>
-                                            ], [
-                                                dsv:datasetComponent            <www.example-datasets.org/nl/column/perioden> ,
-                                                                                <www.example-datasets.org/nl/column/totaalLevendGeborenKinderen_1> ,
-                                                                                <www.example-datasets.org/nl/column/levendGeborenKinderenRelatief_2> ,
-                                                                                <www.example-datasets.org/nl/column/algemeenVruchtbaarheidscijfer_3> ,
-                                                                                <www.example-datasets.org/nl/column/totaalLevendGeborenKinderen_4> ,
-                                                                                <www.example-datasets.org/nl/column/jongens_5> ,
-                                                                                <www.example-datasets.org/nl/column/meisjes_6> ,
-                                                                                <www.example-datasets.org/nl/column/jongensPer1000Meisjes_7> ,
-                                                                                <www.example-datasets.org/nl/column/totaalLevendGeborenKinderen_8> ,
-                                                                                <www.example-datasets.org/nl/column/jongerDan20Jaar_9> ,
-                                                                                <www.example-datasets.org/nl/column/k_20Tot25Jaar_10> ,
-                                                                                <www.example-datasets.org/nl/column/k_25Tot30Jaar_11> ,
-                                                                                <www.example-datasets.org/nl/column/k_30Tot35Jaar_12> ,
-                                                                                <www.example-datasets.org/nl/column/k_35Tot40Jaar_13> ,
-                                                                                <www.example-datasets.org/nl/column/k_40Tot45Jaar_14> ,
-                                                                                <www.example-datasets.org/nl/column/k_45JaarOfOuder_15> ,
-                                                                                <www.example-datasets.org/nl/column/totaalLevendGeborenKinderen_16> ,
-                                                                                <www.example-datasets.org/nl/column/k_1eKind_17> ,
-                                                                                <www.example-datasets.org/nl/column/k_2eKind_18> ,
-                                                                                <www.example-datasets.org/nl/column/k_3eKind_19> ,
-                                                                                <www.example-datasets.org/nl/column/k_4eOfVolgendeKinderen_20> ,
-                                                                                <www.example-datasets.org/nl/column/totaalLevendGeborenKinderen_21> ,
-                                                                                <www.example-datasets.org/nl/column/moederGehuwd_22> ,
-                                                                                <www.example-datasets.org/nl/column/moederNietGehuwd_23> ,
-                                                                                <www.example-datasets.org/nl/column/totaalLevendGeborenKinderen_24> ,
-                                                                                <www.example-datasets.org/nl/column/persoonMetEenNederlandseAchtergrond_25> ,
-                                                                                <www.example-datasets.org/nl/column/persoonMetEenMigratieachtergrond_26> ,
-                                                                                <www.example-datasets.org/nl/column/persoonMetEenWesterseMigratieacht_27> ,
-                                                                                <www.example-datasets.org/nl/column/persoonMetEenNietWesterseMigrati_28> ,
-                                                                                <www.example-datasets.org/nl/column/doodgeborenKinderen24OfMeerWeken_29> ,
-                                                                                <www.example-datasets.org/nl/column/doodgeborenKinderen24Relatief_30> ,
-                                                                                <www.example-datasets.org/nl/column/doodgeborenKinderen28OfMeerWeken_31> ,
-                                                                                <www.example-datasets.org/nl/column/doodgeborenKinderen28Relatief_32> ,
-                                                                                <www.example-datasets.org/nl/column/totaalGeboorten_33> ,
-                                                                                <www.example-datasets.org/nl/column/enkelvoudigeGeboorten_34> ,
-                                                                                <www.example-datasets.org/nl/column/totaalMeervoudigeGeboorten_35> ,
-                                                                                <www.example-datasets.org/nl/column/totaalTweelinggeboorten_36> ,
-                                                                                <www.example-datasets.org/nl/column/k_2Jongens_37> ,
-                                                                                <www.example-datasets.org/nl/column/k_1JongenEn1Meisje_38> ,
-                                                                                <www.example-datasets.org/nl/column/k_2Meisjes_39> ,
-                                                                                <www.example-datasets.org/nl/column/drieOfMeervoudigeGeboorten_40> ,
-                                                                                <www.example-datasets.org/nl/column/gemiddeldKindertalPerVrouw_41> ,
-                                                                                <www.example-datasets.org/nl/column/gemiddeldAantal1eKinderenPerVrouw_42> ,
-                                                                                <www.example-datasets.org/nl/column/gemiddeldAantal2eKinderenPerVrouw_43> ,
-                                                                                <www.example-datasets.org/nl/column/gemiddeldAantal3eKinderenPerVrouw_44> ,
-                                                                                <www.example-datasets.org/nl/column/gemiddeldAantal4eOfVolgendeKind_45> ,
-                                                                                <www.example-datasets.org/nl/column/gemiddeldKindertalPerMan_46> ,
-                                                                                <www.example-datasets.org/nl/column/gemiddeldAantal1eKinderenPerMan_47> ,
-                                                                                <www.example-datasets.org/nl/column/totaalAlleKinderen_48> ,
-                                                                                <www.example-datasets.org/nl/column/bij1eKind_49> ,
-                                                                                <www.example-datasets.org/nl/column/bij2eKind_50> ,
-                                                                                <www.example-datasets.org/nl/column/bij3eKind_51> ,
-                                                                                <www.example-datasets.org/nl/column/bij4eOfVolgendeKind_52> ,
-                                                                                <www.example-datasets.org/nl/column/totaalAlleKinderen_53> ,
-                                                                                <www.example-datasets.org/nl/column/bij1eKindVanDeMoeder_54> ,
-                                                                                <www.example-datasets.org/nl/column/nettoVervangingsfactor_55> 
-                                            ] .
+<www.nl-open-data.org/example-aggregated-dataset>           a                               dsv:AggregatedDataset ;
+                                                            csvw:url                        "https://opendata.cbs.nl/statline/portal.html?_la=nl&_catalog=CBS&tableId=37422ned&_theme=62" ;
+                                                            dsv:rowsRepresentInstancesOf    var:Births  ;
+                                                            dsv:aggregationMethod   [
+                                                                dsv:aggregatedFrom          <www.nl-open-data.org/example-individual-dataset> ;
+                                                                dsv:aggregatedBy            <www.nl-open-data.org/example-individual-dataset/column/perioden> ,
+                                                                                            <www.nl-open-data.org/example-individual-dataset/column/jongerDan20Jaar_9> ,
+                                                                                            <www.nl-open-data.org/example-individual-dataset/column/k_20Tot25Jaar_10> ,
+                                                                                            <www.nl-open-data.org/example-individual-dataset/column/k_25Tot30Jaar_11> ,
+                                                                                            <www.nl-open-data.org/example-individual-dataset/column/k_30Tot35Jaar_12> ,
+                                                                                            <www.nl-open-data.org/example-individual-dataset/column/k_35Tot40Jaar_13> ,
+                                                                                            <www.nl-open-data.org/example-individual-dataset/column/k_40Tot45Jaar_14> ,
+                                                                                            <www.nl-open-data.org/example-individual-dataset/column/k_45JaarOfOuder_15>
+                                                            ] ;
+                                                            dsv:summaryStatistics   [
+                                                                dsv:numberOfRows            "72"^^xsd:integer ;
+                                                                dsv:numberOfColumns         "12"^^xsd:integer ;
+                                                                dsv:datasetCompleteness     "1.0"^^xsd:float 
+                                                            ] ;
+                                                            dsv:datasetSchema       [
+                                                                dsv:datasetComponent        <www.nl-open-data.org/example-aggregated-dataset/column/perioden> ,
+                                                                                            <www.nl-open-data.org/example-aggregated-dataset/column/totaalLevendGeborenKinderen_1> ,
+                                                                                            <www.nl-open-data.org/example-aggregated-dataset/column/algemeenVruchtbaarheidscijfer_3> ,
+                                                                                            <www.nl-open-data.org/example-aggregated-dataset/column/jongerDan20Jaar_9> ,
+                                                                                            <www.nl-open-data.org/example-aggregated-dataset/column/k_20Tot25Jaar_10> ,
+                                                                                            <www.nl-open-data.org/example-aggregated-dataset/column/k_25Tot30Jaar_11> ,
+                                                                                            <www.nl-open-data.org/example-aggregated-dataset/column/k_30Tot35Jaar_12> ,
+                                                                                            <www.nl-open-data.org/example-aggregated-dataset/column/k_35Tot40Jaar_13> ,
+                                                                                            <www.nl-open-data.org/example-aggregated-dataset/column/k_40Tot45Jaar_14> ,
+                                                                                            <www.nl-open-data.org/example-aggregated-dataset/column/k_45JaarOfOuder_15> ,
+                                                                                            <www.nl-open-data.org/example-aggregated-dataset/column/totaalGeboorten_33> 
+                                                            ] .
 
 ###########################################
 # Dataset Netherlands - Columns
 ###########################################
 
-<www.example-datasets.org/nl/column/perioden>                                   a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "perioden"@nl ;
-                                                                                rdfs:comment            "periods"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/periods> ;
-                                                                                dsv:refersToVariable    var:YearCoverage .
+<www.nl-open-data.org/example-aggregated-dataset/column/perioden>                               a                               dsv:DimensionComponent ,
+                                                                                                                                csvw:Column ;
+                                                                                                rdfs:label                      "perioden"@nl ;
+                                                                                                rdfs:comment                    "periods"@en ;
+                                                                                                dsv:componentProperty           <www.nl-open-data.org/properties-dictionary/periods> ;
+                                                                                                dsv:refersToVariable            var:YearCoverage ;
+                                                                                                dsv:hasAggregationMethod        [
+                                                                                                    dsv:aggregationFunction             "GROUP BY"@en ;
+                                                                                                    dsv:aggregationFunctionArgument     <www.nl-open-data.org/example-individual-dataset/column/perioden> 
+                                                                                                ] ;
+                                                                                                dsv:summaryStatistics           [
+                                                                                                    dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                                    dsv:dataType                        "Numerical"@en ;
+                                                                                                ] .
 
-<www.example-datasets.org/nl/column/totaalLevendGeborenKinderen_1>              a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "totaalLevendGeborenKinderen_1"@nl ;
-                                                                                rdfs:comment            "total live born children"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/totalLiveBornChildren> ;
-                                                                                dsv:refersToVariable    var:NumberOfLiveBirths .
+<www.nl-open-data.org/example-aggregated-dataset/column/totaalLevendGeborenKinderen_1>          a                               dsv:DimensionComponent ,
+                                                                                                                                csvw:Column ;
+                                                                                                rdfs:label                      "totaalLevendGeborenKinderen_1"@nl ;
+                                                                                                rdfs:comment                    "total live born children"@en ;
+                                                                                                dsv:componentProperty           <www.nl-open-data.org/properties-dictionary/totalLiveBornChildren> ;
+                                                                                                dsv:refersToVariable            var:NumberOfLiveBirths ;
+                                                                                                dsv:hasAggregationMethod        [
+                                                                                                    dsv:aggregationFunction             "COUNT"@en ;
+                                                                                                    dsv:aggregationFunctionArgument     <www.nl-open-data.org/example-individual-dataset/column/new-live-birth-id> 
+                                                                                                ] ;
+                                                                                                dsv:summaryStatistics           [
+                                                                                                    dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                                    dsv:dataType                        "Numerical"@en ;
+                                                                                                ] .
 
-<www.example-datasets.org/nl/column/levendGeborenKinderenRelatief_2>            a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "levendGeborenKinderenRelatief_2"@nl ;
-                                                                                rdfs:comment            "live born children, relative"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/relativeLiveBornChildren> ;
-                                                                                dsv:refersToVariable    var:NumberOfLiveBirths .
+<www.nl-open-data.org/example-aggregated-dataset/column/algemeenVruchtbaarheidscijfer_3>        a                               dsv:DimensionComponent ,
+                                                                                                                                csvw:Column ;
+                                                                                                rdfs:label                      "algemeenVruchtbaarheidscijfer_3"@nl ;
+                                                                                                rdfs:comment                    "general fertility rate"@en ;
+                                                                                                dsv:componentProperty           <www.nl-open-data.org/properties-dictionary/generalFertilityRate> ;
+                                                                                                dsv:refersToVariable            var:GeneralFertilityRate ;
+                                                                                                dsv:summaryStatistics           [
+                                                                                                    dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                                    dsv:dataType                        "Numerical"@en ;
+                                                                                                ] .
 
-<www.example-datasets.org/nl/column/algemeenVruchtbaarheidscijfer_3>            a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "algemeenVruchtbaarheidscijfer_3"@nl ;
-                                                                                rdfs:comment            "general fertility rate"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/generalFertilityRate> ;
-                                                                                dsv:refersToVariable    var:GeneralFertilityRate .
+<www.nl-open-data.org/example-aggregated-dataset/column/jongerDan20Jaar_9>                      a                               dsv:DimensionComponent ,
+                                                                                                                                csvw:Column ;
+                                                                                                rdfs:label                      "jongerDan20Jaar_9"@nl ;
+                                                                                                rdfs:comment                    "younger than 20 years"@en ;
+                                                                                                dsv:componentProperty           <www.nl-open-data.org/properties-dictionary/youngerThan20Years> ;
+                                                                                                dsv:refersToVariable            var:Age ;
+                                                                                                dsv:hasAggregationMethod        [
+                                                                                                    dsv:aggregationFunction             "COUNT"@en ;
+                                                                                                    dsv:aggregationFunctionArgument     <www.nl-open-data.org/example-individual-dataset/column/jongerDan20Jaar_9> 
+                                                                                                ] ;
+                                                                                                dsv:summaryStatistics           [
+                                                                                                    dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                                    dsv:dataType                        "Numerical"@en ;
+                                                                                                ] .
 
-<www.example-datasets.org/nl/column/totaalLevendGeborenKinderen_4>              a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "totaalLevendGeborenKinderen_4"@nl ;
-                                                                                rdfs:comment            "total live born children"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/totalLiveBornChildren> ;
-                                                                                dsv:refersToVariable    var:NumberOfLiveBirths .
+<www.nl-open-data.org/example-aggregated-dataset/column/k_20Tot25Jaar_10>                       a                               dsv:DimensionComponent ,
+                                                                                                                                csvw:Column ;
+                                                                                                rdfs:label                      "k_20Tot25Jaar_10"@nl ;
+                                                                                                rdfs:comment                    "20 to 25 years"@en ;
+                                                                                                dsv:componentProperty           <www.nl-open-data.org/properties-dictionary/20To25Years> ;
+                                                                                                dsv:refersToVariable            var:Age ;
+                                                                                                dsv:hasAggregationMethod        [
+                                                                                                    dsv:aggregationFunction             "COUNT"@en ;
+                                                                                                    dsv:aggregationFunctionArgument     <www.nl-open-data.org/example-individual-dataset/column/k_20Tot25Jaar_10> 
+                                                                                                ] ;
+                                                                                                dsv:summaryStatistics           [
+                                                                                                    dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                                    dsv:dataType                        "Numerical"@en ;
+                                                                                                ] .
 
-<www.example-datasets.org/nl/column/jongens_5>                                  a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "jongens_5"@nl ;
-                                                                                rdfs:comment            "boys"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/boys> ;
-                                                                                dsv:refersToVariable    var:Gender .
+<www.nl-open-data.org/example-aggregated-dataset/column/k_25Tot30Jaar_11>                       a                               dsv:DimensionComponent ,
+                                                                                                                                csvw:Column ;
+                                                                                                rdfs:label                      "k_25Tot30Jaar_11"@nl ;
+                                                                                                rdfs:comment                    "25 to 30 years"@en ;
+                                                                                                dsv:componentProperty           <www.nl-open-data.org/properties-dictionary/25To30Years> ;
+                                                                                                dsv:refersToVariable            var:Age ;
+                                                                                                dsv:hasAggregationMethod        [
+                                                                                                    dsv:aggregationFunction             "COUNT"@en ;
+                                                                                                    dsv:aggregationFunctionArgument     <www.nl-open-data.org/example-individual-dataset/column/k_25Tot30Jaar_11> 
+                                                                                                ] ;
+                                                                                                dsv:summaryStatistics           [
+                                                                                                    dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                                    dsv:dataType                        "Numerical"@en ;
+                                                                                                ] .
 
-<www.example-datasets.org/nl/column/meisjes_6>                                  a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "meisjes_6"@nl ;
-                                                                                rdfs:comment            "girls"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/girls> ;
-                                                                                dsv:refersToVariable    var:Gender .
+<www.nl-open-data.org/example-aggregated-dataset/column/k_30Tot35Jaar_12>                       a                               dsv:DimensionComponent ,
+                                                                                                                                csvw:Column ;
+                                                                                                rdfs:label                      "k_30Tot35Jaar_12"@nl ;
+                                                                                                rdfs:comment                    "30 to 35 years"@en ;
+                                                                                                dsv:componentProperty           <www.nl-open-data.org/properties-dictionary/30To35Years> ;
+                                                                                                dsv:refersToVariable            var:Age ;
+                                                                                                dsv:hasAggregationMethod        [
+                                                                                                    dsv:aggregationFunction             "COUNT"@en ;
+                                                                                                    dsv:aggregationFunctionArgument     <www.nl-open-data.org/example-individual-dataset/column/k_30Tot35Jaar_12> 
+                                                                                                ] ;
+                                                                                                dsv:summaryStatistics           [
+                                                                                                    dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                                    dsv:dataType                        "Numerical"@en ;
+                                                                                                ] .
 
-<www.example-datasets.org/nl/column/jongensPer1000Meisjes_7>                    a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "jongensPer1000Meisjes_7"@nl ;
-                                                                                rdfs:comment            "boys per 1000 girls"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/boysPer1000Girls> ;
-                                                                                dsv:refersToVariable    var:Gender .
+<www.nl-open-data.org/example-aggregated-dataset/column/k_35Tot40Jaar_13>                       a                               dsv:DimensionComponent ,
+                                                                                                                                csvw:Column ;
+                                                                                                rdfs:label                      "k_35Tot40Jaar_13"@nl ;
+                                                                                                rdfs:comment                    "35 to 40 years"@en ;
+                                                                                                dsv:componentProperty           <www.nl-open-data.org/properties-dictionary/35To40Years> ;
+                                                                                                dsv:refersToVariable            var:Age ;
+                                                                                                dsv:hasAggregationMethod        [
+                                                                                                    dsv:aggregationFunction             "COUNT"@en ;
+                                                                                                    dsv:aggregationFunctionArgument     <www.nl-open-data.org/example-individual-dataset/column/k_35Tot40Jaar_13> 
+                                                                                                ] ;
+                                                                                                dsv:summaryStatistics           [
+                                                                                                    dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                                    dsv:dataType                        "Numerical"@en ;
+                                                                                                ] .
 
-<www.example-datasets.org/nl/column/totaalLevendGeborenKinderen_8>              a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "totaalLevendGeborenKinderen_8"@nl ;
-                                                                                rdfs:comment            "total live born children"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/totalLiveBornChildren> ;
-                                                                                dsv:refersToVariable    var:NumberOfLiveBirths .
+<www.nl-open-data.org/example-aggregated-dataset/column/k_40Tot45Jaar_14>                       a                               dsv:DimensionComponent ,
+                                                                                                                                csvw:Column ;
+                                                                                                rdfs:label                      "k_40Tot45Jaar_14"@nl ;
+                                                                                                rdfs:comment                    "40 to 45 years"@en ;
+                                                                                                dsv:componentProperty           <www.nl-open-data.org/properties-dictionary/40To45Years> ;
+                                                                                                dsv:refersToVariable            var:Age ;
+                                                                                                dsv:hasAggregationMethod        [
+                                                                                                    dsv:aggregationFunction             "COUNT"@en ;
+                                                                                                    dsv:aggregationFunctionArgument     <www.nl-open-data.org/example-individual-dataset/column/k_40Tot45Jaar_14> 
+                                                                                                ] ;
+                                                                                                dsv:summaryStatistics           [
+                                                                                                    dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                                    dsv:dataType                        "Numerical"@en ;
+                                                                                                ] .
 
-<www.example-datasets.org/nl/column/jongerDan20Jaar_9>                          a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "jongerDan20Jaar_9"@nl ;
-                                                                                rdfs:comment            "younger than 20 years"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/youngerThan20Years> ;
-                                                                                dsv:refersToVariable    var:Age .
+<www.nl-open-data.org/example-aggregated-dataset/column/k_45JaarOfOuder_15>                     a                               dsv:DimensionComponent ,
+                                                                                                                                csvw:Column ;
+                                                                                                rdfs:label                      "k_45JaarOfOuder_15"@nl ;
+                                                                                                rdfs:comment                    "45 years or older"@en ;
+                                                                                                dsv:componentProperty           <www.nl-open-data.org/properties-dictionary/45YearsOrOlder> ;
+                                                                                                dsv:refersToVariable            var:Age ;
+                                                                                                dsv:hasAggregationMethod        [
+                                                                                                    dsv:aggregationFunction             "COUNT"@en ;
+                                                                                                    dsv:aggregationFunctionArgument     <www.nl-open-data.org/example-individual-dataset/column/k_45JaarOfOuder_15> 
+                                                                                                ] ;
+                                                                                                dsv:summaryStatistics           [
+                                                                                                    dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                                    dsv:dataType                        "Numerical"@en ;
+                                                                                                ] .
 
-<www.example-datasets.org/nl/column/k_20Tot25Jaar_10>                           a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "k_20Tot25Jaar_10"@nl ;
-                                                                                rdfs:comment            "20 to 25 years"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/20To25Years> ;
-                                                                                dsv:refersToVariable    var:Age .
-
-<www.example-datasets.org/nl/column/k_25Tot30Jaar_11>                           a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "k_25Tot30Jaar_11"@nl ;
-                                                                                rdfs:comment            "25 to 30 years"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/25To30Years> ;
-                                                                                dsv:refersToVariable    var:Age .
-
-<www.example-datasets.org/nl/column/k_30Tot35Jaar_12>                           a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "k_30Tot35Jaar_12"@nl ;
-                                                                                rdfs:comment            "30 to 35 years"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/30To35Years> ;
-                                                                                dsv:refersToVariable    var:Age .
-
-<www.example-datasets.org/nl/column/k_35Tot40Jaar_13>                           a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "k_35Tot40Jaar_13"@nl ;
-                                                                                rdfs:comment            "35 to 40 years"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/35To40Years> ;
-                                                                                dsv:refersToVariable    var:Age .
-
-<www.example-datasets.org/nl/column/k_40Tot45Jaar_14>                           a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "k_40Tot45Jaar_14"@nl ;
-                                                                                rdfs:comment            "40 to 45 years"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/40To45Years> ;
-                                                                                dsv:refersToVariable    var:Age .
-
-<www.example-datasets.org/nl/column/k_45JaarOfOuder_15>                         a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "k_45JaarOfOuder_15"@nl ;
-                                                                                rdfs:comment            "45 years or older"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/45YearsOrOlder> ;
-                                                                                dsv:refersToVariable    var:Age .
-
-<www.example-datasets.org/nl/column/totaalLevendGeborenKinderen_16>             a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "totaalLevendGeborenKinderen_16"@nl ;
-                                                                                rdfs:comment            "total live born children"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/totalLiveBornChildren> ;
-                                                                                dsv:refersToVariable    var:NumberOfLiveBirths .
-
-<www.example-datasets.org/nl/column/k_1eKind_17>                                a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "k_1eKind_17"@nl ;
-                                                                                rdfs:comment            "1st child"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/1stChild> ;
-                                                                                dsv:refersToVariable    var:NumberOfBirths .
-
-<www.example-datasets.org/nl/column/k_2eKind_18>                                a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "k_2eKind_18"@nl ;
-                                                                                rdfs:comment            "2nd child"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/2ndChild> ;
-                                                                                dsv:refersToVariable    var:NumberOfBirths .
-
-<www.example-datasets.org/nl/column/k_3eKind_19>                                a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "k_3eKind_19"@nl ;
-                                                                                rdfs:comment            "3rd child"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/3rdChild> ;
-                                                                                dsv:refersToVariable    var:NumberOfBirths .
-
-<www.example-datasets.org/nl/column/k_4eOfVolgendeKinderen_20>                  a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "k_4eOfVolgendeKinderen_20"@nl ;
-                                                                                rdfs:comment            "4th or more child"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/4thOrMoreChild> ;
-                                                                                dsv:refersToVariable    var:NumberOfBirths .
-
-<www.example-datasets.org/nl/column/totaalLevendGeborenKinderen_21>             a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "totaalLevendGeborenKinderen_21"@nl ;
-                                                                                rdfs:comment            "total live born children"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/totalLiveBornChildren> ;
-                                                                                dsv:refersToVariable    var:NumberOfLiveBirths .
-
-<www.example-datasets.org/nl/column/moederGehuwd_22>                            a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "moederGehuwd_22"@nl ;
-                                                                                rdfs:comment            "married mother"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/marriedMother> ;
-                                                                                dsv:refersToVariable    var:MaritalStatus .
-
-<www.example-datasets.org/nl/column/moederNietGehuwd_23>                        a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "moederNietGehuwd_23"@nl ;
-                                                                                rdfs:comment            "unmarried mother"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/unmarriedMother> ;
-                                                                                dsv:refersToVariable    var:MaritalStatus .
-
-<www.example-datasets.org/nl/column/totaalLevendGeborenKinderen_24>             a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "totaalLevendGeborenKinderen_24"@nl ;
-                                                                                rdfs:comment            "total live born children"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/totalLiveBornChildren> ;
-                                                                                dsv:refersToVariable    var:NumberOfLiveBirths .
-
-<www.example-datasets.org/nl/column/persoonMetEenNederlandseAchtergrond_25>     a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "persoonMetEenNederlandseAchtergrond_25"@nl ;
-                                                                                rdfs:comment            "person with a Dutch background"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/personWithADutchBackground> ;
-                                                                                dsv:refersToVariable    var:Background .
-
-<www.example-datasets.org/nl/column/persoonMetEenMigratieachtergrond_26>        a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "persoonMetEenMigratieachtergrond_26"@nl ;
-                                                                                rdfs:comment            "person with a migration background"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/personWithAMigrationBackground> ;
-                                                                                dsv:refersToVariable    var:Background .
-
-<www.example-datasets.org/nl/column/persoonMetEenWesterseMigratieacht_27>       a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "persoonMetEenWesterseMigratieacht_27"@nl ;
-                                                                                rdfs:comment            "person with a Western migration background"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/personWithAWesternMigrationBackground> ;
-                                                                                dsv:refersToVariable    var:Background .
-
-<www.example-datasets.org/nl/column/persoonMetEenNietWesterseMigrati_28>        a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "persoonMetEenNietWesterseMigrati_28"@nl ;
-                                                                                rdfs:comment            "person with a non-western migration background"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/personWithANonWesternBackground> ;
-                                                                                dsv:refersToVariable    var:Background .
-
-<www.example-datasets.org/nl/column/doodgeborenKinderen24OfMeerWeken_29>        a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "doodgeborenKinderen24OfMeerWeken_29"@nl ;
-                                                                                rdfs:comment            "still born children 24 or more weeks"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/stillBornChildren24OrMoreWeeks> ;
-                                                                                dsv:refersToVariable    var:NumberOfStillBirths .
-
-<www.example-datasets.org/nl/column/doodgeborenKinderen24Relatief_30>           a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "doodgeborenKinderen24Relatief_30"@nl ;
-                                                                                rdfs:comment            "still born children 24 or more weeks, relative"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/relativeStillBornChildren24OrMoreWeeks> ;
-                                                                                dsv:refersToVariable    var:NumberOfStillBirths .
-
-<www.example-datasets.org/nl/column/doodgeborenKinderen28OfMeerWeken_31>        a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "doodgeborenKinderen28OfMeerWeken_31"@nl ;
-                                                                                rdfs:comment            "still born children 28 or more weeks"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/stillBornChildren28OrMoreWeeks> ;
-                                                                                dsv:refersToVariable    var:NumberOfStillBirths .
-
-<www.example-datasets.org/nl/column/doodgeborenKinderen28Relatief_32>           a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "doodgeborenKinderen28Relatief_32"@nl ;
-                                                                                rdfs:comment            "still born children 28 or more weeks, relative"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/relativeStillBornChildren28OrMoreWeeks> ;
-                                                                                dsv:refersToVariable    var:NumberOfStillBirths .
-
-<www.example-datasets.org/nl/column/totaalGeboorten_33>                         a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "totaalGeboorten_33"@nl ;
-                                                                                rdfs:comment            "total births"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/totalBirths> ;
-                                                                                dsv:refersToVariable    var:NumberOfBirths .
-
-<www.example-datasets.org/nl/column/enkelvoudigeGeboorten_34>                   a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "enkelvoudigeGeboorten_34"@nl ;
-                                                                                rdfs:comment            "single births"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/singleBirths> ;
-                                                                                dsv:refersToVariable    var:NumberOfBirths .
-
-<www.example-datasets.org/nl/column/totaalMeervoudigeGeboorten_35>              a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "totaalMeervoudigeGeboorten_35"@nl ;
-                                                                                rdfs:comment            "total multiple births"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/totalMultipleBirths> ;
-                                                                                dsv:refersToVariable    var:NumberOfBirths .
-
-<www.example-datasets.org/nl/column/totaalTweelinggeboorten_36>                 a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "totaalTweelinggeboorten_36"@nl ;
-                                                                                rdfs:comment            "total twin births"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/totalTwinBirths> ;
-                                                                                dsv:refersToVariable    var:NumberOfBirths .
-
-<www.example-datasets.org/nl/column/k_2Jongens_37>                              a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "k_2Jongens_37"@nl ;
-                                                                                rdfs:comment            "2 boys"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/2Boys> ;
-                                                                                dsv:refersToVariable    var:Gender .
-
-<www.example-datasets.org/nl/column/k_1JongenEn1Meisje_38>                      a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "k_1JongenEn1Meisje_38"@nl ;
-                                                                                rdfs:comment            "1 boy and 1 girl"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/1BoyAnd1Girl> ;
-                                                                                dsv:refersToVariable    var:Gender .
-
-<www.example-datasets.org/nl/column/k_2Meisjes_39>                              a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "k_2Meisjes_39"@nl ;
-                                                                                rdfs:comment            "2 girls"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/2Girls> ;
-                                                                                dsv:refersToVariable    var:Gender .
-
-<www.example-datasets.org/nl/column/drieOfMeervoudigeGeboorten_40>              a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "drieOfMeervoudigeGeboorten_40"@nl ;
-                                                                                rdfs:comment            "3 or multiple births"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/3OrMultipleBirths> ;
-                                                                                dsv:refersToVariable    var:Gender .
-
-<www.example-datasets.org/nl/column/gemiddeldKindertalPerVrouw_41>              a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "gemiddeldKindertalPerVrouw_41"@nl ;
-                                                                                rdfs:comment            "average children per woman"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/averageChildrenPerWoman> ;
-                                                                                dsv:refersToVariable    var:NumberOfBirths .
-
-<www.example-datasets.org/nl/column/gemiddeldAantal1eKinderenPerVrouw_42>       a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "gemiddeldAantal1eKinderenPerVrouw_42"@nl ;
-                                                                                rdfs:comment            "average number of 1st children per woman"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/averageNumberOf1stChildrenPerWoman> ;
-                                                                                dsv:refersToVariable    var:NumberOfBirths .
-
-<www.example-datasets.org/nl/column/gemiddeldAantal2eKinderenPerVrouw_43>       a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "gemiddeldAantal2eKinderenPerVrouw_43"@nl ;
-                                                                                rdfs:comment            "average number of 2nd children per woman"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/averageNumberOf2ndChildrenPerWoman> ;
-                                                                                dsv:refersToVariable    var:NumberOfBirths .
-
-<www.example-datasets.org/nl/column/gemiddeldAantal3eKinderenPerVrouw_44>       a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "gemiddeldAantal3eKinderenPerVrouw_44"@nl ;
-                                                                                rdfs:comment            "average number of 3rd children per woman"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/averageNumberOf3rdChildrenPerWoman> ;
-                                                                                dsv:refersToVariable    var:NumberOfBirths .
-
-<www.example-datasets.org/nl/column/gemiddeldAantal4eOfVolgendeKind_45>         a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "gemiddeldAantal4eOfVolgendeKind_45"@nl ;
-                                                                                rdfs:comment            "average number of 4th children or more per woman"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/averageNumberOf4thOrMoreChildrenPerWoman> ;
-                                                                                dsv:refersToVariable    var:NumberOfBirths .
-
-<www.example-datasets.org/nl/column/gemiddeldKindertalPerMan_46>                a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "gemiddeldKindertalPerMan_46"@nl ;
-                                                                                rdfs:comment            "average children per man"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/averageChildrenPerMan> ;
-                                                                                dsv:refersToVariable    var:NumberOfBirths .
-
-<www.example-datasets.org/nl/column/gemiddeldAantal1eKinderenPerMan_47>         a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "gemiddeldAantal1eKinderenPerMan_47"@nl ;
-                                                                                rdfs:comment            "average number of 1st children per man"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/averageNumberOf1stChildrenPerMan> ;
-                                                                                dsv:refersToVariable    var:NumberOfBirths .
-
-<www.example-datasets.org/nl/column/totaalAlleKinderen_48>                      a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "totaalAlleKinderen_48"@nl ;
-                                                                                rdfs:comment            "total all children"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/totalAllChildren> ;
-                                                                                dsv:refersToVariable    var:NumberOfBirths .
-
-<www.example-datasets.org/nl/column/bij1eKind_49>                               a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "bij1eKind_49"@nl ;
-                                                                                rdfs:comment            "at 1st child"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/at1stChild> ;
-                                                                                dsv:refersToVariable    var:Age .
-
-<www.example-datasets.org/nl/column/bij2eKind_50>                               a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "bij2eKind_50"@nl ;
-                                                                                rdfs:comment            "at 2nd child"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/at2ndChild> ;
-                                                                                dsv:refersToVariable    var:Age .
-
-<www.example-datasets.org/nl/column/bij3eKind_51>                               a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "bij3eKind_51"@nl ;
-                                                                                rdfs:comment            "at 3rd child"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/at3rdChild> ;
-                                                                                dsv:refersToVariable    var:Age .
-
-<www.example-datasets.org/nl/column/bij4eOfVolgendeKind_52>                     a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "bij4eOfVolgendeKind_52"@nl ;
-                                                                                rdfs:comment            "at 4th of more child"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/at4thOrMoreChild> ;
-                                                                                dsv:refersToVariable    var:Age .
-
-<www.example-datasets.org/nl/column/totaalAlleKinderen_53>                      a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "totaalAlleKinderen_53"@nl ;
-                                                                                rdfs:comment            "total all children"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/totalAllChildren> ;
-                                                                                dsv:refersToVariable    var:NumberOfBirths .
-
-<www.example-datasets.org/nl/column/bij1eKindVanDeMoeder_54>                    a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "bij1eKindVanDeMoeder_54"@nl ;
-                                                                                rdfs:comment            "at 1st child of the mother"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/at1stChildOfTheMother> ;
-                                                                                dsv:refersToVariable    var:Age .
-
-<www.example-datasets.org/nl/column/nettoVervangingsfactor_55>                  a                       dsv:DimensionComponent ,
-                                                                                                        csvw:Column ;
-                                                                                rdfs:label              "nettoVervangingsfactor_55"@nl ;
-                                                                                rdfs:comment            "net replacement factor"@en ;
-                                                                                dsv:componentProperty   <www.example-datasets.org/nl/property/netReplacementFactor> ;
-                                                                                dsv:refersToVariable    var:NetReplacementFactor .
-
+<www.nl-open-data.org/example-aggregated-dataset/column/totaalGeboorten_33>                     a                               dsv:DimensionComponent ,
+                                                                                                                                csvw:Column ;
+                                                                                                rdfs:label                      "totaalGeboorten_33"@nl ;
+                                                                                                rdfs:comment                    "total births"@en ;
+                                                                                                dsv:componentProperty           <www.nl-open-data.org/properties-dictionary/totalBirths> ;
+                                                                                                dsv:refersToVariable            var:NumberOfBirths ;
+                                                                                                dsv:hasAggregationMethod        [
+                                                                                                    dsv:aggregationFunction             "COUNT"@en ;
+                                                                                                    dsv:aggregationFunctionArgument     <www.nl-open-data.org/example-individual-dataset/column/new-birth-id> 
+                                                                                                ] ;
+                                                                                                dsv:summaryStatistics           [
+                                                                                                    dsv:componentCompleteness           "1.00"^^xsd:float ;
+                                                                                                    dsv:dataType                        "Numerical"@en ;
+                                                                                                ] .
 
 ###########################################
 # Dataset Netherlands - Properties
 ###########################################
 
-<www.example-datasets.org/nl/property/periods>                                      a                       rdf:Property ;
-                                                                                    dsv:linksToVariable     var:YearCoverage ;
-                                                                                    rdfs:range              xsd:gYear ;
-                                                                                    rdfs:domain             <www.example-datasets.org/nl/rowsRepresentation/nationalStatistics> .
+<www.nl-open-data.org/properties-dictionary/periods>                        a                       rdf:Property ;
+                                                                            dsv:linksToVariable     var:YearCoverage ;
+                                                                            rdfs:domain             var:Births ;
+                                                                            rdfs:range              xsd:gYear .
 
+<www.nl-open-data.org/properties-dictionary/totalLiveBornChildren>          a                       rdf:Property ;
+                                                                            dsv:linksToVariable     var:YearCoverage ;
+                                                                            rdfs:domain             var:Births ;
+                                                                            rdfs:range              xsd:int .
 
-<www.example-datasets.org/nl/property/totalLiveBornChildren>                        a                       rdf:Property .
+<www.nl-open-data.org/properties-dictionary/generalFertilityRate>           a                       rdf:Property ;
+                                                                            dsv:linksToVariable     var:YearCoverage ;
+                                                                            rdfs:domain             var:Births ;
+                                                                            rdfs:range              xsd:float .
 
-<www.example-datasets.org/nl/property/relativeLiveBornChildren>                     a                       rdf:Property .
+<www.nl-open-data.org/properties-dictionary/youngerThan20Years>             a                       rdf:Property ;
+                                                                            dsv:linksToVariable     var:YearCoverage ;
+                                                                            rdfs:domain             var:Births ;
+                                                                            rdfs:range              xsd:int .
 
-<www.example-datasets.org/nl/property/generalFertilityRate>                         a                       rdf:Property .
+<www.nl-open-data.org/properties-dictionary/20To25Years>                    a                       rdf:Property ;
+                                                                            dsv:linksToVariable     var:YearCoverage ;
+                                                                            rdfs:domain             var:Births ;
+                                                                            rdfs:range              xsd:int .
 
-<www.example-datasets.org/nl/property/boys>                                         a                       rdf:Property .
+<www.nl-open-data.org/properties-dictionary/25To30Years>                    a                       rdf:Property ;
+                                                                            dsv:linksToVariable     var:YearCoverage ;
+                                                                            rdfs:domain             var:Births ;
+                                                                            rdfs:range              xsd:int .
 
-<www.example-datasets.org/nl/property/girls>                                        a                       rdf:Property .
+<www.nl-open-data.org/properties-dictionary/30To35Years>                    a                       rdf:Property ;
+                                                                            dsv:linksToVariable     var:YearCoverage ;
+                                                                            rdfs:domain             var:Births ;
+                                                                            rdfs:range              xsd:int .
 
-<www.example-datasets.org/nl/property/boysPer1000Girls>                             a                       rdf:Property .
+<www.nl-open-data.org/properties-dictionary/35To40Years>                    a                       rdf:Property ;
+                                                                            dsv:linksToVariable     var:YearCoverage ;
+                                                                            rdfs:domain             var:Births ;
+                                                                            rdfs:range              xsd:int .
 
-<www.example-datasets.org/nl/property/youngerThan20Years>                           a                       rdf:Property .
+<www.nl-open-data.org/properties-dictionary/40To45Years>                    a                       rdf:Property ;
+                                                                            dsv:linksToVariable     var:YearCoverage ;
+                                                                            rdfs:domain             var:Births ;
+                                                                            rdfs:range              xsd:int .
 
-<www.example-datasets.org/nl/property/20To25Years>                                  a                       rdf:Property .
+<www.nl-open-data.org/properties-dictionary/45YearsOrOlder>                 a                       rdf:Property ;
+                                                                            dsv:linksToVariable     var:YearCoverage ;
+                                                                            rdfs:domain             var:Births ;
+                                                                            rdfs:range              xsd:int .
 
-<www.example-datasets.org/nl/property/25To30Years>                                  a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/30To35Years>                                  a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/35To40Years>                                  a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/40To45Years>                                  a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/45YearsOrOlder>                               a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/1stChild>                                     a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/2ndChild>                                     a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/3rdChild>                                     a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/4thOrMoreChild>                               a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/marriedMother>                                a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/unmarriedMother>                              a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/personWithADutchBackground>                   a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/personWithAMigrationBackground>               a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/personWithAWesternMigrationBackground>        a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/personWithANonWesternBackground>              a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/stillBornChildren24OrMoreWeeks>               a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/relativeStillBornChildren24OrMoreWeeks>       a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/stillBornChildren28OrMoreWeeks>               a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/relativeStillBornChildren28OrMoreWeeks>       a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/totalBirths>                                  a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/singleBirths>                                 a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/totalMultipleBirths>                          a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/totalTwinBirths>                              a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/2Boys>                                        a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/1BoyAnd1Girl>                                 a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/2Girls>                                       a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/3OrMultipleBirths>                            a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/averageChildrenPerWoman>                      a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/averageNumberOf1stChildrenPerWoman>           a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/averageNumberOf2ndChildrenPerWoman>           a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/averageNumberOf3rdChildrenPerWoman>           a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/averageNumberOf4thOrMoreChildrenPerWoman>     a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/averageChildrenPerMan>                        a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/averageNumberOf1stChildrenPerMan>             a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/totalAllChildren>                             a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/at1stChild>                                   a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/at2ndChild>                                   a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/at3rdChild>                                   a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/at4thOrMoreChild>                             a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/at1stChildOfTheMother>                        a                       rdf:Property .
-
-<www.example-datasets.org/nl/property/netReplacementFactor>                         a                       rdf:Property .
+<www.nl-open-data.org/properties-dictionary/totalBirths>                    a                       rdf:Property ;
+                                                                            dsv:linksToVariable     var:YearCoverage ;
+                                                                            rdfs:domain             var:Births ;
+                                                                            rdfs:range              xsd:int .
 
