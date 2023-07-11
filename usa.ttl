@@ -11,7 +11,7 @@
 
 <http://www.usa-open-data.org/example-aggregated-dataset>           a                               dsv:AggregatedDataset ;
                                                                     csvw:url                        "https://catalog.data.gov/dataset/nchs-births-and-general-fertility-rates-united-states" ;
-                                                                    dsv:rowsRepresentInstancesOf    var:Birth ;
+                                                                    dsv:rowsRepresentInstancesOf    wikidata:Birth ;  # TK: take it from WikiData or create a new class, but it should not be var:Birth (it's a birth not a variable)
                                                                     dsv:aggregationMethod   [
                                                                         dsv:aggregatedFrom          <http://www.usa-open-data.org/example-individual-dataset> ;
                                                                         dsv:aggregatedBy            <http://www.usa-open-data.org/example-individual-dataset/column/Year>
@@ -23,87 +23,84 @@
                                                                     ] ;
                                                                     dsv:datasetSchema       [
                                                                         dsv:datasetComponent        <http://www.usa-open-data.org/example-aggregated-dataset/column/Year> ,
-                                                                                                    <http://www.usa-open-data.org/example-aggregated-dataset/column/BirthNumber> ,
-                                                                                                    <http://www.usa-open-data.org/example-aggregated-dataset/column/GeneralFertilityRate> ,
-                                                                                                    <http://www.usa-open-data.org/example-aggregated-dataset/column/CrudeBirthRate> 
+                                                                                                    <http://www.usa-open-data.org/example-aggregated-dataset/column/BirthNumber>
+                                                                                                    
+                                                                                                    # TK: I'd remove these two below, as they are aggregations using "complex functions"; we can say this is out of scope to simplify our case study;
+                                                                                                    # It would be quite straight-forward to implemented more complex functions (with divisions etc.) and we could model it if we knew the underlying
+                                                                                                    # un-aggregated data, but we leave it out for now to focus on our core elements (something along these lines to explain this in the paper)
+                                                                                                    #<http://www.usa-open-data.org/example-aggregated-dataset/column/GeneralFertilityRate> ,
+                                                                                                    #<http://www.usa-open-data.org/example-aggregated-dataset/column/CrudeBirthRate> 
                                                                     ] .
+
+<http://www.usa-open-data.org/example-individual-dataset>           # TK: some info of the unaggregated dataset:
+                                                                    dsv:summaryStatistics   [
+                                                                        dsv:numberOfRows            "23456"^^xsd:integer ; # TK: Fill in the correct number here
+                                                                        dsv:numberOfColumns         "2"^^xsd:integer ;
+                                                                        dsv:completeness            "1.00"^^xsd:float 
+                                                                    ] ;
+
+                                                                    dsv:datasetSchema       [
+                                                                        dsv:datasetComponent        <http://www.usa-open-data.org/example-individual-dataset/column/BirthID> ,
+                                                                                                    <http://www.usa-open-data.org/example-individual-dataset/column/Year>
+                                                                    ].
+
 
 ###########################################
 # Dataset USA - Columns
 ###########################################
 
+# TK: Column that is only in the non-aggregated dataset (assumed):
+<http://www.usa-open-data.org/example-individual-dataset/column/BirthID> a                           dsv:DimensionComponent ,
+                                                                                                                        csvw:Column ; 
+                                                                                            rdfs:label                  "Birth ID"@en ;
+                                                                                            dsv:componentProperty       ex:hasID ;  # TK: add proper URI
+                                                                                            dsv:refersToVariable       <http://www.usa-open-data.org/properties-dictionary/birthRecordID> ;  # TK: made up; not sure it exists like that but some sort of identifier is certainly there or should/could be created, but that's not our problem
+                                                                                            dsv:summaryStatistics       [
+                                                                                                dsv:completeness                    "1.00"^^xsd:float ;
+                                                                                                dsv:dataType                        "String"@en ;
+                                                                                            ] .
+
+<http://www.usa-open-data.org/example-individual-dataset/column/Year> a                           dsv:DimensionComponent ,
+                                                                                                                        csvw:Column ; 
+                                                                                            rdfs:label                  "Year"@en ;
+                                                                                            dsv:componentProperty       <http://www.usa-open-data.org/properties-dictionary/hasYearOfBirth> ;  # TK: or something more general like eventOntology:hasEventYear
+                                                                                            dsv:refersToVariable        var:Year ;
+                                                                                            dsv:summaryStatistics       [
+                                                                                                dsv:completeness                    "1.00"^^xsd:float ;
+                                                                                                dsv:dataType                        "integer"@en ;
+                                                                                            ] .
+
 <http://www.usa-open-data.org/example-aggregated-dataset/column/Year>                       a                           dsv:DimensionComponent ,
                                                                                                                         csvw:Column ;
                                                                                             rdfs:label                  "Year"@en ;
-                                                                                            dsv:componentProperty       <http://www.usa-open-data.org/properties-dictionary/year> ;
-                                                                                            dsv:refersToVariable        var:YearCoverage ;
-                                                                                            dsv:hasAggregationMethod    [
-                                                                                                dsv:aggregationFunction             "GROUP BY"@en ;
-                                                                                                dsv:aggregationFunctionArgument     <http://www.usa-open-data.org/example-individual-dataset/column/Year> 
-                                                                                            ] ;
-                                                                                            dsv:summaryStatistics       [
-                                                                                                dsv:completeness                    "1.00"^^xsd:float ;
-                                                                                                dsv:dataType                        "Numerical"@en ;
-                                                                                            ] .
+                                                                                            dsv:hasAggregationFunction dsv:GroupBy ;  # TK: Just as a suggestion to simplify this line and next; property could attach directly (not via blank node); GroupBy is better a URI 
+                                                                                            dsv:aggregatesFromColumn     <http://www.usa-open-data.org/example-individual-dataset/column/Year> .
+                                                                                            # TK: everything else (property, summary statistics) are implied from the individual column
 
 <http://www.usa-open-data.org/example-aggregated-dataset/column/BirthNumber>                a                           dsv:DimensionComponent ,
                                                                                                                         csvw:Column ;
                                                                                             rdfs:label                  "Birth Number"@en ;
                                                                                             dsv:componentProperty       <http://www.usa-open-data.org/properties-dictionary/birthNumber> ;
-                                                                                            dsv:refersToVariable        var:Birth ;
-                                                                                            dsv:hasAggregationMethod    [
-                                                                                                dsv:aggregationFunction             "COUNT"@en ;
-                                                                                                dsv:aggregationFunctionArgument     <http://www.usa-open-data.org/example-individual-dataset/column/new-birth-id> 
-                                                                                            ] ;
-                                                                                            dsv:summaryStatistics       [
-                                                                                                dsv:completeness                    "1.00"^^xsd:float ;
-                                                                                                dsv:dataType                        "Numerical"@en ;
-                                                                                            ] .
+                                                                                            dsv:hasAggregationFunction dsv:Count ;
+                                                                                            dsv:aggregatesFromColumn     <http://www.usa-open-data.org/example-individual-dataset/column/BirthID> .
+                                                                                            # TK: everything else (property, summary statistics) are implied from the individual column
 
-<http://www.usa-open-data.org/example-aggregated-dataset/column/GeneralFertilityRate>       a                           dsv:DimensionComponent ,
-                                                                                                                        csvw:Column ;
-                                                                                            rdfs:label                  "General Fertility Rate"@en ;
-                                                                                            dsv:componentProperty       <http://www.usa-open-data.org/properties-dictionary/generalFertilityRate> ;
-                                                                                            dsv:refersToVariable        var:FertilityRate ;
-                                                                                            dsv:summaryStatistics       [
-                                                                                                dsv:completeness                    "1.00"^^xsd:float ;
-                                                                                                dsv:dataType                        "Numerical"@en ;
-                                                                                            ] .
-
-<http://www.usa-open-data.org/example-aggregated-dataset/column/CrudeBirthRate>             a                           dsv:DimensionComponent ,
-                                                                                                                        csvw:Column ;
-                                                                                            rdfs:label                  "Crude Birth Rate"@en ;
-                                                                                            dsv:componentProperty       <http://www.usa-open-data.org/properties-dictionary/crudeBirthRate> ;
-                                                                                            dsv:refersToVariable        var:Birth ;
-                                                                                            dsv:summaryStatistics       [
-                                                                                                dsv:completeness                    "1.00"^^xsd:float ;
-                                                                                                dsv:dataType                        "Numerical"@en ;
-                                                                                            ] .
 
 ###########################################
 # Dataset USA - Properties
 ###########################################
 
-<http://www.usa-open-data.org/properties-dictionary/year>                       a                       rdf:Property ;
-                                                                                rdfs:label              "Property defining the year of an event"@en ;
-                                                                                dsv:linksToVariable     var:YearCoverage ;
+<http://www.usa-open-data.org/properties-dictionary/hasYearOfBirth>                       a                       rdf:Property ;
+                                                                                rdfs:subPropertyOf      ex:hasYearFromSomeAcceptedOntology ;  # TK: to do
+                                                                                rdfs:label              "the year in which the birth happened"@en ;
+                                                                                dsv:linksToVariable     var:Year ;
                                                                                 rdfs:domain             var:Birth ;
                                                                                 rdfs:range              xsd:gYear .
 
-<http://www.usa-open-data.org/properties-dictionary/birthNumber>                a                       rdf:Property ;
-                                                                                rdfs:label              "Property defining the number of births"@en ;
+<http://www.usa-open-data.org/properties-dictionary/birthRecordID>                a                       rdf:Property ;
+                                                                                rdfs:subPropertyOf      ex:hasIDFromDublinCoreOrSimilar ;  # TK: to do
+                                                                                rdfs:label              "Attached a birth identifier to a birth event"@en ;
                                                                                 dsv:linksToVariable     var:Birth ;
-                                                                                rdfs:domain             var:Birth ;
-                                                                                rdfs:range              xsd:int .
+                                                                                rdfs:domain             wikidata:Birth ;  # TK: find proper WikiData ID
+                                                                                rdfs:range              xsd:string .  # TK: assuming it's just a string; anything else could be modeled easily too
 
-<http://www.usa-open-data.org/properties-dictionary/generalFertilityRate>       a                       rdf:Property ;
-                                                                                rdfs:label              "Property defining the general fertility rate"@en ;
-                                                                                dsv:linksToVariable     var:FertilityRate ;
-                                                                                rdfs:domain             var:Birth ;
-                                                                                rdfs:range              xsd:float .
-
-<http://www.usa-open-data.org/properties-dictionary/crudeBirthRate>             a                       rdf:Property ;
-                                                                                rdfs:label              "Property defining the crude birth rate"@en ;
-                                                                                dsv:linksToVariable     var:Birth ;
-                                                                                rdfs:domain             var:Birth ;
-                                                                                rdfs:range              xsd:float .
