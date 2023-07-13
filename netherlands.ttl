@@ -4,32 +4,22 @@
 @prefix var:            <http://www.example.org/VariablesVocabulary/> .
 @prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
 @prefix dbpedia-owl:    <http://dbpedia.org/ontology/> .
+@prefix wd:             <http://www.wikidata.org/entity/> .
 
 
 ###########################################
 # Dataset Netherlands
 ###########################################
 
-<http://www.nl-open-data.org/example-aggregated-dataset>        a                               dsv:AggregatedDataset ;
+<http://www.nl-open-data.org/example-aggregated-dataset>        a                               dsv:Dataset ;
                                                                 csvw:url                        "https://opendata.cbs.nl/statline/portal.html?_la=nl&_catalog=CBS&tableId=37422ned&_theme=62" ;
-                                                                dsv:rowsRepresentInstancesOf    var:Birth  ; # here it represents the individual 
-                                                                dsv:aggregationMethod   [
-                                                                        dsv:aggregatedFrom              <http://www.nl-open-data.org/example-individual-dataset> ;
-                                                                        dsv:aggregatedBy                <http://www.nl-open-data.org/example-individual-dataset/column/perioden> ,
-                                                                                                        <http://www.nl-open-data.org/example-individual-dataset/column/jongerDan20Jaar_9> ,
-                                                                                                        <http://www.nl-open-data.org/example-individual-dataset/column/k_20Tot25Jaar_10> ,
-                                                                                                        <http://www.nl-open-data.org/example-individual-dataset/column/k_25Tot30Jaar_11> ,
-                                                                                                        <http://www.nl-open-data.org/example-individual-dataset/column/k_30Tot35Jaar_12> ,
-                                                                                                        <http://www.nl-open-data.org/example-individual-dataset/column/k_35Tot40Jaar_13> ,
-                                                                                                        <http://www.nl-open-data.org/example-individual-dataset/column/k_40Tot45Jaar_14> ,
-                                                                                                        <http://www.nl-open-data.org/example-individual-dataset/column/k_45JaarOfOuder_15>
-                                                                ] ;
-                                                                dsv:summaryStatistics   [
+                                                                dsv:rowsRepresentInstancesOf    wd:Q14819852 ;
+                                                                dsv:summaryStatistics           [
                                                                         dsv:numberOfRows                "72"^^xsd:integer ;
                                                                         dsv:numberOfColumns             "12"^^xsd:integer ;
                                                                         dsv:completeness                "1.00"^^xsd:float 
                                                                 ] ;
-                                                                dsv:datasetSchema       [
+                                                                dsv:datasetSchema               [
                                                                         dsv:datasetComponent            <http://www.nl-open-data.org/example-aggregated-dataset/column/perioden> ,
                                                                                                         <http://www.nl-open-data.org/example-aggregated-dataset/column/totaalLevendGeborenKinderen_1> ,
                                                                                                         <http://www.nl-open-data.org/example-aggregated-dataset/column/algemeenVruchtbaarheidscijfer_3> ,
@@ -54,13 +44,9 @@
                                                                                                         rdfs:comment                    "periods"@en ;
                                                                                                         dsv:componentProperty           <http://www.nl-open-data.org/properties-dictionary/periods> ;
                                                                                                         dsv:refersToVariable            var:YearCoverage ;
-                                                                                                        dsv:hasAggregationMethod        [
-                                                                                                                dsv:aggregationFunction                 "GROUP BY"@en ;
-                                                                                                                dsv:aggregationFunctionArgument         <http://www.nl-open-data.org/example-individual-dataset/column/perioden> 
-                                                                                                                ] ;
                                                                                                         dsv:summaryStatistics           [
-                                                                                                                dsv:completeness                        "1.00"^^xsd:float ;
-                                                                                                                dsv:dataType                            "Numerical"@en ;
+                                                                                                                dsv:completeness                "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         "Numerical"@en ;
                                                                                                         ] .
 
 <http://www.nl-open-data.org/example-aggregated-dataset/column/totaalLevendGeborenKinderen_1>           a                               dsv:DimensionComponent ,
@@ -69,13 +55,9 @@
                                                                                                         rdfs:comment                    "total live born children"@en ;
                                                                                                         dsv:componentProperty           <http://www.nl-open-data.org/properties-dictionary/totalLiveBornChildren> ;
                                                                                                         dsv:refersToVariable            var:LiveBirth ;
-                                                                                                        dsv:hasAggregationMethod        [
-                                                                                                                dsv:aggregationFunction                 "COUNT"@en ;
-                                                                                                                dsv:aggregationFunctionArgument         <http://www.nl-open-data.org/example-individual-dataset/column/new-live-birth-id> 
-                                                                                                        ] ;
                                                                                                         dsv:summaryStatistics           [
-                                                                                                                dsv:completeness                        "1.00"^^xsd:float ;
-                                                                                                                dsv:dataType                            "Numerical"@en ;
+                                                                                                                dsv:completeness                "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         "Numerical"@en ;
                                                                                                         ] .
 
 <http://www.nl-open-data.org/example-aggregated-dataset/column/algemeenVruchtbaarheidscijfer_3>         a                               dsv:DimensionComponent ,
@@ -85,8 +67,8 @@
                                                                                                         dsv:componentProperty           <http://www.nl-open-data.org/properties-dictionary/generalFertilityRate> ;
                                                                                                         dsv:refersToVariable            var:FertilityRate ;
                                                                                                         dsv:summaryStatistics           [
-                                                                                                                dsv:completeness                        "1.00"^^xsd:float ;
-                                                                                                                dsv:dataType                            "Numerical"@en ;
+                                                                                                                dsv:completeness                "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         "Numerical"@en ;
                                                                                                         ] .
 
 <http://www.nl-open-data.org/example-aggregated-dataset/column/jongerDan20Jaar_9>                       a                               dsv:DimensionComponent ,
@@ -95,13 +77,9 @@
                                                                                                         rdfs:comment                    "younger than 20 years"@en ;
                                                                                                         dsv:componentProperty           <http://www.nl-open-data.org/properties-dictionary/youngerThan20Years> ;
                                                                                                         dsv:refersToVariable            var:Age ;
-                                                                                                        dsv:hasAggregationMethod        [
-                                                                                                                dsv:aggregationFunction                 "COUNT"@en ;
-                                                                                                                dsv:aggregationFunctionArgument         <http://www.nl-open-data.org/example-individual-dataset/column/jongerDan20Jaar_9> 
-                                                                                                        ] ;
                                                                                                         dsv:summaryStatistics           [
-                                                                                                                dsv:completeness                        "1.00"^^xsd:float ;
-                                                                                                                dsv:dataType                            "Numerical"@en ;
+                                                                                                                dsv:completeness                "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         "Numerical"@en ;
                                                                                                         ] .
 
 <http://www.nl-open-data.org/example-aggregated-dataset/column/k_20Tot25Jaar_10>                        a                               dsv:DimensionComponent ,
@@ -110,13 +88,9 @@
                                                                                                         rdfs:comment                    "20 to 25 years"@en ;
                                                                                                         dsv:componentProperty           <http://www.nl-open-data.org/properties-dictionary/20To25Years> ; # to remove
                                                                                                         dsv:refersToVariable            var:Age ;
-                                                                                                        dsv:hasAggregationMethod        [
-                                                                                                                dsv:aggregationFunction                 "COUNT"@en ;
-                                                                                                                dsv:aggregationFunctionArgument         <http://www.nl-open-data.org/example-individual-dataset/column/k_20Tot25Jaar_10> 
-                                                                                                        ] ;
                                                                                                         dsv:summaryStatistics           [
-                                                                                                                dsv:completeness                        "1.00"^^xsd:float ;
-                                                                                                                dsv:dataType                            "Numerical"@en ;
+                                                                                                                dsv:completeness                "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         "Numerical"@en ;
                                                                                                         ] .
 
 <http://www.nl-open-data.org/example-aggregated-dataset/column/k_25Tot30Jaar_11>                        a                               dsv:DimensionComponent ,
@@ -125,13 +99,9 @@
                                                                                                         rdfs:comment                    "25 to 30 years"@en ;
                                                                                                         dsv:componentProperty           <http://www.nl-open-data.org/properties-dictionary/25To30Years> ;
                                                                                                         dsv:refersToVariable            var:Age ;
-                                                                                                        dsv:hasAggregationMethod        [
-                                                                                                                dsv:aggregationFunction                 "COUNT"@en ;
-                                                                                                                dsv:aggregationFunctionArgument         <http://www.nl-open-data.org/example-individual-dataset/column/k_25Tot30Jaar_11> 
-                                                                                                        ] ;
                                                                                                         dsv:summaryStatistics           [
-                                                                                                                dsv:completeness                        "1.00"^^xsd:float ;
-                                                                                                                dsv:dataType                            "Numerical"@en ;
+                                                                                                                dsv:completeness                "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         "Numerical"@en ;
                                                                                                         ] .
 
 <http://www.nl-open-data.org/example-aggregated-dataset/column/k_30Tot35Jaar_12>                        a                               dsv:DimensionComponent ,
@@ -140,13 +110,9 @@
                                                                                                         rdfs:comment                    "30 to 35 years"@en ;
                                                                                                         dsv:componentProperty           <http://www.nl-open-data.org/properties-dictionary/30To35Years> ;
                                                                                                         dsv:refersToVariable            var:Age ;
-                                                                                                        dsv:hasAggregationMethod        [
-                                                                                                                dsv:aggregationFunction                 "COUNT"@en ;
-                                                                                                                dsv:aggregationFunctionArgument         <http://www.nl-open-data.org/example-individual-dataset/column/k_30Tot35Jaar_12> 
-                                                                                                        ] ;
                                                                                                         dsv:summaryStatistics           [
-                                                                                                                dsv:completeness                        "1.00"^^xsd:float ;
-                                                                                                                dsv:dataType                            "Numerical"@en ;
+                                                                                                                dsv:completeness                "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         "Numerical"@en ;
                                                                                                         ] .
 
 <http://www.nl-open-data.org/example-aggregated-dataset/column/k_35Tot40Jaar_13>                        a                               dsv:DimensionComponent ,
@@ -155,13 +121,9 @@
                                                                                                         rdfs:comment                    "35 to 40 years"@en ;
                                                                                                         dsv:componentProperty           <http://www.nl-open-data.org/properties-dictionary/35To40Years> ;
                                                                                                         dsv:refersToVariable            var:Age ;
-                                                                                                        dsv:hasAggregationMethod        [
-                                                                                                                dsv:aggregationFunction                 "COUNT"@en ;
-                                                                                                                dsv:aggregationFunctionArgument         <http://www.nl-open-data.org/example-individual-dataset/column/k_35Tot40Jaar_13> 
-                                                                                                        ] ;
                                                                                                         dsv:summaryStatistics           [
-                                                                                                                dsv:completeness                        "1.00"^^xsd:float ;
-                                                                                                                dsv:dataType                            "Numerical"@en ;
+                                                                                                                dsv:completeness                "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         "Numerical"@en ;
                                                                                                         ] .
 
 <http://www.nl-open-data.org/example-aggregated-dataset/column/k_40Tot45Jaar_14>                        a                               dsv:DimensionComponent ,
@@ -170,13 +132,9 @@
                                                                                                         rdfs:comment                    "40 to 45 years"@en ;
                                                                                                         dsv:componentProperty           <http://www.nl-open-data.org/properties-dictionary/40To45Years> ;
                                                                                                         dsv:refersToVariable            var:Age ;
-                                                                                                        dsv:hasAggregationMethod        [
-                                                                                                                dsv:aggregationFunction                 "COUNT"@en ;
-                                                                                                                dsv:aggregationFunctionArgument         <http://www.nl-open-data.org/example-individual-dataset/column/k_40Tot45Jaar_14> 
-                                                                                                        ] ;
                                                                                                         dsv:summaryStatistics           [
-                                                                                                                dsv:completeness                        "1.00"^^xsd:float ;
-                                                                                                                dsv:dataType                            "Numerical"@en ;
+                                                                                                                dsv:completeness                "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         "Numerical"@en ;
                                                                                                         ] .
 
 <http://www.nl-open-data.org/example-aggregated-dataset/column/k_45JaarOfOuder_15>                      a                               dsv:DimensionComponent ,
@@ -185,13 +143,9 @@
                                                                                                         rdfs:comment                    "45 years or older"@en ;
                                                                                                         dsv:componentProperty           <http://www.nl-open-data.org/properties-dictionary/45YearsOrOlder> ;
                                                                                                         dsv:refersToVariable            var:Age ;
-                                                                                                        dsv:hasAggregationMethod        [
-                                                                                                                dsv:aggregationFunction                 "COUNT"@en ;
-                                                                                                                dsv:aggregationFunctionArgument         <http://www.nl-open-data.org/example-individual-dataset/column/k_45JaarOfOuder_15> 
-                                                                                                        ] ;
                                                                                                         dsv:summaryStatistics           [
-                                                                                                                dsv:completeness                        "1.00"^^xsd:float ;
-                                                                                                                dsv:dataType                            "Numerical"@en ;
+                                                                                                                dsv:completeness                "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         "Numerical"@en ;
                                                                                                         ] .
 
 <http://www.nl-open-data.org/example-aggregated-dataset/column/totaalGeboorten_33>                      a                               dsv:DimensionComponent ,
@@ -200,13 +154,9 @@
                                                                                                         rdfs:comment                    "total births"@en ;
                                                                                                         dsv:componentProperty           <http://www.nl-open-data.org/properties-dictionary/totalBirths> ;
                                                                                                         dsv:refersToVariable            var:Birth ;
-                                                                                                        dsv:hasAggregationMethod        [
-                                                                                                                dsv:aggregationFunction                 "COUNT"@en ;
-                                                                                                                dsv:aggregationFunctionArgument         <http://www.nl-open-data.org/example-individual-dataset/column/new-birth-id> 
-                                                                                                        ] ;
                                                                                                         dsv:summaryStatistics           [
-                                                                                                                dsv:completeness                        "1.00"^^xsd:float ;
-                                                                                                                dsv:dataType                            "Numerical"@en ;
+                                                                                                                dsv:completeness                "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         "Numerical"@en ;
                                                                                                         ] .
 
 ###########################################

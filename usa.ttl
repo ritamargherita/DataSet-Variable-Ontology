@@ -3,29 +3,26 @@
 @prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix var:            <http://www.example.org/VariablesVocabulary/> .
 @prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+@prefix wd:             <http://www.wikidata.org/entity/> .
 
 
 ###########################################
 # Dataset USA
 ###########################################
 
-<http://www.usa-open-data.org/example-aggregated-dataset>           a                               dsv:AggregatedDataset ;
+<http://www.usa-open-data.org/example-aggregated-dataset>           a                               dsv:Dataset ;
                                                                     csvw:url                        "https://catalog.data.gov/dataset/nchs-births-and-general-fertility-rates-united-states" ;
-                                                                    dsv:rowsRepresentInstancesOf    var:Birth ;
-                                                                    dsv:aggregationMethod   [
-                                                                        dsv:aggregatedFrom          <http://www.usa-open-data.org/example-individual-dataset> ;
-                                                                        dsv:aggregatedBy            <http://www.usa-open-data.org/example-individual-dataset/column/Year>
+                                                                    dsv:rowsRepresentInstancesOf    wd:Q14819852  ;
+                                                                    dsv:summaryStatistics           [
+                                                                        dsv:numberOfRows                "110"^^xsd:integer ;
+                                                                        dsv:numberOfColumns             "4"^^xsd:integer ;
+                                                                        dsv:completeness                "1.00"^^xsd:float 
                                                                     ] ;
-                                                                    dsv:summaryStatistics   [
-                                                                        dsv:numberOfRows            "110"^^xsd:integer ;
-                                                                        dsv:numberOfColumns         "4"^^xsd:integer ;
-                                                                        dsv:completeness            "1.00"^^xsd:float 
-                                                                    ] ;
-                                                                    dsv:datasetSchema       [
-                                                                        dsv:datasetComponent        <http://www.usa-open-data.org/example-aggregated-dataset/column/Year> ,
-                                                                                                    <http://www.usa-open-data.org/example-aggregated-dataset/column/BirthNumber> ,
-                                                                                                    <http://www.usa-open-data.org/example-aggregated-dataset/column/GeneralFertilityRate> ,
-                                                                                                    <http://www.usa-open-data.org/example-aggregated-dataset/column/CrudeBirthRate> 
+                                                                    dsv:datasetSchema               [
+                                                                        dsv:datasetComponent            <http://www.usa-open-data.org/example-aggregated-dataset/column/Year> ,
+                                                                                                        <http://www.usa-open-data.org/example-aggregated-dataset/column/BirthNumber> ,
+                                                                                                        <http://www.usa-open-data.org/example-aggregated-dataset/column/GeneralFertilityRate> ,
+                                                                                                        <http://www.usa-open-data.org/example-aggregated-dataset/column/CrudeBirthRate> 
                                                                     ] .
 
 ###########################################
@@ -37,13 +34,9 @@
                                                                                             rdfs:label                  "Year"@en ;
                                                                                             dsv:componentProperty       <http://www.usa-open-data.org/properties-dictionary/year> ;
                                                                                             dsv:refersToVariable        var:YearCoverage ;
-                                                                                            dsv:hasAggregationMethod    [
-                                                                                                dsv:aggregationFunction             "GROUP BY"@en ;
-                                                                                                dsv:aggregationFunctionArgument     <http://www.usa-open-data.org/example-individual-dataset/column/Year> 
-                                                                                            ] ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:completeness                    "1.00"^^xsd:float ;
-                                                                                                dsv:dataType                        "Numerical"@en ;
+                                                                                                dsv:completeness            "1.00"^^xsd:float ;
+                                                                                                dsv:statisticalDataType     "Numerical"@en ;
                                                                                             ] .
 
 <http://www.usa-open-data.org/example-aggregated-dataset/column/BirthNumber>                a                           dsv:DimensionComponent ,
@@ -51,13 +44,9 @@
                                                                                             rdfs:label                  "Birth Number"@en ;
                                                                                             dsv:componentProperty       <http://www.usa-open-data.org/properties-dictionary/birthNumber> ;
                                                                                             dsv:refersToVariable        var:Birth ;
-                                                                                            dsv:hasAggregationMethod    [
-                                                                                                dsv:aggregationFunction             "COUNT"@en ;
-                                                                                                dsv:aggregationFunctionArgument     <http://www.usa-open-data.org/example-individual-dataset/column/new-birth-id> 
-                                                                                            ] ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:completeness                    "1.00"^^xsd:float ;
-                                                                                                dsv:dataType                        "Numerical"@en ;
+                                                                                                dsv:completeness            "1.00"^^xsd:float ;
+                                                                                                dsv:statisticalDataType     "Numerical"@en ;
                                                                                             ] .
 
 <http://www.usa-open-data.org/example-aggregated-dataset/column/GeneralFertilityRate>       a                           dsv:DimensionComponent ,
@@ -66,8 +55,8 @@
                                                                                             dsv:componentProperty       <http://www.usa-open-data.org/properties-dictionary/generalFertilityRate> ;
                                                                                             dsv:refersToVariable        var:FertilityRate ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:completeness                    "1.00"^^xsd:float ;
-                                                                                                dsv:dataType                        "Numerical"@en ;
+                                                                                                dsv:completeness            "1.00"^^xsd:float ;
+                                                                                                dsv:statisticalDataType     "Numerical"@en ;
                                                                                             ] .
 
 <http://www.usa-open-data.org/example-aggregated-dataset/column/CrudeBirthRate>             a                           dsv:DimensionComponent ,
@@ -76,8 +65,8 @@
                                                                                             dsv:componentProperty       <http://www.usa-open-data.org/properties-dictionary/crudeBirthRate> ;
                                                                                             dsv:refersToVariable        var:Birth ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:completeness                    "1.00"^^xsd:float ;
-                                                                                                dsv:dataType                        "Numerical"@en ;
+                                                                                                dsv:completeness            "1.00"^^xsd:float ;
+                                                                                                dsv:statisticalDataType     "Numerical"@en ;
                                                                                             ] .
 
 ###########################################

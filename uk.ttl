@@ -4,44 +4,33 @@
 @prefix var:            <http://www.example.org/VariablesVocabulary/> .
 @prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
 @prefix dbpedia-owl:    <http://dbpedia.org/ontology/> .
+@prefix wd:             <http://www.wikidata.org/entity/> .
 
 
 ###########################################
 # Dataset United Kingdom
 ###########################################
 
-<http://www.uk-open-data.org/example-aggregated-dataset>        a                               dsv:AggregatedDataset ;
+<http://www.uk-open-data.org/example-aggregated-dataset>        a                               dsv:Dataset ;
                                                                 csvw:url                        "https://www.data.gov.uk/dataset/dab5dccd-4d0e-4b40-b333-178e13ce49fe/annual-births-by-age-of-mother" ;
-                                                                dsv:rowsRepresentInstancesOf    var:Birth ;
-                                                                dsv:aggregationMethod   [
-                                                                    dsv:aggregatedFrom          <http://www.uk-open-data.org/example-individual-dataset> ;
-                                                                    dsv:aggregatedBy            <http://www.uk-open-data.org/example-individual-dataset/column/year> ,
-                                                                                                <http://www.uk-open-data.org/example-individual-dataset/column/rgn20cd> ,
-                                                                                                <http://www.uk-open-data.org/example-individual-dataset/column/rgn20nm> ,
-                                                                                                <http://www.uk-open-data.org/example-individual-dataset/column/lad20cd> ,
-                                                                                                <http://www.uk-open-data.org/example-individual-dataset/column/lad20nm> ,
-                                                                                                <http://www.uk-open-data.org/example-individual-dataset/column/wd20cd> ,
-                                                                                                <http://www.uk-open-data.org/example-individual-dataset/column/wd20nm> ,
-                                                                                                <http://www.uk-open-data.org/example-individual-dataset/column/ageOfMother> ,
-                                                                                                <http://www.uk-open-data.org/example-individual-dataset/column/sex> 
+                                                                dsv:rowsRepresentInstancesOf    wd:Q14819852 ;
+                                                                dsv:summaryStatistics           [
+                                                                    dsv:numberOfRows                "962760"^^xsd:integer ;
+                                                                    dsv:numberOfColumns             "10"^^xsd:integer ;
+                                                                    dsv:completeness                "0.98"^^xsd:float ;
+                                                                    dsv:missingValuesFormat         "NA"^^xsd:string
                                                                 ] ;
-                                                                dsv:summaryStatistics   [
-                                                                    dsv:numberOfRows            "962760"^^xsd:integer ;
-                                                                    dsv:numberOfColumns         "10"^^xsd:integer ;
-                                                                    dsv:completeness            "0.98"^^xsd:float ;
-                                                                    dsv:missingValuesFormat     "NA"^^xsd:string
-                                                                ] ;
-                                                                dsv:datasetSchema       [
-                                                                    dsv:datasetComponent        <http://www.uk-open-data.org/example-aggregated-dataset/column/year> ,
-                                                                                                <http://www.uk-open-data.org/example-aggregated-dataset/column/rgn20cd> ,
-                                                                                                <http://www.uk-open-data.org/example-aggregated-dataset/column/rgn20nm> ,
-                                                                                                <http://www.uk-open-data.org/example-aggregated-dataset/column/lad20cd> ,
-                                                                                                <http://www.uk-open-data.org/example-aggregated-dataset/column/lad20nm> ,
-                                                                                                <http://www.uk-open-data.org/example-aggregated-dataset/column/wd20cd> ,
-                                                                                                <http://www.uk-open-data.org/example-aggregated-dataset/column/wd20nm> ,
-                                                                                                <http://www.uk-open-data.org/example-aggregated-dataset/column/ageOfMother> ,
-                                                                                                <http://www.uk-open-data.org/example-aggregated-dataset/column/sex> ,
-                                                                                                <http://www.uk-open-data.org/example-aggregated-dataset/column/births> 
+                                                                dsv:datasetSchema               [
+                                                                    dsv:datasetComponent            <http://www.uk-open-data.org/example-aggregated-dataset/column/year> ,
+                                                                                                    <http://www.uk-open-data.org/example-aggregated-dataset/column/rgn20cd> ,
+                                                                                                    <http://www.uk-open-data.org/example-aggregated-dataset/column/rgn20nm> ,
+                                                                                                    <http://www.uk-open-data.org/example-aggregated-dataset/column/lad20cd> ,
+                                                                                                    <http://www.uk-open-data.org/example-aggregated-dataset/column/lad20nm> ,
+                                                                                                    <http://www.uk-open-data.org/example-aggregated-dataset/column/wd20cd> ,
+                                                                                                    <http://www.uk-open-data.org/example-aggregated-dataset/column/wd20nm> ,
+                                                                                                    <http://www.uk-open-data.org/example-aggregated-dataset/column/ageOfMother> ,
+                                                                                                    <http://www.uk-open-data.org/example-aggregated-dataset/column/sex> ,
+                                                                                                    <http://www.uk-open-data.org/example-aggregated-dataset/column/births> 
                                                                 ] .
 
 ###########################################
@@ -53,13 +42,9 @@
                                                                                 rdfs:label                      "year"@en ;
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/year> ;
                                                                                 dsv:refersToVariable            var:YearCoverage ;
-                                                                                dsv:hasAggregationMethod        [
-                                                                                    dsv:aggregationFunction             "GROUP BY"@en ;
-                                                                                    dsv:aggregationFunctionArgument     <http://www.uk-open-data.org/example-individual-dataset/column/year> 
-                                                                                ] ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:completeness                    "1.00"^^xsd:float ;
-                                                                                    dsv:dataType                        "Numerical"@en ;
+                                                                                    dsv:completeness                "1.00"^^xsd:float ;
+                                                                                    dsv:statisticalDataType         "Numerical"@en ;
                                                                                 ] .
 
 <http://www.uk-open-data.org/example-aggregated-dataset/column/rgn20cd>         a                               dsv:DimensionComponent ,
@@ -67,14 +52,10 @@
                                                                                 rdfs:label                      "RGN20CD"@en ;
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/rgn20cd> ;
                                                                                 dsv:refersToVariable            var:GeoLocation ;
-                                                                                dsv:hasAggregationMethod        [
-                                                                                    dsv:aggregationFunction             "GROUP BY"@en ;
-                                                                                    dsv:aggregationFunctionArgument     <http://www.uk-open-data.org/example-individual-dataset/column/rgn20cd> 
-                                                                                ] ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:completeness                    "0.89"^^xsd:float ;
-                                                                                    dsv:missingValuesFormat             "NA"^^xsd:string ;
-                                                                                    dsv:dataType                        "Categorical"@en ;
+                                                                                    dsv:completeness                "0.89"^^xsd:float ;
+                                                                                    dsv:missingValuesFormat         "NA"^^xsd:string ;
+                                                                                    dsv:statisticalDataType         "Categorical"@en ;
                                                                                 ] .
 
 <http://www.uk-open-data.org/example-aggregated-dataset/column/rgn20nm>         a                               dsv:DimensionComponent ,
@@ -82,14 +63,10 @@
                                                                                 rdfs:label                      "RGN20NM"@en ;
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/rgn20nm> ;
                                                                                 dsv:refersToVariable            var:GeoLocation ;
-                                                                                dsv:hasAggregationMethod        [
-                                                                                    dsv:aggregationFunction             "GROUP BY"@en ;
-                                                                                    dsv:aggregationFunctionArgument     <http://www.uk-open-data.org/example-individual-dataset/column/rgn20nm> 
-                                                                                ] ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:completeness                    "0.89"^^xsd:float ;
-                                                                                    dsv:missingValuesFormat             "NA"^^xsd:string ;
-                                                                                    dsv:dataType                        "Categorical"@en ;
+                                                                                    dsv:completeness                "0.89"^^xsd:float ;
+                                                                                    dsv:missingValuesFormat         "NA"^^xsd:string ;
+                                                                                    dsv:statisticalDataType         "Categorical"@en ;
                                                                                 ] .
 
 <http://www.uk-open-data.org/example-aggregated-dataset/column/lad20cd>         a                               dsv:DimensionComponent ,
@@ -97,13 +74,9 @@
                                                                                 rdfs:label                      "LAD20CD"@en ;
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/lad20cd> ;
                                                                                 dsv:refersToVariable            var:GeoLocation ;
-                                                                                dsv:hasAggregationMethod        [
-                                                                                    dsv:aggregationFunction             "GROUP BY"@en ;
-                                                                                    dsv:aggregationFunctionArgument     <http://www.uk-open-data.org/example-individual-dataset/column/lad20cd> 
-                                                                                ] ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:completeness                    "1.00"^^xsd:float ;
-                                                                                    dsv:dataType                        "Categorical"@en ;
+                                                                                    dsv:completeness                "1.00"^^xsd:float ;
+                                                                                    dsv:statisticalDataType         "Categorical"@en ;
                                                                                 ] .
 
 <http://www.uk-open-data.org/example-aggregated-dataset/column/lad20nm>         a                               dsv:DimensionComponent ,
@@ -111,13 +84,9 @@
                                                                                 rdfs:label                      "LAD20NM"@en ;
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/lad20nm> ;
                                                                                 dsv:refersToVariable            var:GeoLocation ;
-                                                                                dsv:hasAggregationMethod        [
-                                                                                    dsv:aggregationFunction             "GROUP BY"@en ;
-                                                                                    dsv:aggregationFunctionArgument     <http://www.uk-open-data.org/example-individual-dataset/column/lad20nm> 
-                                                                                ] ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:completeness                    "1.00"^^xsd:float ;
-                                                                                    dsv:dataType                        "Categorical"@en ;
+                                                                                    dsv:completeness                "1.00"^^xsd:float ;
+                                                                                    dsv:statisticalDataType         "Categorical"@en ;
                                                                                 ] .
 
 <http://www.uk-open-data.org/example-aggregated-dataset/column/wd20cd>          a                               dsv:DimensionComponent ,
@@ -125,13 +94,9 @@
                                                                                 rdfs:label                      "WD20CD"@en ;
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/wd20cd> ;
                                                                                 dsv:refersToVariable            var:GeoLocation ;
-                                                                                dsv:hasAggregationMethod        [
-                                                                                    dsv:aggregationFunction             "GROUP BY"@en ;
-                                                                                    dsv:aggregationFunctionArgument     <http://www.uk-open-data.org/example-individual-dataset/column/wd20cd> 
-                                                                                ] ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:completeness                    "1.00"^^xsd:float ;
-                                                                                    dsv:dataType                        "Categorical"@en ;
+                                                                                    dsv:completeness                "1.00"^^xsd:float ;
+                                                                                    dsv:statisticalDataType         "Categorical"@en ;
                                                                                 ] .
 
 <http://www.uk-open-data.org/example-aggregated-dataset/column/wd20nm>          a                               dsv:DimensionComponent ,
@@ -139,13 +104,9 @@
                                                                                 rdfs:label                      "WD20NM"@en ;
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/wd20nm> ;
                                                                                 dsv:refersToVariable            var:GeoLocation ;
-                                                                                dsv:hasAggregationMethod        [
-                                                                                    dsv:aggregationFunction             "GROUP BY"@en ;
-                                                                                    dsv:aggregationFunctionArgument     <http://www.uk-open-data.org/example-individual-dataset/column/wd20nm> 
-                                                                                ] ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:completeness                    "1.00"^^xsd:float ;
-                                                                                    dsv:dataType                        "Categorical"@en ;
+                                                                                    dsv:completeness                "1.00"^^xsd:float ;
+                                                                                    dsv:statisticalDataType         "Categorical"@en ;
                                                                                 ] .
 
 <http://www.uk-open-data.org/example-aggregated-dataset/column/ageOfMother>     a                               dsv:DimensionComponent ,
@@ -153,13 +114,9 @@
                                                                                 rdfs:label                      "age_of_mother"@en ;
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/ageOfMother> ;
                                                                                 dsv:refersToVariable            var:Age ;
-                                                                                dsv:hasAggregationMethod        [
-                                                                                    dsv:aggregationFunction             "GROUP BY"@en ;
-                                                                                    dsv:aggregationFunctionArgument     <http://www.uk-open-data.org/example-individual-dataset/column/ageOfMother> 
-                                                                                ] ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:completeness                    "1.00"^^xsd:float ;
-                                                                                    dsv:dataType                        "Categorical"@en ;
+                                                                                    dsv:completeness                "1.00"^^xsd:float ;
+                                                                                    dsv:statisticalDataType         "Categorical"@en ;
                                                                                 ] .
 
 <http://www.uk-open-data.org/example-aggregated-dataset/column/sex>             a                               dsv:DimensionComponent ,
@@ -167,13 +124,9 @@
                                                                                 rdfs:label                      "sex"@en ;
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/sex> ;
                                                                                 dsv:refersToVariable            var:Gender ;
-                                                                                dsv:hasAggregationMethod        [
-                                                                                    dsv:aggregationFunction             "GROUP BY"@en ;
-                                                                                    dsv:aggregationFunctionArgument     <http://www.uk-open-data.org/example-individual-dataset/column/sex> 
-                                                                                ] ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:completeness                    "1.00"^^xsd:float ;
-                                                                                    dsv:dataType                        "Categorical"@en ;
+                                                                                    dsv:completeness                "1.00"^^xsd:float ;
+                                                                                    dsv:statisticalDataType         "Categorical"@en ;
                                                                                 ] .
 
 <http://www.uk-open-data.org/example-aggregated-dataset/column/births>          a                               dsv:DimensionComponent ,
@@ -181,13 +134,9 @@
                                                                                 rdfs:label                      "births"@en ;
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/births> ;
                                                                                 dsv:refersToVariable            var:Birth ;
-                                                                                dsv:hasAggregationMethod        [
-                                                                                    dsv:aggregationFunction             "COUNT"@en ;
-                                                                                    dsv:aggregationFunctionArgument     <http://www.uk-open-data.org/example-individual-dataset/column/new-birth-id> 
-                                                                                ] ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:completeness                    "1.00"^^xsd:float ;
-                                                                                    dsv:dataType                        "Numerical"@en ;
+                                                                                    dsv:completeness                "1.00"^^xsd:float ;
+                                                                                    dsv:statisticalDataType         "Numerical"@en ;
                                                                                 ] .
 
 ###########################################

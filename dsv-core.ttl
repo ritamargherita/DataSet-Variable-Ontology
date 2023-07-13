@@ -29,18 +29,7 @@ dsv:DimensionComponent          a                   owl:Class ;
 
 dsv:Variable                    a                   owl:Class .
 
-dsv:Aggregation                 a                   owl:Class ;
-                                rdfs:subClassOf     dm:Anonymization .
-
 dsv:SummaryStatistics           a                   owl:Class .
-
-###########################################
-# Instances of Classes
-###########################################
-
-dsv:IndividualDataset           a                   dsv:Dataset .
-
-dsv:AggregatedDataset           a                   dsv:Dataset .
 
 ###########################################
 # Object Properties
@@ -75,25 +64,9 @@ dsv:subVariableOf                   a                   owl:ObjectProperty ;
                                     rdfs:domain         dsv:Variable ;
                                     rdfs:range          dsv:Variable .
 
-dsv:aggregationMethod               a                   owl:ObjectProperty ;
-                                    rdfs:domain         dsv:DimensionComponent ;
-                                    rdfs:range          dsv:Aggregation .
-
 dsv:rowsRepresentInstancesOf        a                   owl:ObjectProperty ;
                                     rdfs:domain         dsv:DatasetSchema ;
                                     rdfs:range          owl:Class .
-
-dsv:aggregatedFrom                  a                   owl:ObjectProperty ;
-                                    rdfs:domain         dsv:Aggregation ;
-                                    rdfs:range          dsv:Dataset .
-
-dsv:aggregatedBy                    a                   owl:ObjectProperty ;
-                                    rdfs:domain         dsv:Aggregation ;
-                                    rdfs:range          dsv:DimensionComponent .
-
-dsv:aggregationFunctionArgument     a                   owl:ObjectProperty ;
-                                    rdfs:domain         dsv:Aggregation ;
-                                    rdfs:range          dsv:DimensionComponent .
 
 dsv:summaryStatistics               a                   owl:ObjectProperty ;
                                     rdfs:domain         dsv:Dataset ,
@@ -103,10 +76,6 @@ dsv:summaryStatistics               a                   owl:ObjectProperty ;
 ###########################################
 # Data Properties
 ###########################################   
-
-dsv:aggregationFunction             a                   owl:DataProperty ;
-                                    rdfs:domain         dsv:Aggregation ;
-                                    rdfs:range          xsd:string . 
 
 dsv:numberOfColumns                 a                   owl:DataProperty ;
                                     rdfs:domain         dsv:SummaryStatistics ;
