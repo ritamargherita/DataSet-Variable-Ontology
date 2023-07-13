@@ -170,7 +170,7 @@ WHERE {
 PREFIX dsv: 	<http://www.example.org/datasetVariableOntology/>
 PREFIX rdfs: 	<http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT DISTINCT ?dataset2 ?rowsRepresentation 
+SELECT DISTINCT ?dataset2  
 WHERE {
     ?dataset2		a 	                            dsv:AggregatedDataset ;
                		dsv:rowsRepresentInstancesOf	?rowsRepresentation
