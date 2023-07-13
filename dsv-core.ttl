@@ -95,7 +95,7 @@ dsv:completeness                    a                   owl:DataProperty ;
                                     rdfs:domain         dsv:SummaryStatistics ;
                                     rdfs:range          xsd:string .
 
-dsv:dataType                        a                   owl:DataProperty ;
+dsv:statisticalDataType             a                   owl:DataProperty ;
                                     rdfs:domain         dsv:SummaryStatistics ;
                                     rdfs:range          xsd:string . 
 
