@@ -12,7 +12,7 @@
 
 <http://www.nl-open-data.org/example-aggregated-dataset>        a                               dsv:AggregatedDataset ;
                                                                 csvw:url                        "https://opendata.cbs.nl/statline/portal.html?_la=nl&_catalog=CBS&tableId=37422ned&_theme=62" ;
-                                                                dsv:rowsRepresentInstancesOf    var:Birth  ;
+                                                                dsv:rowsRepresentInstancesOf    var:Birth  ; # here it represents the individual 
                                                                 dsv:aggregationMethod   [
                                                                         dsv:aggregatedFrom              <http://www.nl-open-data.org/example-individual-dataset> ;
                                                                         dsv:aggregatedBy                <http://www.nl-open-data.org/example-individual-dataset/column/perioden> ,
@@ -42,6 +42,7 @@
                                                                                                         <http://www.nl-open-data.org/example-aggregated-dataset/column/k_45JaarOfOuder_15> ,
                                                                                                         <http://www.nl-open-data.org/example-aggregated-dataset/column/totaalGeboorten_33> 
                                                                 ] .
+
 
 ###########################################
 # Dataset Netherlands - Columns
@@ -107,7 +108,7 @@
                                                                                                                                         csvw:Column ;
                                                                                                         rdfs:label                      "k_20Tot25Jaar_10"@nl ;
                                                                                                         rdfs:comment                    "20 to 25 years"@en ;
-                                                                                                        dsv:componentProperty           <http://www.nl-open-data.org/properties-dictionary/20To25Years> ;
+                                                                                                        dsv:componentProperty           <http://www.nl-open-data.org/properties-dictionary/20To25Years> ; # to remove
                                                                                                         dsv:refersToVariable            var:Age ;
                                                                                                         dsv:hasAggregationMethod        [
                                                                                                                 dsv:aggregationFunction                 "COUNT"@en ;
@@ -245,7 +246,7 @@
                                                                                         <http://www.nl-open-data.org/properties-dictionary/hasMother> 
                                                                                         <http://www.nl-open-data.org/properties-dictionary/hasAgeGroup> ) ;
                                                                                 dsv:linksToVariable     var:Age ;
-                                                                                rdfs:domain             var:Birth ;
+                                                                                rdfs:domain             dsv:AggregationGroup ; #new class
                                                                                 rdfs:range              xsd:int .
 
 <http://www.nl-open-data.org/properties-dictionary/25To30Years>                 a                       rdf:Property ;
