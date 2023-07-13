@@ -10,7 +10,7 @@
 # Dataset USA
 ###########################################
 
-<http://www.usa-open-data.org/example-aggregated-dataset>           a                               dsv:Dataset ;
+<http://www.usa-open-data.org/example-aggregated-dataset>           a                               dsv:AggregatedDataset ;
                                                                     csvw:url                        "https://catalog.data.gov/dataset/nchs-births-and-general-fertility-rates-united-states" ;
                                                                     dsv:rowsRepresentInstancesOf    wd:Q14819852  ;
                                                                     dsv:summaryStatistics           [

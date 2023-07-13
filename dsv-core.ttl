@@ -20,6 +20,12 @@ dsv:Dataset                     a                   owl:Class ;
                                 rdfs:subClassOf     qb:DataSet ,
                                                     csvw:Table .              
 
+dsv:AggregatedDataset           a                   owl:Class ;
+                                rdfs:subClassOf     dsv:Dataset .
+
+dsv:IndividualDataset           a                   owl:Class ;
+                                rdfs:subClassOf     dsv:Dataset .
+                                
 dsv:DatasetSchema               a                   owl:Class ;
                                 rdfs:subClassOf     qb:DataStructureDefinition ,
                                                     csvw:TableSchema .

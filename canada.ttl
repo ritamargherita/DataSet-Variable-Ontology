@@ -10,7 +10,7 @@
 # Dataset Canada 
 ###########################################
 
-<http://www.canada-open-data.org/example-aggregated-dataset>        a                               dsv:Dataset ;
+<http://www.canada-open-data.org/example-aggregated-dataset>        a                               dsv:AggregatedDataset ;
                                                                     csvw:url                        "https://open.canada.ca/data/en/dataset/1367e3a6-02f1-496f-9c0f-d078dbdd58d0" ;
                                                                     dsv:rowsRepresentInstancesOf    wd:Q66057507 ;
                                                                     dsv:summaryStatistics           [

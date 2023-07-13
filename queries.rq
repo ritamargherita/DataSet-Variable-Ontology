@@ -42,7 +42,7 @@ WHERE {
     ?datasetSchema														dsv:datasetComponent	?column .
     ?column																rdfs:label				?colLabel ;
                            												dsv:summaryStatistics	?colStats .
-    ?colStats															dsv:dataType 			?dataType .
+    ?colStats															dsv:statisticalDataType ?dataType .
 }
 
 

@@ -11,7 +11,7 @@
 # Dataset Netherlands
 ###########################################
 
-<http://www.nl-open-data.org/example-aggregated-dataset>        a                               dsv:Dataset ;
+<http://www.nl-open-data.org/example-aggregated-dataset>        a                               dsv:AggregatedDataset ;
                                                                 csvw:url                        "https://opendata.cbs.nl/statline/portal.html?_la=nl&_catalog=CBS&tableId=37422ned&_theme=62" ;
                                                                 dsv:rowsRepresentInstancesOf    wd:Q14819852 ;
                                                                 dsv:summaryStatistics           [
