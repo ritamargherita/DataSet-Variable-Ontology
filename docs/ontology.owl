@@ -1,0 +1,623 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/dsv-ontology#"
+     xml:base="https://w3id.org/dsv-ontology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/dsv-ontology#">
+        <dc:contributor xml:lang="en">The DataSet-Variable Ontology is part of the work of the ODISSEI project, funded by the Netherlands Organisation of Scientific Research (NWO), ODISSEI Roadmap project: 184.035.014.</dc:contributor>
+        <dc:creator xml:lang="en">Jacco van Ossenbruggen</dc:creator>
+        <dc:creator xml:lang="en">Margherita Martorana</dc:creator>
+        <dc:creator xml:lang="en">Ronald Siebes</dc:creator>
+        <dc:creator xml:lang="en">Tobias Kuhn</dc:creator>
+        <dc:rights xml:lang="en">The DataSet-Variable Ontology Ontology is available under the Creative Commons Attribution 4.0 license; see http://creativecommons.org/licenses/by/4.0/.</dc:rights>
+        <dc:subject xml:lang="en">Dataset, Variable</dc:subject>
+        <dc:title xml:lang="en">The DataSet-Variable Ontology</dc:title>
+        <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <vann:preferredNamespacePrefix>dsv</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/dsv-ontology#</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">Ontology for describing relationships between datasets and variables.</rdfs:comment>
+        <rdfs:comment>Ontology for describing relationships between datasets and variables.</rdfs:comment>
+        <rdfs:label xml:lang="en">DataSet-Variable Ontology</rdfs:label>
+        <rdfs:label>DataSet-Variable Ontology.</rdfs:label>
+        <owl:versionInfo xml:lang="en">V1.0 - 2023 Release</owl:versionInfo>
+        <foaf:homepage rdf:resource="https://w3id.org/dsv-ontology"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/subject -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/subject"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/homepage -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/TR/vocab-data-cube/component -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/TR/vocab-data-cube/component"/>
+    
+
+
+    <!-- http://www.w3.org/TR/vocab-data-cube/dimension -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/TR/vocab-data-cube/dimension"/>
+    
+
+
+    <!-- http://www.w3.org/TR/vocab-data-cube/structure -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/TR/vocab-data-cube/structure"/>
+    
+
+
+    <!-- http://www.w3.org/ns/csvw#propertyUrl -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/csvw#propertyUrl"/>
+    
+
+
+    <!-- http://www.w3.org/ns/csvw#tableSchema -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/csvw#tableSchema"/>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#componentProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dsv-ontology#componentProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/TR/vocab-data-cube/dimension"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/csvw#propertyUrl"/>
+        <rdfs:domain rdf:resource="https://w3id.org/dsv-ontology#DimensionComponent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:comment>Property linking a component to a property.</rdfs:comment>
+        <rdfs:label>component property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#datasetSchema -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dsv-ontology#datasetSchema">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/TR/vocab-data-cube/structure"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/csvw#tableSchema"/>
+        <rdfs:domain rdf:resource="https://w3id.org/dsv-ontology#Dataset"/>
+        <rdfs:range rdf:resource="https://w3id.org/dsv-ontology#DatasetSchema"/>
+        <rdfs:comment>Property linking the dataset to its schema.</rdfs:comment>
+        <rdfs:label>dataset schema</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#dimensionComponent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dsv-ontology#dimensionComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/TR/vocab-data-cube/component"/>
+        <rdfs:domain rdf:resource="https://w3id.org/dsv-ontology#DatasetSchema"/>
+        <rdfs:range rdf:resource="https://w3id.org/dsv-ontology#DimensionComponent"/>
+        <rdfs:comment>Property linking the dataset schema to its components.</rdfs:comment>
+        <rdfs:label>dimension component</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#linksToVariable -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dsv-ontology#linksToVariable">
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:range rdf:resource="https://w3id.org/dsv-ontology#Variable"/>
+        <rdfs:comment>Property linking a property of a component to a variable.</rdfs:comment>
+        <rdfs:label>links to variable</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#refersToVariable -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dsv-ontology#refersToVariable">
+        <rdfs:domain rdf:resource="https://w3id.org/dsv-ontology#DimensionComponent"/>
+        <rdfs:range rdf:resource="https://w3id.org/dsv-ontology#Variable"/>
+        <rdfs:comment>Property linking a component to a variable.</rdfs:comment>
+        <rdfs:label>refers to variable</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#rowsRepresentInstancesOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dsv-ontology#rowsRepresentInstancesOf">
+        <rdfs:domain rdf:resource="https://w3id.org/dsv-ontology#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:comment>Property linking a dataset to the conceptual representation of its rows.</rdfs:comment>
+        <rdfs:label>rows represent instances of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#statisticalDataType -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dsv-ontology#statisticalDataType">
+        <rdfs:domain rdf:resource="https://w3id.org/dsv-ontology#SummaryStatistics"/>
+        <rdfs:range rdf:resource="https://w3id.org/dsv-ontology#StatisticalDataType"/>
+        <rdfs:comment>Property linking a component to its statistical data type.</rdfs:comment>
+        <rdfs:label>statistical data type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#subVariableOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dsv-ontology#subVariableOf">
+        <rdfs:domain rdf:resource="https://w3id.org/dsv-ontology#Variable"/>
+        <rdfs:range rdf:resource="https://w3id.org/dsv-ontology#Variable"/>
+        <rdfs:comment>Property linking a variable to its sub-variable.</rdfs:comment>
+        <rdfs:label>sub-variable of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#summaryStatistics -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dsv-ontology#summaryStatistics">
+        <rdfs:domain rdf:resource="https://w3id.org/dsv-ontology#Dataset"/>
+        <rdfs:domain rdf:resource="https://w3id.org/dsv-ontology#DimensionComponent"/>
+        <rdfs:range rdf:resource="https://w3id.org/dsv-ontology#SummaryStatistics"/>
+        <rdfs:comment>Property linking a dataset or a component to their summary statistics.</rdfs:comment>
+        <rdfs:label>summary statistics</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#completeness -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/dsv-ontology#completeness">
+        <rdfs:domain rdf:resource="https://w3id.org/dsv-ontology#SummaryStatistics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#missingValueFormat -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/dsv-ontology#missingValueFormat">
+        <rdfs:domain rdf:resource="https://w3id.org/dsv-ontology#SummaryStatistics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#numberOfColumns -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/dsv-ontology#numberOfColumns">
+        <rdfs:domain rdf:resource="https://w3id.org/dsv-ontology#SummaryStatistics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#numberOfRows -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/dsv-ontology#numberOfRows">
+        <rdfs:domain rdf:resource="https://w3id.org/dsv-ontology#SummaryStatistics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Property -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Class -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#DataProperty -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#DataProperty"/>
+    
+
+
+    <!-- http://www.w3.org/TR/vocab-data-cube/ComponentSpecification -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/TR/vocab-data-cube/ComponentSpecification"/>
+    
+
+
+    <!-- http://www.w3.org/TR/vocab-data-cube/DataSet -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/TR/vocab-data-cube/DataSet"/>
+    
+
+
+    <!-- http://www.w3.org/TR/vocab-data-cube/DataStructureDefinition -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/TR/vocab-data-cube/DataStructureDefinition"/>
+    
+
+
+    <!-- http://www.w3.org/ns/csvw#Table -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/csvw#Table"/>
+    
+
+
+    <!-- http://www.w3.org/ns/csvw#TableSchema -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/csvw#TableSchema"/>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#AggregatedDataset -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dsv-ontology#AggregatedDataset">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dsv-ontology#Dataset"/>
+        <rdfs:comment>Set of data that has been aggregated over an individual - or unaggregated - set of data.</rdfs:comment>
+        <rdfs:label>Aggregated Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#Dataset -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dsv-ontology#Dataset">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/vocab-data-cube/DataSet"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/csvw#Table"/>
+        <rdfs:comment>Set of data.</rdfs:comment>
+        <rdfs:label>Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#DatasetSchema -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dsv-ontology#DatasetSchema">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/vocab-data-cube/DataStructureDefinition"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/csvw#TableSchema"/>
+        <rdfs:comment>The structural schema of a dataset.</rdfs:comment>
+        <rdfs:label>Dataset Schema</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#DimensionComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dsv-ontology#DimensionComponent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/vocab-data-cube/ComponentSpecification"/>
+        <rdfs:comment>Set of individual component of a dataset.</rdfs:comment>
+        <rdfs:label>Dimension Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#IndividualDataset -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dsv-ontology#IndividualDataset">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dsv-ontology#Dataset"/>
+        <rdfs:comment>Set of data that can be aggregated over. Usually representing the raw data. </rdfs:comment>
+        <rdfs:label>Individual Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#IntervalStatisticalDataType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dsv-ontology#IntervalStatisticalDataType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dsv-ontology#QuantitativeStatisticalDataType"/>
+        <rdfs:comment>Statistical data type representing ordered data measured over a numerical scale with equal distance between units.</rdfs:comment>
+        <rdfs:label>Interval Statistical Data Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#NominalStatisticalDataType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dsv-ontology#NominalStatisticalDataType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dsv-ontology#QualitativeStatisticalDataType"/>
+        <rdfs:comment>Statistical data type representing discrete units that cannot be ordered or measured.</rdfs:comment>
+        <rdfs:label>Nominal Statistical Data Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#OrdinalStatisticalDataType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dsv-ontology#OrdinalStatisticalDataType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dsv-ontology#QualitativeStatisticalDataType"/>
+        <rdfs:comment>Statistical data type representing discrete units that can be ordered or measured.</rdfs:comment>
+        <rdfs:label>Ordinal Statistical Data Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#QualitativeStatisticalDataType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dsv-ontology#QualitativeStatisticalDataType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dsv-ontology#StatisticalDataType"/>
+        <rdfs:comment>Set of statistical data types can be observed and - or - categorised.</rdfs:comment>
+        <rdfs:label>Qualitative Statistical Data Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#QuantitativeStatisticalDataType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dsv-ontology#QuantitativeStatisticalDataType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dsv-ontology#StatisticalDataType"/>
+        <rdfs:comment>Set of statistical data types can be measured and quantified.</rdfs:comment>
+        <rdfs:label>Quantitative Statistical Data Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#RatioStatisticalDataType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dsv-ontology#RatioStatisticalDataType">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dsv-ontology#QuantitativeStatisticalDataType"/>
+        <rdfs:comment>Statistical data type representing ordered data with equal distance between units, where negative values are not allowed.</rdfs:comment>
+        <rdfs:label>Ratio Statistical Data Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#StatisticalDataType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dsv-ontology#StatisticalDataType">
+        <rdfs:comment>Set of statistical data types.</rdfs:comment>
+        <rdfs:label>Statistical Data Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#SummaryStatistics -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dsv-ontology#SummaryStatistics">
+        <rdfs:comment>Set of summary statistics about the dataset or column.</rdfs:comment>
+        <rdfs:label>Summary Statistics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#Variable -->
+
+
+    <owl:Class rdf:about="https://w3id.org/dsv-ontology#Variable">
+        <rdfs:comment>The variable described by a dimension of the dataset.</rdfs:comment>
+        <rdfs:label>Variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#completeness -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dsv-ontology#completeness">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#missingValueFormat -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dsv-ontology#missingValueFormat">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#numberOfColumns -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dsv-ontology#numberOfColumns">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dsv-ontology#numberOfRows -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dsv-ontology#numberOfRows">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/dsv-ontology#completeness">
+        <rdfs:comment>Property linking a dataset or a component to their summary statistics.</rdfs:comment>
+        <rdfs:label>completeness</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/dsv-ontology#missingValueFormat">
+        <rdfs:comment>Property linking a dataset or a component to their summary statistics.</rdfs:comment>
+        <rdfs:label>missing value format</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/dsv-ontology#numberOfColumns">
+        <rdfs:comment>Property linking a dataset or a component to their summary statistics.</rdfs:comment>
+        <rdfs:label>number of columns</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/dsv-ontology#numberOfRows">
+        <rdfs:comment>Property linking a dataset or a component to their summary statistics.</rdfs:comment>
+        <rdfs:label>number of rows</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
