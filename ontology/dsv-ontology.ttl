@@ -1,104 +1,199 @@
-@prefix dsv:        <https://w3id.org/dsv-ontology#> .
-@prefix dm:         <http://w3id.org/odissei/ns/datamethods/> .
-@prefix owl:        <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix csvw:       <http://www.w3.org/ns/csvw#> .
-@prefix qb:         <http://www.w3.org/TR/vocab-data-cube/> .
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dsv: <https://w3id.org/dsv-ontology> .
+@prefix var: <http://example.org/VariablesVocabulary/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dm: <https://w3id.org/odissei/ns/datamethods/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix qb: <http://www.w3.org/TR/vocab-data-cube/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
 
 ###########################################
 # DataSet-Variable Ontology
 ###########################################
 
-<https://w3id.org/dsv-ontology#>            a       owl:Ontology .
+<https://w3id.org/dsv-ontology#> a owl:Ontology;
+  rdfs:comment "Ontology for describing relationships between datasets and variables."@en,
+    "Ontology for describing relationships between datasets and variables.";
+  rdfs:label "DataSet-Variable Ontology"@en, "DataSet-Variable Ontology.";
+  dc:contributor "The DataSet-Variable Ontology is part of the work of the ODISSEI project, funded by the Netherlands Organisation of Scientific Research (NWO), ODISSEI Roadmap project: 184.035.014."@en;
+  dc:creator "Margherita Martorana"@en, "Tobias Kuhn"@en, "Ronald Siebes"@en, "Jacco van Ossenbruggen"@en;
+  dc:rights "The DataSet-Variable Ontology Ontology is available under the Creative Commons Attribution 4.0 license; see http://creativecommons.org/licenses/by/4.0/."@en;
+  dc:subject "Dataset, Variable"@en;
+  dc:title "The DataSet-Variable Ontology"@en;
+  dcterms:license <http://creativecommons.org/licenses/by/4.0/>;
+  vann:preferredNamespacePrefix "dsv";
+  vann:preferredNamespaceUri "https://w3id.org/dsv-ontology#";
+  owl:versionInfo "V1.0 - 2023 Release"@en;
+  foaf:homepage <https://w3id.org/dsv-ontology> .
 
 ###########################################
 # Classes
 ###########################################
 
-dsv:Dataset                     a                   owl:Class ;
-                                rdfs:subClassOf     qb:DataSet ,
-                                                    csvw:Table .              
+<https://w3id.org/dsv-ontology#Dataset> a owl:Class;
+  rdfs:subClassOf qb:DataSet, csvw:Table;
+  rdfs:comment "Set of data.";
+  rdfs:label "Dataset" .
 
-dsv:AggregatedDataset           a                   owl:Class ;
-                                rdfs:subClassOf     dsv:Dataset .
+<https://w3id.org/dsv-ontology#AggregatedDataset> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/dsv-ontology#Dataset>;
+  rdfs:comment "Set of data that has been aggregated over an individual - or unaggregated - set of data.";
+  rdfs:label "Aggregated Dataset" .
 
-dsv:IndividualDataset           a                   owl:Class ;
-                                rdfs:subClassOf     dsv:Dataset .
-                                
-dsv:DatasetSchema               a                   owl:Class ;
-                                rdfs:subClassOf     qb:DataStructureDefinition ,
-                                                    csvw:TableSchema .
+<https://w3id.org/dsv-ontology#IndividualDataset> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/dsv-ontology#Dataset>;
+  rdfs:comment "Set of data that can be aggregated over. Usually representing the raw data. ";
+  rdfs:label "Individual Dataset" .
 
-dsv:DimensionComponent          a                   owl:Class ;
-                                rdfs:subClassOf     qb:ComponentSpecification .
+<https://w3id.org/dsv-ontology#DatasetSchema> a owl:Class;
+  rdfs:subClassOf qb:DataStructureDefinition, csvw:TableSchema;
+  rdfs:comment "The structural schema of a dataset.";
+  rdfs:label "Dataset Schema" .
 
-dsv:Variable                    a                   owl:Class .
+<https://w3id.org/dsv-ontology#DimensionComponent> a owl:Class;
+  rdfs:subClassOf qb:ComponentSpecification;
+  rdfs:comment "Set of individual component of a dataset.";
+  rdfs:label "Dimension Component" .
 
-dsv:SummaryStatistics           a                   owl:Class .
+<https://w3id.org/dsv-ontology#Variable> a owl:Class;
+  rdfs:comment "The variable described by a dimension of the dataset.";
+  rdfs:label "Variable" .
+
+<https://w3id.org/dsv-ontology#SummaryStatistics> a owl:Class;
+  rdfs:comment "Set of summary statistics about the dataset or column.";
+  rdfs:label "Summary Statistics" .
+
+<https://w3id.org/dsv-ontology#StatisticalDataType> a owl:Class;
+  rdfs:comment "Set of statistical data types.";
+  rdfs:label "Statistical Data Type" .
+
+<https://w3id.org/dsv-ontology#QualitativeStatisticalDataType> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/dsv-ontology#StatisticalDataType>;
+  rdfs:comment "Set of statistical data types can be observed and - or - categorised.";
+  rdfs:label "Qualitative Statistical Data Type" .
+
+<https://w3id.org/dsv-ontology#NominalStatisticalDataType> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/dsv-ontology#QualitativeStatisticalDataType>;
+  rdfs:comment "Statistical data type representing discrete units that cannot be ordered or measured.";
+  rdfs:label "Nominal Statistical Data Type" .
+
+<https://w3id.org/dsv-ontology#OrdinalStatisticalDataType> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/dsv-ontology#QualitativeStatisticalDataType>;
+  rdfs:comment "Statistical data type representing discrete units that can be ordered or measured.";
+  rdfs:label "Ordinal Statistical Data Type" .
+
+<https://w3id.org/dsv-ontology#QuantitativeStatisticalDataType> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/dsv-ontology#StatisticalDataType>;
+  rdfs:comment "Set of statistical data types can be measured and quantified.";
+  rdfs:label "Quantitative Statistical Data Type" .
+
+<https://w3id.org/dsv-ontology#IntervalStatisticalDataType> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/dsv-ontology#QuantitativeStatisticalDataType>;
+  rdfs:comment "Statistical data type representing ordered data measured over a numerical scale with equal distance between units.";
+  rdfs:label "Interval Statistical Data Type" .
+
+<https://w3id.org/dsv-ontology#RatioStatisticalDataType> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/dsv-ontology#QuantitativeStatisticalDataType>;
+  rdfs:comment "Statistical data type representing ordered data with equal distance between units, where negative values are not allowed.";
+  rdfs:label "Ratio Statistical Data Type" .
+
 
 ###########################################
 # Object Properties
 ###########################################                  
 
-dsv:datasetSchema                   a                   owl:ObjectProperty ;
-                                    rdfs:subPropertyOf  qb:structure ,
-                                                        csvw:tableSchema ;
-                                    rdfs:domain         dsv:Dataset ;
-                                    rdfs:range          dsv:DatasetSchema .
+<https://w3id.org/dsv-ontology#datasetSchema> a owl:ObjectProperty;
+  rdfs:subPropertyOf qb:structure, csvw:tableSchema;
+  rdfs:domain <https://w3id.org/dsv-ontology#Dataset>;
+  rdfs:range <https://w3id.org/dsv-ontology#DatasetSchema>;
+  rdfs:comment "Property linking the dataset to its schema.";
+  rdfs:label "dataset schema" .
 
-dsv:dimensionComponent              a                   owl:ObjectProperty ;
-                                    rdfs:subPropertyOf  qb:component ;
-                                    rdfs:domain         dsv:DatasetSchema ;
-                                    rdfs:range          dsv:DimensionComponent .
+<https://w3id.org/dsv-ontology#dimensionComponent> a owl:ObjectProperty;
+  rdfs:subPropertyOf qb:component;
+  rdfs:domain <https://w3id.org/dsv-ontology#DatasetSchema>;
+  rdfs:range <https://w3id.org/dsv-ontology#DimensionComponent>;
+  rdfs:comment "Property linking the dataset schema to its components.";
+  rdfs:label "dimension component" .
 
-dsv:componentProperty               a                   owl:ObjectProperty ;
-                                    rdfs:subPropertyOf  qb:dimension,
-                                                        csvw:propertyUrl ;
-                                    rdfs:domain         dsv:DimensionComponent ;
-                                    rdfs:range          rdf:Property .
+<https://w3id.org/dsv-ontology#componentProperty> a owl:ObjectProperty;
+  rdfs:subPropertyOf qb:dimension, csvw:propertyUrl;
+  rdfs:domain <https://w3id.org/dsv-ontology#DimensionComponent>;
+  rdfs:range rdf:Property;
+  rdfs:comment "Property linking a component to a property.";
+  rdfs:label "component property" .
 
-dsv:refersToVariable                a                   owl:ObjectProperty ;
-                                    rdfs:domain         dsv:DimensionComponent ;
-                                    rdfs:range          dsv:Variable .
+<https://w3id.org/dsv-ontology#refersToVariable> a owl:ObjectProperty;
+  rdfs:domain <https://w3id.org/dsv-ontology#DimensionComponent>;
+  rdfs:range <https://w3id.org/dsv-ontology#Variable>;
+  rdfs:comment "Property linking a component to a variable.";
+  rdfs:label "refers to variable" .
 
-dsv:linksToVariable                 a                   owl:ObjectProperty ;
-                                    rdfs:domain         rdf:Property ;
-                                    rdfs:range          dsv:Variable .
+<https://w3id.org/dsv-ontology#linksToVariable> a owl:ObjectProperty;
+  rdfs:domain rdf:Property;
+  rdfs:range <https://w3id.org/dsv-ontology#Variable>;
+  rdfs:comment "Property linking a property of a component to a variable.";
+  rdfs:label "links to variable" .
 
-dsv:subVariableOf                   a                   owl:ObjectProperty ;
-                                    rdfs:domain         dsv:Variable ;
-                                    rdfs:range          dsv:Variable .
+<https://w3id.org/dsv-ontology#subVariableOf> a owl:ObjectProperty;
+  rdfs:domain <https://w3id.org/dsv-ontology#Variable>;
+  rdfs:range <https://w3id.org/dsv-ontology#Variable>;
+  rdfs:comment "Property linking a variable to its sub-variable.";
+  rdfs:label "sub-variable of" .
 
-dsv:rowsRepresentInstancesOf        a                   owl:ObjectProperty ;
-                                    rdfs:domain         dsv:DatasetSchema ;
-                                    rdfs:range          owl:Class .
+<https://w3id.org/dsv-ontology#rowsRepresentInstancesOf> a owl:ObjectProperty;
+  rdfs:domain <https://w3id.org/dsv-ontology#Dataset>;
+  rdfs:range owl:Class;
+  rdfs:comment "Property linking a dataset to the conceptual representation of its rows.";
+  rdfs:label "rows represent instances of" .
 
-dsv:summaryStatistics               a                   owl:ObjectProperty ;
-                                    rdfs:domain         dsv:Dataset ,
-                                                        dsv:DimensionComponent ;
-                                    rdfs:range          dsv:SummaryStatistics .
+<https://w3id.org/dsv-ontology#summaryStatistics> a owl:ObjectProperty;
+  rdfs:domain <https://w3id.org/dsv-ontology#Dataset>, <https://w3id.org/dsv-ontology#DimensionComponent>;
+  rdfs:range <https://w3id.org/dsv-ontology#SummaryStatistics>;
+  rdfs:comment "Property linking a dataset or a component to their summary statistics.";
+  rdfs:label "summary statistics" .
+
+<https://w3id.org/dsv-ontology#statisticalDataType> a owl:ObjectProperty;
+  rdfs:domain <https://w3id.org/dsv-ontology#SummaryStatistics>;
+  rdfs:range <https://w3id.org/dsv-ontology#StatisticalDataType>;
+  rdfs:comment "Property linking a component to its statistical data type.";
+  rdfs:label "statistical data type" .
 
 ###########################################
 # Data Properties
 ###########################################   
 
-dsv:numberOfColumns                 a                   owl:DataProperty ;
-                                    rdfs:domain         dsv:SummaryStatistics ;
-                                    rdfs:range          xsd:string .
+<https://w3id.org/dsv-ontology#numberOfColumns> a owl:DataProperty;
+  rdfs:domain <https://w3id.org/dsv-ontology#SummaryStatistics>;
+  rdfs:range xsd:integer;
+  rdfs:comment "Property linking a dataset or a component to their summary statistics.";
+  rdfs:label "number of columns" .
 
-dsv:numberOfRows                    a                   owl:DataProperty ;
-                                    rdfs:domain         dsv:SummaryStatistics ;
-                                    rdfs:range          xsd:string . 
+<https://w3id.org/dsv-ontology#numberOfRows> a owl:DataProperty;
+  rdfs:domain <https://w3id.org/dsv-ontology#SummaryStatistics>;
+  rdfs:range xsd:integer;
+  rdfs:comment "Property linking a dataset or a component to their summary statistics.";
+  rdfs:label "number of rows" .
 
-dsv:completeness                    a                   owl:DataProperty ;
-                                    rdfs:domain         dsv:SummaryStatistics ;
-                                    rdfs:range          xsd:string .
+<https://w3id.org/dsv-ontology#completeness> a owl:DataProperty;
+  rdfs:domain <https://w3id.org/dsv-ontology#SummaryStatistics>;
+  rdfs:range xsd:float;
+  rdfs:comment "Property linking a dataset or a component to their summary statistics.";
+  rdfs:label "completeness" .
 
 dsv:statisticalDataType             a                   owl:DataProperty ;
                                     rdfs:domain         dsv:SummaryStatistics ;
                                     rdfs:range          xsd:string . 
 
-dsv:missingValueFormat              a                   owl:DataProperty ;
-                                    rdfs:domain         dsv:SummaryStatistics ;
-                                    rdfs:range          xsd:string .
+<https://w3id.org/dsv-ontology#missingValueFormat> a owl:DataProperty;
+  rdfs:domain <https://w3id.org/dsv-ontology#SummaryStatistics>;
+  rdfs:range xsd:string;
+  rdfs:comment "Property linking a dataset or a component to their summary statistics.";
+  rdfs:label "missing value format" .
