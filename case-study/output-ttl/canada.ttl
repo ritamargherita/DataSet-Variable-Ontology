@@ -16,7 +16,7 @@
                                                                     dsv:summaryStatistics           [
                                                                         dsv:numberOfRows                "40208"^^xsd:integer ;
                                                                         dsv:numberOfColumns             "5"^^xsd:integer ;
-                                                                        dsv:completeness                "0.99"^^xsd:float ;
+                                                                        dsv:datasetCompleteness         "0.99"^^xsd:float ;
                                                                         dsv:missingValuesFormat         "NA"^^xsd:string
                                                                     ] ;
                                                                     dsv:datasetSchema               [
@@ -37,7 +37,7 @@
                                                                                             dsv:componentProperty       <http://www.canada-open-data.org/properties-dictionary/refDate> ;
                                                                                             dsv:refersToVariable        var:YearCoverage ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:completeness            "1.00"^^xsd:float ;
+                                                                                                dsv:componentCompleteness   "1.00"^^xsd:float ;
                                                                                                 dsv:statisticalDataType     dsv:Ratio ;
                                                                                             ] .
 
@@ -47,7 +47,7 @@
                                                                                             dsv:componentProperty       <http://www.canada-open-data.org/properties-dictionary/geo> ;
                                                                                             dsv:refersToVariable        var:GeoLocation ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:completeness            "1.00"^^xsd:float ;
+                                                                                                dsv:componentCompleteness   "1.00"^^xsd:float ;
                                                                                                 dsv:statisticalDataType     dsv:Nominal ;
                                                                                             ] .
 
@@ -57,7 +57,7 @@
                                                                                             dsv:componentProperty       <http://www.canada-open-data.org/properties-dictionary/ageGroup> ;
                                                                                             dsv:refersToVariable        var:Age ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:completeness            "1.00"^^xsd:float ;
+                                                                                                dsv:componentCompleteness   "1.00"^^xsd:float ;
                                                                                                 dsv:statisticalDataType     dsv:Nominal ;
                                                                                             ] .
 
@@ -67,7 +67,7 @@
                                                                                             dsv:componentProperty       <http://www.canada-open-data.org/properties-dictionary/pregnancyOutcomes> ;
                                                                                             dsv:refersToVariable        var:PregnancyOutcome ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:completeness            "1.00"^^xsd:float ;
+                                                                                                dsv:componentCompleteness   "1.00"^^xsd:float ;
                                                                                                 dsv:statisticalDataType     dsv:Nominal ;
                                                                                             ] .
 
@@ -77,7 +77,7 @@
                                                                                             dsv:componentProperty       <http://www.canada-open-data.org/properties-dictionary/value> ;
                                                                                             dsv:refersToVariable        var:Birth ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:completeness            "0.97"^^xsd:float ;
+                                                                                                dsv:componentCompleteness   "0.97"^^xsd:float ;
                                                                                                 dsv:statisticalDataType     dsv:Ratio ;
                                                                                                 dsv:missingValuesFormat     "NA"^^xsd:string
                                                                                             ] .

@@ -16,7 +16,7 @@
                                                                     dsv:summaryStatistics           [
                                                                         dsv:numberOfRows                "110"^^xsd:integer ;
                                                                         dsv:numberOfColumns             "4"^^xsd:integer ;
-                                                                        dsv:completeness                "1.00"^^xsd:float 
+                                                                        dsv:datasetCompleteness         "1.00"^^xsd:float 
                                                                     ] ;
                                                                     dsv:datasetSchema               [
                                                                         dsv:datasetComponent            <http://www.usa-open-data.org/example-aggregated-dataset/column/Year> ,
@@ -35,7 +35,7 @@
                                                                                             dsv:componentProperty       <http://www.usa-open-data.org/properties-dictionary/year> ;
                                                                                             dsv:refersToVariable        var:YearCoverage ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:completeness            "1.00"^^xsd:float ;
+                                                                                                dsv:componentCompleteness   "1.00"^^xsd:float ;
                                                                                                 dsv:statisticalDataType     dsv:Ratio ;
                                                                                             ] .
 
@@ -45,7 +45,7 @@
                                                                                             dsv:componentProperty       <http://www.usa-open-data.org/properties-dictionary/birthNumber> ;
                                                                                             dsv:refersToVariable        var:Birth ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:completeness            "1.00"^^xsd:float ;
+                                                                                                dsv:componentCompleteness   "1.00"^^xsd:float ;
                                                                                                 dsv:statisticalDataType     dsv:Ratio ;
                                                                                             ] .
 
@@ -55,7 +55,7 @@
                                                                                             dsv:componentProperty       <http://www.usa-open-data.org/properties-dictionary/generalFertilityRate> ;
                                                                                             dsv:refersToVariable        var:FertilityRate ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:completeness            "1.00"^^xsd:float ;
+                                                                                                dsv:componentCompleteness   "1.00"^^xsd:float ;
                                                                                                 dsv:statisticalDataType     dsv:Ratio ;
                                                                                             ] .
 
@@ -65,7 +65,7 @@
                                                                                             dsv:componentProperty       <http://www.usa-open-data.org/properties-dictionary/crudeBirthRate> ;
                                                                                             dsv:refersToVariable        var:Birth ;
                                                                                             dsv:summaryStatistics       [
-                                                                                                dsv:completeness            "1.00"^^xsd:float ;
+                                                                                                dsv:componentCompleteness   "1.00"^^xsd:float ;
                                                                                                 dsv:statisticalDataType     dsv:Ratio ;
                                                                                             ] .
 

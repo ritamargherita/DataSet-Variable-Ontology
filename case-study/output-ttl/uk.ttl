@@ -17,7 +17,7 @@
                                                                 dsv:summaryStatistics           [
                                                                     dsv:numberOfRows                "962760"^^xsd:integer ;
                                                                     dsv:numberOfColumns             "10"^^xsd:integer ;
-                                                                    dsv:completeness                "0.98"^^xsd:float ;
+                                                                    dsv:datasetCompleteness         "0.98"^^xsd:float ;
                                                                     dsv:missingValuesFormat         "NA"^^xsd:string
                                                                 ] ;
                                                                 dsv:datasetSchema               [
@@ -43,7 +43,7 @@
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/year> ;
                                                                                 dsv:refersToVariable            var:YearCoverage ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:completeness                "1.00"^^xsd:float ;
+                                                                                    dsv:componentCompleteness       "1.00"^^xsd:float ;
                                                                                     dsv:statisticalDataType         dsv:Ratio ;
                                                                                 ] .
 
@@ -53,7 +53,7 @@
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/rgn20cd> ;
                                                                                 dsv:refersToVariable            var:GeoLocation ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:completeness                "0.89"^^xsd:float ;
+                                                                                    dsv:componentCompleteness       "0.89"^^xsd:float ;
                                                                                     dsv:missingValuesFormat         "NA"^^xsd:string ;
                                                                                     dsv:statisticalDataType         dsv:Nominal ;
                                                                                 ] .
@@ -64,7 +64,7 @@
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/rgn20nm> ;
                                                                                 dsv:refersToVariable            var:GeoLocation ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:completeness                "0.89"^^xsd:float ;
+                                                                                    dsv:componentCompleteness       "0.89"^^xsd:float ;
                                                                                     dsv:missingValuesFormat         "NA"^^xsd:string ;
                                                                                     dsv:statisticalDataType         dsv:Nominal ;
                                                                                 ] .
@@ -75,7 +75,7 @@
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/lad20cd> ;
                                                                                 dsv:refersToVariable            var:GeoLocation ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:completeness                "1.00"^^xsd:float ;
+                                                                                    dsv:componentCompleteness       "1.00"^^xsd:float ;
                                                                                     dsv:statisticalDataType         dsv:Nominal ;
                                                                                 ] .
 
@@ -85,7 +85,7 @@
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/lad20nm> ;
                                                                                 dsv:refersToVariable            var:GeoLocation ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:completeness                "1.00"^^xsd:float ;
+                                                                                    dsv:componentCompleteness       "1.00"^^xsd:float ;
                                                                                     dsv:statisticalDataType         dsv:Nominal ;
                                                                                 ] .
 
@@ -95,7 +95,7 @@
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/wd20cd> ;
                                                                                 dsv:refersToVariable            var:GeoLocation ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:completeness                "1.00"^^xsd:float ;
+                                                                                    dsv:componentCompleteness       "1.00"^^xsd:float ;
                                                                                     dsv:statisticalDataType         dsv:Nominal ;
                                                                                 ] .
 
@@ -105,7 +105,7 @@
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/wd20nm> ;
                                                                                 dsv:refersToVariable            var:GeoLocation ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:completeness                "1.00"^^xsd:float ;
+                                                                                    dsv:componentCompleteness       "1.00"^^xsd:float ;
                                                                                     dsv:statisticalDataType         dsv:Nominal ;
                                                                                 ] .
 
@@ -115,7 +115,7 @@
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/ageOfMother> ;
                                                                                 dsv:refersToVariable            var:Age ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:completeness                "1.00"^^xsd:float ;
+                                                                                    dsv:componentCompleteness       "1.00"^^xsd:float ;
                                                                                     dsv:statisticalDataType         dsv:Nominal ;
                                                                                 ] .
 
@@ -125,7 +125,7 @@
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/sex> ;
                                                                                 dsv:refersToVariable            var:Gender ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:completeness                "1.00"^^xsd:float ;
+                                                                                    dsv:componentCompleteness       "1.00"^^xsd:float ;
                                                                                     dsv:statisticalDataType         dsv:Nominal ;
                                                                                 ] .
 
@@ -135,7 +135,7 @@
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/births> ;
                                                                                 dsv:refersToVariable            var:Birth ;
                                                                                 dsv:summaryStatistics           [
-                                                                                    dsv:completeness                "1.00"^^xsd:float ;
+                                                                                    dsv:componentCompleteness       "1.00"^^xsd:float ;
                                                                                     dsv:statisticalDataType         dsv:Ratio ;
                                                                                 ] .
 
