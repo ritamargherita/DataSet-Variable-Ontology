@@ -56,10 +56,10 @@
 <https://w3id.org/dsv-ontology#DatasetComponent> a owl:Class;
   rdfs:subClassOf qb:ComponentSpecification;
   rdfs:comment "Set of individual component of a dataset.";
-  rdfs:label "Dimension Component" .
+  rdfs:label "Dataset Component" .
 
 <https://w3id.org/dsv-ontology#Variable> a owl:Class;
-  rdfs:comment "The variable described by a dimension of the dataset.";
+  rdfs:comment "The variable described by a component of the dataset.";
   rdfs:label "Variable" .
 
 <https://w3id.org/dsv-ontology#SummaryStatistics> a owl:Class;
@@ -117,7 +117,7 @@
   rdfs:domain <https://w3id.org/dsv-ontology#DatasetSchema>;
   rdfs:range <https://w3id.org/dsv-ontology#DatasetComponent>;
   rdfs:comment "Property linking the dataset schema to its components.";
-  rdfs:label "dimension component" .
+  rdfs:label "dataset component" .
 
 <https://w3id.org/dsv-ontology#componentProperty> a owl:ObjectProperty;
   rdfs:subPropertyOf qb:dimension, csvw:propertyUrl;
