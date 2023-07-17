@@ -17,6 +17,30 @@
   "@id" : "http://purl.org/dc/terms/license",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/linked-data/cube#ComponentSpecification",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Class"
+  } ]
+}, {
+  "@id" : "http://purl.org/linked-data/cube#DataSet",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Class"
+  } ]
+}, {
+  "@id" : "http://purl.org/linked-data/cube#DataStructureDefinition",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Class"
+  } ]
+}, {
+  "@id" : "http://purl.org/linked-data/cube#component",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://purl.org/linked-data/cube#dimension",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://purl.org/linked-data/cube#structure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -37,30 +61,6 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Class"
   } ]
-}, {
-  "@id" : "http://www.w3.org/TR/vocab-data-cube/ComponentSpecification",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/TR/vocab-data-cube/DataSet",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/TR/vocab-data-cube/DataStructureDefinition",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/TR/vocab-data-cube/component",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
-  "@id" : "http://www.w3.org/TR/vocab-data-cube/dimension",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
-  "@id" : "http://www.w3.org/TR/vocab-data-cube/structure",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://www.w3.org/ns/csvw#Table",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -166,9 +166,23 @@
     "@value" : "Dataset"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/TR/vocab-data-cube/DataSet"
+    "@id" : "http://purl.org/linked-data/cube#DataSet"
   }, {
     "@id" : "http://www.w3.org/ns/csvw#Table"
+  } ]
+}, {
+  "@id" : "https://w3id.org/dsv-ontology#DatasetComponent",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Class"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Set of individual component of a dataset."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Dataset Component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/linked-data/cube#ComponentSpecification"
   } ]
 }, {
   "@id" : "https://w3id.org/dsv-ontology#DatasetSchema",
@@ -182,23 +196,9 @@
     "@value" : "Dataset Schema"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/TR/vocab-data-cube/DataStructureDefinition"
+    "@id" : "http://purl.org/linked-data/cube#DataStructureDefinition"
   }, {
     "@id" : "http://www.w3.org/ns/csvw#TableSchema"
-  } ]
-}, {
-  "@id" : "https://w3id.org/dsv-ontology#DimensionComponent",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Set of individual component of a dataset."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Dimension Component"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/TR/vocab-data-cube/ComponentSpecification"
   } ]
 }, {
   "@id" : "https://w3id.org/dsv-ontology#IndividualDataset",
@@ -326,25 +326,25 @@
     "@id" : "http://www.w3.org/2002/07/owl#Class"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The variable described by a dimension of the dataset."
+    "@value" : "The variable described by a component of the dataset."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Variable"
   } ]
 }, {
-  "@id" : "https://w3id.org/dsv-ontology#completeness",
+  "@id" : "https://w3id.org/dsv-ontology#componentCompleteness",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#DataProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Property linking a dataset or a component to their summary statistics."
+    "@value" : "Property linking a component to its summary statistics."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/dsv-ontology#SummaryStatistics"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "completeness"
+    "@value" : "component completeness"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
@@ -356,7 +356,7 @@
     "@value" : "Property linking a component to a property."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#DimensionComponent"
+    "@id" : "https://w3id.org/dsv-ontology#DatasetComponent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "component property"
@@ -365,9 +365,45 @@
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/TR/vocab-data-cube/dimension"
+    "@id" : "http://purl.org/linked-data/cube#dimension"
   }, {
     "@id" : "http://www.w3.org/ns/csvw#propertyUrl"
+  } ]
+}, {
+  "@id" : "https://w3id.org/dsv-ontology#datasetCompleteness",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#DataProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Property linking a dataset to its summary statistics."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/dsv-ontology#SummaryStatistics"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dataset completeness"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "https://w3id.org/dsv-ontology#datasetComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Property linking the dataset schema to its components."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/dsv-ontology#DatasetSchema"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dataset component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/dsv-ontology#DatasetComponent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/linked-data/cube#component"
   } ]
 }, {
   "@id" : "https://w3id.org/dsv-ontology#datasetSchema",
@@ -385,27 +421,9 @@
     "@id" : "https://w3id.org/dsv-ontology#DatasetSchema"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/TR/vocab-data-cube/structure"
+    "@id" : "http://purl.org/linked-data/cube#structure"
   }, {
     "@id" : "http://www.w3.org/ns/csvw#tableSchema"
-  } ]
-}, {
-  "@id" : "https://w3id.org/dsv-ontology#dimensionComponent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Property linking the dataset schema to its components."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#DatasetSchema"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "dimension component"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#DimensionComponent"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/TR/vocab-data-cube/component"
   } ]
 }, {
   "@id" : "https://w3id.org/dsv-ontology#linksToVariable",
@@ -429,7 +447,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#DataProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Property linking a dataset or a component to their summary statistics."
+    "@value" : "Property linking a dataset or a component to the format of the missinf values."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/dsv-ontology#SummaryStatistics"
@@ -447,7 +465,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#DataProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Property linking a dataset or a component to their summary statistics."
+    "@value" : "Property linking a dataset to its number of columns."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/dsv-ontology#SummaryStatistics"
@@ -465,7 +483,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#DataProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Property linking a dataset or a component to their summary statistics."
+    "@value" : "Property linking a dataset to its number of rows."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/dsv-ontology#SummaryStatistics"
@@ -483,7 +501,7 @@
     "@value" : "Property linking a component to a variable."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#DimensionComponent"
+    "@id" : "https://w3id.org/dsv-ontology#DatasetComponent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "refers to variable"
@@ -545,7 +563,7 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/dsv-ontology#Dataset"
   }, {
-    "@id" : "https://w3id.org/dsv-ontology#DimensionComponent"
+    "@id" : "https://w3id.org/dsv-ontology#DatasetComponent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "summary statistics"

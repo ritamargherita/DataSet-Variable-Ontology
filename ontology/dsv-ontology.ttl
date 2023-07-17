@@ -169,27 +169,29 @@
 <https://w3id.org/dsv-ontology#numberOfColumns> a owl:DataProperty;
   rdfs:domain <https://w3id.org/dsv-ontology#SummaryStatistics>;
   rdfs:range xsd:integer;
-  rdfs:comment "Property linking a dataset or a component to their summary statistics.";
+  rdfs:comment "Property linking a dataset to its number of columns.";
   rdfs:label "number of columns" .
 
 <https://w3id.org/dsv-ontology#numberOfRows> a owl:DataProperty;
   rdfs:domain <https://w3id.org/dsv-ontology#SummaryStatistics>;
   rdfs:range xsd:integer;
-  rdfs:comment "Property linking a dataset or a component to their summary statistics.";
+  rdfs:comment "Property linking a dataset to its number of rows.";
   rdfs:label "number of rows" .
 
-<https://w3id.org/dsv-ontology#completeness> a owl:DataProperty;
+<https://w3id.org/dsv-ontology#datasetCompleteness> a owl:DataProperty;
   rdfs:domain <https://w3id.org/dsv-ontology#SummaryStatistics>;
   rdfs:range xsd:float;
-  rdfs:comment "Property linking a dataset or a component to their summary statistics.";
-  rdfs:label "completeness" .
+  rdfs:comment "Property linking a dataset to its summary statistics.";
+  rdfs:label "dataset completeness" .
 
-dsv:statisticalDataType             a                   owl:DataProperty ;
-                                    rdfs:domain         dsv:SummaryStatistics ;
-                                    rdfs:range          xsd:string . 
+<https://w3id.org/dsv-ontology#componentCompleteness> a owl:DataProperty;
+  rdfs:domain <https://w3id.org/dsv-ontology#SummaryStatistics>;
+  rdfs:range xsd:float;
+  rdfs:comment "Property linking a component to its summary statistics.";
+  rdfs:label "component completeness" .
 
 <https://w3id.org/dsv-ontology#missingValueFormat> a owl:DataProperty;
   rdfs:domain <https://w3id.org/dsv-ontology#SummaryStatistics>;
   rdfs:range xsd:string;
-  rdfs:comment "Property linking a dataset or a component to their summary statistics.";
+  rdfs:comment "Property linking a dataset or a component to the format of the missinf values.";
   rdfs:label "missing value format" .
