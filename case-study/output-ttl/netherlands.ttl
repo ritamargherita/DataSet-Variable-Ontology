@@ -38,7 +38,7 @@
 # Dataset Netherlands - Columns
 ###########################################
 
-<http://www.nl-open-data.org/example-aggregated-dataset/column/perioden>                                a                               dsv:DimensionComponent ,
+<http://www.nl-open-data.org/example-aggregated-dataset/column/perioden>                                a                               dsv:DatasetComponent ,
                                                                                                                                         csvw:Column ;
                                                                                                         rdfs:label                      "perioden"@nl ;
                                                                                                         rdfs:comment                    "periods"@en ;
@@ -49,7 +49,7 @@
                                                                                                                 dsv:statisticalDataType         dsv:Ratio ;
                                                                                                         ] .
 
-<http://www.nl-open-data.org/example-aggregated-dataset/column/totaalLevendGeborenKinderen_1>           a                               dsv:DimensionComponent ,
+<http://www.nl-open-data.org/example-aggregated-dataset/column/totaalLevendGeborenKinderen_1>           a                               dsv:DatasetComponent ,
                                                                                                                                         csvw:Column ;
                                                                                                         rdfs:label                      "totaalLevendGeborenKinderen_1"@nl ;
                                                                                                         rdfs:comment                    "total live born children"@en ;
@@ -60,7 +60,7 @@
                                                                                                                 dsv:statisticalDataType         dsv:Ratio ;
                                                                                                         ] .
 
-<http://www.nl-open-data.org/example-aggregated-dataset/column/algemeenVruchtbaarheidscijfer_3>         a                               dsv:DimensionComponent ,
+<http://www.nl-open-data.org/example-aggregated-dataset/column/algemeenVruchtbaarheidscijfer_3>         a                               dsv:DatasetComponent ,
                                                                                                                                         csvw:Column ;
                                                                                                         rdfs:label                      "algemeenVruchtbaarheidscijfer_3"@nl ;
                                                                                                         rdfs:comment                    "general fertility rate"@en ;
@@ -71,7 +71,7 @@
                                                                                                                 dsv:statisticalDataType         dsv:Ratio ;
                                                                                                         ] .
 
-<http://www.nl-open-data.org/example-aggregated-dataset/column/jongerDan20Jaar_9>                       a                               dsv:DimensionComponent ,
+<http://www.nl-open-data.org/example-aggregated-dataset/column/jongerDan20Jaar_9>                       a                               dsv:DatasetComponent ,
                                                                                                                                         csvw:Column ;
                                                                                                         rdfs:label                      "jongerDan20Jaar_9"@nl ;
                                                                                                         rdfs:comment                    "younger than 20 years"@en ;
@@ -82,7 +82,7 @@
                                                                                                                 dsv:statisticalDataType         dsv:Nominal ;
                                                                                                         ] .
 
-<http://www.nl-open-data.org/example-aggregated-dataset/column/k_20Tot25Jaar_10>                        a                               dsv:DimensionComponent ,
+<http://www.nl-open-data.org/example-aggregated-dataset/column/k_20Tot25Jaar_10>                        a                               dsv:DatasetComponent ,
                                                                                                                                         csvw:Column ;
                                                                                                         rdfs:label                      "k_20Tot25Jaar_10"@nl ;
                                                                                                         rdfs:comment                    "20 to 25 years"@en ;
@@ -93,7 +93,7 @@
                                                                                                                 dsv:statisticalDataType         dsv:Nominal ;
                                                                                                         ] .
 
-<http://www.nl-open-data.org/example-aggregated-dataset/column/k_25Tot30Jaar_11>                        a                               dsv:DimensionComponent ,
+<http://www.nl-open-data.org/example-aggregated-dataset/column/k_25Tot30Jaar_11>                        a                               dsv:DatasetComponent ,
                                                                                                                                         csvw:Column ;
                                                                                                         rdfs:label                      "k_25Tot30Jaar_11"@nl ;
                                                                                                         rdfs:comment                    "25 to 30 years"@en ;
@@ -104,7 +104,7 @@
                                                                                                                 dsv:statisticalDataType         dsv:Nominal ;
                                                                                                         ] .
 
-<http://www.nl-open-data.org/example-aggregated-dataset/column/k_30Tot35Jaar_12>                        a                               dsv:DimensionComponent ,
+<http://www.nl-open-data.org/example-aggregated-dataset/column/k_30Tot35Jaar_12>                        a                               dsv:DatasetComponent ,
                                                                                                                                         csvw:Column ;
                                                                                                         rdfs:label                      "k_30Tot35Jaar_12"@nl ;
                                                                                                         rdfs:comment                    "30 to 35 years"@en ;
@@ -115,7 +115,7 @@
                                                                                                                 dsv:statisticalDataType         dsv:Nominal ;
                                                                                                         ] .
 
-<http://www.nl-open-data.org/example-aggregated-dataset/column/k_35Tot40Jaar_13>                        a                               dsv:DimensionComponent ,
+<http://www.nl-open-data.org/example-aggregated-dataset/column/k_35Tot40Jaar_13>                        a                               dsv:DatasetComponent ,
                                                                                                                                         csvw:Column ;
                                                                                                         rdfs:label                      "k_35Tot40Jaar_13"@nl ;
                                                                                                         rdfs:comment                    "35 to 40 years"@en ;
@@ -126,7 +126,7 @@
                                                                                                                 dsv:statisticalDataType         dsv:Nominal ;
                                                                                                         ] .
 
-<http://www.nl-open-data.org/example-aggregated-dataset/column/k_40Tot45Jaar_14>                        a                               dsv:DimensionComponent ,
+<http://www.nl-open-data.org/example-aggregated-dataset/column/k_40Tot45Jaar_14>                        a                               dsv:DatasetComponent ,
                                                                                                                                         csvw:Column ;
                                                                                                         rdfs:label                      "k_40Tot45Jaar_14"@nl ;
                                                                                                         rdfs:comment                    "40 to 45 years"@en ;
@@ -137,7 +137,7 @@
                                                                                                                 dsv:statisticalDataType         dsv:Nominal ;
                                                                                                         ] .
 
-<http://www.nl-open-data.org/example-aggregated-dataset/column/k_45JaarOfOuder_15>                      a                               dsv:DimensionComponent ,
+<http://www.nl-open-data.org/example-aggregated-dataset/column/k_45JaarOfOuder_15>                      a                               dsv:DatasetComponent ,
                                                                                                                                         csvw:Column ;
                                                                                                         rdfs:label                      "k_45JaarOfOuder_15"@nl ;
                                                                                                         rdfs:comment                    "45 years or older"@en ;
@@ -148,7 +148,7 @@
                                                                                                                 dsv:statisticalDataType         dsv:Nominal ;
                                                                                                         ] .
 
-<http://www.nl-open-data.org/example-aggregated-dataset/column/totaalGeboorten_33>                      a                               dsv:DimensionComponent ,
+<http://www.nl-open-data.org/example-aggregated-dataset/column/totaalGeboorten_33>                      a                               dsv:DatasetComponent ,
                                                                                                                                         csvw:Column ;
                                                                                                         rdfs:label                      "totaalGeboorten_33"@nl ;
                                                                                                         rdfs:comment                    "total births"@en ;

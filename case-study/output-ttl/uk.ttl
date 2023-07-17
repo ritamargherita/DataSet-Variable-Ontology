@@ -37,7 +37,7 @@
 # Dataset United Kingdom - Columns
 ###########################################
 
-<http://www.uk-open-data.org/example-aggregated-dataset/column/year>            a                               dsv:DimensionComponent ,
+<http://www.uk-open-data.org/example-aggregated-dataset/column/year>            a                               dsv:DatasetComponent ,
                                                                                                                 csvw:Column ;
                                                                                 rdfs:label                      "year"@en ;
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/year> ;
@@ -47,7 +47,7 @@
                                                                                     dsv:statisticalDataType         dsv:Ratio ;
                                                                                 ] .
 
-<http://www.uk-open-data.org/example-aggregated-dataset/column/rgn20cd>         a                               dsv:DimensionComponent ,
+<http://www.uk-open-data.org/example-aggregated-dataset/column/rgn20cd>         a                               dsv:DatasetComponent ,
                                                                                                                 csvw:Column ;
                                                                                 rdfs:label                      "RGN20CD"@en ;
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/rgn20cd> ;
@@ -58,7 +58,7 @@
                                                                                     dsv:statisticalDataType         dsv:Nominal ;
                                                                                 ] .
 
-<http://www.uk-open-data.org/example-aggregated-dataset/column/rgn20nm>         a                               dsv:DimensionComponent ,
+<http://www.uk-open-data.org/example-aggregated-dataset/column/rgn20nm>         a                               dsv:DatasetComponent ,
                                                                                                                 csvw:Column ;
                                                                                 rdfs:label                      "RGN20NM"@en ;
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/rgn20nm> ;
@@ -69,7 +69,7 @@
                                                                                     dsv:statisticalDataType         dsv:Nominal ;
                                                                                 ] .
 
-<http://www.uk-open-data.org/example-aggregated-dataset/column/lad20cd>         a                               dsv:DimensionComponent ,
+<http://www.uk-open-data.org/example-aggregated-dataset/column/lad20cd>         a                               dsv:DatasetComponent ,
                                                                                                                 csvw:Column ;
                                                                                 rdfs:label                      "LAD20CD"@en ;
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/lad20cd> ;
@@ -79,7 +79,7 @@
                                                                                     dsv:statisticalDataType         dsv:Nominal ;
                                                                                 ] .
 
-<http://www.uk-open-data.org/example-aggregated-dataset/column/lad20nm>         a                               dsv:DimensionComponent ,
+<http://www.uk-open-data.org/example-aggregated-dataset/column/lad20nm>         a                               dsv:DatasetComponent ,
                                                                                                                 csvw:Column ;
                                                                                 rdfs:label                      "LAD20NM"@en ;
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/lad20nm> ;
@@ -89,7 +89,7 @@
                                                                                     dsv:statisticalDataType         dsv:Nominal ;
                                                                                 ] .
 
-<http://www.uk-open-data.org/example-aggregated-dataset/column/wd20cd>          a                               dsv:DimensionComponent ,
+<http://www.uk-open-data.org/example-aggregated-dataset/column/wd20cd>          a                               dsv:DatasetComponent ,
                                                                                                                 csvw:Column ;
                                                                                 rdfs:label                      "WD20CD"@en ;
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/wd20cd> ;
@@ -99,7 +99,7 @@
                                                                                     dsv:statisticalDataType         dsv:Nominal ;
                                                                                 ] .
 
-<http://www.uk-open-data.org/example-aggregated-dataset/column/wd20nm>          a                               dsv:DimensionComponent ,
+<http://www.uk-open-data.org/example-aggregated-dataset/column/wd20nm>          a                               dsv:DatasetComponent ,
                                                                                                                 csvw:Column ;
                                                                                 rdfs:label                      "WD20NM"@en ;
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/wd20nm> ;
@@ -109,7 +109,7 @@
                                                                                     dsv:statisticalDataType         dsv:Nominal ;
                                                                                 ] .
 
-<http://www.uk-open-data.org/example-aggregated-dataset/column/ageOfMother>     a                               dsv:DimensionComponent ,
+<http://www.uk-open-data.org/example-aggregated-dataset/column/ageOfMother>     a                               dsv:DatasetComponent ,
                                                                                                                 csvw:Column ;
                                                                                 rdfs:label                      "age_of_mother"@en ;
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/ageOfMother> ;
@@ -119,7 +119,7 @@
                                                                                     dsv:statisticalDataType         dsv:Nominal ;
                                                                                 ] .
 
-<http://www.uk-open-data.org/example-aggregated-dataset/column/sex>             a                               dsv:DimensionComponent ,
+<http://www.uk-open-data.org/example-aggregated-dataset/column/sex>             a                               dsv:DatasetComponent ,
                                                                                                                 csvw:Column ;
                                                                                 rdfs:label                      "sex"@en ;
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/sex> ;
@@ -129,7 +129,7 @@
                                                                                     dsv:statisticalDataType         dsv:Nominal ;
                                                                                 ] .
 
-<http://www.uk-open-data.org/example-aggregated-dataset/column/births>          a                               dsv:DimensionComponent ,
+<http://www.uk-open-data.org/example-aggregated-dataset/column/births>          a                               dsv:DatasetComponent ,
                                                                                                                 csvw:Column ;
                                                                                 rdfs:label                      "births"@en ;
                                                                                 dsv:componentProperty           <http://www.uk-open-data.org/properties-dictionary/births> ;

@@ -29,7 +29,7 @@
 # Dataset USA - Columns
 ###########################################
 
-<http://www.usa-open-data.org/example-aggregated-dataset/column/Year>                       a                           dsv:DimensionComponent ,
+<http://www.usa-open-data.org/example-aggregated-dataset/column/Year>                       a                           dsv:DatasetComponent ,
                                                                                                                         csvw:Column ;
                                                                                             rdfs:label                  "Year"@en ;
                                                                                             dsv:componentProperty       <http://www.usa-open-data.org/properties-dictionary/year> ;
@@ -39,7 +39,7 @@
                                                                                                 dsv:statisticalDataType     dsv:Ratio ;
                                                                                             ] .
 
-<http://www.usa-open-data.org/example-aggregated-dataset/column/BirthNumber>                a                           dsv:DimensionComponent ,
+<http://www.usa-open-data.org/example-aggregated-dataset/column/BirthNumber>                a                           dsv:DatasetComponent ,
                                                                                                                         csvw:Column ;
                                                                                             rdfs:label                  "Birth Number"@en ;
                                                                                             dsv:componentProperty       <http://www.usa-open-data.org/properties-dictionary/birthNumber> ;
@@ -49,7 +49,7 @@
                                                                                                 dsv:statisticalDataType     dsv:Ratio ;
                                                                                             ] .
 
-<http://www.usa-open-data.org/example-aggregated-dataset/column/GeneralFertilityRate>       a                           dsv:DimensionComponent ,
+<http://www.usa-open-data.org/example-aggregated-dataset/column/GeneralFertilityRate>       a                           dsv:DatasetComponent ,
                                                                                                                         csvw:Column ;
                                                                                             rdfs:label                  "General Fertility Rate"@en ;
                                                                                             dsv:componentProperty       <http://www.usa-open-data.org/properties-dictionary/generalFertilityRate> ;
@@ -59,7 +59,7 @@
                                                                                                 dsv:statisticalDataType     dsv:Ratio ;
                                                                                             ] .
 
-<http://www.usa-open-data.org/example-aggregated-dataset/column/CrudeBirthRate>             a                           dsv:DimensionComponent ,
+<http://www.usa-open-data.org/example-aggregated-dataset/column/CrudeBirthRate>             a                           dsv:DatasetComponent ,
                                                                                                                         csvw:Column ;
                                                                                             rdfs:label                  "Crude Birth Rate"@en ;
                                                                                             dsv:componentProperty       <http://www.usa-open-data.org/properties-dictionary/crudeBirthRate> ;

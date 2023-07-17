@@ -6,8 +6,8 @@
 	xmlns:dm="https://w3id.org/odissei/ns/datamethods/"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:wd="http://www.wikidata.org/entity/"
-	xmlns:qb="http://www.w3.org/TR/vocab-data-cube/"
-	xmlns:csvw="http://www.w3.org/ns/csvw#"
+	xmlns:qb="http://purl.org/linked-data/cube#"
+	xmlns:csvw="https://www.w3.org/ns/csvw#"
 	xmlns:dbpedia-owl="http://dbpedia.org/ontology/"
 	xmlns:vann="http://purl.org/vocab/vann/"
 	xmlns:dcterms="http://purl.org/dc/terms/"
@@ -68,17 +68,17 @@
 	<rdfs:comment>The structural schema of a dataset.</rdfs:comment>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://w3id.org/dsv-ontology#DimensionComponent">
+<rdf:Description rdf:about="https://w3id.org/dsv-ontology#DatasetComponent">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:subClassOf rdf:resource="http://www.w3.org/TR/vocab-data-cube/ComponentSpecification"/>
-	<rdfs:label>Dimension Component</rdfs:label>
+	<rdfs:label>Dataset Component</rdfs:label>
 	<rdfs:comment>Set of individual component of a dataset.</rdfs:comment>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://w3id.org/dsv-ontology#Variable">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<rdfs:label>Variable</rdfs:label>
-	<rdfs:comment>The variable described by a dimension of the dataset.</rdfs:comment>
+	<rdfs:comment>The variable described by a component of the dataset.</rdfs:comment>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://w3id.org/dsv-ontology#SummaryStatistics">
@@ -145,12 +145,12 @@
 	<rdfs:comment>Property linking the dataset to its schema.</rdfs:comment>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://w3id.org/dsv-ontology#dimensionComponent">
+<rdf:Description rdf:about="https://w3id.org/dsv-ontology#datasetComponent">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
 	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/TR/vocab-data-cube/component"/>
 	<rdfs:domain rdf:resource="https://w3id.org/dsv-ontology#DatasetSchema"/>
-    <rdfs:range rdf:resource="https://w3id.org/dsv-ontology#DimensionComponent"/>
-	<rdfs:label>dimension component</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/dsv-ontology#DatasetComponent"/>
+	<rdfs:label>dataset component</rdfs:label>
 	<rdfs:comment>Property linking the dataset schema to its components.</rdfs:comment>
 </rdf:Description>
 
@@ -158,7 +158,7 @@
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
 	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/TR/vocab-data-cube/dimension"/>
 	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/csvw#propertyUrl"/>
-	<rdfs:domain rdf:resource="https://w3id.org/dsv-ontology#DimensionComponent"/>
+	<rdfs:domain rdf:resource="https://w3id.org/dsv-ontology#Datasetomponent"/>
     <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
 	<rdfs:label>component property</rdfs:label>
 	<rdfs:comment>Property linking a component to a property.</rdfs:comment>
@@ -166,7 +166,7 @@
 
 <rdf:Description rdf:about="https://w3id.org/dsv-ontology#refersToVariable">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="https://w3id.org/dsv-ontology#DimensionComponent"/>
+	<rdfs:domain rdf:resource="https://w3id.org/dsv-ontology#DatasetComponent"/>
     <rdfs:range rdf:resource="https://w3id.org/dsv-ontology#Variable"/>
 	<rdfs:label>refers to variable</rdfs:label>
 	<rdfs:comment>Property linking a component to a variable.</rdfs:comment>
@@ -199,7 +199,7 @@
 <rdf:Description rdf:about="https://w3id.org/dsv-ontology#summaryStatistics">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
 	<rdfs:domain rdf:resource="https://w3id.org/dsv-ontology#Dataset"/>
-	<rdfs:domain rdf:resource="https://w3id.org/dsv-ontology#DimensionComponent"/>
+	<rdfs:domain rdf:resource="https://w3id.org/dsv-ontology#DatasetComponent"/>
     <rdfs:range rdf:resource="https://w3id.org/dsv-ontology#SummaryStatistics"/>
 	<rdfs:label>summary statistics</rdfs:label>
 	<rdfs:comment>Property linking a dataset or a component to their summary statistics.</rdfs:comment>

@@ -31,7 +31,7 @@
 # Dataset Canada - Columns
 ###########################################
 
-<http://www.canada-open-data.org/example-aggregated-dataset/column/refDate>                 a                           dsv:DimensionComponent ,
+<http://www.canada-open-data.org/example-aggregated-dataset/column/refDate>                 a                           dsv:DatasetComponent ,
                                                                                                                         csvw:Column ;
                                                                                             rdfs:label                  "REF_DATE"@en ;
                                                                                             dsv:componentProperty       <http://www.canada-open-data.org/properties-dictionary/refDate> ;
@@ -41,7 +41,7 @@
                                                                                                 dsv:statisticalDataType     dsv:Ratio ;
                                                                                             ] .
 
-<http://www.canada-open-data.org/example-aggregated-dataset/column/geo>                     a                           dsv:DimensionComponent ,
+<http://www.canada-open-data.org/example-aggregated-dataset/column/geo>                     a                           dsv:DatasetComponent ,
                                                                                                                         csvw:Column ;
                                                                                             rdfs:label                  "GEO"@en ;
                                                                                             dsv:componentProperty       <http://www.canada-open-data.org/properties-dictionary/geo> ;
@@ -51,7 +51,7 @@
                                                                                                 dsv:statisticalDataType     dsv:Nominal ;
                                                                                             ] .
 
-<http://www.canada-open-data.org/example-aggregated-dataset/column/ageGroup>                a                           dsv:DimensionComponent ,
+<http://www.canada-open-data.org/example-aggregated-dataset/column/ageGroup>                a                           dsv:DatasetComponent ,
                                                                                                                         csvw:Column ;
                                                                                             rdfs:label                  "Age group"@en ;
                                                                                             dsv:componentProperty       <http://www.canada-open-data.org/properties-dictionary/ageGroup> ;
@@ -61,7 +61,7 @@
                                                                                                 dsv:statisticalDataType     dsv:Nominal ;
                                                                                             ] .
 
-<http://www.canada-open-data.org/example-aggregated-dataset/column/pregnancyOutcomes>       a                           dsv:DimensionComponent ,
+<http://www.canada-open-data.org/example-aggregated-dataset/column/pregnancyOutcomes>       a                           dsv:DatasetComponent ,
                                                                                                                         csvw:Column ;
                                                                                             rdfs:label                  "Pregnancy outcomes"@en ;
                                                                                             dsv:componentProperty       <http://www.canada-open-data.org/properties-dictionary/pregnancyOutcomes> ;
@@ -71,7 +71,7 @@
                                                                                                 dsv:statisticalDataType     dsv:Nominal ;
                                                                                             ] .
 
-<http://www.canada-open-data.org/example-aggregated-dataset/column/value>                   a                           dsv:DimensionComponent ,
+<http://www.canada-open-data.org/example-aggregated-dataset/column/value>                   a                           dsv:DatasetComponent ,
                                                                                                                         csvw:Column ;
                                                                                             rdfs:label                  "VALUE"@en ;
                                                                                             dsv:componentProperty       <http://www.canada-open-data.org/properties-dictionary/value> ;

@@ -1,18 +1,14 @@
-@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix dsv: <https://w3id.org/dsv-ontology> .
-@prefix var: <http://example.org/VariablesVocabulary/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dm: <https://w3id.org/odissei/ns/datamethods/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix wd: <http://www.wikidata.org/entity/> .
-@prefix qb: <http://www.w3.org/TR/vocab-data-cube/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix vann: <http://purl.org/vocab/vann/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix csvw: <http://www.w3.org/ns/csvw#> .
+@prefix dsv:      <https://w3id.org/dsv-ontology#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc:       <http://purl.org/dc/elements/1.1/> .
+@prefix vann:     <http://purl.org/vocab/vann/> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix csvw:     <http://www.w3.org/ns/csvw#> .
+@prefix qb:       <http://purl.org/linked-data/cube#> .
 
 ###########################################
 # DataSet-Variable Ontology
@@ -57,7 +53,7 @@
   rdfs:comment "The structural schema of a dataset.";
   rdfs:label "Dataset Schema" .
 
-<https://w3id.org/dsv-ontology#DimensionComponent> a owl:Class;
+<https://w3id.org/dsv-ontology#DatasetComponent> a owl:Class;
   rdfs:subClassOf qb:ComponentSpecification;
   rdfs:comment "Set of individual component of a dataset.";
   rdfs:label "Dimension Component" .
@@ -116,22 +112,22 @@
   rdfs:comment "Property linking the dataset to its schema.";
   rdfs:label "dataset schema" .
 
-<https://w3id.org/dsv-ontology#dimensionComponent> a owl:ObjectProperty;
+<https://w3id.org/dsv-ontology#datasetComponent> a owl:ObjectProperty;
   rdfs:subPropertyOf qb:component;
   rdfs:domain <https://w3id.org/dsv-ontology#DatasetSchema>;
-  rdfs:range <https://w3id.org/dsv-ontology#DimensionComponent>;
+  rdfs:range <https://w3id.org/dsv-ontology#DatasetComponent>;
   rdfs:comment "Property linking the dataset schema to its components.";
   rdfs:label "dimension component" .
 
 <https://w3id.org/dsv-ontology#componentProperty> a owl:ObjectProperty;
   rdfs:subPropertyOf qb:dimension, csvw:propertyUrl;
-  rdfs:domain <https://w3id.org/dsv-ontology#DimensionComponent>;
+  rdfs:domain <https://w3id.org/dsv-ontology#DatasetComponent>;
   rdfs:range rdf:Property;
   rdfs:comment "Property linking a component to a property.";
   rdfs:label "component property" .
 
 <https://w3id.org/dsv-ontology#refersToVariable> a owl:ObjectProperty;
-  rdfs:domain <https://w3id.org/dsv-ontology#DimensionComponent>;
+  rdfs:domain <https://w3id.org/dsv-ontology#DatasetComponent>;
   rdfs:range <https://w3id.org/dsv-ontology#Variable>;
   rdfs:comment "Property linking a component to a variable.";
   rdfs:label "refers to variable" .
@@ -155,7 +151,7 @@
   rdfs:label "rows represent instances of" .
 
 <https://w3id.org/dsv-ontology#summaryStatistics> a owl:ObjectProperty;
-  rdfs:domain <https://w3id.org/dsv-ontology#Dataset>, <https://w3id.org/dsv-ontology#DimensionComponent>;
+  rdfs:domain <https://w3id.org/dsv-ontology#Dataset>, <https://w3id.org/dsv-ontology#DatasetComponent>;
   rdfs:range <https://w3id.org/dsv-ontology#SummaryStatistics>;
   rdfs:comment "Property linking a dataset or a component to their summary statistics.";
   rdfs:label "summary statistics" .
