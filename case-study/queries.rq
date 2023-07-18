@@ -65,10 +65,10 @@ WHERE {
 
 PREFIX dsv: 	<https://w3id.org/dsv-ontology#>
 
-SELECT ?completeness
+SELECT ?datasetCompleteness
 WHERE { 
     <http://www.canada-open-data.org/example-aggregated-dataset>		dsv:summaryStatistics		?stats .
-	?stats																dsv:completeness			?completeness
+	?stats																dsv:datasetCompleteness		?datasetCompleteness
 }
 
 
@@ -81,11 +81,11 @@ PREFIX rdfs: 	<http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?component ?componentLabel ?componentCompleteness
 WHERE { 
-    <http://www.canada-open-data.org/example-aggregated-dataset>		dsv:datasetSchema		?datasetSchema .
-    ?datasetSchema														dsv:datasetComponent	?component .
-    ?component															rdfs:label				?componentLabel ;
-																		dsv:summaryStatistics	?componentStats .
-    ?componentStats														dsv:completeness		?componentCompleteness .
+    <http://www.canada-open-data.org/example-aggregated-dataset>		dsv:datasetSchema			?datasetSchema .
+    ?datasetSchema														dsv:datasetComponent		?component .
+    ?component															rdfs:label					?componentLabel ;
+																		dsv:summaryStatistics		?componentStats .
+    ?componentStats														dsv:componentCompleteness	?componentCompleteness .
 }
 
 
