@@ -1,0 +1,121 @@
+@prefix csvw:           <http://www.w3.org/ns/csvw#> .
+@prefix qb:             <http://purl.org/linked-data/cube#> .
+@prefix dsv:            <https://w3id.org/dsv-ontology#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct:            <http://purl.org/dc/terms/> .
+@prefix eg-usa-code:    <http://example.org/usaCodeBook#> .
+@prefix var:            <http://www.example.org/VariablesVocabulary/> .
+@prefix dsv:            <https://w3id.org/dsv-ontology#> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbpedia-owl:    <http://dbpedia.org/ontology/> .
+@prefix wd:             <http://www.wikidata.org/entity/> .
+@prefix sdmx-subject:   <http://purl.org/linked-data/sdmx/2009/subject#> .
+@prefix sdmx-concept:   <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix ddi-au:         <http://rdf-vocabulary.ddialliance.org/cv/AnalysisUnit/2.1.3/#> .
+@prefix eg:             <http://example.org/ns#> .
+
+
+# -- Data Set --------------------------------------------
+
+<http://www.usa-open-data.org/example-aggregated-dataset>           a                               qb:DataSet ;
+                                                                    dct:subject                     sdmx-subject:1 , # demographic and social statistics
+                                                                                                    sdmx-subject:1.4 ; # health
+                                                                    dsv:summaryStatistics           [
+                                                                        dsv:numberOfRows                "110"^^xsd:integer ;
+                                                                        dsv:numberOfColumns             "4"^^xsd:integer ;
+                                                                        dsv:datasetCompleteness         "1.00"^^xsd:float 
+                                                                    ] ;
+                                                                    qb:structure                    eg:dsd-usa ; 
+                                                                    sdmx-attribute:statUnit         ddi-au:Group ;
+                                                                    sdmx-attribute:unitMeasure      <http://dbpedia.org/resource/Year> .
+
+
+# -- Data structure definition ----------------------------
+
+eg:dsd-usa                                                          a                               qb:DataStructureDefinition ;
+                                                                    qb:component                    [
+                                                                        qb:dimension                    <http://www.usa-open-data.org/example-aggregated-dataset/column/Year> ,
+                                                                                                        <http://www.usa-open-data.org/example-aggregated-dataset/column/BirthNumber> ,
+                                                                                                        <http://www.usa-open-data.org/example-aggregated-dataset/column/GeneralFertilityRate> ,
+                                                                                                        <http://www.usa-open-data.org/example-aggregated-dataset/column/CrudeBirthRate> 
+                                                                    ] .
+
+
+# -- Dimensions -------------------------------------------
+
+<http://www.usa-open-data.org/example-aggregated-dataset/column/Year>                       a                           rdf:Property ,
+                                                                                                                        qb:DimensionProperty ,
+                                                                                                                        csvw:Column ;
+                                                                                            rdfs:label                  "Year"@en ;
+                                                                                            rdfs:subPropertyOf          sdmx-dimension:refPeriod ;
+                                                                                            qb:concept                  sdmx-concept:refPeriod ;
+                                                                                            qb:codeList                 eg-usa-code:PeriodeYearn ;
+                                                                                            dsv:summaryStatistics       [
+                                                                                                dsv:componentCompleteness   "1.00"^^xsd:float ;
+                                                                                                dsv:statisticalDataType     dsv:Ratio ;
+                                                                                            ] .
+
+<http://www.usa-open-data.org/example-aggregated-dataset/column/BirthNumber>                a                           rdf:Property ,
+                                                                                                                        qb:DimensionProperty ,
+                                                                                                                        csvw:Column ;
+                                                                                            rdfs:label                  "Birth Number"@en ;
+                                                                                            rdfs:subPropertyOf          <http://www.usa-open-data.org/properties-dictionary/birthNumber> ;
+                                                                                            qb:concept                  var:Birth ;
+                                                                                            qb:codeList                 eg-usa-code:BirthNumber ;
+                                                                                            dsv:summaryStatistics       [
+                                                                                                dsv:componentCompleteness   "1.00"^^xsd:float ;
+                                                                                                dsv:statisticalDataType     dsv:Ratio ;
+                                                                                            ] .
+
+<http://www.usa-open-data.org/example-aggregated-dataset/column/GeneralFertilityRate>       a                           rdf:Property ,
+                                                                                                                        qb:DimensionProperty ,
+                                                                                                                        csvw:Column ;
+                                                                                            rdfs:label                  "General Fertility Rate"@en ;
+                                                                                            rdfs:subPropertyOf          <http://www.usa-open-data.org/properties-dictionary/generalFertilityRate> ;
+                                                                                            qb:concept                  var:FertilityRate ;
+                                                                                            qb:codeList                 eg-usa-code:GeneralFertilityRate ;
+                                                                                            dsv:summaryStatistics       [
+                                                                                                dsv:componentCompleteness   "1.00"^^xsd:float ;
+                                                                                                dsv:statisticalDataType     dsv:Ratio ;
+                                                                                            ] .
+
+<http://www.usa-open-data.org/example-aggregated-dataset/column/CrudeBirthRate>             a                           rdf:Property ,
+                                                                                                                        qb:DimensionProperty ,
+                                                                                                                        csvw:Column ;
+                                                                                            rdfs:label                  "Crude Birth Rate"@en ;
+                                                                                            rdfs:subPropertyOf          <http://www.usa-open-data.org/properties-dictionary/crudeBirthRate> ;
+                                                                                            qb:concept                  var:Birth ;
+                                                                                            qb:codeList                 eg-usa-code:CrudeBirthRate ;
+                                                                                            dsv:summaryStatistics       [
+                                                                                                dsv:componentCompleteness   "1.00"^^xsd:float ;
+                                                                                                dsv:statisticalDataType     dsv:Ratio ;
+                                                                                            ] .
+
+
+# -- CBS Properties Vocab --------------------------------------------
+
+<http://www.usa-open-data.org/properties-dictionary/year>                       a                       rdf:Property ;
+                                                                                rdfs:label              "Property defining the year of an event"@en ;
+                                                                                dsv:linksToVariable     var:YearCoverage ;
+                                                                                rdfs:domain             var:Birth ;
+                                                                                rdfs:range              xsd:gYear .
+
+<http://www.usa-open-data.org/properties-dictionary/birthNumber>                a                       rdf:Property ;
+                                                                                rdfs:label              "Property defining the number of births"@en ;
+                                                                                dsv:linksToVariable     var:Birth ;
+                                                                                rdfs:domain             var:Birth ;
+                                                                                rdfs:range              xsd:int .
+
+<http://www.usa-open-data.org/properties-dictionary/generalFertilityRate>       a                       rdf:Property ;
+                                                                                rdfs:label              "Property defining the general fertility rate"@en ;
+                                                                                dsv:linksToVariable     var:FertilityRate ;
+                                                                                rdfs:domain             var:Birth ;
+                                                                                rdfs:range              xsd:float .
+
+<http://www.usa-open-data.org/properties-dictionary/crudeBirthRate>             a                       rdf:Property ;
+                                                                                rdfs:label              "Property defining the crude birth rate"@en ;
+                                                                                dsv:linksToVariable     var:Birth ;
+                                                                                rdfs:domain             var:Birth ;
+                                                                                rdfs:range              xsd:float .
