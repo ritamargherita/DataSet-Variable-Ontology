@@ -35,6 +35,10 @@
                                                                     dct:format                      "csv" ;
                                                                     sdmx-attribute:unitMeasure      wd:Q577 ;
                                                                     sdmx-attribute:statUnit         ddi-au:Group ;
+                                                                    csvw:primaryKey                 <http://www.canada-open-data.org/example-aggregated-dataset/column/refDate> ,
+                                                                                                    <http://www.canada-open-data.org/example-aggregated-dataset/column/geo> ,
+                                                                                                    <http://www.canada-open-data.org/example-aggregated-dataset/column/ageGroup> ,
+                                                                                                    <http://www.canada-open-data.org/example-aggregated-dataset/column/pregnancyOutcomes> ;
                                                                     qb:structure                    eg:dsd-ca ; 
                                                                     dsv:summaryStatistics           [
                                                                         dsv:numberOfRows                "40208"^^xsd:integer ;

@@ -37,6 +37,7 @@
                                                                 dct:format                      "csv" ;
                                                                 sdmx-attribute:unitMeasure      wd:Q577 ;
                                                                 sdmx-attribute:statUnit         ddi-au:Group ;
+                                                                csvw:primaryKey                 <http://www.nl-open-data.org/example-aggregated-dataset/column/perioden> ;
                                                                 qb:structure                    eg:dsd-nl ;
                                                                 dsv:summaryStatistics           [
                                                                         dsv:numberOfRows                "72"^^xsd:integer ;

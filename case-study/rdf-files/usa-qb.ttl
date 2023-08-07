@@ -33,6 +33,7 @@
                                                                     dct:format                      "csv" ;
                                                                     sdmx-attribute:unitMeasure      wd:Q577 ;
                                                                     sdmx-attribute:statUnit         ddi-au:Group ;
+                                                                    csvw:primaryKey                 <http://www.usa-open-data.org/example-aggregated-dataset/column/Year> ;
                                                                     qb:structure                    eg:dsd-usa ; 
                                                                     dsv:summaryStatistics           [
                                                                         dsv:numberOfRows                "110"^^xsd:integer ;

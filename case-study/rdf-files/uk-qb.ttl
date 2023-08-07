@@ -35,6 +35,15 @@
                                                                     dct:format                      "csv" ;
                                                                     sdmx-attribute:unitMeasure      wd:Q577 ;
                                                                     sdmx-attribute:statUnit         ddi-au:Group ;
+                                                                    csvw:primaryKey                 <http://www.uk-open-data.org/example-aggregated-dataset/column/year> ,
+                                                                                                    <http://www.uk-open-data.org/example-aggregated-dataset/column/rgn20cd> ,
+                                                                                                    <http://www.uk-open-data.org/example-aggregated-dataset/column/rgn20nm> ,
+                                                                                                    <http://www.uk-open-data.org/example-aggregated-dataset/column/lad20cd> ,
+                                                                                                    <http://www.uk-open-data.org/example-aggregated-dataset/column/lad20nm> ,
+                                                                                                    <http://www.uk-open-data.org/example-aggregated-dataset/column/wd20cd> ,
+                                                                                                    <http://www.uk-open-data.org/example-aggregated-dataset/column/wd20nm> ,
+                                                                                                    <http://www.uk-open-data.org/example-aggregated-dataset/column/ageOfMother> ,
+                                                                                                    <http://www.uk-open-data.org/example-aggregated-dataset/column/sex> ;
                                                                     qb:structure                    eg:dsd-uk ;
                                                                     dsv:summaryStatistics           [
                                                                         dsv:numberOfRows                "962760"^^xsd:integer ;
