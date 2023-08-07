@@ -1,0 +1,133 @@
+@prefix csvw:           <http://www.w3.org/ns/csvw#> .
+@prefix dct:            <http://purl.org/dc/terms/> .
+@prefix ddi-au:         <http://rdf-vocabulary.ddialliance.org/cv/AnalysisUnit/2.1.3/#> .
+@prefix dsv:            <https://w3id.org/dsv-ontology#> .
+@prefix eg:             <http://example.org/ns#> .
+@prefix elsst:          <https://elsst.cessda.eu/id/3/> .
+@prefix qb:             <http://purl.org/linked-data/cube#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:         <http://schema.org/> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix sdmx-concept:   <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix sdmx-subject:   <http://purl.org/linked-data/sdmx/2009/subject#> .
+@prefix wd:             <http://www.wikidata.org/entity/> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+
+
+# -- Data Set ----------------------------------------------
+
+<http://www.usa-open-data.org/example-aggregated-dataset>           a                               qb:DataSet ,
+                                                                                                    csvw:Table ;
+                                                                    dct:title                       "NCHS - Births and General Fertility Rates: United States"@en ;
+                                                                    rdfs:label                      "NCHS - Births and General Fertility Rates: United States"@en ;
+                                                                    rdfs:comment                    "This RDF description is not meant to be representative of the real dataset, and it was not created or commissioned by the original author of the dataset. It was created only for experimental and research purposes."@en ;
+                                                                    dct:description                 "This dataset includes crude birth rates and general fertility rates in the United States since 1909. The number of states in the reporting area differ historically. In 1915 (when the birth registration area was established), 10 states and the District of Columbia reported births; by 1933, 48 states and the District of Columbia were reporting births, with the last two states, Alaska and Hawaii, added to the registration area in 1959 and 1960, when these regions gained statehood. Reporting area information is detailed in references 1 and 2 below. Trend lines for 1909–1958 are based on live births adjusted for under-registration; beginning with 1959, trend lines are based on registered live births."@en ;
+                                                                    dct:publisher                   "U.S. Department of Health & Human Services"@en ;
+                                                                    dct:issued                      "2022-03-12"^^xsd:date ;
+                                                                    schema:about                    "https://catalog.data.gov/dataset/nchs-births-and-general-fertility-rates-united-states" ; 
+                                                                    schema:spatialCoverage          wd:Q30 ; 
+                                                                    schema:temporalCoverage         "1909/2018" ; # ISO 8601 time interval format
+                                                                    dct:subject                     sdmx-subject:1 , # demographic and social statistics
+                                                                                                    sdmx-subject:1.4 ; # health
+                                                                    sdmx-attribute:unitMeasure      wd:Q577 ;
+                                                                    sdmx-attribute:statUnit         ddi-au:Group ;
+                                                                    qb:structure                    eg:dsd-usa ; 
+                                                                    dsv:summaryStatistics           [
+                                                                        dsv:numberOfRows                "110"^^xsd:integer ;
+                                                                        dsv:numberOfColumns             "4"^^xsd:integer ;
+                                                                        dsv:datasetCompleteness         "1.00"^^xsd:float 
+                                                                    ] .
+
+
+# -- Data structure definition -----------------------------
+
+eg:dsd-usa                                                          a                               qb:DataStructureDefinition ;
+                                                                    qb:component                    <http://www.usa-open-data.org/example-aggregated-dataset/column/Year> ,
+                                                                                                    <http://www.usa-open-data.org/example-aggregated-dataset/column/BirthNumber> ,
+                                                                                                    <http://www.usa-open-data.org/example-aggregated-dataset/column/GeneralFertilityRate> ,
+                                                                                                    <http://www.usa-open-data.org/example-aggregated-dataset/column/CrudeBirthRate> .
+
+
+# -- Components (Columns) ----------------------------------
+
+<http://www.usa-open-data.org/example-aggregated-dataset/column/Year>                       a                           qb:ComponentSpecification ,
+                                                                                                                        csvw:Column ;
+                                                                                            rdfs:label                  "Year"@en ;
+                                                                                            rdfs:description            "Year of observation."@en ;
+                                                                                            qb:dimension                <http://www.usa-open-data.org/properties-dictionary/year> ;
+                                                                                            dsv:summaryStatistics       [
+                                                                                                dsv:columnCompleteness      "1.00"^^xsd:float ;
+                                                                                                dsv:statisticalDataType     dsv:IntervalDataType ;
+                                                                                                schema:minValue             "1909"^^xsd:gYear ;
+                                                                                                schema:maxValue             "2018"^^xsd:gYear 
+                                                                                            ] .
+
+<http://www.usa-open-data.org/example-aggregated-dataset/column/BirthNumber>                a                           qb:ComponentSpecification ,
+                                                                                                                        csvw:Column ;
+                                                                                            rdfs:label                  "Birth Number"@en ;
+                                                                                            rdfs:description            "Number of births."@en ;
+                                                                                            qb:dimension                <http://www.usa-open-data.org/properties-dictionary/birthNumber> ;
+                                                                                            dsv:summaryStatistics       [
+                                                                                                dsv:columnCompleteness      "1.00"^^xsd:float ;
+                                                                                                dsv:statisticalDataType     dsv:RatioDataType  ;
+                                                                                                schema:minValue             "2307000"^^xsd:int ;
+                                                                                                schema:maxValue             "4316233"^^xsd:int
+                                                                                            ] .
+
+<http://www.usa-open-data.org/example-aggregated-dataset/column/GeneralFertilityRate>       a                           qb:ComponentSpecification ,
+                                                                                                                        csvw:Column ;
+                                                                                            rdfs:label                  "General Fertility Rate"@en ;
+                                                                                            rdfs:description            "Number of live births per 1000 women of childbearing age, for each year."@en ;
+                                                                                            qb:dimension                <http://www.usa-open-data.org/properties-dictionary/generalFertilityRate> ;
+                                                                                            dsv:summaryStatistics       [
+                                                                                                dsv:columnCompleteness      "1.00"^^xsd:float ;
+                                                                                                dsv:statisticalDataType     dsv:RatioDataType ;
+                                                                                                schema:minValue             "59.1"^^xsd:float ;
+                                                                                                schema:maxValue             "126.8"^^xsd:float
+                                                                                            ] .
+
+<http://www.usa-open-data.org/example-aggregated-dataset/column/CrudeBirthRate>             a                           qb:ComponentSpecification ,
+                                                                                                                        csvw:Column ;
+                                                                                            rdfs:label                  "Crude Birth Rate"@en ;
+                                                                                            rdfs:description            "Number of live births per 1000 people, withouth considering age or gender distribution, for each year."@en ;
+                                                                                            qb:dimension                <http://www.usa-open-data.org/properties-dictionary/crudeBirthRate> ;
+                                                                                            dsv:summaryStatistics       [
+                                                                                                dsv:columnCompleteness      "1.00"^^xsd:float ;
+                                                                                                dsv:statisticalDataType     dsv:RatioDataType ;
+                                                                                                schema:minValue             "11.6"^^xsd:float ;
+                                                                                                schema:maxValue             "30.1"^^xsd:float 
+                                                                                            ] .
+
+
+# -- Dimension Properties ------------------------------
+
+<http://www.usa-open-data.org/properties-dictionary/year>                       a                       rdf:Property ,
+                                                                                                        qb:DimensionProperty ;
+                                                                                rdfs:label              "Year Property"@en ;
+                                                                                rdfs:description        "Property defining the year of an event"@en ;
+                                                                                rdfs:subPropertyOf      sdmx-dimension:refPeriod ;
+                                                                                rdfs:range              xsd:gYear ;
+                                                                                qb:concept              sdmx-concept:refPeriod .
+
+<http://www.usa-open-data.org/properties-dictionary/birthNumber>                a                       rdf:Property ,
+                                                                                                        qb:DimensionProperty ;
+                                                                                rdfs:label              "Number of BirthsProperty"@en ;
+                                                                                rdfs:description        "Property defining the number of births"@en ;
+                                                                                rdfs:subPropertyOf      schema:value ;
+                                                                                rdfs:range              xsd:int ;
+                                                                                qb:concept              elsst:d8f31e43-68d0-4b17-a33e-9fee3c5f77b3 . 
+
+<http://www.usa-open-data.org/properties-dictionary/generalFertilityRate>       a                       rdf:Property ,
+                                                                                                        qb:DimensionProperty ;
+                                                                                rdfs:label              "General Fertility Rate Property"@en ;
+                                                                                rdfs:description        "Property defining the general fertility rate"@en ;
+                                                                                rdfs:range              xsd:float ;
+                                                                                qb:concept              elsst:7bbac201-fff2-4bb2-8766-84e671165f22 . 
+
+<http://www.usa-open-data.org/properties-dictionary/crudeBirthRate>             a                       rdf:Property ,
+                                                                                                        qb:DimensionProperty ;
+                                                                                rdfs:label              "Crude Birth Rate Property"@en ;
+                                                                                rdfs:description        "Property defining the crude birth rate"@en ;
+                                                                                rdfs:range              xsd:float ;
+                                                                                qb:concept              elsst:696a6b2e-01ff-4330-a003-d4cb3be5d906 .

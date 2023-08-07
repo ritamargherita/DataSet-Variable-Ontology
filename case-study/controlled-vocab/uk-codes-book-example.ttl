@@ -1,0 +1,87 @@
+@prefix eg-uk:          <http://example.org/ns#uk-codebook/> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:         <http://schema.org/> .
+@prefix skos:           <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+
+
+# -- Canada Codes-Book -------------------------------------
+eg-uk:UKCodesBook           a                       skos:ConceptScheme ;
+                            rdfs:label              "Codes-Book Concept Scheme for United Kingdom Open Data Portal."@en ;
+                            rdfs:comment            "This RDF description is not meant to be representative of the real dataset, and it was not created or commissioned by the original author of the dataset. It was created only for experimental and research purposes."@en ;
+                            dct:publisher           "United Kingdom Open Data"@en .
+       
+                            
+# -- Age Group Concept -------------------------------------
+
+eg-uk:AgeGroup              a                       skos:Concept ;
+                            rdfs:label              "Age group"@en ;
+                            rdfs:comment            "Age group"@en ;
+                            skos:narrower           eg-uk:Age24under ,
+                                                    eg-uk:Age25to34 ,
+                                                    eg-uk:Age35over ;
+                            skos:inScheme           eg-uk:UKCodesBook .
+
+eg-uk:Age24under            a                       skos:Concept ;
+                            rdfs:label              "24 years and under"@en ;
+                            rdfs:comment            "24 years and under"@en ;
+                            schema:maxValue         "24"^^xsd:int ;
+                            skos:broader            eg-uk:AgeGroup ;
+                            skos:inScheme           eg-uk:UKCodesBook . 
+
+eg-uk:Age25to34             a                       skos:Concept ;
+                            rdfs:label              "25 to 34 years"@en ;
+                            rdfs:comment            "25 to 34 years"@en ;
+                            schema:minValue         "25"^^xsd:int ;
+                            schema:maxValue         "34"^^xsd:int ;
+                            skos:broader            eg-uk:AgeGroup ;
+                            skos:inScheme           eg-uk:UKCodesBook . 
+
+eg-uk:Age35over             a                       skos:Concept ;
+                            rdfs:label              "35 years and over"@en ;
+                            rdfs:comment            "35 years and over"@en ;
+                            schema:minValue         "35"^^xsd:int ;
+                            skos:broader            eg-uk:AgeGroup ;
+                            skos:inScheme           eg-uk:UKCodesBook . 
+
+# -- Gender Concept ----------------------------------------
+
+eg-uk:Gender                a                       skos:Concept ;
+                            rdfs:label              "Gender"@en ;
+                            rdfs:comment            "Gender"@en ;
+                            skos:related            wd:Q48277 ;
+                            skos:narrower           eg-uk:GenderFemale ,
+                                                    eg-uk:GenderMale ;
+                            skos:inScheme           eg-uk:UKCodesBook .
+
+eg-uk:GenderFemale          a                       skos:Concept ;
+                            rdfs:label              "Female gender"@en ;
+                            rdfs:comment            "Female gender"@en ;
+                            skos:related            wd:Q6581072 ;
+                            skos:broader            eg-uk:Gender ;
+                            skos:inScheme           eg-uk:UKCodesBook . 
+
+eg-uk:GenderMale            a                       skos:Concept ;
+                            rdfs:label              "Male gender"@en ;
+                            rdfs:comment            "Male gender"@en ;
+                            skos:related            wd:Q6581097 ;
+                            skos:broader            eg-uk:Gender ;
+                            skos:inScheme           eg-uk:UKCodesBook . 
+
+eg-uk:Agender               a                       skos:Concept ;
+                            rdfs:label              "Agender"@en ;
+                            rdfs:comment            "Agender"@en ;
+                            skos:related            wd:Q505371 ;
+                            skos:broader            eg-uk:Gender ;
+                            skos:inScheme           eg-uk:UKCodesBook . 
+
+eg-uk:Transgender           a                       skos:Concept ;
+                            rdfs:label              "Transgender"@en ;
+                            rdfs:comment            "Transgender"@en ;
+                            skos:related            wd:Q189125 ;
+                            skos:broader            eg-uk:Gender ;
+                            skos:inScheme           eg-uk:UKCodesBook .
+
+
+
+                            

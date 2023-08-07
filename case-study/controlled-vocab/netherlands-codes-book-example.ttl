@@ -1,0 +1,89 @@
+@prefix eg-nl:          <http://example.org/ns#netherlands-codebook/> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:         <http://schema.org/> .
+@prefix skos:           <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+
+
+# -- Netherlands Codes-Book --------------------------------
+eg-nl:NLCodesBook           a                       skos:ConceptScheme ;
+                            rdfs:label              "Codes-Book Concept Scheme for Statistics Netherlands."@en ;
+                            rdfs:comment            "This RDF description is not meant to be representative of the real dataset, and it was not created or commissioned by the original author of the dataset. It was created only for experimental and research purposes."@en ;
+                            dct:publisher           "Statistics Netherlands"@en .
+
+
+# -- Age Group Concept -------------------------------------
+
+eg-nl:AgeGroup              a                       skos:Concept ;
+                            rdfs:label              "Age group"@en ;
+                            rdfs:comment            "Age group"@en ;
+                            skos:narrower           eg-nl:Age20under ,
+                                                    eg-nl:Age20to25 ,
+                                                    eg-nl:Age25to30 ,
+                                                    eg-nl:Age30to35 ,
+                                                    eg-nl:Age35to40 ,
+                                                    eg-nl:Age40to45 ,
+                                                    eg-nl:Age45over ;
+                            skos:inScheme           eg-nl:NLCodesBook .
+
+eg-nl:Age20under            a                       skos:Concept ;
+                            rdfs:label              "20 years and under"@en ;
+                            rdfs:comment            "20 years and under"@en ;
+                            schema:maxValue         "20"^^xsd:int ;
+                            skos:broader            eg-nl:AgeGroup ;
+                            skos:inScheme           eg-nl:NLCodesBook . 
+
+eg-nl:Age20to25             a                       skos:Concept ;
+                            rdfs:label              "20 to 25 years"@en ;
+                            rdfs:comment            "20 to 25 years"@en ;
+                            schema:minValye         "20"^^xsd:int ;
+                            schema:maxValue         "25"^^xsd:int ;
+                            skos:broader            eg-nl:AgeGroup ;
+                            skos:inScheme           eg-nl:NLCodesBook . 
+
+eg-nl:Age25to30             a                       skos:Concept ;
+                            rdfs:label              "25 to 30 years"@en ;
+                            rdfs:comment            "25 to 30 years"@en ;
+                            schema:minValye         "25"^^xsd:int ;
+                            schema:maxValue         "30"^^xsd:int ;
+                            skos:broader            eg-nl:AgeGroup ;
+                            skos:inScheme           eg-nl:NLCodesBook . 
+
+eg-nl:Age30to35             a                       skos:Concept ;
+                            rdfs:label              "30 to 35 years"@en ;
+                            rdfs:comment            "30 to 35 years"@en ;
+                            schema:minValye         "30"^^xsd:int ;
+                            schema:maxValue         "35"^^xsd:int ;
+                            skos:broader            eg-nl:AgeGroup ;
+                            skos:inScheme           eg-nl:NLCodesBook . 
+
+eg-nl:Age35to40             a                       skos:Concept ;
+                            rdfs:label              "35 to 40 years"@en ;
+                            rdfs:comment            "35 to 40 years"@en ;
+                            schema:minValye         "35"^^xsd:int ;
+                            schema:maxValue         "40"^^xsd:int ;
+                            skos:broader            eg-nl:AgeGroup ;
+                            skos:inScheme           eg-nl:NLCodesBook . 
+
+eg-nl:Age40to45             a                       skos:Concept ;
+                            rdfs:label              "40 to 45 years"@en ;
+                            rdfs:comment            "40 to 45 years"@en ;
+                            schema:minValye         "40"^^xsd:int ;
+                            schema:maxValue         "45"^^xsd:int ;
+                            skos:broader            eg-nl:AgeGroup ;
+                            skos:inScheme           eg-nl:NLCodesBook . 
+
+eg-nl:Age45over             a                       skos:Concept ;
+                            rdfs:label              "45 years and over"@en ;
+                            rdfs:comment            "45 years and over"@en ;
+                            schema:minValue         "45"^^xsd:int ;
+                            skos:broader            eg-nl:AgeGroup ;
+                            skos:inScheme           eg-nl:NLCodesBook . 
+
+
+
+
+
+
+
+

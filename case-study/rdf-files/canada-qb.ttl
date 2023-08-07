@@ -1,0 +1,189 @@
+@prefix csvw:           <http://www.w3.org/ns/csvw#> .
+@prefix dct:            <http://purl.org/dc/terms/> .
+@prefix ddi-au:         <http://rdf-vocabulary.ddialliance.org/cv/AnalysisUnit/2.1.3/#> .
+@prefix dsv:            <https://w3id.org/dsv-ontology#> .
+@prefix eg:             <http://example.org/ns#> .
+@prefix eg-ca:          <http://example.org/ns#canada-codebook/> .
+@prefix elsst:          <https://elsst.cessda.eu/id/3/> .
+@prefix qb:             <http://purl.org/linked-data/cube#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:         <http://schema.org/> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix sdmx-concept:   <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix sdmx-subject:   <http://purl.org/linked-data/sdmx/2009/subject#> .
+@prefix wd:             <http://www.wikidata.org/entity/> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+
+
+# -- Data Set ----------------------------------------------
+
+<http://www.canada-open-data.org/example-aggregated-dataset>        a                               qb:DataSet ,
+                                                                                                    csvw:Table ;
+                                                                    dct:title                       "Pregnancy outcomes (live births, induced abortions, and fetal loss)"@en ;
+                                                                    rdfs:label                      "Pregnancy outcomes (live births, induced abortions, and fetal loss)"@en ;
+                                                                    rdfs:comment                    "This RDF description is not meant to be representative of the real dataset, and it was not created or commissioned by the original author of the dataset. It was created only for experimental and research purposes."@en ;
+                                                                    dct:description                 "Number of teen pregnancies and rates per 1,000 females, by pregnancy outcome (live births, induced abortions, or fetal loss), by age group (under 20 years, 20 to 24 years, 25 to 29 years, 30 to 34 years, 35 to 39 years, or 40 years and over), 1974 to 2005."@en ;
+                                                                    dct:publisher                   "Statistics Canada"@en ;
+                                                                    dct:issued                      "2010-10-25"^^xsd:date ;
+                                                                    schema:about                    "https://open.canada.ca/data/en/dataset/1367e3a6-02f1-496f-9c0f-d078dbdd58d0" ; 
+                                                                    schema:spatialCoverage          wd:Q16 ; 
+                                                                    schema:temporalCoverage         "1974/2005" ; # ISO 8601 time interval format
+                                                                    dct:subject                     sdmx-subject:1 ,        # demographic and social statistics
+                                                                                                    sdmx-subject:3.2 ,      # regional and small area statistics
+                                                                                                    sdmx-subject:1.4 ;      # health
+                                                                    sdmx-attribute:unitMeasure      wd:Q577 ;
+                                                                    sdmx-attribute:statUnit         ddi-au:Group ;
+                                                                    qb:structure                    eg:dsd-ca ; 
+                                                                    dsv:summaryStatistics           [
+                                                                        dsv:numberOfRows                "40208"^^xsd:integer ;
+                                                                        dsv:numberOfColumns             "5"^^xsd:integer ;
+                                                                        dsv:datasetCompleteness         "0.99"^^xsd:float ;
+                                                                        dsv:missingValuesFormat         "NA"^^xsd:string
+                                                                    ] .  
+
+
+# -- Data structure definition -----------------------------
+
+eg:dsd-ca                                                           a                               qb:DataStructureDefinition ;
+                                                                    qb:component                    <http://www.canada-open-data.org/example-aggregated-dataset/column/refDate> ,
+                                                                                                    <http://www.canada-open-data.org/example-aggregated-dataset/column/geo> ,
+                                                                                                    <http://www.canada-open-data.org/example-aggregated-dataset/column/ageGroup> ,
+                                                                                                    <http://www.canada-open-data.org/example-aggregated-dataset/column/pregnancyOutcomes> ,
+                                                                                                    <http://www.canada-open-data.org/example-aggregated-dataset/column/value> .
+
+
+# -- Components (Columns) ----------------------------------
+
+<http://www.canada-open-data.org/example-aggregated-dataset/column/refDate>                 a                           qb:ComponentSpecification ,
+                                                                                                                        csvw:Column ;
+                                                                                            rdfs:label                  "REF_DATE"@en ;
+                                                                                            rdfs:description            "Year of observation."@en ;
+                                                                                            qb:dimension                <http://www.canada-open-data.org/properties-dictionary/refDate> ;
+                                                                                            dsv:summaryStatistics       [
+                                                                                                dsv:componentCompleteness   "1.00"^^xsd:float ;
+                                                                                                dsv:statisticalDataType     dsv:IntervalDataType ;
+                                                                                                schema:minValue             "1974"^^xsd:gYear ;
+                                                                                                schema:maxValue             "2005"^^xsd:gYear 
+                                                                                            ] .
+
+<http://www.canada-open-data.org/example-aggregated-dataset/column/geo>                     a                           qb:ComponentSpecification ,
+                                                                                                                        csvw:Column ;
+                                                                                            rdfs:label                  "GEO"@en ;
+                                                                                            rdfs:description            "Place of residence of mother."@en ;
+                                                                                            qb:dimension                <http://www.canada-open-data.org/properties-dictionary/geo> ;
+                                                                                            dsv:summaryStatistics       [
+                                                                                                dsv:componentCompleteness   "1.00"^^xsd:float ;
+                                                                                                dsv:statisticalDataType     dsv:NominalDataType ;
+                                                                                                dsv:hasCategories           eg-ca:1.1 ,
+                                                                                                                            eg-ca:1.2 ,
+                                                                                                                            eg-ca:1.3 ,
+                                                                                                                            eg-ca:1.4 ,
+                                                                                                                            eg-ca:1.5 ,
+                                                                                                                            eg-ca:1.6 ,
+                                                                                                                            eg-ca:1.7 ,
+                                                                                                                            eg-ca:1.8 ,
+                                                                                                                            eg-ca:1.9 ,
+                                                                                                                            eg-ca:1.10 ,
+                                                                                                                            eg-ca:1.11 ,
+                                                                                                                            eg-ca:1.12 ,
+                                                                                                                            eg-ca:1.13 ,
+                                                                                                                            eg-ca:1.14 ,
+                                                                                                                            eg-ca:1.15 ,
+                                                                                                                            eg-ca:1.16 
+                                                                                            ] .
+
+<http://www.canada-open-data.org/example-aggregated-dataset/column/ageGroup>                a                           qb:ComponentSpecification ,
+                                                                                                                        csvw:Column ;
+                                                                                            rdfs:label                  "Age group"@en ;
+                                                                                            rdfs:description            "Age group of mother."@en ;
+                                                                                            qb:dimension                <http://www.canada-open-data.org/properties-dictionary/ageGroup> ;
+                                                                                            dsv:summaryStatistics       [
+                                                                                                dsv:componentCompleteness   "1.00"^^xsd:float ;
+                                                                                                dsv:statisticalDataType     dsv:NominalDataType ;
+                                                                                                dsv:hasCategories           eg-ca:2.1 ,
+                                                                                                                            eg-ca:2.2 ,
+                                                                                                                            eg-ca:2.3 ,
+                                                                                                                            eg-ca:2.4 ,
+                                                                                                                            eg-ca:2.5 ,
+                                                                                                                            eg-ca:2.6 ,
+                                                                                                                            eg-ca:2.7 ,
+                                                                                                                            eg-ca:2.8 ,
+                                                                                                                            eg-ca:2.9 ,
+                                                                                                                            eg-ca:2.10 ,
+                                                                                                                            eg-ca:2.11 ,
+                                                                                                                            eg-ca:2.12 
+                                                                                            ] .
+
+<http://www.canada-open-data.org/example-aggregated-dataset/column/pregnancyOutcomes>       a                           qb:ComponentSpecification ,
+                                                                                                                        csvw:Column ;
+                                                                                            rdfs:label                  "Pregnancy outcomes"@en ;
+                                                                                            rdfs:description            "Pregnancy outcome."@en ;
+                                                                                            qb:dimension                <http://www.canada-open-data.org/properties-dictionary/pregnancyOutcomes> ;
+                                                                                            dsv:summaryStatistics       [
+                                                                                                dsv:componentCompleteness   "1.00"^^xsd:float ;
+                                                                                                dsv:statisticalDataType     dsv:NominalDataType ;
+                                                                                                dsv:hasCategories           eg-ca:3.1 ,
+                                                                                                                            eg-ca:3.2 ,
+                                                                                                                            eg-ca:3.3 ,
+                                                                                                                            eg-ca:3.4 
+                                                                                            ] .
+
+<http://www.canada-open-data.org/example-aggregated-dataset/column/value>                   a                           qb:ComponentSpecification ,
+                                                                                                                        csvw:Column ;
+                                                                                            rdfs:label                  "VALUE"@en ;
+                                                                                            rdfs:description            "Number of births."@en ;
+                                                                                            qb:dimension                <http://www.canada-open-data.org/properties-dictionary/value> ;
+                                                                                            dsv:summaryStatistics       [
+                                                                                                dsv:componentCompleteness   "0.97"^^xsd:float ;
+                                                                                                dsv:statisticalDataType     dsv:RatioDataType ;
+                                                                                                dsv:missingValuesFormat     "NA"^^xsd:string ;
+                                                                                                schema:minValue             "0"^^xsd:int ;
+                                                                                                schema:maxValue             "526887"^^xsd:int
+                                                                                            ] .
+
+
+# -- Dimension Properties ------------------------------
+
+<http://www.canada-open-data.org/properties-dictionary/refDate>                 a                       rdf:Property ,
+                                                                                                        qb:DimensionProperty ;
+                                                                                rdfs:label              "Reference Date Property"@en ;
+                                                                                rdfs:description        "Property defining the year of an event"@en ;
+                                                                                rdfs:subPropertyOf      sdmx-dimension:refPeriod  ;
+                                                                                rdfs:range              xsd:gYear ;
+                                                                                qb:concept              sdmx-concept:refPeriod  .
+
+<http://www.canada-open-data.org/properties-dictionary/geo>                     a                       rdf:Property ,
+                                                                                                        qb:DimensionProperty ;
+                                                                                rdfs:label              "Geographical Location Property"@en ;
+                                                                                rdfs:description        "Property defining the location of an event"@en ;
+                                                                                rdfs:subPropertyOf      sdmx-dimension:refArea ;
+                                                                                rdfs:range              xsd:string ;
+                                                                                qb:concept              sdmx-concept:refArea ;
+                                                                                qb:codeList             eg-ca:Geography.
+
+<http://www.canada-open-data.org/properties-dictionary/ageGroup>                a                       rdf:Property ,
+                                                                                                        qb:DimensionProperty ;
+                                                                                rdfs:label              "Age Group of Mother Property"@en ;
+                                                                                rdfs:description        "Property defining the age group of the mother"@en ;
+                                                                                rdfs:subPropertyOf      sdmx-dimension:age ;
+                                                                                rdfs:range              xsd:string ;
+                                                                                qb:concept              sdmx-concept:age ;
+                                                                                qb:codeList             eg-ca:AgeGroup .
+
+<http://www.canada-open-data.org/properties-dictionary/pregnancyOutcomes>       a                       rdf:Property ,
+                                                                                                        qb:DimensionProperty ;
+                                                                                rdfs:label              "Pregnancy Outcome Property"@en ;
+                                                                                rdfs:description        "Property defining the outcome of a pregnancy"@en ;
+                                                                                rdfs:range              xsd:string ;
+                                                                                qb:concept              wd:Q66057507 ;
+                                                                                qb:codeList             eg-ca:PregnancyOutcomes.
+
+<http://www.canada-open-data.org/properties-dictionary/value>                   a                       rdf:Property ,
+                                                                                                        qb:DimensionProperty ;
+                                                                                rdfs:label              "Number of Births Property"@en ;
+                                                                                rdfs:description        "Property defining the number of births"@en ;
+                                                                                rdfs:subPropertyOf      schema:value ;
+                                                                                rdfs:range              xsd:int ;
+                                                                                qb:concept              elsst:d8f31e43-68d0-4b17-a33e-9fee3c5f77b3 .
+

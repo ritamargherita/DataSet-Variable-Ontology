@@ -1,0 +1,324 @@
+@prefix eg-ca:          <http://example.org/ns#canada-codebook/> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:         <http://schema.org/> .
+@prefix skos:           <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+
+
+# -- Canada Codes-Book -------------------------------------
+eg-ca:CanadaCodesBook       a                       skos:ConceptScheme ;
+                            rdfs:label              "Codes-Book Concept Scheme for Statistics Canada."@en ;
+                            rdfs:comment            "This RDF description is not meant to be representative of the real dataset, and it was not created or commissioned by the original author of the dataset. It was created only for experimental and research purposes."@en ;
+                            dct:publisher           "Statistics Canada"@en .
+
+
+# -- Geography Concept -------------------------------------
+
+eg-ca:Geography             a                       skos:Concept ;
+                            rdfs:label              "Geography, place of residence of females"@en ;
+                            rdfs:comment            "Geography, place of residence of females"@en ;
+                            schema:related          wd:Q16 ; 
+                            skos:narrower           eg-ca:1.1 ,
+                                                    eg-ca:1.2 ,
+                                                    eg-ca:1.3 ,
+                                                    eg-ca:1.4 ,
+                                                    eg-ca:1.5 ,
+                                                    eg-ca:1.6 ,
+                                                    eg-ca:1.7 ,
+                                                    eg-ca:1.8 ,
+                                                    eg-ca:1.9 ,
+                                                    eg-ca:1.10 ,
+                                                    eg-ca:1.11 ,
+                                                    eg-ca:1.12 ,
+                                                    eg-ca:1.13 ,
+                                                    eg-ca:1.14 ,
+                                                    eg-ca:1.15 ,
+                                                    eg-ca:1.16 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook .
+
+eg-ca:1.1                   a                       skos:Concept ;
+                            rdfs:label              "Canada, place of residence of females"@en ;
+                            rdfs:comment            "Canada, place of residence of females"@en ;
+                            schema:related          wd:Q16 ; 
+                            skos:broader            eg-ca:Geography ;
+                            skos:narrower           eg-ca:1.2 ,
+                                                    eg-ca:1.3 ,
+                                                    eg-ca:1.4 ,
+                                                    eg-ca:1.5 ,
+                                                    eg-ca:1.6 ,
+                                                    eg-ca:1.7 ,
+                                                    eg-ca:1.8 ,
+                                                    eg-ca:1.9 ,
+                                                    eg-ca:1.10 ,
+                                                    eg-ca:1.11 ,
+                                                    eg-ca:1.12 ,
+                                                    eg-ca:1.13 ,
+                                                    eg-ca:1.14 ,
+                                                    eg-ca:1.15 ,
+                                                    eg-ca:1.16 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook .             
+
+eg-ca:1.2                   a                       skos:Concept ;
+                            rdfs:label              "Newfoundland and Labrador, place of residence of females"@en ;
+                            rdfs:comment            "Newfoundland and Labrador, place of residence of females"@en ;
+                            schema:related          wd:Q2003 ; 
+                            skos:broader            eg-ca:1.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook .        
+
+eg-ca:1.3                   a                       skos:Concept ;
+                            rdfs:label              "Prince Edward Island, place of residence of females"@en ;
+                            rdfs:comment            "Prince Edward Island, place of residence of females"@en ;
+                            schema:related          wd:Q1978 ; 
+                            skos:broader            eg-ca:1.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook .        
+                             
+eg-ca:1.4                   a                       skos:Concept ;
+                            rdfs:label              "Nova Scotia, place of residence of females"@en ;
+                            rdfs:comment            "Nova Scotia, place of residence of females"@en ;
+                            schema:related          wd:Q1952 ; 
+                            skos:broader            eg-ca:1.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook .        
+                             
+eg-ca:1.5                   a                       skos:Concept ;
+                            rdfs:label              "New Brunswick, place of residence of females"@en ;
+                            rdfs:comment            "New Brunswick, place of residence of females"@en ;
+                            schema:related          wd:Q1965 ; 
+                            skos:broader            eg-ca:1.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook .        
+                             
+eg-ca:1.6                   a                       skos:Concept ;
+                            rdfs:label              "Quebec, place of residence of females"@en ;
+                            rdfs:comment            "Quebec, place of residence of females"@en ;
+                            schema:related          wd:Q176 ; 
+                            skos:broader            eg-ca:1.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook .        
+                             
+eg-ca:1.7                   a                       skos:Concept ;
+                            rdfs:label              "Ontario, place of residence of females"@en ;
+                            rdfs:comment            "Ontario, place of residence of females"@en ;
+                            schema:related          wd:Q1904 ; 
+                            skos:broader            eg-ca:1.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook .        
+                             
+eg-ca:1.8                   a                       skos:Concept ;
+                            rdfs:label              "Manitoba, place of residence of females"@en ;
+                            rdfs:comment            "Manitoba, place of residence of females"@en ;
+                            schema:related          wd:Q1948 ; 
+                            skos:broader            eg-ca:1.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook .        
+                             
+eg-ca:1.9                   a                       skos:Concept ;
+                            rdfs:label              "Saskatchewan, place of residence of females"@en ;
+                            rdfs:comment            "Saskatchewan, place of residence of females"@en ;
+                            schema:related          wd:Q1989 ; 
+                            skos:broader            eg-ca:1.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook .        
+                             
+eg-ca:1.10                  a                       skos:Concept ;
+                            rdfs:label              "Alberta, place of residence of females"@en ;
+                            rdfs:comment            "Alberta, place of residence of females"@en ;
+                            schema:related          wd:Q1951 ; 
+                            skos:broader            eg-ca:1.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook .        
+                             
+eg-ca:1.11                  a                       skos:Concept ;
+                            rdfs:label              "British Columbia, place of residence of females"@en ;
+                            rdfs:comment            "British Columbia, place of residence of females"@en ;
+                            schema:related          wd:Q1973 ; 
+                            skos:broader            eg-ca:1.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook .        
+                             
+eg-ca:1.12                  a                       skos:Concept ;
+                            rdfs:label              "Yukon, place of residence of females"@en ;
+                            rdfs:comment            "Yukon, place of residence of females"@en ;
+                            schema:related          wd:Q2009 ; 
+                            skos:broader            eg-ca:1.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook .        
+                             
+eg-ca:1.13                  a                       skos:Concept ;
+                            rdfs:label              "Northwest Territories including Nunavut, place of residence of females"@en ;
+                            rdfs:comment            "Northwest Territories including Nunavut, place of residence of females"@en ;
+                            schema:related          [ owl:unionOf (wd:Q2007 wd:Q2023) ] ; 
+                            skos:broader            eg-ca:1.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook .        
+                             
+eg-ca:1.14                  a                       skos:Concept ;
+                            rdfs:label              "Northwest Territories, place of residence of females"@en ;
+                            rdfs:comment            "Northwest Territories, place of residence of females"@en ;
+                            schema:related          wd:Q2007 ; 
+                            skos:broader            eg-ca:1.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook .        
+                             
+eg-ca:1.15                  a                       skos:Concept ;
+                            rdfs:label              "Nunavut, place of residence of females"@en ;
+                            rdfs:comment            "Nunavut, place of residence of females"@en ;
+                            schema:related          wd:Q2023 ; 
+                            skos:broader            eg-ca:1.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook .        
+                             
+eg-ca:1.16                  a                       skos:Concept ;
+                            rdfs:label              "Unknown province or territory of residence of females"@en ;
+                            rdfs:comment            "Unknown province or territory of residence of females"@en ;
+                            skos:broader            eg-ca:1.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook .        
+                             
+
+# -- Age Group Concept -------------------------------------
+
+eg-ca:AgeGroup              a                       skos:Concept ;
+                            rdfs:label              "Age group"@en ;
+                            rdfs:comment            "Age group"@en ;
+                            skos:narrower           eg-ca:2.1 ,
+                                                    eg-ca:2.2 ,
+                                                    eg-ca:2.3 ,
+                                                    eg-ca:2.4 ,
+                                                    eg-ca:2.5 ,
+                                                    eg-ca:2.6 ,
+                                                    eg-ca:2.7 ,
+                                                    eg-ca:2.8 ,
+                                                    eg-ca:2.9 ,
+                                                    eg-ca:2.10 ,
+                                                    eg-ca:2.11 ,
+                                                    eg-ca:2.12 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook .
+
+eg-ca:2.1                   a                       skos:Concept ;
+                            rdfs:label              "All ages"@en ;
+                            rdfs:comment            "All ages"@en ;
+                            skos:broader            eg-ca:AgeGroup ;
+                            skos:narrower           eg-ca:2.2 ,
+                                                    eg-ca:2.3 ,
+                                                    eg-ca:2.4 ,
+                                                    eg-ca:2.5 ,
+                                                    eg-ca:2.6 ,
+                                                    eg-ca:2.7 ,
+                                                    eg-ca:2.8 ,
+                                                    eg-ca:2.9 ,
+                                                    eg-ca:2.10 ,
+                                                    eg-ca:2.11 ,
+                                                    eg-ca:2.12 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook . 
+
+eg-ca:2.2                   a                       skos:Concept ;
+                            rdfs:label              "Under 20 years"@en ;
+                            rdfs:comment            "Under 20 years"@en ;
+                            schema:maxValue         "20"^^xsd:int ;
+                            skos:broader            eg-ca:2.1 ;
+                            skos:narrower           eg-ca:2.3 ,
+                                                    eg-ca:2.4 ,
+                                                    eg-ca:2.5 ,
+                                                    eg-ca:2.6 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook . 
+                            
+eg-ca:2.3                   a                       skos:Concept ;
+                            rdfs:label              "Under 15 years"@en ;
+                            rdfs:comment            "Under 15 years"@en ;
+                            schema:maxValue         "15"^^xsd:int ;
+                            skos:broader            eg-ca:2.2 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook . 
+
+eg-ca:2.4                   a                       skos:Concept ;
+                            rdfs:label              "15 to 19 years"@en ;
+                            rdfs:comment            "15 to 19 years"@en ;
+                            schema:minValue         "15"^^xsd:int ;
+                            schema:maxValue         "19"^^xsd:int ;
+                            skos:broader            eg-ca:2.2 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook . 
+
+eg-ca:2.5                   a                       skos:Concept ;
+                            rdfs:label              "15 to 17 years"@en ;
+                            rdfs:comment            "15 to 17 years"@en ;
+                            schema:minValue         "15"^^xsd:int ;
+                            schema:maxValue         "17"^^xsd:int ;
+                            skos:broader            eg-ca:2.4 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook . 
+
+eg-ca:2.6                   a                       skos:Concept ;
+                            rdfs:label              "18 to 19 years"@en ;
+                            rdfs:comment            "18 to 19 years"@en ;
+                            schema:minValue         "18"^^xsd:int ;
+                            schema:maxValue         "19"^^xsd:int ;
+                            skos:broader            eg-ca:2.4 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook . 
+
+eg-ca:2.7                   a                       skos:Concept ;
+                            rdfs:label              "20 to 24 years"@en ;
+                            rdfs:comment            "20 to 24 years"@en ;
+                            schema:minValue         "20"^^xsd:int ;
+                            schema:maxValue         "24"^^xsd:int ;
+                            skos:broader            eg-ca:2.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook . 
+
+eg-ca:2.8                   a                       skos:Concept ;
+                            rdfs:label              "25 to 29 years"@en ;
+                            rdfs:comment            "25 to 29 years"@en ;
+                            schema:minValue         "25"^^xsd:int ;
+                            schema:maxValue         "29"^^xsd:int ;
+                            skos:broader            eg-ca:2.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook . 
+
+eg-ca:2.9                   a                       skos:Concept ;
+                            rdfs:label              "30 to 34 years"@en ;
+                            rdfs:comment            "30 to 34 years"@en ;
+                            schema:minValue         "30"^^xsd:int ;
+                            schema:maxValue         "34"^^xsd:int ;
+                            skos:broader            eg-ca:2.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook . 
+
+eg-ca:2.10                  a                       skos:Concept ;
+                            rdfs:label              "35 to 39 years"@en ;
+                            rdfs:comment            "35 to 39 years"@en ;
+                            schema:minValue         "35"^^xsd:int ;
+                            schema:maxValue         "39"^^xsd:int ;
+                            skos:broader            eg-ca:2.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook . 
+
+eg-ca:2.11                  a                       skos:Concept ;
+                            rdfs:label              "40 years and over"@en ;
+                            rdfs:comment            "40 years and over"@en ;
+                            schema:minValue         "40"^^xsd:int ;
+                            skos:broader            eg-ca:2.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook . 
+
+eg-ca:2.12                  a                       skos:Concept ;
+                            rdfs:label              "Unknown age group"@en ;
+                            rdfs:comment            "Unknown age group"@en ;
+                            skos:broader            eg-ca:2.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook . 
+
+
+# -- Pregnancy Outcomes Concept ----------------------------
+
+eg-ca:PregnancyOutcomes     a                       skos:Concept ;
+                            rdfs:label              "Pregnancy outcomes"@en ;
+                            rdfs:comment            "Pregnancy outcomes"@en ;
+                            skos:narrower           eg-ca:3.1 ,
+                                                    eg-ca:3.2 ,
+                                                    eg-ca:3.3 ,
+                                                    eg-ca:3.4 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook .
+
+eg-ca:3.1                   a                       skos:Concept ;
+                            rdfs:label              "Total, pregnancies"@en ;
+                            rdfs:comment            "Total, pregnancies"@en ;
+                            skos:broader            eg-ca:PregnancyOutcomes ;
+                            skos:inScheme           eg-ca:CanadaCodesBook . 
+
+eg-ca:3.2                   a                       skos:Concept ;
+                            rdfs:label              "Live births"@en ;
+                            rdfs:comment            "Live births"@en ;
+                            skos:broader            eg-ca:3.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook . 
+                            
+eg-ca:3.3                   a                       skos:Concept ;
+                            rdfs:label              "Induced abortions"@en ;
+                            rdfs:comment            "Induced abortions"@en ;
+                            skos:broader            eg-ca:3.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook . 
+                            
+eg-ca:3.4                   a                       skos:Concept ;
+                            rdfs:label              "Fetal loss"@en ;
+                            rdfs:comment            "Fetal loss"@en ;
+                            skos:broader            eg-ca:3.1 ;
+                            skos:inScheme           eg-ca:CanadaCodesBook . 
+                            

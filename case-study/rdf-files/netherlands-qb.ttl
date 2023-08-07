@@ -1,0 +1,304 @@
+@prefix csvw:           <http://www.w3.org/ns/csvw#> .
+@prefix dct:            <http://purl.org/dc/terms/> .
+@prefix ddi-au:         <http://rdf-vocabulary.ddialliance.org/cv/AnalysisUnit/2.1.3/#> .
+@prefix dsv:            <https://w3id.org/dsv-ontology#> .
+@prefix eg:             <http://example.org/ns#> .
+@prefix eg-nl:          <http://example.org/ns#nl-codebook/> .
+@prefix elsst:          <https://elsst.cessda.eu/id/3/> .
+@prefix qb:             <http://purl.org/linked-data/cube#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:         <http://schema.org/> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix sdmx-concept:   <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix sdmx-subject:   <http://purl.org/linked-data/sdmx/2009/subject#> .
+@prefix wd:             <http://www.wikidata.org/entity/> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+
+
+# -- Data Set ----------------------------------------------
+
+<http://www.nl-open-data.org/example-aggregated-dataset>        a                               qb:DataSet ,
+                                                                                                csvw:Table ;
+                                                                dct:title                       "Geboorte: kerncijfers"@nl ,
+                                                                                                "Births; key figures"@en ;
+                                                                rdfs:label                      "Geboorte: kerncijfers"@nl ,
+                                                                                                "Births; key figures"@en ;
+                                                                rdfs:comment                    "This RDF description is not meant to be representative of the real dataset, and it was not created or commissioned by the original author of the dataset. It was created only for experimental and research purposes."@en ;
+                                                                dct:description                 "Deze tabel bevat kerncijfers over vruchtbaarheid, levend- en doodgeboren kinderen en meerlingbevallingen naar geslacht. Het betreft de geboorten onder de inwoners van Nederland."@nl ,
+                                                                                                "This table contains key figures on fertility, stillbirth and stillbirths and multiple births by sex. It concerns births among the inhabitants of the Netherlands. "@en ;
+                                                                dct:publisher                   "CBS Open Data Statline"@en ;
+                                                                dct:issued                      "2022-07-27"^^xsd:date ;
+                                                                schema:about                    "https://opendata.cbs.nl/statline/portal.html?_la=nl&_catalog=CBS&tableId=37422ned&_theme=62" ; 
+                                                                schema:spatialCoverage          wd:Q55 ; 
+                                                                schema:temporalCoverage         "1950/2021" ; # ISO 8601 time interval format
+                                                                dct:subject                     sdmx-subject:1 , # demographic and social statistics
+                                                                                                sdmx-subject:1.4 ; # health
+                                                                sdmx-attribute:unitMeasure      wd:Q577 ;
+                                                                sdmx-attribute:statUnit         ddi-au:Group ;
+                                                                qb:structure                    eg:dsd-nl ;
+                                                                dsv:summaryStatistics           [
+                                                                        dsv:numberOfRows                "72"^^xsd:integer ;
+                                                                        dsv:numberOfColumns             "12"^^xsd:integer ;
+                                                                        dsv:datasetCompleteness         "1.00"^^xsd:float 
+                                                                ] .
+
+
+# -- Data structure definition -----------------------------
+
+eg:dsd-nl                                                       a                               qb:DataStructureDefinition ;
+                                                                qb:component                    <http://www.nl-open-data.org/example-aggregated-dataset/column/perioden> ,
+                                                                                                <http://www.nl-open-data.org/example-aggregated-dataset/column/totaalLevendGeborenKinderen_1> ,
+                                                                                                <http://www.nl-open-data.org/example-aggregated-dataset/column/algemeenVruchtbaarheidscijfer_3> ,
+                                                                                                <http://www.nl-open-data.org/example-aggregated-dataset/column/jongerDan20Jaar_9> ,
+                                                                                                <http://www.nl-open-data.org/example-aggregated-dataset/column/k_20Tot25Jaar_10> ,
+                                                                                                <http://www.nl-open-data.org/example-aggregated-dataset/column/k_25Tot30Jaar_11> ,
+                                                                                                <http://www.nl-open-data.org/example-aggregated-dataset/column/k_30Tot35Jaar_12> ,
+                                                                                                <http://www.nl-open-data.org/example-aggregated-dataset/column/k_35Tot40Jaar_13> ,
+                                                                                                <http://www.nl-open-data.org/example-aggregated-dataset/column/k_40Tot45Jaar_14> ,
+                                                                                                <http://www.nl-open-data.org/example-aggregated-dataset/column/k_45JaarOfOuder_15> ,
+                                                                                                <http://www.nl-open-data.org/example-aggregated-dataset/column/totaalGeboorten_33> .
+
+
+# -- Components (Columns) ----------------------------------
+
+<http://www.nl-open-data.org/example-aggregated-dataset/column/perioden>                                a                               qb:ComponentSpecification ,
+                                                                                                                                        csvw:Column ;
+                                                                                                        rdfs:label                      "perioden"@nl ,
+                                                                                                                                        "periods"@en ;
+                                                                                                        rdfs:description                "Year of observation."@en ;
+                                                                                                        qb:dimension                    <http://www.nl-open-data.org/properties-dictionary/perioden> ;
+                                                                                                        dsv:summaryStatistics           [
+                                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         dsv:IntervalDataType ;
+                                                                                                                schema:minValue                 "1950"^^xsd:gYear ;
+                                                                                                                schema:maxValue                 "2021"^^xsd:gYear 
+                                                                                                        ] .
+
+
+<http://www.nl-open-data.org/example-aggregated-dataset/column/totaalLevendGeborenKinderen_1>           a                               qb:ComponentSpecification ,
+                                                                                                                                        csvw:Column ;
+                                                                                                        rdfs:label                      "totaalLevendGeborenKinderen_1"@nl ,
+                                                                                                                                        "total live born children"@en ;
+                                                                                                        rdfs:description                "Total number of live births."@en ;
+                                                                                                        qb:dimension                    <http://www.nl-open-data.org/properties-dictionary/totaalLevendGeborenKinderen> ;
+                                                                                                        dsv:summaryStatistics           [
+                                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         dsv:RatioDataType ;
+                                                                                                                schema:minValue                 "168525"^^xsd:int ;
+                                                                                                                schema:maxValue                 "250914"^^xsd:int 
+                                                                                                        ] .
+
+<http://www.nl-open-data.org/example-aggregated-dataset/column/algemeenVruchtbaarheidscijfer_3>         a                               qb:ComponentSpecification ,
+                                                                                                                                        csvw:Column ;
+                                                                                                        rdfs:label                      "algemeenVruchtbaarheidscijfer_3"@nl ,
+                                                                                                                                        "general fertility rate"@en ;
+                                                                                                        rdfs:description                "Number of live births per 1000 women of childbearing age, for each year."@en ;
+                                                                                                        qb:dimension                    <http://www.nl-open-data.org/properties-dictionary/algemeenVruchtbaarheidscijfer> ;
+                                                                                                        dsv:summaryStatistics           [
+                                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         dsv:RatioDataType ;
+                                                                                                                schema:minValue                 "44.8"^^xsd:float ;
+                                                                                                                schema:maxValue                 "90.9"^^xsd:float 
+                                                                                                        ] .
+
+<http://www.nl-open-data.org/example-aggregated-dataset/column/jongerDan20Jaar_9>                       a                               qb:ComponentSpecification ,
+                                                                                                                                        csvw:Column ;
+                                                                                                        rdfs:label                      "jongerDan20Jaar_9"@nl ,
+                                                                                                                                        "younger than 20 years"@en ;
+                                                                                                        rdfs:description                "Mothers younger than 20 years old."@en ;
+                                                                                                        qb:dimension                    <http://www.nl-open-data.org/properties-dictionary/jongerDan20Jaar> ;
+                                                                                                        dsv:summaryStatistics           [
+                                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         dsv:RatioDataType ;
+                                                                                                                schema:minValue                 "715"^^xsd:int ;
+                                                                                                                schema:maxValue                 "9743"^^xsd:int 
+                                                                                                        ] .
+
+<http://www.nl-open-data.org/example-aggregated-dataset/column/k_20Tot25Jaar_10>                        a                               qb:ComponentSpecification ,
+                                                                                                                                        csvw:Column ;
+                                                                                                        rdfs:label                      "k_20Tot25Jaar_10"@nl ,
+                                                                                                                                        "20 to 25 years"@en ;
+                                                                                                        rdfs:description                "Mothers with age between 20 and 25 years old."@en ;
+                                                                                                        qb:dimension                    <http://www.nl-open-data.org/properties-dictionary/k_20Tot25Jaar> ;
+                                                                                                        dsv:summaryStatistics           [
+                                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         dsv:RatioDataType ;
+                                                                                                                schema:minValue                 "9899"^^xsd:int ;
+                                                                                                                schema:maxValue                 "73971"^^xsd:int 
+                                                                                                        ] .
+
+<http://www.nl-open-data.org/example-aggregated-dataset/column/k_25Tot30Jaar_11>                        a                               qb:ComponentSpecification ,
+                                                                                                                                        csvw:Column ;
+                                                                                                        rdfs:label                      "k_25Tot30Jaar_11"@nl ,
+                                                                                                                                        "25 to 30 years"@en ;
+                                                                                                        rdfs:description                "Mothers with age between 25 and 30 years old."@en ;
+                                                                                                        qb:dimension                    <http://www.nl-open-data.org/properties-dictionary/k_25Tot30Jaar> ;
+                                                                                                        dsv:summaryStatistics           [
+                                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         dsv:RatioDataType ;
+                                                                                                                schema:minValue                 "43666"^^xsd:int ;
+                                                                                                                schema:maxValue                 "88469"^^xsd:int 
+                                                                                                        ] .
+
+<http://www.nl-open-data.org/example-aggregated-dataset/column/k_30Tot35Jaar_12>                        a                               qb:ComponentSpecification ,
+                                                                                                                                        csvw:Column ;
+                                                                                                        rdfs:label                      "k_30Tot35Jaar_12"@nl ,
+                                                                                                                                        "30 to 35 years"@en ;
+                                                                                                        rdfs:description                "Mothers with age between 30 and 35 years old."@en ;
+                                                                                                        qb:dimension                    <http://www.nl-open-data.org/properties-dictionary/k_30Tot35Jaar> ;
+                                                                                                        dsv:summaryStatistics           [
+                                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         dsv:RatioDataType ;
+                                                                                                                schema:minValue                 "29948"^^xsd:int ;
+                                                                                                                schema:maxValue                 "87117"^^xsd:int 
+                                                                                                        ] .
+
+<http://www.nl-open-data.org/example-aggregated-dataset/column/k_35Tot40Jaar_13>                        a                               qb:ComponentSpecification ,
+                                                                                                                                        csvw:Column ;
+                                                                                                        rdfs:label                      "k_35Tot40Jaar_13"@nl ,
+                                                                                                                                        "35 to 40 years"@en ;
+                                                                                                        rdfs:description                "Mothers with age between 35 and 40 years old."@en ;
+                                                                                                        qb:dimension                    <http://www.nl-open-data.org/properties-dictionary/k_35Tot40Jaar> ;
+                                                                                                        dsv:summaryStatistics           [
+                                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         dsv:RatioDataType ;
+                                                                                                                schema:minValue                 "7994"^^xsd:int ;
+                                                                                                                schema:maxValue                 "42024"^^xsd:int 
+                                                                                                        ] .
+
+<http://www.nl-open-data.org/example-aggregated-dataset/column/k_40Tot45Jaar_14>                        a                               qb:ComponentSpecification ,
+                                                                                                                                        csvw:Column ;
+                                                                                                        rdfs:label                      "k_40Tot45Jaar_14"@nl ,
+                                                                                                                                        "40 to 45 years"@en ;
+                                                                                                        rdfs:description                "Mothers with age between 40 and 45 years old."@en ;
+                                                                                                        qb:dimension                    <http://www.nl-open-data.org/properties-dictionary/k_40Tot45Jaar> ;
+                                                                                                        dsv:summaryStatistics           [
+                                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         dsv:RatioDataType ;
+                                                                                                                schema:minValue                 "1546"^^xsd:int ;
+                                                                                                                schema:maxValue                 "17715"^^xsd:int 
+                                                                                                        ] .
+
+<http://www.nl-open-data.org/example-aggregated-dataset/column/k_45JaarOfOuder_15>                      a                               qb:ComponentSpecification ,
+                                                                                                                                        csvw:Column ;
+                                                                                                        rdfs:label                      "k_45JaarOfOuder_15"@nl ,
+                                                                                                                                        "45 years or older"@en ;
+                                                                                                        rdfs:description                "Mothers older than 45 years old."@en ;
+                                                                                                        qb:dimension                    <http://www.nl-open-data.org/properties-dictionary/k_45JaarOfOuder> ;
+                                                                                                        dsv:summaryStatistics           [
+                                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         dsv:RatioDataType ;
+                                                                                                                schema:minValue                 "151"^^xsd:int ;
+                                                                                                                schema:maxValue                 "1817"^^xsd:int 
+                                                                                                        ] .
+
+<http://www.nl-open-data.org/example-aggregated-dataset/column/totaalGeboorten_33>                      a                               qb:ComponentSpecification ,
+                                                                                                                                        csvw:Column ;
+                                                                                                        rdfs:label                      "totaalGeboorten_33"@nl ,
+                                                                                                                                        "total births"@en ;
+                                                                                                        rdfs:description                "Number of births."@en ;
+                                                                                                        qb:dimension                    <http://www.nl-open-data.org/properties-dictionary/totaalGeboorten> ;
+                                                                                                        dsv:summaryStatistics           [
+                                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                                dsv:statisticalDataType         dsv:RatioDataType ;
+                                                                                                                schema:minValue                 "166331"^^xsd:int ;
+                                                                                                                schema:maxValue                 "251354"^^xsd:int 
+                                                                                                        ] .
+
+
+# -- Dimension Properties ------------------------------
+
+<http://www.nl-open-data.org/properties-dictionary/perioden>                            a                       rdf:Property ,
+                                                                                                                qb:DimensionProperty ;
+                                                                                        rdfs:label              "Year Property"@en ;
+                                                                                        rdfs:description        "Property defining the year of an event"@en ;
+                                                                                        rdfs:subPropertyOf      sdmx-dimension:refPeriod ;
+                                                                                        rdfs:range              xsd:gYear ;
+                                                                                        qb:concept              sdmx-concept:refPeriod .
+
+<http://www.nl-open-data.org/properties-dictionary/totaalLevendGeborenKinderen>         a                       rdf:Property ,
+                                                                                                                qb:DimensionProperty ;
+                                                                                        rdfs:label              "Number of Live Births Property"@en ;
+                                                                                        rdfs:description        "Property defining the number of live births"@en ;
+                                                                                        rdfs:subPropertyOf      schema:value ;
+                                                                                        rdfs:range              xsd:int ;
+                                                                                        qb:concept              elsst:d8f31e43-68d0-4b17-a33e-9fee3c5f77b3 .
+
+<http://www.nl-open-data.org/properties-dictionary/algemeenVruchtbaarheidscijfer>       a                       rdf:Property ,
+                                                                                                                qb:DimensionProperty ;
+                                                                                        rdfs:label              "General Fertility Rate Property"@en ;
+                                                                                        rdfs:description        "Property defining the general fertility rate"@en ;
+                                                                                        rdfs:range              xsd:float ;
+                                                                                        qb:concept              elsst:7bbac201-fff2-4bb2-8766-84e671165f22 .
+
+<http://www.nl-open-data.org/properties-dictionary/jongerDan20Jaar>                     a                       rdf:Property ,
+                                                                                                                qb:DimensionProperty ;
+                                                                                        rdfs:label              "Age of Mother Less Than 20 Years Old Property"@en ;
+                                                                                        rdfs:description        "Property defining the number of mothers with age less than 20 years old"@en ;
+                                                                                        rdfs:subPropertyOf      sdmx-dimension:age ;
+                                                                                        rdfs:range              xsd:int ;
+                                                                                        qb:concept              sdmx-concept:age ;
+                                                                                        qb:codeList             eg-nl:Age20under .
+
+<http://www.nl-open-data.org/properties-dictionary/k_20Tot25Jaar>                       a                       rdf:Property ,
+                                                                                                                qb:DimensionProperty ;
+                                                                                        rdfs:label              "Age of Mother Between 20 and 25 Years Old Property"@en ;
+                                                                                        rdfs:description        "Property defining the number of mothers with age between 20 and 25 years old"@en ;
+                                                                                        rdfs:subPropertyOf      sdmx-dimension:age ;
+                                                                                        rdfs:range              xsd:int ;
+                                                                                        qb:concept              sdmx-concept:age ;
+                                                                                        qb:codeList             eg-nl:Age20to25 .
+
+<http://www.nl-open-data.org/properties-dictionary/k_25Tot30Jaar>                       a                       rdf:Property ,
+                                                                                                                qb:DimensionProperty ;
+                                                                                        rdfs:label              "Age of Mother Between 25 and 30 Years Old Property"@en ;
+                                                                                        rdfs:description        "Property defining the number of mothers with age between 25 and 30 years old"@en ;
+                                                                                        rdfs:subPropertyOf      sdmx-dimension:age ;
+                                                                                        rdfs:range              xsd:int ;
+                                                                                        qb:concept              sdmx-concept:age ;
+                                                                                        qb:codeList             eg-nl:Age25to30 .
+
+<http://www.nl-open-data.org/properties-dictionary/k_30Tot35Jaar>                       a                       rdf:Property ,
+                                                                                                                qb:DimensionProperty ;
+                                                                                        rdfs:label              "Age of Mother Between 30 and 35 Years Old Property"@en ;
+                                                                                        rdfs:description        "Property defining the number of mothers with age between 30 and 35 years old"@en ;
+                                                                                        rdfs:subPropertyOf      sdmx-dimension:age ;
+                                                                                        rdfs:range              xsd:int ;
+                                                                                        qb:concept              sdmx-concept:age ;
+                                                                                        qb:codeList             eg-nl:Age30to35 .
+
+<http://www.nl-open-data.org/properties-dictionary/k_35Tot40Jaar>                       a                       rdf:Property ,
+                                                                                                                qb:DimensionProperty ;
+                                                                                        rdfs:label              "Age of Mother Between 35 and 40 Years Old Property"@en ;
+                                                                                        rdfs:description        "Property defining the number of mothers with age between 35 and 40 years old"@en ;
+                                                                                        rdfs:subPropertyOf      sdmx-dimension:age ;
+                                                                                        rdfs:range              xsd:int ;
+                                                                                        qb:concept              sdmx-concept:age ;
+                                                                                        qb:codeList             eg-nl:Age35to40 .
+
+<http://www.nl-open-data.org/properties-dictionary/k_40Tot45Jaar>                       a                       rdf:Property ,
+                                                                                                                qb:DimensionProperty ;
+                                                                                        rdfs:label              "Age of Mother Between 40 and 45 Years Old Property"@en ;
+                                                                                        rdfs:description        "Property defining the number of mothers with age between 40 and 45 years old"@en ;
+                                                                                        rdfs:subPropertyOf      sdmx-dimension:age ;
+                                                                                        rdfs:range              xsd:int ;
+                                                                                        qb:concept              sdmx-concept:age ;
+                                                                                        qb:codeList             eg-nl:Age40to45 .
+
+<http://www.nl-open-data.org/properties-dictionary/k_45JaarOfOuder>                     a                       rdf:Property ,
+                                                                                                                qb:DimensionProperty ;
+                                                                                        rdfs:label              "Age of Mother Older Than 45 Years Old Property"@en ;
+                                                                                        rdfs:description        "Property defining the number of mothers with age older than 45 years old"@en ;
+                                                                                        rdfs:subPropertyOf      sdmx-dimension:age ;
+                                                                                        rdfs:range              xsd:int ;
+                                                                                        qb:concept              sdmx-concept:age ;
+                                                                                        qb:codeList             eg-nl:Age45over .
+
+<http://www.nl-open-data.org/properties-dictionary/totaalGeboorten>                     a                       rdf:Property ,
+                                                                                                                qb:DimensionProperty ;
+                                                                                        rdfs:label              "Number of Births Property"@en ;
+                                                                                        rdfs:description        "Property defining the number of births"@en ;
+                                                                                        rdfs:subPropertyOf      schema:value ;
+                                                                                        rdfs:range              xsd:int ;
+                                                                                        qb:concept              elsst:d8f31e43-68d0-4b17-a33e-9fee3c5f77b3 .
