@@ -1,0 +1,963 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/ns/csvw", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/dsv-ontology", "http://www.w3.org/2001/XMLSchema", "http://purl.org/linked-data/cube" ],
+    "title" : {
+      "en" : "The DataSet-Variable Ontology"
+    },
+    "iri" : "https://w3id.org/dsv-ontology#",
+    "version" : "V1.0 - 2023 Release",
+    "author" : [ "Jacco van Ossenbruggen", "Margherita Martorana", "Ronald Siebes", "Tobias Kuhn" ],
+    "labels" : {
+      "en" : "DataSet-Variable Ontology",
+      "undefined" : "DataSet-Variable Ontology."
+    },
+    "comments" : {
+      "en" : "Ontology for describing relationships between datasets and variables.",
+      "undefined" : "Ontology for describing relationships between datasets and variables."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Margherita Martorana",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Tobias Kuhn",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Jacco van Ossenbruggen",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Ronald Siebes",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "en",
+        "value" : "The DataSet-Variable Ontology is part of the work of the ODISSEI project, funded by the Netherlands Organisation of Scientific Research (NWO), ODISSEI Roadmap project: 184.035.014.",
+        "type" : "label"
+      } ],
+      "subject" : [ {
+        "identifier" : "subject",
+        "language" : "en",
+        "value" : "Dataset, Variable",
+        "type" : "label"
+      } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "en",
+        "value" : "The DataSet-Variable Ontology Ontology is available under the Creative Commons Attribution 4.0 license; see http://creativecommons.org/licenses/by/4.0/.",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "dsv",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/dsv-ontology#",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "V1.0 - 2023 Release",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "The DataSet-Variable Ontology",
+        "type" : "label"
+      } ],
+      "homepage" : [ {
+        "identifier" : "homepage",
+        "language" : "undefined",
+        "value" : "https://w3id.org/dsv-ontology",
+        "type" : "iri"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/dsv-ontology#SummaryStatistics",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SummaryStatistics",
+      "undefined" : "Summary Statistics"
+    },
+    "comment" : {
+      "undefined" : "Set of summary statistics about the dataset or column."
+    },
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#Dataset",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dataset",
+      "undefined" : "Dataset"
+    },
+    "subClasses" : [ "7", "8" ],
+    "comment" : {
+      "undefined" : "Set of data."
+    },
+    "id" : "4",
+    "superClasses" : [ "5", "6" ]
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#StatisticalDataType",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StatisticalDataType",
+      "undefined" : "Statistical Data Type"
+    },
+    "subClasses" : [ "14", "15" ],
+    "comment" : {
+      "undefined" : "Set of statistical data types."
+    },
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#Variable",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Variable",
+      "undefined" : "Variable"
+    },
+    "comment" : {
+      "undefined" : "The variable described by a component of the dataset."
+    },
+    "id" : "16"
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#IntervalStatisticalDataType",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IntervalStatisticalDataType",
+      "undefined" : "Interval Statistical Data Type"
+    },
+    "comment" : {
+      "undefined" : "Statistical data type representing ordered data measured over a numerical scale with equal distance between units."
+    },
+    "id" : "17",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#RatioStatisticalDataType",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RatioStatisticalDataType",
+      "undefined" : "Ratio Statistical Data Type"
+    },
+    "comment" : {
+      "undefined" : "Statistical data type representing ordered data with equal distance between units, where negative values are not allowed."
+    },
+    "id" : "18",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#DataProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataProperty"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/dsv-ontology#numberOfRows",
+      "baseIri" : "https://w3id.org/dsv-ontology",
+      "comment" : {
+        "undefined" : "Property linking a dataset to its number of rows."
+      },
+      "labels" : {
+        "IRI-based" : "numberOfRows",
+        "undefined" : "number of rows"
+      }
+    }, {
+      "iri" : "https://w3id.org/dsv-ontology#componentCompleteness",
+      "baseIri" : "https://w3id.org/dsv-ontology",
+      "comment" : {
+        "undefined" : "Property linking a component to its summary statistics."
+      },
+      "labels" : {
+        "IRI-based" : "componentCompleteness",
+        "undefined" : "component completeness"
+      }
+    }, {
+      "iri" : "https://w3id.org/dsv-ontology#numberOfColumns",
+      "baseIri" : "https://w3id.org/dsv-ontology",
+      "comment" : {
+        "undefined" : "Property linking a dataset to its number of columns."
+      },
+      "labels" : {
+        "IRI-based" : "numberOfColumns",
+        "undefined" : "number of columns"
+      }
+    }, {
+      "iri" : "https://w3id.org/dsv-ontology#missingValueFormat",
+      "baseIri" : "https://w3id.org/dsv-ontology",
+      "comment" : {
+        "undefined" : "Property linking a dataset or a component to the format of the missinf values."
+      },
+      "labels" : {
+        "IRI-based" : "missingValueFormat",
+        "undefined" : "missing value format"
+      }
+    }, {
+      "iri" : "https://w3id.org/dsv-ontology#datasetCompleteness",
+      "baseIri" : "https://w3id.org/dsv-ontology",
+      "comment" : {
+        "undefined" : "Property linking a dataset to its summary statistics."
+      },
+      "labels" : {
+        "IRI-based" : "datasetCompleteness",
+        "undefined" : "dataset completeness"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://www.w3.org/ns/csvw#TableSchema",
+    "baseIri" : "http://www.w3.org/ns/csvw",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TableSchema"
+    },
+    "subClasses" : [ "28" ],
+    "attributes" : [ "external" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#DatasetSchema",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DatasetSchema",
+      "undefined" : "Dataset Schema"
+    },
+    "comment" : {
+      "undefined" : "The structural schema of a dataset."
+    },
+    "id" : "28",
+    "superClasses" : [ "35", "27" ]
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#NominalStatisticalDataType",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NominalStatisticalDataType",
+      "undefined" : "Nominal Statistical Data Type"
+    },
+    "comment" : {
+      "undefined" : "Statistical data type representing discrete units that cannot be ordered or measured."
+    },
+    "id" : "39",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#DatasetComponent",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DatasetComponent",
+      "undefined" : "Dataset Component"
+    },
+    "comment" : {
+      "undefined" : "Set of individual component of a dataset."
+    },
+    "id" : "30",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#AggregatedDataset",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AggregatedDataset",
+      "undefined" : "Aggregated Dataset"
+    },
+    "comment" : {
+      "undefined" : "Set of data that has been aggregated over an individual - or unaggregated - set of data."
+    },
+    "id" : "7",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "49",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "12",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "10",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "1",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "30", "4" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://www.w3.org/ns/csvw#Table",
+    "baseIri" : "http://www.w3.org/ns/csvw",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Table"
+    },
+    "subClasses" : [ "4" ],
+    "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "56",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://purl.org/linked-data/cube#DataSet",
+    "baseIri" : "http://purl.org/linked-data/cube",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataSet"
+    },
+    "subClasses" : [ "4" ],
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://purl.org/linked-data/cube#DataStructureDefinition",
+    "baseIri" : "http://purl.org/linked-data/cube",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataStructureDefinition"
+    },
+    "subClasses" : [ "28" ],
+    "attributes" : [ "external" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#QualitativeStatisticalDataType",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QualitativeStatisticalDataType",
+      "undefined" : "Qualitative Statistical Data Type"
+    },
+    "subClasses" : [ "39", "44" ],
+    "comment" : {
+      "undefined" : "Set of statistical data types can be observed and - or - categorised."
+    },
+    "id" : "15",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#OrdinalStatisticalDataType",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OrdinalStatisticalDataType",
+      "undefined" : "Ordinal Statistical Data Type"
+    },
+    "comment" : {
+      "undefined" : "Statistical data type representing discrete units that can be ordered or measured."
+    },
+    "id" : "44",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://purl.org/linked-data/cube#ComponentSpecification",
+    "baseIri" : "http://purl.org/linked-data/cube",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ComponentSpecification"
+    },
+    "subClasses" : [ "30" ],
+    "attributes" : [ "external" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#QuantitativeStatisticalDataType",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QuantitativeStatisticalDataType",
+      "undefined" : "Quantitative Statistical Data Type"
+    },
+    "subClasses" : [ "17", "18" ],
+    "comment" : {
+      "undefined" : "Set of statistical data types can be measured and quantified."
+    },
+    "id" : "14",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#IndividualDataset",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IndividualDataset",
+      "undefined" : "Individual Dataset"
+    },
+    "comment" : {
+      "undefined" : "Set of data that can be aggregated over. Usually representing the raw data. "
+    },
+    "id" : "8",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+    "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Property"
+    },
+    "attributes" : [ "external" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Class",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Class"
+    },
+    "attributes" : [ "external" ],
+    "id" : "24"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "2",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "33",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "32",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://purl.org/linked-data/cube#structure",
+    "baseIri" : "http://purl.org/linked-data/cube",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "structure"
+    },
+    "domain" : "1",
+    "subproperty" : [ "2" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#numberOfRows",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "numberOfRows",
+      "undefined" : "number of rows"
+    },
+    "domain" : "3",
+    "comment" : {
+      "undefined" : "Property linking a dataset to its number of rows."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "9"
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#numberOfColumns",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "numberOfColumns",
+      "undefined" : "number of columns"
+    },
+    "domain" : "3",
+    "comment" : {
+      "undefined" : "Property linking a dataset to its number of columns."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#summaryStatistics",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "summaryStatistics",
+      "undefined" : "summary statistics"
+    },
+    "domain" : "20",
+    "comment" : {
+      "undefined" : "Property linking a dataset or a component to their summary statistics."
+    },
+    "attributes" : [ "object" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#componentCompleteness",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "componentCompleteness",
+      "undefined" : "component completeness"
+    },
+    "domain" : "3",
+    "comment" : {
+      "undefined" : "Property linking a component to its summary statistics."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#rowsRepresentInstancesOf",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "rowsRepresentInstancesOf",
+      "undefined" : "rows represent instances of"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "Property linking a dataset to the conceptual representation of its rows."
+    },
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#subVariableOf",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "subVariableOf",
+      "undefined" : "sub-variable of"
+    },
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "Property linking a variable to its sub-variable."
+    },
+    "attributes" : [ "object" ],
+    "id" : "26"
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#componentProperty",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "componentProperty",
+      "undefined" : "component property"
+    },
+    "superproperty" : [ "32", "33" ],
+    "domain" : "30",
+    "comment" : {
+      "undefined" : "Property linking a component to a property."
+    },
+    "attributes" : [ "object" ],
+    "id" : "29"
+  }, {
+    "range" : "14",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "34"
+  }, {
+    "range" : "37",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "36"
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#datasetSchema",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "datasetSchema",
+      "undefined" : "dataset schema"
+    },
+    "superproperty" : [ "0", "38" ],
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "Property linking the dataset to its schema."
+    },
+    "attributes" : [ "object" ],
+    "id" : "2"
+  }, {
+    "range" : "14",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "40"
+  }, {
+    "range" : "35",
+    "domain" : "28",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "41"
+  }, {
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "42"
+  }, {
+    "range" : "15",
+    "domain" : "44",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "43"
+  }, {
+    "range" : "15",
+    "domain" : "39",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "45"
+  }, {
+    "range" : "13",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "46"
+  }, {
+    "range" : "6",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "47"
+  }, {
+    "range" : "27",
+    "domain" : "28",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "48"
+  }, {
+    "range" : "4",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "50"
+  }, {
+    "range" : "4",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "51"
+  }, {
+    "range" : "13",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://www.w3.org/ns/csvw#propertyUrl",
+    "baseIri" : "http://www.w3.org/ns/csvw",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "propertyUrl"
+    },
+    "domain" : "1",
+    "subproperty" : [ "29" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://purl.org/linked-data/cube#dimension",
+    "baseIri" : "http://purl.org/linked-data/cube",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "dimension"
+    },
+    "domain" : "1",
+    "subproperty" : [ "29" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "32"
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#datasetComponent",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "datasetComponent",
+      "undefined" : "dataset component"
+    },
+    "superproperty" : [ "54" ],
+    "domain" : "28",
+    "comment" : {
+      "undefined" : "Property linking the dataset schema to its components."
+    },
+    "attributes" : [ "object" ],
+    "id" : "53"
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#refersToVariable",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "refersToVariable",
+      "undefined" : "refers to variable"
+    },
+    "domain" : "30",
+    "comment" : {
+      "undefined" : "Property linking a component to a variable."
+    },
+    "attributes" : [ "object" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://www.w3.org/ns/csvw#tableSchema",
+    "baseIri" : "http://www.w3.org/ns/csvw",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "tableSchema"
+    },
+    "domain" : "1",
+    "subproperty" : [ "2" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "38"
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#statisticalDataType",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "statisticalDataType",
+      "undefined" : "statistical data type"
+    },
+    "domain" : "3",
+    "comment" : {
+      "undefined" : "Property linking a component to its statistical data type."
+    },
+    "attributes" : [ "object" ],
+    "id" : "57"
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#datasetCompleteness",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "datasetCompleteness",
+      "undefined" : "dataset completeness"
+    },
+    "domain" : "3",
+    "comment" : {
+      "undefined" : "Property linking a dataset to its summary statistics."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://purl.org/linked-data/cube#component",
+    "baseIri" : "http://purl.org/linked-data/cube",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "component"
+    },
+    "domain" : "1",
+    "subproperty" : [ "53" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "54"
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#missingValueFormat",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "missingValueFormat",
+      "undefined" : "missing value format"
+    },
+    "domain" : "3",
+    "comment" : {
+      "undefined" : "Property linking a dataset or a component to the format of the missinf values."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "59"
+  }, {
+    "iri" : "https://w3id.org/dsv-ontology#linksToVariable",
+    "baseIri" : "https://w3id.org/dsv-ontology",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "linksToVariable",
+      "undefined" : "links to variable"
+    },
+    "domain" : "31",
+    "comment" : {
+      "undefined" : "Property linking a property of a component to a variable."
+    },
+    "attributes" : [ "object" ],
+    "id" : "60"
+  } ]
+}
