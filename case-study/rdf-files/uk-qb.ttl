@@ -32,6 +32,7 @@
                                                                     dct:subject                     sdmx-subject:1 ,        # demographic and social statistics
                                                                                                     sdmx-subject:3.2 ,      # regional and small area statistics
                                                                                                     sdmx-subject:1.4 ;      # health
+                                                                    dct:format                      "csv" ;
                                                                     sdmx-attribute:unitMeasure      wd:Q577 ;
                                                                     sdmx-attribute:statUnit         ddi-au:Group ;
                                                                     qb:structure                    eg:dsd-uk ;

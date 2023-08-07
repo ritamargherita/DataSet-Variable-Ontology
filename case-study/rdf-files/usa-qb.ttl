@@ -30,6 +30,7 @@
                                                                     schema:temporalCoverage         "1909/2018" ; # ISO 8601 time interval format
                                                                     dct:subject                     sdmx-subject:1 , # demographic and social statistics
                                                                                                     sdmx-subject:1.4 ; # health
+                                                                    dct:format                      "csv" ;
                                                                     sdmx-attribute:unitMeasure      wd:Q577 ;
                                                                     sdmx-attribute:statUnit         ddi-au:Group ;
                                                                     qb:structure                    eg:dsd-usa ; 
