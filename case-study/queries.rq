@@ -116,14 +116,11 @@ WHERE {
 PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX dsv: <https://w3id.org/dsv-ontology#>
 
-SELECT ?numberOfRows ?numberOfColumns ?datasetCompleteness ?missingValuesFormat
+SELECT ?p ?o
 WHERE {
     ?dataset		a						qb:DataSet ;
               		dsv:summaryStatistics	[
-        				dsv:numberOfRows		?numberOfRows ;
-            			dsv:numberOfColumns		?numberOfColumns ;
-               			dsv:datasetCompleteness	?datasetCompleteness ;
-                  		dsv:missingValuesFormat	?missingValuesFormat 
+        				?p ?o
     				] .
     VALUES ?dataset { <http://www.canada-open-data.org/example-aggregated-dataset> }
 }
@@ -193,12 +190,13 @@ WHERE {
 # 2.4 - Are there any potential sources of bias in the dataset?
 ##################################################################################################################################
 
-PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT *
 WHERE {
-    ?s	?p	?o
-    VALUES ?s { <http://example.org/ns#uk-codebook/Gender> }
+    <http://example.org/ns#uk-codebook/Gender> skos:narrower ?narrowerConcept .
+    ?narrowerConcept rdfs:label ?label 
 }
 
 ##################################################################################################################################
