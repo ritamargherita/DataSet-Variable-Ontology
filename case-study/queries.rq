@@ -205,15 +205,19 @@ WHERE {
 
 PREFIX csvw: <http://www.w3.org/ns/csvw#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX sdmx-concept: <http://purl.org/linked-data/sdmx/2009/concept#>
 
-SELECT ?primaryKey	?label	?description
+SELECT ?dataset ?primaryKey ?label ?description
 WHERE {
     ?dataset		csvw:primaryKey		?primaryKey .
     
     ?primaryKey 	rdfs:label 			?label ;
-                 	rdfs:description	?description .
+                 	rdfs:description	?description ;
+                  	qb:dimension 		?dimension .
     
-    VALUES ?dataset { <http://www.nl-open-data.org/example-aggregated-dataset> }
+    ?dimension 		qb:concept 			sdmx-concept:refPeriod .
+    
 }
 
 
