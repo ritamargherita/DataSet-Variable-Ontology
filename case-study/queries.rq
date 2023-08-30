@@ -25,25 +25,30 @@ WHERE {
     ?variable		rdfs:label | skos:prefLabel 		?variableLabel .
     FILTER (lang(?variableLabel) = 'en')
     
-    VALUES ?s { <http://www.canada-open-data.org/example-aggregated-dataset> }
+    VALUES ?s { <http://www.nl-open-data.org/example-aggregated-dataset> }
 }
 GROUP BY ?description
 
 
 ##################################################################################################################################
-# 1.1 - What other datasets represent the same topics, categories or variables?
+# 2 - What other datasets represent the same topics, categories or variables?
 ##################################################################################################################################
 
 PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX dct: <http://purl.org/dc/terms/>
 
-SELECT DISTINCT ?otherDataset ?title
+SELECT DISTINCT ?relatedDataset ?title
 WHERE {
-    ?otherDataset		a 				qb:DataSet ;
+    ?relatedDataset		a 				qb:DataSet ;
                    		dct:title 		?title ;
-                   		dct:subject		?subject .
+                   		dct:subject		?subject ;
+                     	qb:structure	[
+        						qb:component	?otherComponent
+    ] .
+    ?otherComponent		qb:dimension 	?otherDimension .
+    ?otherDimension 	qb:concept 		?variable .
     
-    FILTER(?otherDataset != ?dataset)
+    FILTER(?relatedDataset != ?dataset)
 
     {
         SELECT DISTINCT ?dataset ?subject ?variable
@@ -55,62 +60,58 @@ WHERE {
             ] .
             ?component		qb:dimension 		?dimension .
             ?dimension 		qb:concept			?variable .
-            VALUES ?dataset { <http://www.canada-open-data.org/example-aggregated-dataset> }
+            VALUES ?dataset { <http://www.nl-open-data.org/example-aggregated-dataset> }
         }
     }
 }
 
 
 ##################################################################################################################################
-# 1.2 - Are there any conceptual relationship between columns?
+# 3 - Are there any conceptual relationship between columns?
 ##################################################################################################################################
 
 PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX dct: <http://purl.org/dc/terms/>
 
-SELECT DISTINCT ?component ?variable
+SELECT DISTINCT ?columnURI ?variableURI
 WHERE {
     ?dataset		a					qb:DataSet ;
               dct:subject 		?subject ;
               qb:structure		[
-					qb:component	?component 
-			  ] .
+        qb:component	?columnURI 
+    ] .
 
-    ?component		qb:dimension 		?dimension .
-    ?dimension 		qb:concept			?variable .
+    ?columnURI		qb:dimension 		?dimension .
+    ?dimension 		qb:concept	?variableURI .
 
-    VALUES ?dataset { <http://www.uk-open-data.org/example-aggregated-dataset> }
+    VALUES ?dataset { <http://www.nl-open-data.org/example-aggregated-dataset> }
 }
 
 
 ##################################################################################################################################
-# 1.3 - Given a variable, which columns are used to represent measurements of this variable in the various datasets?
+# 4 - Given a variable, which columns are used to represent measurements of this variable in the various datasets?
 ##################################################################################################################################
 
 PREFIX qb: <http://purl.org/linked-data/cube#>
-PREFIX dct: <http://purl.org/dc/terms/>
 PREFIX sdmx-concept: <http://purl.org/linked-data/sdmx/2009/concept#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT DISTINCT ?dataset ?title ?component ?componentLabel ?componentDescription
+SELECT DISTINCT ?dataset ?columnLabel ?columnDescription
 WHERE {
     ?dataset		a					qb:DataSet ;
-                    dct:title			?title ;
                     qb:structure		[
-                        qb:component	?component 
+                        qb:component	?column 
                     ] .
 
-    ?component		qb:dimension 		?dimension ;
-                	rdfs:label			?componentLabel ;
-                 	rdfs:description	?componentDescription .
-    ?dimension 		qb:concept			?variable .
-
-    VALUES ?variable { sdmx-concept:age }
+    ?column 		qb:dimension 		?dimension ;
+                	rdfs:label			?columnLabel ;
+                 	rdfs:description	?columnDescription .
+    ?dimension 		qb:concept			sdmx-concept:age .
 }
 
 
 ##################################################################################################################################
-# 2 - What quantitative insights, such as number of columns and dataset completeness, can be derived from a dataset?
+# 5 - What quantitative insights, such as number of columns and dataset completeness, can be derived from a dataset?
 ##################################################################################################################################
 
 PREFIX qb: <http://purl.org/linked-data/cube#>
@@ -127,7 +128,7 @@ WHERE {
 
 
 ##################################################################################################################################
-# 2.1 - How many entries does the dataset have?
+# 6 - How many entries does the dataset have?
 ##################################################################################################################################
 
 PREFIX qb: <http://purl.org/linked-data/cube#>
@@ -144,7 +145,7 @@ WHERE {
 
 
 ##################################################################################################################################
-# 2.2 - If there is any missing data, how is it encoded? 
+# 7 - If there is any missing data, how is it encoded? 
 ##################################################################################################################################
 
 PREFIX qb: <http://purl.org/linked-data/cube#>
@@ -162,7 +163,7 @@ WHERE {
 
 
 ##################################################################################################################################
-# 2.3 - And how is the missing data distributed across columns?
+# 8 - And how is the missing data distributed across columns?
 ##################################################################################################################################
 
 PREFIX qb: <http://purl.org/linked-data/cube#>
@@ -187,7 +188,7 @@ WHERE {
 
 
 ##################################################################################################################################
-# 2.4 - Are there any potential sources of bias in the dataset?
+# 9 - Are there any potential sources of bias in the dataset?
 ##################################################################################################################################
 
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -200,7 +201,7 @@ WHERE {
 }
 
 ##################################################################################################################################
-# 3 - Does the dataset have any primary keys? If yes, are the keys shared with other datasets?
+# 10 - Does the dataset have any primary keys? If yes, are the keys shared with other datasets?
 ##################################################################################################################################
 
 PREFIX csvw: <http://www.w3.org/ns/csvw#>
@@ -222,7 +223,7 @@ WHERE {
 
 
 ##################################################################################################################################
-# 3.1 - Can two given datasets with the same primary keys be merged?
+# 11 - Can two given datasets with the same primary keys be merged?
 ##################################################################################################################################
 
 PREFIX csvw: <http://www.w3.org/ns/csvw#>
@@ -254,12 +255,12 @@ WHERE {
 }
 
 ##################################################################################################################################
-# 3.2 - How would the metadata description of the merged datasets look like?
+# 12 - How would the metadata description of the merged datasets look like?
 ##################################################################################################################################
 
 
 ##################################################################################################################################
-# 4 - In what ways is the content of two given datasets related?
+# 13 - In what ways is the content of two given datasets related?
 ##################################################################################################################################
 
 PREFIX qb: <http://purl.org/linked-data/cube#>
@@ -321,6 +322,6 @@ WHERE {
 
 
 ##################################################################################################################################
-# 4.1 - Can two given datasets be joined, so that information of one can be combined with the information of the other one?
+# 14 - Can two given datasets be joined, so that information of one can be combined with the information of the other one?
 ##################################################################################################################################
 
