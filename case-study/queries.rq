@@ -166,24 +166,23 @@ WHERE {
 # 8 - And how is the missing data distributed across columns?
 ##################################################################################################################################
 
-PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX dsv: <https://w3id.org/dsv-ontology#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?component ?componentLabel ?componentDescription ?componentCompleteness
+SELECT ?column ?columnLabel ?columnDescription ?columnCompleteness
 WHERE {
-    ?dataset		a						qb:DataSet ;
-              		qb:structure			?datasetStructure .
+    ?dataset		a						dsv:Dataset ;
+              		dsv:datasetSchema		[
+        				dsv:column			?column
+    ] .
     
-    ?datasetStructure	qb:component		?component .
-    
-    ?component		rdfs:label				?componentLabel ;
-                	rdfs:description 		?componentDescription ;
+    ?column			rdfs:label				?columnLabel ;
+                	rdfs:description 		?columnDescription ;
         			dsv:summaryStatistics	[
-        				dsv:componentCompleteness		?componentCompleteness
+        				dsv:columnCompleteness ?columnCompleteness
     				] .
     
-    VALUES ?dataset { <http://www.canada-open-data.org/example-aggregated-dataset> }
+    VALUES ?dataset { <http://www.canada-open-data.org/example-dataset> }
 }
 
 
@@ -206,8 +205,8 @@ WHERE {
 
 PREFIX csvw: <http://www.w3.org/ns/csvw#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX sdmx-concept: <http://purl.org/linked-data/sdmx/2009/concept#>
+PREFIX dsv: <https://w3id.org/dsv-ontology#>
 
 SELECT ?dataset ?primaryKey ?label ?description
 WHERE {
@@ -215,10 +214,8 @@ WHERE {
     
     ?primaryKey 	rdfs:label 			?label ;
                  	rdfs:description	?description ;
-                  	qb:dimension 		?dimension .
-    
-    ?dimension 		qb:concept 			sdmx-concept:refPeriod .
-    
+                  	dsv:columnProperty 	[
+        				dsv:hasVariable		sdmx-concept:refPeriod ] .
 }
 
 
@@ -228,28 +225,29 @@ WHERE {
 
 PREFIX csvw: <http://www.w3.org/ns/csvw#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX dsv: <https://w3id.org/dsv-ontology#>
 
 SELECT DISTINCT *
 WHERE {
-    ?otherDataset		a					qb:DataSet ;
+    ?otherDataset		a					dsv:Dataset ;
                    		csvw:primaryKey		?otherPrimaryKey .
     ?otherPrimaryKey	rdfs:label 			?otherLabel ;
                      	rdfs:description 	?otherDescription ;
-                      	qb:dimension 		?otherDimension .
-    ?otherDimension 	qb:concept			?otherConcept .
+                      	dsv:columnProperty 	[
+        					dsv:hasVariable		?otherVariable ] .
     
     FILTER(?otherDataset != ?dataset)
-    FILTER(?otherConcept = ?concept)
+    FILTER(?otherVariable = ?variable)
+    
     {
-        SELECT ?dataset ?primaryKey ?dimension ?label ?description ?concept
+        SELECT ?dataset ?primaryKey ?dimension ?label ?description ?variable
         WHERE {
-            ?dataset		a					qb:DataSet ;
+            ?dataset		a					dsv:Dataset ;
                       		csvw:primaryKey		?primaryKey .
             ?primaryKey		rdfs:label 			?label ;
                          	rdfs:description 	?description ;
-                			qb:dimension 		?dimension .
-            ?dimension 		qb:concept			?concept .
+                			dsv:columnProperty 	[
+                				dsv:hasVariable		?variable ] .
         }
     }
 }
@@ -258,11 +256,11 @@ WHERE {
 # 12 - How would the metadata description of the merged datasets look like?
 ##################################################################################################################################
 
-PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX schema: <http://schema.org/>
 PREFIX dct: <http://purl.org/dc/terms/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+PREFIX dsv: <https://w3id.org/dsv-ontology#>
 
 SELECT DISTINCT 
 (GROUP_CONCAT(DISTINCT ?spatialCoverage;SEPARATOR=',\n') AS ?mergedSpatialCoverage)
@@ -275,10 +273,10 @@ WHERE {
               		schema:temporalCoverage	?temporalCoverage ;
               		dct:subject	 			[
             			skos:prefLabel			?topicLabel ] ;
-                	qb:structure	[
-            			qb:component	[
-            				qb:dimension	[
-            					qb:concept		[
+                	dsv:datasetSchema	[
+            			dsv:column	[
+            				dsv:columnProperty	[
+            					dsv:hasVariable		[
             						rdfs:label		?variableLabel
         ] ] ] ] . }
     UNION
@@ -287,76 +285,75 @@ WHERE {
               		schema:temporalCoverage	?temporalCoverage ;
               		dct:subject	 			[
             			skos:prefLabel			?topicLabel ] ;
-                	qb:structure	[
-            			qb:component	[
-            				qb:dimension	[
-            					qb:concept		[
+                	dsv:datasetSchema	[
+            			dsv:column	[
+            				dsv:columnProperty	[
+            					dsv:hasVariable		[
             						rdfs:label		?variableLabel
         ] ] ] ] . }
     
-    VALUES ?dataset1 {<http://www.canada-open-data.org/example-aggregated-dataset>}
-    VALUES ?dataset2 {<http://www.uk-open-data.org/example-aggregated-dataset>}
+    VALUES ?dataset1 {<http://www.canada-open-data.org/example-dataset>}
+    VALUES ?dataset2 {<http://www.uk-open-data.org/example-dataset>}
 }
 
 ##################################################################################################################################
 # 13 - In what ways is the content of two given datasets related?
 ##################################################################################################################################
 
-PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX dct: <http://purl.org/dc/terms/>
 PREFIX schema: <http://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dsv: <https://w3id.org/dsv-ontology#>
 
 SELECT DISTINCT 
 ?dataset ?title ?description ?spatialCoverage ?temporalCoverage (GROUP_CONCAT(DISTINCT ?subject;SEPARATOR=',\n') AS ?datasetSubjects)
 ?otherDataset ?otherTitle ?otherDescription ?otherSpatialCoverage ?otherTemporalCoverage (GROUP_CONCAT(DISTINCT ?otherSubject;SEPARATOR=',\n') AS ?otherDatasetSubjects)
 WHERE {
-    ?dataset		a						qb:DataSet ;
+    ?dataset		a						dsv:Dataset ;
               		dct:title				?title ;
                 	dct:description			?description ;
                  	schema:spatialCoverage	?spatialCoverage ;
                   	schema:temporalCoverage	?temporalCoverage ;
                    	dct:subject				?subject .
-    ?otherDataset	a 						qb:DataSet ;
+    ?otherDataset	a 						dsv:Dataset ;
                   	dct:title				?otherTitle ;
                    	dct:description 		?otherDescription ;
                     schema:spatialCoverage	?otherSpatialCoverage ;
                     schema:temporalCoverage	?otherTemporalCoverage ;
                     dct:subject				?otherSubject .
-    VALUES ?dataset { <http://www.usa-open-data.org/example-aggregated-dataset>}
-    VALUES ?otherDataset { <http://www.uk-open-data.org/example-aggregated-dataset> }
+    VALUES ?dataset { <http://www.usa-open-data.org/example-dataset>}
+    VALUES ?otherDataset { <http://www.uk-open-data.org/example-dataset> }
 }
 GROUP BY ?dataset ?title ?description ?spatialCoverage ?temporalCoverage ?otherDataset ?otherTitle ?otherDescription ?otherSpatialCoverage ?otherTemporalCoverage 
 
 ----
 
-PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX dct: <http://purl.org/dc/terms/>
 PREFIX schema: <http://schema.org/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dsv: <https://w3id.org/dsv-ontology#>
 
-SELECT DISTINCT ?component ?dimension ?label ?description ?concept ?otherComponent ?otherDimension ?otherLabel ?otherDescription ?otherConcept
+SELECT DISTINCT ?variable ?column ?columnProperty ?label ?description ?otherColumn ?otherColumnProperty ?otherLabel ?otherDescription
 
 WHERE {
-    ?dataset		a						qb:DataSet ;
-              		qb:structure			?datasetStructure .
-	?datasetStructure	qb:component		?component .
-	?component		qb:dimension 			?dimension ;
-					rdfs:label 				?label ;
-					rdfs:description 		?description .
-	?dimension 		qb:concept 				?concept .
+    ?dataset			a						dsv:Dataset ;
+              			dsv:datasetSchema		[
+        					dsv:column		?column ] .
+	?column				dsv:columnProperty 		?columnProperty ;
+						rdfs:label 				?label ;
+						rdfs:description 		?description .
+    ?columnProperty 	dsv:hasVariable 		?variable .
+    
+    ?otherDataset		a 						dsv:Dataset ;
+                  		dsv:datasetSchema		[
+        					dsv:column		?otherColumn ] .
+    ?otherColumn		dsv:columnProperty 		?otherColumnProperty ;
+						rdfs:label				?otherLabel ;
+						rdfs:description 		?otherDescription .
+    ?otherColumnProperty	dsv:hasVariable		?variable .
 
-    ?otherDataset	a 						qb:DataSet ;
-                  	qb:structure			?otherDatasetStructure .
-	?otherDatasetStructure	qb:component	?otherComponent .
-	?otherComponent	qb:dimension 			?otherDimension ;
-					rdfs:label				?otherLabel ;
-					rdfs:description 		?otherDescription .
-	?otherDimension qb:concept				?otherConcept .
-    
-    FILTER(?concept = ?otherConcept)
-    
-    VALUES ?dataset { <http://www.usa-open-data.org/example-aggregated-dataset>}
-    VALUES ?otherDataset { <http://www.uk-open-data.org/example-aggregated-dataset> }
+    VALUES ?dataset { <http://www.usa-open-data.org/example-dataset>}
+    VALUES ?otherDataset { <http://www.uk-open-data.org/example-dataset> }
 }
 
 
