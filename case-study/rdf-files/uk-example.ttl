@@ -1,0 +1,246 @@
+@prefix csvw:           <http://www.w3.org/ns/csvw#> .
+@prefix dct:            <http://purl.org/dc/terms/> .
+@prefix ddi-au:         <http://rdf-vocabulary.ddialliance.org/cv/AnalysisUnit/2.1.3/#> .
+@prefix dsv:            <https://w3id.org/dsv-ontology#> .
+@prefix eg:             <http://example.org/ns#> .
+@prefix eg-uk:          <http://example.org/ns#uk-codebook/> .
+@prefix elsst:          <https://elsst.cessda.eu/id/3/> .
+@prefix qb:             <http://purl.org/linked-data/cube#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:         <http://schema.org/> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix sdmx-concept:   <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix sdmx-subject:   <http://purl.org/linked-data/sdmx/2009/subject#> .
+@prefix wd:             <http://www.wikidata.org/entity/> .
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#> .
+
+
+# -- Data Set ----------------------------------------------
+
+<http://www.uk-open-data.org/example-dataset>                       a                               dsv:Dataset ;
+                                                                    dct:title                       "Annual births by age of mother"@en ;
+                                                                    rdfs:label                      "Annual births by age of mother"@en ;
+                                                                    rdfs:comment                    "This RDF description is not meant to be representative of the real dataset, and it was not created or commissioned by the original author of the dataset. It was created only for experimental and research purposes."@en ;
+                                                                    dct:description                 "Number of annual live births by broad age group of mother in England and Wales for mid-year to mid-year periods from 1 July 2000 to 30 June 2020."@en ;
+                                                                    dct:publisher                   "Greater London Authority"@en ;
+                                                                    dct:issued                      "2022-03-14"^^xsd:date ;
+                                                                    schema:about                    "https://www.data.gov.uk/dataset/dab5dccd-4d0e-4b40-b333-178e13ce49fe/annual-births-by-age-of-mother" ; 
+                                                                    schema:spatialCoverage          wd:Q145 ; 
+                                                                    schema:temporalCoverage         "2000-07-01/2020-06-30" ; # ISO 8601 time interval format
+                                                                    dct:subject                     sdmx-subject:1 ,        # demographic and social statistics
+                                                                                                    sdmx-subject:3.2 ,      # regional and small area statistics
+                                                                                                    sdmx-subject:1.4 ;      # health
+                                                                    dct:format                      "csv" ;
+                                                                    sdmx-attribute:unitMeasure      wd:Q577 ;
+                                                                    sdmx-attribute:statUnit         ddi-au:Group ;
+                                                                    csvw:primaryKey                 <http://www.uk-open-data.org/example-dataset/column/year> ,
+                                                                                                    <http://www.uk-open-data.org/example-dataset/column/rgn20cd> ,
+                                                                                                    <http://www.uk-open-data.org/example-dataset/column/rgn20nm> ,
+                                                                                                    <http://www.uk-open-data.org/example-dataset/column/lad20cd> ,
+                                                                                                    <http://www.uk-open-data.org/example-dataset/column/lad20nm> ,
+                                                                                                    <http://www.uk-open-data.org/example-dataset/column/wd20cd> ,
+                                                                                                    <http://www.uk-open-data.org/example-dataset/column/wd20nm> ,
+                                                                                                    <http://www.uk-open-data.org/example-dataset/column/ageOfMother> ,
+                                                                                                    <http://www.uk-open-data.org/example-dataset/column/sex> ;
+                                                                    dsv:datasetSchema               eg:dsd-uk ;
+                                                                    dsv:summaryStatistics           [
+                                                                        dsv:numberOfRows                "962760"^^xsd:integer ;
+                                                                        dsv:numberOfColumns             "10"^^xsd:integer ;
+                                                                        dsv:datasetCompleteness         "0.98"^^xsd:float ;
+                                                                        dsv:missingValuesFormat         "NA"^^xsd:string
+                                                                    ] .
+
+
+# -- Data structure definition -----------------------------
+
+eg:dsd-uk                                                           a                               dsv:DatasetSchema ;
+                                                                    dsv:column                      <http://www.uk-open-data.org/example-dataset/column/year> ,
+                                                                                                    <http://www.uk-open-data.org/example-dataset/column/rgn20cd> ,
+                                                                                                    <http://www.uk-open-data.org/example-dataset/column/rgn20nm> ,
+                                                                                                    <http://www.uk-open-data.org/example-dataset/column/lad20cd> ,
+                                                                                                    <http://www.uk-open-data.org/example-dataset/column/lad20nm> ,
+                                                                                                    <http://www.uk-open-data.org/example-dataset/column/wd20cd> ,
+                                                                                                    <http://www.uk-open-data.org/example-dataset/column/wd20nm> ,
+                                                                                                    <http://www.uk-open-data.org/example-dataset/column/ageOfMother> ,
+                                                                                                    <http://www.uk-open-data.org/example-dataset/column/sex> ,
+                                                                                                    <http://www.uk-open-data.org/example-dataset/column/births> .
+
+
+# -- Components (Columns) ----------------------------------
+
+<http://www.uk-open-data.org/example-dataset/column/year>           a                               dsv:Column ;
+                                                                    rdfs:label                      "year"@en ;
+                                                                    rdfs:description                "Year of observation."@en ;
+                                                                    dsv:columnProperty              <http://www.uk-open-data.org/properties-dictionary/year> ;
+                                                                    dsv:summaryStatistics           [
+                                                                        dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                        dsv:statisticalDataType         dsv:IntervalDataType ;
+                                                                        schema:minValue                 "2001"^^xsd:gYear ;
+                                                                        schema:maxValue                 "2020"^^xsd:gYear 
+                                                                    ] .
+
+<http://www.uk-open-data.org/example-dataset/column/rgn20cd>        a                               dsv:Column ;
+                                                                    rdfs:label                      "RGN20CD"@en ;
+                                                                    rdfs:description                "Regional code."@en ;
+                                                                    dsv:columnProperty              <http://www.uk-open-data.org/properties-dictionary/rgn20cd> ;
+                                                                    dsv:summaryStatistics           [
+                                                                        dsv:componentCompleteness       "0.89"^^xsd:float ;
+                                                                        dsv:missingValuesFormat         "NA"^^xsd:string ;
+                                                                        dsv:statisticalDataType         dsv:NominalDataType            
+                                                                    ] .
+
+<http://www.uk-open-data.org/example-dataset/column/rgn20nm>        a                               dsv:Column ;
+                                                                    rdfs:label                      "RGN20NM"@en ;
+                                                                    rdfs:description                "Regional name."@en ;
+                                                                    dsv:columnProperty              <http://www.uk-open-data.org/properties-dictionary/rgn20nm> ;
+                                                                    dsv:summaryStatistics           [
+                                                                        dsv:componentCompleteness       "0.89"^^xsd:float ;
+                                                                        dsv:missingValuesFormat         "NA"^^xsd:string ;
+                                                                        dsv:statisticalDataType         dsv:NominalDataType 
+                                                                    ] .
+
+<http://www.uk-open-data.org/example-dataset/column/lad20cd>        a                               dsv:Column ;
+                                                                    rdfs:label                      "LAD20CD"@en ;
+                                                                    rdfs:description                "Local Authority District code."@en ;
+                                                                    dsv:columnProperty                    <http://www.uk-open-data.org/properties-dictionary/lad20cd> ;
+                                                                    dsv:summaryStatistics           [
+                                                                        dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                        dsv:statisticalDataType         dsv:NominalDataType 
+                                                                    ] .
+
+<http://www.uk-open-data.org/example-dataset/column/lad20nm>        a                               dsv:Column ;
+                                                                    rdfs:label                      "LAD20NM"@en ;
+                                                                    rdfs:description                "Local Authority District name."@en ;
+                                                                    dsv:columnProperty              <http://www.uk-open-data.org/properties-dictionary/lad20nm> ;
+                                                                    dsv:summaryStatistics           [
+                                                                        dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                        dsv:statisticalDataType         dsv:NominalDataType 
+                                                                    ] .
+
+<http://www.uk-open-data.org/example-dataset/column/wd20cd>         a                               dsv:Column ;
+                                                                    rdfs:label                      "WD20CD"@en ;
+                                                                    rdfs:description                "Wards code."@en ;
+                                                                    dsv:columnProperty                    <http://www.uk-open-data.org/properties-dictionary/wd20cd> ;
+                                                                    dsv:summaryStatistics           [
+                                                                        dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                        dsv:statisticalDataType         dsv:NominalDataType 
+                                                                    ] .
+
+<http://www.uk-open-data.org/example-dataset/column/wd20nm>         a                               dsv:Column ;
+                                                                    rdfs:label                      "WD20NM"@en ;
+                                                                    rdfs:description                "wards name."@en ;
+                                                                    dsv:columnProperty                    <http://www.uk-open-data.org/properties-dictionary/wd20nm> ;
+                                                                    dsv:summaryStatistics           [
+                                                                        dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                        dsv:statisticalDataType         dsv:NominalDataType 
+                                                                    ] .
+
+<http://www.uk-open-data.org/example-dataset/column/ageOfMother>    a                               dsv:Column ;
+                                                                    rdfs:label                      "age_of_mother"@en ;
+                                                                    rdfs:description                "Age group of the mother."@en ;
+                                                                    dsv:columnProperty                    <http://www.uk-open-data.org/properties-dictionary/ageOfMother> ;
+                                                                    dsv:summaryStatistics           [
+                                                                        dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                        dsv:statisticalDataType         dsv:NominalDataType ;
+                                                                        dsv:hasCategories               eg-uk:Age24under ,
+                                                                                                        eg-uk:Age25to34 ,
+                                                                                                        eg-uk:Age35over
+                                                                    ] .
+
+<http://www.uk-open-data.org/example-dataset/column/sex>            a                               dsv:Column ;
+                                                                    rdfs:label                      "sex"@en ;
+                                                                    rdfs:description                "Gender of the newborn."@en ;
+                                                                    dsv:columnProperty                    <http://www.uk-open-data.org/properties-dictionary/sex> ;
+                                                                    dsv:summaryStatistics           [
+                                                                        dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                        dsv:statisticalDataType         dsv:NomNominalDataTypenal ;
+                                                                        dsv:hasCategories               eg-uk:GenderFemale ,
+                                                                                                        eg-uk:GenderMale
+                                                                    ] .
+
+<http://www.uk-open-data.org/example-dataset/column/births>         a                               dsv:Column ;
+                                                                    rdfs:label                      "births"@en ;
+                                                                    rdfs:description                "Number of births."@en ;
+                                                                    dsv:columnProperty                    <http://www.uk-open-data.org/properties-dictionary/births> ;
+                                                                    dsv:summaryStatistics           [
+                                                                        dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                        dsv:statisticalDataType         dsv:RatioDataType ;
+                                                                        schema:minValue                 "0"^^xsd:int ;
+                                                                        schema:maxValue                 "218"^^xsd:int
+                                                                    ] .
+
+
+# -- Dimension Properties ------------------------------
+
+<http://www.uk-open-data.org/properties-dictionary/year>            a                       dsv:ColumnProperty ;
+                                                                    rdfs:label              "Year Property" ;
+                                                                    rdfs:description        "Property defining the year of an event"@en ;
+                                                                    rdfs:subPropertyOf      sdmx-dimension:refPeriod ;
+                                                                    rdfs:range              xsd:gYear ;
+                                                                    dsv:hasVariable         sdmx-concept:refPeriod .
+
+<http://www.uk-open-data.org/properties-dictionary/rgn20cd>         a                       dsv:ColumnProperty ;
+                                                                    rdfs:label              "Regional Code Property" ;
+                                                                    rdfs:description        "Property defining the regional code"@en ;
+                                                                    rdfs:subPropertyOf      sdmx-dimension:refArea ;
+                                                                    rdfs:range              xsd:string ;
+                                                                    dsv:hasVariable         sdmx-concept:refArea .
+
+<http://www.uk-open-data.org/properties-dictionary/rgn20nm>         a                       dsv:ColumnProperty ;
+                                                                    rdfs:label              "Regional Name Property" ;
+                                                                    rdfs:description        "Property defining the regional name"@en ;
+                                                                    rdfs:subPropertyOf      sdmx-dimension:refArea ;
+                                                                    rdfs:range              xsd:string ;
+                                                                    dsv:hasVariable         sdmx-concept:refArea .
+
+<http://www.uk-open-data.org/properties-dictionary/lad20cd>         a                       dsv:ColumnProperty ;
+                                                                    rdfs:label              "Local Authority District Code Property" ;
+                                                                    rdfs:description        "Property defining the local authority district code"@en ;
+                                                                    rdfs:subPropertyOf      sdmx-dimension:refArea ;
+                                                                    rdfs:range              xsd:string ;
+                                                                    dsv:hasVariable         sdmx-concept:refArea .
+
+<http://www.uk-open-data.org/properties-dictionary/lad20nm>         a                       dsv:ColumnProperty ;
+                                                                    rdfs:label              "Local Authority District Name Property" ;
+                                                                    rdfs:description        "Property defining the local authority district name"@en ;
+                                                                    rdfs:subPropertyOf      sdmx-dimension:refArea ;
+                                                                    rdfs:range              xsd:string ;
+                                                                    dsv:hasVariable         sdmx-concept:refArea .
+
+<http://www.uk-open-data.org/properties-dictionary/wd20cd>          a                       dsv:ColumnProperty ;
+                                                                    rdfs:label              "Wards Code Property" ;
+                                                                    rdfs:description        "Property defining the wards code"@en ;
+                                                                    rdfs:subPropertyOf      sdmx-dimension:refArea ;
+                                                                    rdfs:range              xsd:string ;
+                                                                    dsv:hasVariable         sdmx-concept:refArea .
+
+<http://www.uk-open-data.org/properties-dictionary/wd20nm>          a                       dsv:ColumnProperty ;
+                                                                    rdfs:label              "Wards Name Property" ;
+                                                                    rdfs:description        "Property defining the wards name"@en ;
+                                                                    rdfs:subPropertyOf      sdmx-dimension:refArea ;
+                                                                    rdfs:range              xsd:string ;
+                                                                    dsv:hasVariable         sdmx-concept:refArea .
+                                                                                
+<http://www.uk-open-data.org/properties-dictionary/ageOfMother>     a                       dsv:ColumnProperty ;
+                                                                    rdfs:label              "Age Group of Mother Property" ;
+                                                                    rdfs:description        "Property defining the age group of the mother"@en ;
+                                                                    rdfs:subPropertyOf      sdmx-dimension:age ;
+                                                                    rdfs:range              xsd:string ;
+                                                                    dsv:hasVariable         sdmx-concept:age ;
+                                                                    dsv:hasCodeBook         eg-uk:AgeGroup .
+
+<http://www.uk-open-data.org/properties-dictionary/sex>             a                       dsv:ColumnProperty ;
+                                                                    rdfs:label              "Gender Property" ;
+                                                                    rdfs:description        "Property defining the gender of the newborn"@en ;
+                                                                    rdfs:subPropertyOf      sdmx-dimension:sex ;
+                                                                    rdfs:range              xsd:string ;
+                                                                    dsv:hasVariable         sdmx-concept:sex ;
+                                                                    dsv:hasCodeBook         eg-uk:Gender .
+
+<http://www.uk-open-data.org/properties-dictionary/births>          a                       dsv:ColumnProperty ;
+                                                                    rdfs:label              "Number of Births Property" ;
+                                                                    rdfs:description        "Property defining the number of births"@en ;
+                                                                    rdfs:subPropertyOf      schema:value ;
+                                                                    rdfs:range              xsd:int ;
+                                                                    dsv:hasVariable         elsst:d8f31e43-68d0-4b17-a33e-9fee3c5f77b3 .
