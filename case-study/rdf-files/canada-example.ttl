@@ -64,7 +64,7 @@ eg:dsd-ca                                                           a           
                                                                                 rdfs:description            "Year of observation."@en ;
                                                                                 dsv:columnProperty          <http://www.canada-open-data.org/properties-dictionary/refDate> ;
                                                                                 dsv:summaryStatistics       [
-                                                                                    dsv:componentCompleteness   "1.00"^^xsd:float ;
+                                                                                    dsv:columnCompleteness      "1.00"^^xsd:float ;
                                                                                     dsv:statisticalDataType     dsv:IntervalDataType ;
                                                                                     schema:minValue             "1974"^^xsd:gYear ;
                                                                                     schema:maxValue             "2005"^^xsd:gYear 
@@ -75,7 +75,7 @@ eg:dsd-ca                                                           a           
                                                                                 rdfs:description            "Place of residence of mother."@en ;
                                                                                 dsv:columnProperty          <http://www.canada-open-data.org/properties-dictionary/geo> ;
                                                                                 dsv:summaryStatistics       [
-                                                                                    dsv:componentCompleteness   "1.00"^^xsd:float ;
+                                                                                    dsv:columnCompleteness      "1.00"^^xsd:float ;
                                                                                     dsv:statisticalDataType     dsv:NominalDataType ;
                                                                                     dsv:hasCategories           eg-ca:1.1 ,
                                                                                                                 eg-ca:1.2 ,
@@ -100,7 +100,7 @@ eg:dsd-ca                                                           a           
                                                                                 rdfs:description            "Age group of mother."@en ;
                                                                                 dsv:columnProperty          <http://www.canada-open-data.org/properties-dictionary/ageGroup> ;
                                                                                 dsv:summaryStatistics       [
-                                                                                    dsv:componentCompleteness   "1.00"^^xsd:float ;
+                                                                                    dsv:columnCompleteness      "1.00"^^xsd:float ;
                                                                                     dsv:statisticalDataType     dsv:NominalDataType ;
                                                                                     dsv:hasCategories           eg-ca:2.1 ,
                                                                                                                 eg-ca:2.2 ,
@@ -121,7 +121,7 @@ eg:dsd-ca                                                           a           
                                                                                 rdfs:description            "Pregnancy outcome."@en ;
                                                                                 dsv:columnProperty          <http://www.canada-open-data.org/properties-dictionary/pregnancyOutcomes> ;
                                                                                 dsv:summaryStatistics       [
-                                                                                    dsv:componentCompleteness   "1.00"^^xsd:float ;
+                                                                                    dsv:columnCompleteness      "1.00"^^xsd:float ;
                                                                                     dsv:statisticalDataType     dsv:NominalDataType ;
                                                                                     dsv:hasCategories           eg-ca:3.1 ,
                                                                                                                 eg-ca:3.2 ,
@@ -134,9 +134,9 @@ eg:dsd-ca                                                           a           
                                                                                 rdfs:description            "Number of births."@en ;
                                                                                 dsv:columnProperty          <http://www.canada-open-data.org/properties-dictionary/value> ;
                                                                                 dsv:summaryStatistics       [
-                                                                                    dsv:componentCompleteness   "0.97"^^xsd:float ;
+                                                                                    dsv:columnCompleteness      "0.97"^^xsd:float ;
                                                                                     dsv:statisticalDataType     dsv:RatioDataType ;
-                                                                                    dsv:missingValuesFormat     "NA"^^xsd:string ;
+                                                                                    dsv:missingValuesFormat     "NaN"^^xsd:string ;
                                                                                     schema:minValue             "0"^^xsd:int ;
                                                                                     schema:maxValue             "526887"^^xsd:int
                                                                                 ] .

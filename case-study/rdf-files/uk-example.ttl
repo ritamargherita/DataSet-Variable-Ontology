@@ -74,7 +74,7 @@ eg:dsd-uk                                                           a           
                                                                     rdfs:description                "Year of observation."@en ;
                                                                     dsv:columnProperty              <http://www.uk-open-data.org/properties-dictionary/year> ;
                                                                     dsv:summaryStatistics           [
-                                                                        dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                        dsv:columnCompleteness          "1.00"^^xsd:float ;
                                                                         dsv:statisticalDataType         dsv:IntervalDataType ;
                                                                         schema:minValue                 "2001"^^xsd:gYear ;
                                                                         schema:maxValue                 "2020"^^xsd:gYear 
@@ -85,7 +85,7 @@ eg:dsd-uk                                                           a           
                                                                     rdfs:description                "Regional code."@en ;
                                                                     dsv:columnProperty              <http://www.uk-open-data.org/properties-dictionary/rgn20cd> ;
                                                                     dsv:summaryStatistics           [
-                                                                        dsv:componentCompleteness       "0.89"^^xsd:float ;
+                                                                        dsv:columnCompleteness          "0.89"^^xsd:float ;
                                                                         dsv:missingValuesFormat         "NA"^^xsd:string ;
                                                                         dsv:statisticalDataType         dsv:NominalDataType            
                                                                     ] .
@@ -95,7 +95,7 @@ eg:dsd-uk                                                           a           
                                                                     rdfs:description                "Regional name."@en ;
                                                                     dsv:columnProperty              <http://www.uk-open-data.org/properties-dictionary/rgn20nm> ;
                                                                     dsv:summaryStatistics           [
-                                                                        dsv:componentCompleteness       "0.89"^^xsd:float ;
+                                                                        dsv:columnCompleteness          "0.89"^^xsd:float ;
                                                                         dsv:missingValuesFormat         "NA"^^xsd:string ;
                                                                         dsv:statisticalDataType         dsv:NominalDataType 
                                                                     ] .
@@ -105,7 +105,7 @@ eg:dsd-uk                                                           a           
                                                                     rdfs:description                "Local Authority District code."@en ;
                                                                     dsv:columnProperty                    <http://www.uk-open-data.org/properties-dictionary/lad20cd> ;
                                                                     dsv:summaryStatistics           [
-                                                                        dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                        dsv:columnCompleteness          "1.00"^^xsd:float ;
                                                                         dsv:statisticalDataType         dsv:NominalDataType 
                                                                     ] .
 
@@ -114,7 +114,7 @@ eg:dsd-uk                                                           a           
                                                                     rdfs:description                "Local Authority District name."@en ;
                                                                     dsv:columnProperty              <http://www.uk-open-data.org/properties-dictionary/lad20nm> ;
                                                                     dsv:summaryStatistics           [
-                                                                        dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                        dsv:columnCompleteness          "1.00"^^xsd:float ;
                                                                         dsv:statisticalDataType         dsv:NominalDataType 
                                                                     ] .
 
@@ -123,7 +123,7 @@ eg:dsd-uk                                                           a           
                                                                     rdfs:description                "Wards code."@en ;
                                                                     dsv:columnProperty                    <http://www.uk-open-data.org/properties-dictionary/wd20cd> ;
                                                                     dsv:summaryStatistics           [
-                                                                        dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                        dsv:columnCompleteness          "1.00"^^xsd:float ;
                                                                         dsv:statisticalDataType         dsv:NominalDataType 
                                                                     ] .
 
@@ -132,7 +132,7 @@ eg:dsd-uk                                                           a           
                                                                     rdfs:description                "wards name."@en ;
                                                                     dsv:columnProperty                    <http://www.uk-open-data.org/properties-dictionary/wd20nm> ;
                                                                     dsv:summaryStatistics           [
-                                                                        dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                        dsv:columnCompleteness          "1.00"^^xsd:float ;
                                                                         dsv:statisticalDataType         dsv:NominalDataType 
                                                                     ] .
 
@@ -141,7 +141,7 @@ eg:dsd-uk                                                           a           
                                                                     rdfs:description                "Age group of the mother."@en ;
                                                                     dsv:columnProperty                    <http://www.uk-open-data.org/properties-dictionary/ageOfMother> ;
                                                                     dsv:summaryStatistics           [
-                                                                        dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                        dsv:columnCompleteness          "1.00"^^xsd:float ;
                                                                         dsv:statisticalDataType         dsv:NominalDataType ;
                                                                         dsv:hasCategories               eg-uk:Age24under ,
                                                                                                         eg-uk:Age25to34 ,
@@ -153,7 +153,7 @@ eg:dsd-uk                                                           a           
                                                                     rdfs:description                "Gender of the newborn."@en ;
                                                                     dsv:columnProperty                    <http://www.uk-open-data.org/properties-dictionary/sex> ;
                                                                     dsv:summaryStatistics           [
-                                                                        dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                        dsv:columnCompleteness          "1.00"^^xsd:float ;
                                                                         dsv:statisticalDataType         dsv:NomNominalDataTypenal ;
                                                                         dsv:hasCategories               eg-uk:GenderFemale ,
                                                                                                         eg-uk:GenderMale
@@ -164,7 +164,7 @@ eg:dsd-uk                                                           a           
                                                                     rdfs:description                "Number of births."@en ;
                                                                     dsv:columnProperty                    <http://www.uk-open-data.org/properties-dictionary/births> ;
                                                                     dsv:summaryStatistics           [
-                                                                        dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                        dsv:columnCompleteness          "1.00"^^xsd:float ;
                                                                         dsv:statisticalDataType         dsv:RatioDataType ;
                                                                         schema:minValue                 "0"^^xsd:int ;
                                                                         schema:maxValue                 "218"^^xsd:int

@@ -69,7 +69,7 @@ eg:dsd-nl                                                       a               
                                                                                         rdfs:description                "Year of observation."@en ;
                                                                                         dsv:columnProperty              <http://www.nl-open-data.org/properties-dictionary/perioden> ;
                                                                                         dsv:summaryStatistics           [
-                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                dsv:columnCompleteness          "1.00"^^xsd:float ;
                                                                                                 dsv:statisticalDataType         dsv:IntervalDataType ;
                                                                                                 schema:minValue                 "1950"^^xsd:gYear ;
                                                                                                 schema:maxValue                 "2021"^^xsd:gYear 
@@ -82,7 +82,7 @@ eg:dsd-nl                                                       a               
                                                                                         rdfs:description                "Total number of live births."@en ;
                                                                                         dsv:columnProperty              <http://www.nl-open-data.org/properties-dictionary/totaalLevendGeborenKinderen> ;
                                                                                         dsv:summaryStatistics           [
-                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                dsv:columnCompleteness          "1.00"^^xsd:float ;
                                                                                                 dsv:statisticalDataType         dsv:RatioDataType ;
                                                                                                 schema:minValue                 "168525"^^xsd:int ;
                                                                                                 schema:maxValue                 "250914"^^xsd:int 
@@ -94,7 +94,7 @@ eg:dsd-nl                                                       a               
                                                                                         rdfs:description                "Number of live births per 1000 women of childbearing age, for each year."@en ;
                                                                                         dsv:columnProperty              <http://www.nl-open-data.org/properties-dictionary/algemeenVruchtbaarheidscijfer> ;
                                                                                         dsv:summaryStatistics           [
-                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                dsv:columnCompleteness          "1.00"^^xsd:float ;
                                                                                                 dsv:statisticalDataType         dsv:RatioDataType ;
                                                                                                 schema:minValue                 "44.8"^^xsd:float ;
                                                                                                 schema:maxValue                 "90.9"^^xsd:float 
@@ -106,7 +106,7 @@ eg:dsd-nl                                                       a               
                                                                                         rdfs:description                "Mothers younger than 20 years old."@en ;
                                                                                         dsv:columnProperty              <http://www.nl-open-data.org/properties-dictionary/jongerDan20Jaar> ;
                                                                                         dsv:summaryStatistics           [
-                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                dsv:columnCompleteness          "1.00"^^xsd:float ;
                                                                                                 dsv:statisticalDataType         dsv:RatioDataType ;
                                                                                                 schema:minValue                 "715"^^xsd:int ;
                                                                                                 schema:maxValue                 "9743"^^xsd:int 
@@ -118,7 +118,7 @@ eg:dsd-nl                                                       a               
                                                                                         rdfs:description                "Mothers with age between 20 and 25 years old."@en ;
                                                                                         dsv:columnProperty              <http://www.nl-open-data.org/properties-dictionary/k_20Tot25Jaar> ;
                                                                                         dsv:summaryStatistics           [
-                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                dsv:columnCompleteness          "1.00"^^xsd:float ;
                                                                                                 dsv:statisticalDataType         dsv:RatioDataType ;
                                                                                                 schema:minValue                 "9899"^^xsd:int ;
                                                                                                 schema:maxValue                 "73971"^^xsd:int 
@@ -130,7 +130,7 @@ eg:dsd-nl                                                       a               
                                                                                         rdfs:description                "Mothers with age between 25 and 30 years old."@en ;
                                                                                         dsv:columnProperty              <http://www.nl-open-data.org/properties-dictionary/k_25Tot30Jaar> ;
                                                                                         dsv:summaryStatistics           [
-                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                dsv:columnCompleteness          "1.00"^^xsd:float ;
                                                                                                 dsv:statisticalDataType         dsv:RatioDataType ;
                                                                                                 schema:minValue                 "43666"^^xsd:int ;
                                                                                                 schema:maxValue                 "88469"^^xsd:int 
@@ -142,7 +142,7 @@ eg:dsd-nl                                                       a               
                                                                                         rdfs:description                "Mothers with age between 30 and 35 years old."@en ;
                                                                                         dsv:columnProperty              <http://www.nl-open-data.org/properties-dictionary/k_30Tot35Jaar> ;
                                                                                         dsv:summaryStatistics           [
-                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                dsv:columnCompleteness          "1.00"^^xsd:float ;
                                                                                                 dsv:statisticalDataType         dsv:RatioDataType ;
                                                                                                 schema:minValue                 "29948"^^xsd:int ;
                                                                                                 schema:maxValue                 "87117"^^xsd:int 
@@ -154,7 +154,7 @@ eg:dsd-nl                                                       a               
                                                                                         rdfs:description                "Mothers with age between 35 and 40 years old."@en ;
                                                                                         dsv:columnProperty              <http://www.nl-open-data.org/properties-dictionary/k_35Tot40Jaar> ;
                                                                                         dsv:summaryStatistics           [
-                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                dsv:columnCompleteness          "1.00"^^xsd:float ;
                                                                                                 dsv:statisticalDataType         dsv:RatioDataType ;
                                                                                                 schema:minValue                 "7994"^^xsd:int ;
                                                                                                 schema:maxValue                 "42024"^^xsd:int 
@@ -166,7 +166,7 @@ eg:dsd-nl                                                       a               
                                                                                         rdfs:description                "Mothers with age between 40 and 45 years old."@en ;
                                                                                         dsv:columnProperty              <http://www.nl-open-data.org/properties-dictionary/k_40Tot45Jaar> ;
                                                                                         dsv:summaryStatistics           [
-                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                dsv:columnCompleteness          "1.00"^^xsd:float ;
                                                                                                 dsv:statisticalDataType         dsv:RatioDataType ;
                                                                                                 schema:minValue                 "1546"^^xsd:int ;
                                                                                                 schema:maxValue                 "17715"^^xsd:int 
@@ -178,7 +178,7 @@ eg:dsd-nl                                                       a               
                                                                                         rdfs:description                "Mothers older than 45 years old."@en ;
                                                                                         dsv:columnProperty              <http://www.nl-open-data.org/properties-dictionary/k_45JaarOfOuder> ;
                                                                                         dsv:summaryStatistics           [
-                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                dsv:columnCompleteness          "1.00"^^xsd:float ;
                                                                                                 dsv:statisticalDataType         dsv:RatioDataType ;
                                                                                                 schema:minValue                 "151"^^xsd:int ;
                                                                                                 schema:maxValue                 "1817"^^xsd:int 
@@ -190,7 +190,7 @@ eg:dsd-nl                                                       a               
                                                                                         rdfs:description                "Number of births."@en ;
                                                                                         dsv:columnProperty              <http://www.nl-open-data.org/properties-dictionary/totaalGeboorten> ;
                                                                                         dsv:summaryStatistics           [
-                                                                                                dsv:componentCompleteness       "1.00"^^xsd:float ;
+                                                                                                dsv:columnCompleteness          "1.00"^^xsd:float ;
                                                                                                 dsv:statisticalDataType         dsv:RatioDataType ;
                                                                                                 schema:minValue                 "166331"^^xsd:int ;
                                                                                                 schema:maxValue                 "251354"^^xsd:int 
