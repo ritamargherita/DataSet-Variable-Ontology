@@ -65,12 +65,25 @@
 <http://xmlns.com/foaf/0.1/homepage> rdf:type owl:AnnotationProperty .
 
 
+###  https://w3id.org/dsv-ontology#hasCategories
+:hasCategories rdf:type owl:AnnotationProperty ;
+               rdfs:domain :CategoricalDataType .
+
+
 #################################################################
 #    Object Properties
 #################################################################
 
+###  http://purl.org/linked-data/cube#codeList
+<http://purl.org/linked-data/cube#codeList> rdf:type owl:ObjectProperty .
+
+
 ###  http://purl.org/linked-data/cube#component
 <http://purl.org/linked-data/cube#component> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/linked-data/cube#concept
+<http://purl.org/linked-data/cube#concept> rdf:type owl:ObjectProperty .
 
 
 ###  http://purl.org/linked-data/cube#dimension
@@ -81,6 +94,10 @@
 <http://purl.org/linked-data/cube#structure> rdf:type owl:ObjectProperty .
 
 
+###  http://www.w3.org/ns/csvw#column
+<http://www.w3.org/ns/csvw#column> rdf:type owl:ObjectProperty .
+
+
 ###  http://www.w3.org/ns/csvw#propertyUrl
 <http://www.w3.org/ns/csvw#propertyUrl> rdf:type owl:ObjectProperty .
 
@@ -89,23 +106,24 @@
 <http://www.w3.org/ns/csvw#tableSchema> rdf:type owl:ObjectProperty .
 
 
-###  https://w3id.org/dsv-ontology#componentProperty
-:componentProperty rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf <http://purl.org/linked-data/cube#dimension> ,
-                                      <http://www.w3.org/ns/csvw#propertyUrl> ;
-                   rdfs:domain :DatasetComponent ;
-                   rdfs:range rdf:Property ;
-                   rdfs:comment "Property linking a component to a property." ;
-                   rdfs:label "component property" .
+###  https://w3id.org/dsv-ontology#column
+:column rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf <http://purl.org/linked-data/cube#component> ,
+                           <http://www.w3.org/ns/csvw#column> ;
+        rdfs:domain :DatasetSchema ;
+        rdfs:range :Column ;
+        rdfs:comment "Property linking the dataset schema to its columns." ;
+        rdfs:label "column" .
 
 
-###  https://w3id.org/dsv-ontology#datasetComponent
-:datasetComponent rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf <http://purl.org/linked-data/cube#component> ;
-                  rdfs:domain :DatasetSchema ;
-                  rdfs:range :DatasetComponent ;
-                  rdfs:comment "Property linking the dataset schema to its components." ;
-                  rdfs:label "dataset component" .
+###  https://w3id.org/dsv-ontology#columnProperty
+:columnProperty rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <http://purl.org/linked-data/cube#dimension> ,
+                                   <http://www.w3.org/ns/csvw#propertyUrl> ;
+                rdfs:domain :Column ;
+                rdfs:range :ColumnProperty ;
+                rdfs:comment "Property linking a column to a property." ;
+                rdfs:label "column property" .
 
 
 ###  https://w3id.org/dsv-ontology#datasetSchema
@@ -118,28 +136,22 @@
                rdfs:label "dataset schema" .
 
 
-###  https://w3id.org/dsv-ontology#linksToVariable
-:linksToVariable rdf:type owl:ObjectProperty ;
-                 rdfs:domain rdf:Property ;
-                 rdfs:range :Variable ;
-                 rdfs:comment "Property linking a property of a component to a variable." ;
-                 rdfs:label "links to variable" .
+###  https://w3id.org/dsv-ontology#hasCodeBook
+:hasCodeBook rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <http://purl.org/linked-data/cube#codeList> ;
+             rdfs:domain :ColumnProperty ;
+             rdfs:range <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+             rdfs:comment "Property linking a column to a concept in codebooks." ;
+             rdfs:label "has code book" .
 
 
-###  https://w3id.org/dsv-ontology#refersToVariable
-:refersToVariable rdf:type owl:ObjectProperty ;
-                  rdfs:domain :DatasetComponent ;
-                  rdfs:range :Variable ;
-                  rdfs:comment "Property linking a component to a variable." ;
-                  rdfs:label "refers to variable" .
-
-
-###  https://w3id.org/dsv-ontology#rowsRepresentInstancesOf
-:rowsRepresentInstancesOf rdf:type owl:ObjectProperty ;
-                          rdfs:domain :Dataset ;
-                          rdfs:range owl:Class ;
-                          rdfs:comment "Property linking a dataset to the conceptual representation of its rows." ;
-                          rdfs:label "rows represent instances of" .
+###  https://w3id.org/dsv-ontology#hasVariable
+:hasVariable rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <http://purl.org/linked-data/cube#concept> ;
+             rdfs:domain :ColumnProperty ;
+             rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+             rdfs:comment "Property linking a column to a concept variable." ;
+             rdfs:label "has variable" .
 
 
 ###  https://w3id.org/dsv-ontology#statisticalDataType
@@ -150,19 +162,8 @@
                      rdfs:label "statistical data type" .
 
 
-###  https://w3id.org/dsv-ontology#subVariableOf
-:subVariableOf rdf:type owl:ObjectProperty ;
-               rdfs:domain :Variable ;
-               rdfs:range :Variable ;
-               rdfs:comment "Property linking a variable to its sub-variable." ;
-               rdfs:label "sub-variable of" .
-
-
 ###  https://w3id.org/dsv-ontology#summaryStatistics
 :summaryStatistics rdf:type owl:ObjectProperty ;
-                   rdfs:domain :Dataset ,
-                               :DatasetComponent ;
-                   rdfs:range :SummaryStatistics ;
                    rdfs:comment "Property linking a dataset or a component to their summary statistics." ;
                    rdfs:label "summary statistics" .
 
@@ -171,10 +172,10 @@
 #    Data properties
 #################################################################
 
-###  https://w3id.org/dsv-ontology#componentCompleteness
-:componentCompleteness rdf:type owl:DatatypeProperty ;
-                       rdfs:domain :SummaryStatistics ;
-                       rdfs:range xsd:float .
+###  https://w3id.org/dsv-ontology#columnCompleteness
+:columnCompleteness rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :SummaryStatistics ;
+                    rdfs:range xsd:float .
 
 
 ###  https://w3id.org/dsv-ontology#datasetCompleteness
@@ -217,16 +218,28 @@
 <http://purl.org/linked-data/cube#DataStructureDefinition> rdf:type owl:Class .
 
 
+###  http://purl.org/linked-data/cube#DimensionProperty
+<http://purl.org/linked-data/cube#DimensionProperty> rdf:type owl:Class .
+
+
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
 rdf:Property rdf:type owl:Class .
 
 
-###  http://www.w3.org/2002/07/owl#Class
-owl:Class rdf:type owl:Class .
-
-
 ###  http://www.w3.org/2002/07/owl#DataProperty
 owl:DataProperty rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/csvw#Column
+<http://www.w3.org/ns/csvw#Column> rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/csvw#Table
@@ -237,11 +250,27 @@ owl:DataProperty rdf:type owl:Class .
 <http://www.w3.org/ns/csvw#TableSchema> rdf:type owl:Class .
 
 
-###  https://w3id.org/dsv-ontology#AggregatedDataset
-:AggregatedDataset rdf:type owl:Class ;
-                   rdfs:subClassOf :Dataset ;
-                   rdfs:comment "Set of data that has been aggregated over an individual - or unaggregated - set of data." ;
-                   rdfs:label "Aggregated Dataset" .
+###  https://w3id.org/dsv-ontology#CategoricalDataType
+:CategoricalDataType rdf:type owl:Class ;
+                     rdfs:subClassOf :StatisticalDataType ;
+                     rdfs:comment "Set of statistical data types can be observed and - or - categorised." ;
+                     rdfs:label "Categorical Statistical Data Type" .
+
+
+###  https://w3id.org/dsv-ontology#Column
+:Column rdf:type owl:Class ;
+        rdfs:subClassOf <http://purl.org/linked-data/cube#ComponentSpecification> ,
+                        <http://www.w3.org/ns/csvw#Column> ;
+        rdfs:comment "Set of individual columns of a dataset." ;
+        rdfs:label "Dataset Component" .
+
+
+###  https://w3id.org/dsv-ontology#ColumnProperty
+:ColumnProperty rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.org/linked-data/cube#DimensionProperty> ,
+                                rdf:Property ;
+                rdfs:comment "RDF Properties represented by the column." ;
+                rdfs:label "Column Property" .
 
 
 ###  https://w3id.org/dsv-ontology#Dataset
@@ -252,13 +281,6 @@ owl:DataProperty rdf:type owl:Class .
          rdfs:label "Dataset" .
 
 
-###  https://w3id.org/dsv-ontology#DatasetComponent
-:DatasetComponent rdf:type owl:Class ;
-                  rdfs:subClassOf <http://purl.org/linked-data/cube#ComponentSpecification> ;
-                  rdfs:comment "Set of individual component of a dataset." ;
-                  rdfs:label "Dataset Component" .
-
-
 ###  https://w3id.org/dsv-ontology#DatasetSchema
 :DatasetSchema rdf:type owl:Class ;
                rdfs:subClassOf <http://purl.org/linked-data/cube#DataStructureDefinition> ,
@@ -267,53 +289,39 @@ owl:DataProperty rdf:type owl:Class .
                rdfs:label "Dataset Schema" .
 
 
-###  https://w3id.org/dsv-ontology#IndividualDataset
-:IndividualDataset rdf:type owl:Class ;
-                   rdfs:subClassOf :Dataset ;
-                   rdfs:comment "Set of data that can be aggregated over. Usually representing the raw data. " ;
-                   rdfs:label "Individual Dataset" .
+###  https://w3id.org/dsv-ontology#IntervalDataType
+:IntervalDataType rdf:type owl:Class ;
+                  rdfs:subClassOf :NumericalDataType ;
+                  rdfs:comment "Statistical data type representing ordered data measured over a numerical scale with equal distance between units." ;
+                  rdfs:label "Interval Statistical Data Type" .
 
 
-###  https://w3id.org/dsv-ontology#IntervalStatisticalDataType
-:IntervalStatisticalDataType rdf:type owl:Class ;
-                             rdfs:subClassOf :QuantitativeStatisticalDataType ;
-                             rdfs:comment "Statistical data type representing ordered data measured over a numerical scale with equal distance between units." ;
-                             rdfs:label "Interval Statistical Data Type" .
+###  https://w3id.org/dsv-ontology#NominalDataType
+:NominalDataType rdf:type owl:Class ;
+                 rdfs:subClassOf :CategoricalDataType ;
+                 rdfs:comment "Statistical data type representing discrete units that cannot be ordered or measured." ;
+                 rdfs:label "Nominal Statistical Data Type" .
 
 
-###  https://w3id.org/dsv-ontology#NominalStatisticalDataType
-:NominalStatisticalDataType rdf:type owl:Class ;
-                            rdfs:subClassOf :QualitativeStatisticalDataType ;
-                            rdfs:comment "Statistical data type representing discrete units that cannot be ordered or measured." ;
-                            rdfs:label "Nominal Statistical Data Type" .
+###  https://w3id.org/dsv-ontology#NumericalDataType
+:NumericalDataType rdf:type owl:Class ;
+                   rdfs:subClassOf :StatisticalDataType ;
+                   rdfs:comment "Set of statistical data types can be measured and quantified." ;
+                   rdfs:label "Numerical Statistical Data Type" .
 
 
-###  https://w3id.org/dsv-ontology#OrdinalStatisticalDataType
-:OrdinalStatisticalDataType rdf:type owl:Class ;
-                            rdfs:subClassOf :QualitativeStatisticalDataType ;
-                            rdfs:comment "Statistical data type representing discrete units that can be ordered or measured." ;
-                            rdfs:label "Ordinal Statistical Data Type" .
+###  https://w3id.org/dsv-ontology#OrdinalDataType
+:OrdinalDataType rdf:type owl:Class ;
+                 rdfs:subClassOf :CategoricalDataType ;
+                 rdfs:comment "Statistical data type representing discrete units that can be ordered or measured." ;
+                 rdfs:label "Ordinal Statistical Data Type" .
 
 
-###  https://w3id.org/dsv-ontology#QualitativeStatisticalDataType
-:QualitativeStatisticalDataType rdf:type owl:Class ;
-                                rdfs:subClassOf :StatisticalDataType ;
-                                rdfs:comment "Set of statistical data types can be observed and - or - categorised." ;
-                                rdfs:label "Qualitative Statistical Data Type" .
-
-
-###  https://w3id.org/dsv-ontology#QuantitativeStatisticalDataType
-:QuantitativeStatisticalDataType rdf:type owl:Class ;
-                                 rdfs:subClassOf :StatisticalDataType ;
-                                 rdfs:comment "Set of statistical data types can be measured and quantified." ;
-                                 rdfs:label "Quantitative Statistical Data Type" .
-
-
-###  https://w3id.org/dsv-ontology#RatioStatisticalDataType
-:RatioStatisticalDataType rdf:type owl:Class ;
-                          rdfs:subClassOf :QuantitativeStatisticalDataType ;
-                          rdfs:comment "Statistical data type representing ordered data with equal distance between units, where negative values are not allowed." ;
-                          rdfs:label "Ratio Statistical Data Type" .
+###  https://w3id.org/dsv-ontology#RatioDataType
+:RatioDataType rdf:type owl:Class ;
+               rdfs:subClassOf :NumericalDataType ;
+               rdfs:comment "Statistical data type representing ordered data with equal distance between units, where negative values are not allowed." ;
+               rdfs:label "Ratio Statistical Data Type" .
 
 
 ###  https://w3id.org/dsv-ontology#StatisticalDataType
@@ -328,24 +336,23 @@ owl:DataProperty rdf:type owl:Class .
                    rdfs:label "Summary Statistics" .
 
 
-###  https://w3id.org/dsv-ontology#Variable
-:Variable rdf:type owl:Class ;
-          rdfs:comment "The variable described by a component of the dataset." ;
-          rdfs:label "Variable" .
-
-
 #################################################################
 #    Individuals
 #################################################################
 
-###  https://w3id.org/dsv-ontology#componentCompleteness
-:componentCompleteness rdf:type owl:NamedIndividual ,
-                                owl:DataProperty .
+###  https://w3id.org/dsv-ontology#columnCompleteness
+:columnCompleteness rdf:type owl:NamedIndividual ,
+                             owl:DataProperty .
 
 
 ###  https://w3id.org/dsv-ontology#datasetCompleteness
 :datasetCompleteness rdf:type owl:NamedIndividual ,
                               owl:DataProperty .
+
+
+###  https://w3id.org/dsv-ontology#hasCategories
+:hasCategories rdf:type owl:NamedIndividual ,
+                        owl:DataProperty .
 
 
 ###  https://w3id.org/dsv-ontology#missingValueFormat
@@ -367,15 +374,19 @@ owl:DataProperty rdf:type owl:Class .
 #    Annotations
 #################################################################
 
-:componentCompleteness rdfs:comment "Property linking a component to its summary statistics." ;
-                       rdfs:label "component completeness" .
+:columnCompleteness rdfs:comment "Property linking a column to its summary statistics." ;
+                    rdfs:label "column completeness" .
 
 
 :datasetCompleteness rdfs:comment "Property linking a dataset to its summary statistics." ;
                      rdfs:label "dataset completeness" .
 
 
-:missingValueFormat rdfs:comment "Property linking a dataset or a component to the format of the missinf values." ;
+:hasCategories rdfs:comment "Property linking a categorical data type to the categories it can include." ;
+               rdfs:label "has categories" .
+
+
+:missingValueFormat rdfs:comment "Property linking a dataset or a column to the format of the missing values." ;
                     rdfs:label "missing value format" .
 
 

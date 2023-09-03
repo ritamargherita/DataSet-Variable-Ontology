@@ -52,6 +52,10 @@
 # http://xmlns.com/foaf/0.1/homepage
 <http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# https://w3id.org/dsv-ontology#hasCategories
+<https://w3id.org/dsv-ontology#hasCategories> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/dsv-ontology#hasCategories> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dsv-ontology#CategoricalDataType> .
+# 
 # 
 # 
 # #################################################################
@@ -61,8 +65,14 @@
 # #################################################################
 # 
 # 
+# http://purl.org/linked-data/cube#codeList
+<http://purl.org/linked-data/cube#codeList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
 # http://purl.org/linked-data/cube#component
 <http://purl.org/linked-data/cube#component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://purl.org/linked-data/cube#concept
+<http://purl.org/linked-data/cube#concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
 # http://purl.org/linked-data/cube#dimension
 <http://purl.org/linked-data/cube#dimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -70,29 +80,32 @@
 # http://purl.org/linked-data/cube#structure
 <http://purl.org/linked-data/cube#structure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
+# http://www.w3.org/ns/csvw#column
+<http://www.w3.org/ns/csvw#column> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
 # http://www.w3.org/ns/csvw#propertyUrl
 <http://www.w3.org/ns/csvw#propertyUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
 # http://www.w3.org/ns/csvw#tableSchema
 <http://www.w3.org/ns/csvw#tableSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
-# https://w3id.org/dsv-ontology#componentProperty
-<https://w3id.org/dsv-ontology#componentProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/dsv-ontology#componentProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/cube#dimension> .
-<https://w3id.org/dsv-ontology#componentProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/csvw#propertyUrl> .
-<https://w3id.org/dsv-ontology#componentProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dsv-ontology#DatasetComponent> .
-<https://w3id.org/dsv-ontology#componentProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/dsv-ontology#componentProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking a component to a property." .
-<https://w3id.org/dsv-ontology#componentProperty> <http://www.w3.org/2000/01/rdf-schema#label> "component property" .
+# https://w3id.org/dsv-ontology#column
+<https://w3id.org/dsv-ontology#column> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dsv-ontology#column> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/cube#component> .
+<https://w3id.org/dsv-ontology#column> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/csvw#column> .
+<https://w3id.org/dsv-ontology#column> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dsv-ontology#DatasetSchema> .
+<https://w3id.org/dsv-ontology#column> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dsv-ontology#Column> .
+<https://w3id.org/dsv-ontology#column> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking the dataset schema to its columns." .
+<https://w3id.org/dsv-ontology#column> <http://www.w3.org/2000/01/rdf-schema#label> "column" .
 # 
-# https://w3id.org/dsv-ontology#datasetComponent
-<https://w3id.org/dsv-ontology#datasetComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/dsv-ontology#datasetComponent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/cube#component> .
-<https://w3id.org/dsv-ontology#datasetComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dsv-ontology#DatasetSchema> .
-<https://w3id.org/dsv-ontology#datasetComponent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dsv-ontology#DatasetComponent> .
-<https://w3id.org/dsv-ontology#datasetComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking the dataset schema to its components." .
-<https://w3id.org/dsv-ontology#datasetComponent> <http://www.w3.org/2000/01/rdf-schema#label> "dataset component" .
+# https://w3id.org/dsv-ontology#columnProperty
+<https://w3id.org/dsv-ontology#columnProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dsv-ontology#columnProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/cube#dimension> .
+<https://w3id.org/dsv-ontology#columnProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/csvw#propertyUrl> .
+<https://w3id.org/dsv-ontology#columnProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dsv-ontology#Column> .
+<https://w3id.org/dsv-ontology#columnProperty> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dsv-ontology#ColumnProperty> .
+<https://w3id.org/dsv-ontology#columnProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking a column to a property." .
+<https://w3id.org/dsv-ontology#columnProperty> <http://www.w3.org/2000/01/rdf-schema#label> "column property" .
 # 
 # https://w3id.org/dsv-ontology#datasetSchema
 <https://w3id.org/dsv-ontology#datasetSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -103,27 +116,23 @@
 <https://w3id.org/dsv-ontology#datasetSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking the dataset to its schema." .
 <https://w3id.org/dsv-ontology#datasetSchema> <http://www.w3.org/2000/01/rdf-schema#label> "dataset schema" .
 # 
-# https://w3id.org/dsv-ontology#linksToVariable
-<https://w3id.org/dsv-ontology#linksToVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/dsv-ontology#linksToVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<https://w3id.org/dsv-ontology#linksToVariable> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dsv-ontology#Variable> .
-<https://w3id.org/dsv-ontology#linksToVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking a property of a component to a variable." .
-<https://w3id.org/dsv-ontology#linksToVariable> <http://www.w3.org/2000/01/rdf-schema#label> "links to variable" .
+# https://w3id.org/dsv-ontology#hasCodeBook
+<https://w3id.org/dsv-ontology#hasCodeBook> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dsv-ontology#hasCodeBook> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/cube#codeList> .
+<https://w3id.org/dsv-ontology#hasCodeBook> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dsv-ontology#ColumnProperty> .
+<https://w3id.org/dsv-ontology#hasCodeBook> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dsv-ontology#hasCodeBook> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking a column to a concept in codebooks." .
+<https://w3id.org/dsv-ontology#hasCodeBook> <http://www.w3.org/2000/01/rdf-schema#label> "has code book" .
 # 
-# https://w3id.org/dsv-ontology#refersToVariable
-<https://w3id.org/dsv-ontology#refersToVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/dsv-ontology#refersToVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dsv-ontology#DatasetComponent> .
-<https://w3id.org/dsv-ontology#refersToVariable> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dsv-ontology#Variable> .
-<https://w3id.org/dsv-ontology#refersToVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking a component to a variable." .
-<https://w3id.org/dsv-ontology#refersToVariable> <http://www.w3.org/2000/01/rdf-schema#label> "refers to variable" .
-# 
-# https://w3id.org/dsv-ontology#rowsRepresentInstancesOf
-<https://w3id.org/dsv-ontology#rowsRepresentInstancesOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/dsv-ontology#rowsRepresentInstancesOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dsv-ontology#Dataset> .
-<https://w3id.org/dsv-ontology#rowsRepresentInstancesOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/dsv-ontology#rowsRepresentInstancesOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking a dataset to the conceptual representation of its rows." .
-<https://w3id.org/dsv-ontology#rowsRepresentInstancesOf> <http://www.w3.org/2000/01/rdf-schema#label> "rows represent instances of" .
+# https://w3id.org/dsv-ontology#hasVariable
+<https://w3id.org/dsv-ontology#hasVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dsv-ontology#hasVariable> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/cube#concept> .
+<https://w3id.org/dsv-ontology#hasVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dsv-ontology#ColumnProperty> .
+<https://w3id.org/dsv-ontology#hasVariable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dsv-ontology#hasVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking a column to a concept variable." .
+<https://w3id.org/dsv-ontology#hasVariable> <http://www.w3.org/2000/01/rdf-schema#label> "has variable" .
 # 
 # https://w3id.org/dsv-ontology#statisticalDataType
 <https://w3id.org/dsv-ontology#statisticalDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -132,18 +141,8 @@
 <https://w3id.org/dsv-ontology#statisticalDataType> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking a component to its statistical data type." .
 <https://w3id.org/dsv-ontology#statisticalDataType> <http://www.w3.org/2000/01/rdf-schema#label> "statistical data type" .
 # 
-# https://w3id.org/dsv-ontology#subVariableOf
-<https://w3id.org/dsv-ontology#subVariableOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/dsv-ontology#subVariableOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dsv-ontology#Variable> .
-<https://w3id.org/dsv-ontology#subVariableOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dsv-ontology#Variable> .
-<https://w3id.org/dsv-ontology#subVariableOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking a variable to its sub-variable." .
-<https://w3id.org/dsv-ontology#subVariableOf> <http://www.w3.org/2000/01/rdf-schema#label> "sub-variable of" .
-# 
 # https://w3id.org/dsv-ontology#summaryStatistics
 <https://w3id.org/dsv-ontology#summaryStatistics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/dsv-ontology#summaryStatistics> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dsv-ontology#Dataset> .
-<https://w3id.org/dsv-ontology#summaryStatistics> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dsv-ontology#DatasetComponent> .
-<https://w3id.org/dsv-ontology#summaryStatistics> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/dsv-ontology#SummaryStatistics> .
 <https://w3id.org/dsv-ontology#summaryStatistics> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking a dataset or a component to their summary statistics." .
 <https://w3id.org/dsv-ontology#summaryStatistics> <http://www.w3.org/2000/01/rdf-schema#label> "summary statistics" .
 # 
@@ -156,10 +155,10 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/dsv-ontology#componentCompleteness
-<https://w3id.org/dsv-ontology#componentCompleteness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/dsv-ontology#componentCompleteness> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dsv-ontology#SummaryStatistics> .
-<https://w3id.org/dsv-ontology#componentCompleteness> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# https://w3id.org/dsv-ontology#columnCompleteness
+<https://w3id.org/dsv-ontology#columnCompleteness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/dsv-ontology#columnCompleteness> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/dsv-ontology#SummaryStatistics> .
+<https://w3id.org/dsv-ontology#columnCompleteness> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
 # 
 # https://w3id.org/dsv-ontology#datasetCompleteness
 <https://w3id.org/dsv-ontology#datasetCompleteness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -199,12 +198,21 @@
 # http://purl.org/linked-data/cube#DataStructureDefinition
 <http://purl.org/linked-data/cube#DataStructureDefinition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
-# http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+# http://purl.org/linked-data/cube#DimensionProperty
+<http://purl.org/linked-data/cube#DimensionProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
-# http://www.w3.org/2002/07/owl#Class
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.w3.org/2002/07/owl#DataProperty
 <http://www.w3.org/2002/07/owl#DataProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+# 
+# http://www.w3.org/ns/csvw#Column
+<http://www.w3.org/ns/csvw#Column> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.w3.org/ns/csvw#Table
 <http://www.w3.org/ns/csvw#Table> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -212,11 +220,25 @@
 # http://www.w3.org/ns/csvw#TableSchema
 <http://www.w3.org/ns/csvw#TableSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
-# https://w3id.org/dsv-ontology#AggregatedDataset
-<https://w3id.org/dsv-ontology#AggregatedDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/dsv-ontology#AggregatedDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dsv-ontology#Dataset> .
-<https://w3id.org/dsv-ontology#AggregatedDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of data that has been aggregated over an individual - or unaggregated - set of data." .
-<https://w3id.org/dsv-ontology#AggregatedDataset> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregated Dataset" .
+# https://w3id.org/dsv-ontology#CategoricalDataType
+<https://w3id.org/dsv-ontology#CategoricalDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dsv-ontology#CategoricalDataType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dsv-ontology#StatisticalDataType> .
+<https://w3id.org/dsv-ontology#CategoricalDataType> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of statistical data types can be observed and - or - categorised." .
+<https://w3id.org/dsv-ontology#CategoricalDataType> <http://www.w3.org/2000/01/rdf-schema#label> "Categorical Statistical Data Type" .
+# 
+# https://w3id.org/dsv-ontology#Column
+<https://w3id.org/dsv-ontology#Column> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dsv-ontology#Column> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linked-data/cube#ComponentSpecification> .
+<https://w3id.org/dsv-ontology#Column> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/csvw#Column> .
+<https://w3id.org/dsv-ontology#Column> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of individual columns of a dataset." .
+<https://w3id.org/dsv-ontology#Column> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset Component" .
+# 
+# https://w3id.org/dsv-ontology#ColumnProperty
+<https://w3id.org/dsv-ontology#ColumnProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dsv-ontology#ColumnProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linked-data/cube#DimensionProperty> .
+<https://w3id.org/dsv-ontology#ColumnProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/dsv-ontology#ColumnProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "RDF Properties represented by the column." .
+<https://w3id.org/dsv-ontology#ColumnProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Column Property" .
 # 
 # https://w3id.org/dsv-ontology#Dataset
 <https://w3id.org/dsv-ontology#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -225,12 +247,6 @@
 <https://w3id.org/dsv-ontology#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of data." .
 <https://w3id.org/dsv-ontology#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset" .
 # 
-# https://w3id.org/dsv-ontology#DatasetComponent
-<https://w3id.org/dsv-ontology#DatasetComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/dsv-ontology#DatasetComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linked-data/cube#ComponentSpecification> .
-<https://w3id.org/dsv-ontology#DatasetComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of individual component of a dataset." .
-<https://w3id.org/dsv-ontology#DatasetComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset Component" .
-# 
 # https://w3id.org/dsv-ontology#DatasetSchema
 <https://w3id.org/dsv-ontology#DatasetSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/dsv-ontology#DatasetSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linked-data/cube#DataStructureDefinition> .
@@ -238,47 +254,35 @@
 <https://w3id.org/dsv-ontology#DatasetSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "The structural schema of a dataset." .
 <https://w3id.org/dsv-ontology#DatasetSchema> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset Schema" .
 # 
-# https://w3id.org/dsv-ontology#IndividualDataset
-<https://w3id.org/dsv-ontology#IndividualDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/dsv-ontology#IndividualDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dsv-ontology#Dataset> .
-<https://w3id.org/dsv-ontology#IndividualDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of data that can be aggregated over. Usually representing the raw data. " .
-<https://w3id.org/dsv-ontology#IndividualDataset> <http://www.w3.org/2000/01/rdf-schema#label> "Individual Dataset" .
+# https://w3id.org/dsv-ontology#IntervalDataType
+<https://w3id.org/dsv-ontology#IntervalDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dsv-ontology#IntervalDataType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dsv-ontology#NumericalDataType> .
+<https://w3id.org/dsv-ontology#IntervalDataType> <http://www.w3.org/2000/01/rdf-schema#comment> "Statistical data type representing ordered data measured over a numerical scale with equal distance between units." .
+<https://w3id.org/dsv-ontology#IntervalDataType> <http://www.w3.org/2000/01/rdf-schema#label> "Interval Statistical Data Type" .
 # 
-# https://w3id.org/dsv-ontology#IntervalStatisticalDataType
-<https://w3id.org/dsv-ontology#IntervalStatisticalDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/dsv-ontology#IntervalStatisticalDataType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dsv-ontology#QuantitativeStatisticalDataType> .
-<https://w3id.org/dsv-ontology#IntervalStatisticalDataType> <http://www.w3.org/2000/01/rdf-schema#comment> "Statistical data type representing ordered data measured over a numerical scale with equal distance between units." .
-<https://w3id.org/dsv-ontology#IntervalStatisticalDataType> <http://www.w3.org/2000/01/rdf-schema#label> "Interval Statistical Data Type" .
+# https://w3id.org/dsv-ontology#NominalDataType
+<https://w3id.org/dsv-ontology#NominalDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dsv-ontology#NominalDataType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dsv-ontology#CategoricalDataType> .
+<https://w3id.org/dsv-ontology#NominalDataType> <http://www.w3.org/2000/01/rdf-schema#comment> "Statistical data type representing discrete units that cannot be ordered or measured." .
+<https://w3id.org/dsv-ontology#NominalDataType> <http://www.w3.org/2000/01/rdf-schema#label> "Nominal Statistical Data Type" .
 # 
-# https://w3id.org/dsv-ontology#NominalStatisticalDataType
-<https://w3id.org/dsv-ontology#NominalStatisticalDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/dsv-ontology#NominalStatisticalDataType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dsv-ontology#QualitativeStatisticalDataType> .
-<https://w3id.org/dsv-ontology#NominalStatisticalDataType> <http://www.w3.org/2000/01/rdf-schema#comment> "Statistical data type representing discrete units that cannot be ordered or measured." .
-<https://w3id.org/dsv-ontology#NominalStatisticalDataType> <http://www.w3.org/2000/01/rdf-schema#label> "Nominal Statistical Data Type" .
+# https://w3id.org/dsv-ontology#NumericalDataType
+<https://w3id.org/dsv-ontology#NumericalDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dsv-ontology#NumericalDataType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dsv-ontology#StatisticalDataType> .
+<https://w3id.org/dsv-ontology#NumericalDataType> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of statistical data types can be measured and quantified." .
+<https://w3id.org/dsv-ontology#NumericalDataType> <http://www.w3.org/2000/01/rdf-schema#label> "Numerical Statistical Data Type" .
 # 
-# https://w3id.org/dsv-ontology#OrdinalStatisticalDataType
-<https://w3id.org/dsv-ontology#OrdinalStatisticalDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/dsv-ontology#OrdinalStatisticalDataType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dsv-ontology#QualitativeStatisticalDataType> .
-<https://w3id.org/dsv-ontology#OrdinalStatisticalDataType> <http://www.w3.org/2000/01/rdf-schema#comment> "Statistical data type representing discrete units that can be ordered or measured." .
-<https://w3id.org/dsv-ontology#OrdinalStatisticalDataType> <http://www.w3.org/2000/01/rdf-schema#label> "Ordinal Statistical Data Type" .
+# https://w3id.org/dsv-ontology#OrdinalDataType
+<https://w3id.org/dsv-ontology#OrdinalDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dsv-ontology#OrdinalDataType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dsv-ontology#CategoricalDataType> .
+<https://w3id.org/dsv-ontology#OrdinalDataType> <http://www.w3.org/2000/01/rdf-schema#comment> "Statistical data type representing discrete units that can be ordered or measured." .
+<https://w3id.org/dsv-ontology#OrdinalDataType> <http://www.w3.org/2000/01/rdf-schema#label> "Ordinal Statistical Data Type" .
 # 
-# https://w3id.org/dsv-ontology#QualitativeStatisticalDataType
-<https://w3id.org/dsv-ontology#QualitativeStatisticalDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/dsv-ontology#QualitativeStatisticalDataType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dsv-ontology#StatisticalDataType> .
-<https://w3id.org/dsv-ontology#QualitativeStatisticalDataType> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of statistical data types can be observed and - or - categorised." .
-<https://w3id.org/dsv-ontology#QualitativeStatisticalDataType> <http://www.w3.org/2000/01/rdf-schema#label> "Qualitative Statistical Data Type" .
-# 
-# https://w3id.org/dsv-ontology#QuantitativeStatisticalDataType
-<https://w3id.org/dsv-ontology#QuantitativeStatisticalDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/dsv-ontology#QuantitativeStatisticalDataType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dsv-ontology#StatisticalDataType> .
-<https://w3id.org/dsv-ontology#QuantitativeStatisticalDataType> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of statistical data types can be measured and quantified." .
-<https://w3id.org/dsv-ontology#QuantitativeStatisticalDataType> <http://www.w3.org/2000/01/rdf-schema#label> "Quantitative Statistical Data Type" .
-# 
-# https://w3id.org/dsv-ontology#RatioStatisticalDataType
-<https://w3id.org/dsv-ontology#RatioStatisticalDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/dsv-ontology#RatioStatisticalDataType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dsv-ontology#QuantitativeStatisticalDataType> .
-<https://w3id.org/dsv-ontology#RatioStatisticalDataType> <http://www.w3.org/2000/01/rdf-schema#comment> "Statistical data type representing ordered data with equal distance between units, where negative values are not allowed." .
-<https://w3id.org/dsv-ontology#RatioStatisticalDataType> <http://www.w3.org/2000/01/rdf-schema#label> "Ratio Statistical Data Type" .
+# https://w3id.org/dsv-ontology#RatioDataType
+<https://w3id.org/dsv-ontology#RatioDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/dsv-ontology#RatioDataType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dsv-ontology#NumericalDataType> .
+<https://w3id.org/dsv-ontology#RatioDataType> <http://www.w3.org/2000/01/rdf-schema#comment> "Statistical data type representing ordered data with equal distance between units, where negative values are not allowed." .
+<https://w3id.org/dsv-ontology#RatioDataType> <http://www.w3.org/2000/01/rdf-schema#label> "Ratio Statistical Data Type" .
 # 
 # https://w3id.org/dsv-ontology#StatisticalDataType
 <https://w3id.org/dsv-ontology#StatisticalDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -290,11 +294,6 @@
 <https://w3id.org/dsv-ontology#SummaryStatistics> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of summary statistics about the dataset or column." .
 <https://w3id.org/dsv-ontology#SummaryStatistics> <http://www.w3.org/2000/01/rdf-schema#label> "Summary Statistics" .
 # 
-# https://w3id.org/dsv-ontology#Variable
-<https://w3id.org/dsv-ontology#Variable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/dsv-ontology#Variable> <http://www.w3.org/2000/01/rdf-schema#comment> "The variable described by a component of the dataset." .
-<https://w3id.org/dsv-ontology#Variable> <http://www.w3.org/2000/01/rdf-schema#label> "Variable" .
-# 
 # 
 # 
 # #################################################################
@@ -304,13 +303,17 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/dsv-ontology#componentCompleteness
-<https://w3id.org/dsv-ontology#componentCompleteness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/dsv-ontology#componentCompleteness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DataProperty> .
+# https://w3id.org/dsv-ontology#columnCompleteness
+<https://w3id.org/dsv-ontology#columnCompleteness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dsv-ontology#columnCompleteness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DataProperty> .
 # 
 # https://w3id.org/dsv-ontology#datasetCompleteness
 <https://w3id.org/dsv-ontology#datasetCompleteness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/dsv-ontology#datasetCompleteness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DataProperty> .
+# 
+# https://w3id.org/dsv-ontology#hasCategories
+<https://w3id.org/dsv-ontology#hasCategories> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/dsv-ontology#hasCategories> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DataProperty> .
 # 
 # https://w3id.org/dsv-ontology#missingValueFormat
 <https://w3id.org/dsv-ontology#missingValueFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -333,13 +336,16 @@
 # #################################################################
 # 
 # 
-<https://w3id.org/dsv-ontology#componentCompleteness> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking a component to its summary statistics." .
-<https://w3id.org/dsv-ontology#componentCompleteness> <http://www.w3.org/2000/01/rdf-schema#label> "component completeness" .
+<https://w3id.org/dsv-ontology#columnCompleteness> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking a column to its summary statistics." .
+<https://w3id.org/dsv-ontology#columnCompleteness> <http://www.w3.org/2000/01/rdf-schema#label> "column completeness" .
 # 
 <https://w3id.org/dsv-ontology#datasetCompleteness> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking a dataset to its summary statistics." .
 <https://w3id.org/dsv-ontology#datasetCompleteness> <http://www.w3.org/2000/01/rdf-schema#label> "dataset completeness" .
 # 
-<https://w3id.org/dsv-ontology#missingValueFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking a dataset or a component to the format of the missinf values." .
+<https://w3id.org/dsv-ontology#hasCategories> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking a categorical data type to the categories it can include." .
+<https://w3id.org/dsv-ontology#hasCategories> <http://www.w3.org/2000/01/rdf-schema#label> "has categories" .
+# 
+<https://w3id.org/dsv-ontology#missingValueFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking a dataset or a column to the format of the missing values." .
 <https://w3id.org/dsv-ontology#missingValueFormat> <http://www.w3.org/2000/01/rdf-schema#label> "missing value format" .
 # 
 <https://w3id.org/dsv-ontology#numberOfColumns> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking a dataset to its number of columns." .

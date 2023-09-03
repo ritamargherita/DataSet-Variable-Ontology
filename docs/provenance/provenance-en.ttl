@@ -10,6 +10,7 @@
 	 prov:wasAttributedTo :agent3;
 	 prov:wasAttributedTo :agent4;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:specializationOf <https://w3id.org/dsv-ontology#>;
 .
 :agent0 a prov:Agent; foaf:name "Jacco van Ossenbruggen".
 :agent1 a prov:Agent; foaf:name "Margherita Martorana".

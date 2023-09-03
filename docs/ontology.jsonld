@@ -18,21 +18,24 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/linked-data/cube#ComponentSpecification",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://purl.org/linked-data/cube#DataSet",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://purl.org/linked-data/cube#DataStructureDefinition",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/linked-data/cube#DimensionProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/linked-data/cube#codeList",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://purl.org/linked-data/cube#component",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://purl.org/linked-data/cube#concept",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://purl.org/linked-data/cube#dimension",
@@ -48,29 +51,28 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/2002/07/owl#Class",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://www.w3.org/2002/07/owl#DataProperty",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#Concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/csvw#Column",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://www.w3.org/ns/csvw#Table",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://www.w3.org/ns/csvw#TableSchema",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/csvw#column",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://www.w3.org/ns/csvw#propertyUrl",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
@@ -141,24 +143,48 @@
     "@id" : "https://w3id.org/dsv-ontology"
   } ]
 }, {
-  "@id" : "https://w3id.org/dsv-ontology#AggregatedDataset",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ],
+  "@id" : "https://w3id.org/dsv-ontology#CategoricalDataType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Set of data that has been aggregated over an individual - or unaggregated - set of data."
+    "@value" : "Set of statistical data types can be observed and - or - categorised."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Aggregated Dataset"
+    "@value" : "Categorical Statistical Data Type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#Dataset"
+    "@id" : "https://w3id.org/dsv-ontology#StatisticalDataType"
+  } ]
+}, {
+  "@id" : "https://w3id.org/dsv-ontology#Column",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Set of individual columns of a dataset."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Dataset Component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/linked-data/cube#ComponentSpecification"
+  }, {
+    "@id" : "http://www.w3.org/ns/csvw#Column"
+  } ]
+}, {
+  "@id" : "https://w3id.org/dsv-ontology#ColumnProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "RDF Properties represented by the column."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Column Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/linked-data/cube#DimensionProperty"
+  }, {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
   } ]
 }, {
   "@id" : "https://w3id.org/dsv-ontology#Dataset",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Set of data."
   } ],
@@ -171,24 +197,8 @@
     "@id" : "http://www.w3.org/ns/csvw#Table"
   } ]
 }, {
-  "@id" : "https://w3id.org/dsv-ontology#DatasetComponent",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Set of individual component of a dataset."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Dataset Component"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/linked-data/cube#ComponentSpecification"
-  } ]
-}, {
   "@id" : "https://w3id.org/dsv-ontology#DatasetSchema",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The structural schema of a dataset."
   } ],
@@ -201,24 +211,8 @@
     "@id" : "http://www.w3.org/ns/csvw#TableSchema"
   } ]
 }, {
-  "@id" : "https://w3id.org/dsv-ontology#IndividualDataset",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Set of data that can be aggregated over. Usually representing the raw data. "
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Individual Dataset"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#Dataset"
-  } ]
-}, {
-  "@id" : "https://w3id.org/dsv-ontology#IntervalStatisticalDataType",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ],
+  "@id" : "https://w3id.org/dsv-ontology#IntervalDataType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Statistical data type representing ordered data measured over a numerical scale with equal distance between units."
   } ],
@@ -226,13 +220,11 @@
     "@value" : "Interval Statistical Data Type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#QuantitativeStatisticalDataType"
+    "@id" : "https://w3id.org/dsv-ontology#NumericalDataType"
   } ]
 }, {
-  "@id" : "https://w3id.org/dsv-ontology#NominalStatisticalDataType",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ],
+  "@id" : "https://w3id.org/dsv-ontology#NominalDataType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Statistical data type representing discrete units that cannot be ordered or measured."
   } ],
@@ -240,13 +232,23 @@
     "@value" : "Nominal Statistical Data Type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#QualitativeStatisticalDataType"
+    "@id" : "https://w3id.org/dsv-ontology#CategoricalDataType"
   } ]
 }, {
-  "@id" : "https://w3id.org/dsv-ontology#OrdinalStatisticalDataType",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
+  "@id" : "https://w3id.org/dsv-ontology#NumericalDataType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Set of statistical data types can be measured and quantified."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Numerical Statistical Data Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/dsv-ontology#StatisticalDataType"
+  } ]
+}, {
+  "@id" : "https://w3id.org/dsv-ontology#OrdinalDataType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Statistical data type representing discrete units that can be ordered or measured."
   } ],
@@ -254,41 +256,11 @@
     "@value" : "Ordinal Statistical Data Type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#QualitativeStatisticalDataType"
+    "@id" : "https://w3id.org/dsv-ontology#CategoricalDataType"
   } ]
 }, {
-  "@id" : "https://w3id.org/dsv-ontology#QualitativeStatisticalDataType",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Set of statistical data types can be observed and - or - categorised."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Qualitative Statistical Data Type"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#StatisticalDataType"
-  } ]
-}, {
-  "@id" : "https://w3id.org/dsv-ontology#QuantitativeStatisticalDataType",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Set of statistical data types can be measured and quantified."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Quantitative Statistical Data Type"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#StatisticalDataType"
-  } ]
-}, {
-  "@id" : "https://w3id.org/dsv-ontology#RatioStatisticalDataType",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ],
+  "@id" : "https://w3id.org/dsv-ontology#RatioDataType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Statistical data type representing ordered data with equal distance between units, where negative values are not allowed."
   } ],
@@ -296,13 +268,11 @@
     "@value" : "Ratio Statistical Data Type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#QuantitativeStatisticalDataType"
+    "@id" : "https://w3id.org/dsv-ontology#NumericalDataType"
   } ]
 }, {
   "@id" : "https://w3id.org/dsv-ontology#StatisticalDataType",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Set of statistical data types."
   } ],
@@ -311,9 +281,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/dsv-ontology#SummaryStatistics",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Set of summary statistics about the dataset or column."
   } ],
@@ -321,48 +289,57 @@
     "@value" : "Summary Statistics"
   } ]
 }, {
-  "@id" : "https://w3id.org/dsv-ontology#Variable",
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ],
+  "@id" : "https://w3id.org/dsv-ontology#column",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The variable described by a component of the dataset."
+    "@value" : "Property linking the dataset schema to its columns."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/dsv-ontology#DatasetSchema"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Variable"
+    "@value" : "column"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/dsv-ontology#Column"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/linked-data/cube#component"
+  }, {
+    "@id" : "http://www.w3.org/ns/csvw#column"
   } ]
 }, {
-  "@id" : "https://w3id.org/dsv-ontology#componentCompleteness",
+  "@id" : "https://w3id.org/dsv-ontology#columnCompleteness",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#DataProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Property linking a component to its summary statistics."
+    "@value" : "Property linking a column to its summary statistics."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/dsv-ontology#SummaryStatistics"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "component completeness"
+    "@value" : "column completeness"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "https://w3id.org/dsv-ontology#componentProperty",
+  "@id" : "https://w3id.org/dsv-ontology#columnProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Property linking a component to a property."
+    "@value" : "Property linking a column to a property."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#DatasetComponent"
+    "@id" : "https://w3id.org/dsv-ontology#Column"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "component property"
+    "@value" : "column property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    "@id" : "https://w3id.org/dsv-ontology#ColumnProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/linked-data/cube#dimension"
@@ -388,24 +365,6 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "https://w3id.org/dsv-ontology#datasetComponent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Property linking the dataset schema to its components."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#DatasetSchema"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "dataset component"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#DatasetComponent"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://purl.org/linked-data/cube#component"
-  } ]
-}, {
   "@id" : "https://w3id.org/dsv-ontology#datasetSchema",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -426,19 +385,55 @@
     "@id" : "http://www.w3.org/ns/csvw#tableSchema"
   } ]
 }, {
-  "@id" : "https://w3id.org/dsv-ontology#linksToVariable",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "https://w3id.org/dsv-ontology#hasCategories",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#DataProperty"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Property linking a property of a component to a variable."
+    "@value" : "Property linking a categorical data type to the categories it can include."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    "@id" : "https://w3id.org/dsv-ontology#CategoricalDataType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "links to variable"
+    "@value" : "has categories"
+  } ]
+}, {
+  "@id" : "https://w3id.org/dsv-ontology#hasCodeBook",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Property linking a column to a concept in codebooks."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/dsv-ontology#ColumnProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has code book"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#Variable"
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/linked-data/cube#codeList"
+  } ]
+}, {
+  "@id" : "https://w3id.org/dsv-ontology#hasVariable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Property linking a column to a concept variable."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/dsv-ontology#ColumnProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/linked-data/cube#concept"
   } ]
 }, {
   "@id" : "https://w3id.org/dsv-ontology#missingValueFormat",
@@ -447,7 +442,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#DataProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Property linking a dataset or a component to the format of the missinf values."
+    "@value" : "Property linking a dataset or a column to the format of the missing values."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/dsv-ontology#SummaryStatistics"
@@ -495,36 +490,6 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "https://w3id.org/dsv-ontology#refersToVariable",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Property linking a component to a variable."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#DatasetComponent"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "refers to variable"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#Variable"
-  } ]
-}, {
-  "@id" : "https://w3id.org/dsv-ontology#rowsRepresentInstancesOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Property linking a dataset to the conceptual representation of its rows."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#Dataset"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "rows represent instances of"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Class"
-  } ]
-}, {
   "@id" : "https://w3id.org/dsv-ontology#statisticalDataType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -540,35 +505,12 @@
     "@id" : "https://w3id.org/dsv-ontology#StatisticalDataType"
   } ]
 }, {
-  "@id" : "https://w3id.org/dsv-ontology#subVariableOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Property linking a variable to its sub-variable."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#Variable"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "sub-variable of"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#Variable"
-  } ]
-}, {
   "@id" : "https://w3id.org/dsv-ontology#summaryStatistics",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Property linking a dataset or a component to their summary statistics."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#Dataset"
-  }, {
-    "@id" : "https://w3id.org/dsv-ontology#DatasetComponent"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "summary statistics"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/dsv-ontology#SummaryStatistics"
   } ]
 } ]

@@ -1,5 +1,5 @@
 ##################################################################################################################################
-# 1 - What are the main topics, categories or variables represented in a dataset?
+# 1 - What are the main topics and variables represented in a dataset?
 ##################################################################################################################################
 
 PREFIX qb: <http://purl.org/linked-data/cube#>
@@ -258,6 +258,45 @@ WHERE {
 # 12 - How would the metadata description of the merged datasets look like?
 ##################################################################################################################################
 
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX schema: <http://schema.org/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+
+SELECT DISTINCT 
+(GROUP_CONCAT(DISTINCT ?spatialCoverage;SEPARATOR=',\n') AS ?mergedSpatialCoverage)
+(GROUP_CONCAT(DISTINCT ?temporalCoverage;SEPARATOR=',\n') AS ?mergedTemporalCoverage)
+(GROUP_CONCAT(DISTINCT ?topicLabel;SEPARATOR=',\n') AS ?mergedTopicLabel)
+(GROUP_CONCAT(DISTINCT ?variableLabel;SEPARATOR=',\n') AS ?mergedVariable)
+WHERE {
+    {
+        ?dataset1 	schema:spatialCoverage 	?spatialCoverage ;
+              		schema:temporalCoverage	?temporalCoverage ;
+              		dct:subject	 			[
+            			skos:prefLabel			?topicLabel ] ;
+                	qb:structure	[
+            			qb:component	[
+            				qb:dimension	[
+            					qb:concept		[
+            						rdfs:label		?variableLabel
+        ] ] ] ] . }
+    UNION
+    {
+    	?dataset2 	schema:spatialCoverage 	?spatialCoverage ;
+              		schema:temporalCoverage	?temporalCoverage ;
+              		dct:subject	 			[
+            			skos:prefLabel			?topicLabel ] ;
+                	qb:structure	[
+            			qb:component	[
+            				qb:dimension	[
+            					qb:concept		[
+            						rdfs:label		?variableLabel
+        ] ] ] ] . }
+    
+    VALUES ?dataset1 {<http://www.canada-open-data.org/example-aggregated-dataset>}
+    VALUES ?dataset2 {<http://www.uk-open-data.org/example-aggregated-dataset>}
+}
 
 ##################################################################################################################################
 # 13 - In what ways is the content of two given datasets related?
